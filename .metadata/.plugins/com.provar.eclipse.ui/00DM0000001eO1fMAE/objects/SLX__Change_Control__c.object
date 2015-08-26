@@ -1,0 +1,1441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Administrative Object to allow the tracking and approval of system changes</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Add_l_Info__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>type in add&apos;l info</inlineHelpText>
+        <label>Add&apos;l Info</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Change_Control_Request__c</fullName>
+        <displayFormat>{00000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Change Control Request #</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Final_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Final Comment</label>
+        <length>500</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Link_to_Record__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please paste the URL to the record you are having an issue with. If this issue/request is not related to a Salesforce record, simply type in N/A</inlineHelpText>
+        <label>Link to Record</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>On_My_Team__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (CreatedById = $User.Id, 1, 0)</formula>
+        <label>On My Team</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Request__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Request</label>
+        <referenceTo>SLX__Change_Control__c</referenceTo>
+        <relationshipLabel>Parent Requests</relationshipLabel>
+        <relationshipName>Changes</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>5-Cold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4-Lukewarm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3-Warm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2-Hot</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1-ON FIRE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Related_Tab__c</fullName>
+        <externalId>false</externalId>
+        <label>Related Tab</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Accounts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Team</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Activities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ATG Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BU Lead</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cases</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Changes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contacts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Content</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dashboards</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>POA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reports</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Requests</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SWOT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reports_to_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>SLX__Requestor__r.Manager.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Reports to Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Age__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( SLX__Request_Status__c , &quot;Completed&quot;) , NULL, Today()- DATEVALUE( CreatedDate ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Request Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Request Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Account Team Assignment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Broken Functionality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>General User Question</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Missing Account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Primary &amp; Secondary Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Status or BU Spend Issue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Report or View Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Reassignment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Status</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Salesforce Questions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dashboard/Report Issue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Missing BU Product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Salesforce1 App</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pilot/Test Questions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Requestor_Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>$UserRole.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Requestor Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requestor_s_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>SLX__Requestor__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Requestor&apos;s Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLX__Date_Completed__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date work was actually completed</description>
+        <externalId>false</externalId>
+        <label>Date Completed</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SLX__Date_Requested__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Date work is to be completed by</description>
+        <externalId>false</externalId>
+        <label>Date Requested</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SLX__Days_Outstanding__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( SLX__Request_Status__c , &quot;Completed&quot;) ,  SLX__Date_Completed__c - SLX__Date_Requested__c , TODAY() -  SLX__Date_Requested__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days: Outstanding</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLX__Days_Processed__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>SLX__Date_Completed__c -  SLX__Date_Requested__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days: Processed</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLX__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SLX__Request_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Request Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Awaiting Third Party</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Future</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Need More Information</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent to Service Now</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted for Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SLX__Requestor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Requestor</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>R00N40000001Hw99EAC</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SLX__Results__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Issues/Results/Comments</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SNOW__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://autotradergroup.service-now.com/ess/&quot;, &quot;Create SNOW Request&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SNOW</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sub_Reason__c</fullName>
+        <description>Field Dependent upon values selected in Request Type Field</description>
+        <externalId>false</externalId>
+        <label>Sub Reason</label>
+        <picklist>
+            <controllingField>Request_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Territory Change</fullName>
+                <controllingFieldValues>Account Reassignment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Realignment</fullName>
+                <controllingFieldValues>Account Reassignment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transfer to DSC</fullName>
+                <controllingFieldValues>Account Reassignment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Hire Assignment</fullName>
+                <controllingFieldValues>Account Reassignment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Previous Rep No Longer with ATC</fullName>
+                <controllingFieldValues>Account Reassignment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Requested Change</fullName>
+                <controllingFieldValues>Account Reassignment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rep on Leave of Absence</fullName>
+                <controllingFieldValues>Account Reassignment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Assignment for Prospect Accounts</fullName>
+                <controllingFieldValues>Account Reassignment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OOB Dealer</fullName>
+                <controllingFieldValues>Account Status</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Duplicate Account</fullName>
+                <controllingFieldValues>Account Status</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Dealer Request Status</fullName>
+                <controllingFieldValues>Account Status</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Secondary Account</fullName>
+                <controllingFieldValues>Account Status</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Merge</fullName>
+                <controllingFieldValues>Account Status</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Neglected (Dropdown menu)</fullName>
+                <controllingFieldValues>Dashboard/Report Issue</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pipeline</fullName>
+                <controllingFieldValues>Dashboard/Report Issue</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Person Visits</fullName>
+                <controllingFieldValues>Dashboard/Report Issue</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Missing Account</fullName>
+                <controllingFieldValues>Dashboard/Report Issue</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Missing AC</fullName>
+                <controllingFieldValues>Dashboard/Report Issue</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KBB</fullName>
+                <controllingFieldValues>Missing BU Product</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>V-Auto</fullName>
+                <controllingFieldValues>Missing BU Product</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TIM</fullName>
+                <controllingFieldValues>Missing BU Product</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Homenet</fullName>
+                <controllingFieldValues>Missing BU Product</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VIN Solutions</fullName>
+                <controllingFieldValues>Missing BU Product</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Login</fullName>
+                <controllingFieldValues>Salesforce1 App</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Functionality issue</fullName>
+                <controllingFieldValues>Salesforce1 App</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <controllingFieldValues>Account Status</controllingFieldValues>
+                <controllingFieldValues>Dashboard/Report Issue</controllingFieldValues>
+                <controllingFieldValues>Salesforce1 App</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Time_to_Close__c</fullName>
+        <externalId>false</externalId>
+        <formula>ABS(SLX__Date_Requested__c  -  SLX__Date_Completed__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Time to Close</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>What_is_your_Request__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>enter a brief description of your request, add details of request into addl info field</inlineHelpText>
+        <label>What is your Request?</label>
+        <length>150</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Change Control</label>
+    <listViews>
+        <fullName>Account_Transfers</fullName>
+        <columns>SLX__Date_Requested__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>NAME</columns>
+        <columns>SLX__Description__c</columns>
+        <columns>SLX__Request_Status__c</columns>
+        <columns>SLX__Days_Outstanding__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Account Reassignment</value>
+        </filters>
+        <filters>
+            <field>SLX__Request_Status__c</field>
+            <operation>equals</operation>
+            <value>In Process,New</value>
+        </filters>
+        <label>Account Transfers</label>
+    </listViews>
+    <listViews>
+        <fullName>CDG_Team_Queue_Change_Control</fullName>
+        <columns>Change_Control_Request__c</columns>
+        <columns>SLX__Date_Requested__c</columns>
+        <columns>NAME</columns>
+        <columns>SLX__Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>SLX__Days_Outstanding__c</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>SLX__Request_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </filters>
+        <label>CDG Team</label>
+        <queue>CDG_Team_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>New_Requests</fullName>
+        <columns>SLX__Date_Requested__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>NAME</columns>
+        <columns>Request_Type__c</columns>
+        <columns>SLX__Request_Status__c</columns>
+        <columns>SLX__Days_Outstanding__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SLX__Request_Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <filters>
+            <field>OWNER.ALIAS</field>
+            <operation>notEqual</operation>
+            <value>CDG Team</value>
+        </filters>
+        <label>New Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>SLX__AllOutstanding</fullName>
+        <columns>SLX__Date_Requested__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Request_Type__c</columns>
+        <columns>NAME</columns>
+        <columns>SLX__Request_Status__c</columns>
+        <columns>SLX__Description__c</columns>
+        <columns>Priority__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>SLX__Days_Outstanding__c</columns>
+        <columns>SLX__Results__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SLX__Request_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Approved,Completed,Duplicate,Submitted for Approval,Future,Not Approved</value>
+        </filters>
+        <label>All Outstanding</label>
+    </listViews>
+    <listViews>
+        <fullName>SLX__Completed</fullName>
+        <columns>SLX__Date_Requested__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>NAME</columns>
+        <columns>SLX__Description__c</columns>
+        <columns>SLX__Results__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SLX__Request_Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Completed</label>
+    </listViews>
+    <nameField>
+        <label>Change Control Request</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Changes</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>SLX__Admin</fullName>
+        <active>true</active>
+        <label>Admin</label>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1-ON FIRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3-Warm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-Lukewarm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5-Cold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Related_Tab__c</picklist>
+            <values>
+                <fullName>ATG Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accounts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Activities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BU Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cases</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dashboards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reports</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requests</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SWOT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Request_Type__c</picklist>
+            <values>
+                <fullName>Account Reassignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dashboard%2FReport Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing BU Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pilot%2FTest Questions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce Questions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce1 App</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SLX__Request_Status__c</picklist>
+            <values>
+                <fullName>Awaiting Third Party</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Need More Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to Service Now</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Reason__c</picklist>
+            <values>
+                <fullName>Account Realignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assignment for Prospect Accounts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dealer Requested Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Functionality issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Homenet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person Visits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Login</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Merge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing AC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neglected %28Dropdown menu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Dealer Request Status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Hire Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OOB Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous Rep No Longer with ATC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rep on Leave of Absence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secondary Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Territory Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer to DSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>V-Auto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIN Solutions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SLX__User</fullName>
+        <active>true</active>
+        <label>User</label>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1-ON FIRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3-Warm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-Lukewarm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5-Cold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Related_Tab__c</picklist>
+            <values>
+                <fullName>ATG Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accounts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BU Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cases</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Changes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dashboards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reports</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requests</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SWOT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Request_Type__c</picklist>
+            <values>
+                <fullName>Account Reassignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dashboard%2FReport Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing BU Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pilot%2FTest Questions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce Questions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce1 App</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SLX__Request_Status__c</picklist>
+            <values>
+                <fullName>Awaiting Third Party</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to Service Now</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Reason__c</picklist>
+            <values>
+                <fullName>Account Realignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assignment for Prospect Accounts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dealer Requested Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Functionality issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Homenet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person Visits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Login</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Merge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing AC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neglected %28Dropdown menu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Dealer Request Status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Hire Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OOB Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous Rep No Longer with ATC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rep on Leave of Absence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secondary Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Territory Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer to DSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>V-Auto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIN Solutions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Change_Control_Request__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SLX__Date_Requested__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SLX__Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SLX__Request_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SLX__Date_Completed__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SLX__Days_Outstanding__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SLX__Days_Processed__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Change_Control_Request__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SLX__Request_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SLX__Description__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Change_Control_Request__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Change_Control_Request__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SLX__Request_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SLX__Description__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Assign_To_ME</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Assign To Me</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>var changeObj = new sforce.SObject(&quot;SLX__Change_Control__c&quot;); 
+changeObj.Id = &apos;{!SLX__Change_Control__c.Id}&apos;; 
+changeObj.OwnerId = &apos;{!$User.Id}&apos;; 
+var result = sforce.connection.update([changeObj]); 
+window.location.href=window.location.href;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Email_Comment</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Email Comment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/connection.js&quot;)} //adds the proper code for inclusion of AJAX toolkit 
+var checked= {!GETRECORDIDS($ObjectType.Change_Comment__c)}; //grabs the records that the user is requesting to update 
+
+window.open(&apos;/email/author/emailauthor.jsp?retURL=/{!SLX__Change_Control__c.Id}&amp;p24={!SLX__Change_Control__c.Requestor_s_Email__c}&amp;p4={!SLX__Change_Control__c.Reports_to_Email__c}&amp;p3_lkid=&apos; + record + &apos;&amp;template_id=00XE0000000MIVc&apos;);</url>
+    </webLinks>
+</CustomObject>

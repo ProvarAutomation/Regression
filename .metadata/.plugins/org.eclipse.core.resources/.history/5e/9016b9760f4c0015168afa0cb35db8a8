@@ -1,0 +1,28 @@
+package pageobjects;
+
+import java.util.List;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import com.provar.core.testapi.annotations.*;
+
+@Page( title="AccountPage"                                
+     , summary=""
+     , relativeUrl=""
+     , connection="ServiceTestUser"
+     )             
+public class AccountPage {
+
+	@FindBy(linkText = "Show Feed")
+	@LinkType()
+	public WebElement showFeed;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"head_01BE000000769Hx_ep\"]/h3")
+	public WebElement customerInformation;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"ep\"]/div[2]/div[4]/table/tbody/tr[1]/td[1]")
+	public WebElement svocMasterId;
+	@NumericType(decimalPlaces = 2, length = 10)
+	@FindBy(xpath = "//*[@id=\"00NE0000005Bwf0_ileinner\"]")
+	public WebElement svocMasterId_value;
+			
+}

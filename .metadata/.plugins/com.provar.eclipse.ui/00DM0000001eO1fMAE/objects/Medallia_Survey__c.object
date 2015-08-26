@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Data from Medallia Customer Experience Feedback Surveys - COPS and DSI</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AT_Retention__c</fullName>
+        <description>Survey Response Key Metrics section</description>
+        <externalId>false</externalId>
+        <label>AT Retention</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Survey Information Section</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Medallia Surveys</relationshipLabel>
+        <relationshipName>Medallia_Surveys</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Agent_Feedback__c</fullName>
+        <description>Comments Section</description>
+        <externalId>false</externalId>
+        <label>Agent Feedback</label>
+        <length>300</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Agent_Knowledge__c</fullName>
+        <description>Survey Response Drivers Section</description>
+        <externalId>false</externalId>
+        <label>Agent  Knowledge</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agent_Professionalism__c</fullName>
+        <description>Survey Response Drivers Section</description>
+        <externalId>false</externalId>
+        <label>Agent Professionalism</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agent_Taking_Ownership__c</fullName>
+        <description>Survey Response Section</description>
+        <externalId>false</externalId>
+        <label>Agent Taking Ownership</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alert_Activity_Notes__c</fullName>
+        <description>Survey Alert Section</description>
+        <externalId>false</externalId>
+        <label>Alert Activity Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Alert_Closed_By__c</fullName>
+        <description>Survey Alert Section</description>
+        <externalId>false</externalId>
+        <label>Alert Closed By</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alert_Closed_Date__c</fullName>
+        <description>Survey Alert Section</description>
+        <externalId>false</externalId>
+        <label>Alert Closed Date</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alert_Closure_Notes__c</fullName>
+        <description>Survey Alert section</description>
+        <externalId>false</externalId>
+        <label>Alert Closure Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Alert_Created_Date__c</fullName>
+        <description>Survey Alert Section</description>
+        <externalId>false</externalId>
+        <label>Alert Created Date</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alert_Created__c</fullName>
+        <description>Survey Alert Sectoin</description>
+        <externalId>false</externalId>
+        <label>Alert Created</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alert_Type__c</fullName>
+        <description>Survey Alert Section</description>
+        <externalId>false</externalId>
+        <label>Alert Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>At_OSAT__c</fullName>
+        <description>At Key Metric Section</description>
+        <externalId>false</externalId>
+        <label>At OSAT</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AutoTrader_Feedback__c</fullName>
+        <description>Comments Section</description>
+        <externalId>false</externalId>
+        <label>AutoTrader Feedback</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AutoTrader_General_Feedback__c</fullName>
+        <description>Issues/Concerns Feedback section</description>
+        <externalId>false</externalId>
+        <label>AutoTrader General Feedback</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AutoTrader_KPI_s_Feedback__c</fullName>
+        <description>Comments Section</description>
+        <externalId>false</externalId>
+        <label>AutoTrader KPI&apos;s Feedback</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>COPS_Case_Number__c</fullName>
+        <description>Survey Information Section</description>
+        <externalId>false</externalId>
+        <label>COPS Case Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_Fulfilled_Resolved__c</fullName>
+        <description>Fulfillment Section</description>
+        <externalId>false</externalId>
+        <label>Case Fulfilled/Resolved</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_Not_Resolved_Feedback__c</fullName>
+        <description>Comments Section</description>
+        <externalId>false</externalId>
+        <label>Case Not Resolved Feedback</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Case_Number__c</fullName>
+        <description>Survey Information Section</description>
+        <externalId>false</externalId>
+        <label>Case Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competitive_Advantage__c</fullName>
+        <description>Survey Response Key Metrics Sectoin</description>
+        <externalId>false</externalId>
+        <label>Competitive Advantage</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Survey Information Section</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Medallia Surveys</relationshipLabel>
+        <relationshipName>Medallia_Surveys</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DMD_Case_Feedback__c</fullName>
+        <description>Comments Section</description>
+        <externalId>false</externalId>
+        <label>DMD Case Feedback</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DMD_Graphic_Quality__c</fullName>
+        <description>Survey Response Drivers Section</description>
+        <externalId>false</externalId>
+        <label>DMD Graphic Quality</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DMD_Time_for_Graphic__c</fullName>
+        <externalId>false</externalId>
+        <label>DMD Time for Graphic</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealership_Position__c</fullName>
+        <description>Areas for Improvement section</description>
+        <externalId>false</externalId>
+        <label>Dealership Position</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Issue_Category__c</fullName>
+        <description>Survey Alert Section</description>
+        <externalId>false</externalId>
+        <label>Issue Category</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Issue_Concerns_past_6_months__c</fullName>
+        <description>Areas for Improvement section</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Click the Medallia survey view link listed above to view more details about the types of issues and their satisfaction with the resolution</inlineHelpText>
+        <label>Issue/Concerns past 6 months?</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Issue_Resolution__c</fullName>
+        <description>Survey Alert Section</description>
+        <externalId>false</externalId>
+        <label>Resolution Category</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Issues_Concerns_Feedback__c</fullName>
+        <description>Comments Section</description>
+        <externalId>false</externalId>
+        <label>Issues/Concerns Feedback</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Key_Metrics_Unfavorable_Feedback__c</fullName>
+        <description>Comments section</description>
+        <externalId>false</externalId>
+        <label>Key Metrics Unfavorable Feedback</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Measure_AT_Results__c</fullName>
+        <description>Additional Details sectoin</description>
+        <externalId>false</externalId>
+        <label>Measure AT Results</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Medallia_Program__c</fullName>
+        <externalId>false</externalId>
+        <label>Medallia Program</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Medallia_Survey_View__c</fullName>
+        <externalId>false</externalId>
+        <label>Medallia Survey View</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Overall_Agent_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>Overall Agent Service</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Overall_Product_and_Tools__c</fullName>
+        <description>Drivers section</description>
+        <externalId>false</externalId>
+        <label>Overall Product and Tools</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Overall_Results__c</fullName>
+        <description>Drives section</description>
+        <externalId>false</externalId>
+        <label>Overall Results</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Overall_Sales_Rep_Experience__c</fullName>
+        <description>Drivers Section</description>
+        <externalId>false</externalId>
+        <label>Overall Sales Rep Experience</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Overall_Satisfaction_with_DMD_Feedback__c</fullName>
+        <description>Survey Response section</description>
+        <externalId>false</externalId>
+        <label>Overall Satisfaction with DMD Feedback</label>
+        <length>40000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Overall_Service_and_Support__c</fullName>
+        <description>Drivers Section</description>
+        <externalId>false</externalId>
+        <label>Overall Service and Support</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Overall_Value__c</fullName>
+        <description>Survey Response Key Metrics section</description>
+        <externalId>false</externalId>
+        <label>Overall Value</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_and_Tools_Need_Improvemdent__c</fullName>
+        <externalId>false</externalId>
+        <label>Product and Tools Need Improvemdent</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_and_Tools__c</fullName>
+        <description>Areas for Improvement section</description>
+        <externalId>false</externalId>
+        <label>Product and Tools</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Response Date</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Results__c</fullName>
+        <description>Areas for Improvement section</description>
+        <externalId>false</externalId>
+        <label>Results</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sales_Rep_Service_You_Better__c</fullName>
+        <description>Additional Details Section</description>
+        <externalId>false</externalId>
+        <label>Sales Rep Service You Better</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Representative__c</fullName>
+        <description>Areas for improvement section</description>
+        <externalId>false</externalId>
+        <label>Sales Representative</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_and_Support__c</fullName>
+        <description>Areas for Improvement section</description>
+        <externalId>false</externalId>
+        <label>Service and Support</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Survey_Alert__c</fullName>
+        <description>Issues Concern Feedback section</description>
+        <externalId>false</externalId>
+        <label>Survey Alert</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Survey_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Survey Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Times_Contacted__c</fullName>
+        <externalId>false</externalId>
+        <label>Times Contacted</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Medallia Survey</label>
+    <nameField>
+        <label>Medallia Survey Number</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Medallia Surveys</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>
