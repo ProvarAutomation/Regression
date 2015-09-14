@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="26">
+<testCase id="24">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
@@ -55,16 +55,6 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On AccountColumns page</value>
         </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore"/>
-        <argument id="captureAfter"/>
-        <argument id="uiTargetUrl"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="47">
@@ -577,11 +567,6 @@
                 <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
               </constraints>
             </choiceType>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
           </type>
         </apiParam>
       </generatedParameters>
