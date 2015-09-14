@@ -1,0 +1,28 @@
+package pageobjects;
+
+import java.util.List;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import com.provar.core.testapi.annotations.*;
+
+@Page( title="AccountColumns"                                
+     , summary=""
+     , relativeUrl=""
+     , connection="ServiceTestUser"
+     )             
+public class AccountColumns {
+
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"ext-gen16\"]/div/table/thead/tr/td[3]/div")
+	public WebElement Column1;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"ext-gen16\"]/div/table/thead/tr/td[4]/div")
+	public WebElement Column2;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"ext-gen16\"]/div/table/thead/tr/td[5]/div")
+	public WebElement Column3;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"ext-gen16\"]/div/table/thead/tr/td[6]/div")
+	public WebElement Column4;
+			
+}

@@ -5,4 +5,5 @@
     <label>The Permissioner</label>
     <logo>permissioner__The_Permissioner/permissioner__The_Permissioner_logo.png</logo>
     <tab>permissioner__The_Permissioner</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

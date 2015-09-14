@@ -352,7 +352,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Case.Contract__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -758,6 +758,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Case.SourceId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Case.Subject</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -787,7 +792,22 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
+        <field>Case.TIM_Contract_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.TIM_Password__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.TIM_Username__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Case.Task_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -895,6 +915,14 @@
         <recordType>Case.Corporate_Affairs</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Case-TIM BuyBook Tech</layout>
+        <recordType>Case.TIM_BuyBook_Tech</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Case-TIM Implementation</layout>
+        <recordType>Case.TIM_Implementation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CaseClose-ATC Dealer Sales Credit Request Close Layout</layout>
         <recordType>Case.ATC_Dealer_Sales_Credit_Request</recordType>
     </layoutAssignments>
@@ -917,6 +945,10 @@
     <layoutAssignments>
         <layout>CaseClose-ATC Service Close Layout</layout>
         <recordType>Case.Corporate_Affairs</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CaseClose-ATC Service Close Layout</layout>
+        <recordType>Case.TIM_Implementation</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CaseClose-ATG DMD Close Layout</layout>
@@ -949,6 +981,10 @@
     <layoutAssignments>
         <layout>CaseClose-ATG Order Fulfillment Close Layout</layout>
         <recordType>Case.ATG_Order_Cancellation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CaseClose-ATG Order Fulfillment Close Layout</layout>
+        <recordType>Case.TIM_BuyBook_Tech</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CaseClose-Close Case Layout</layout>
@@ -1042,6 +1078,16 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>Case.TIM_BuyBook_Tech</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Case.TIM_Implementation</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>Case.Territory_Management</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -1113,6 +1159,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>RunReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SelectFilesFromSalesforce</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

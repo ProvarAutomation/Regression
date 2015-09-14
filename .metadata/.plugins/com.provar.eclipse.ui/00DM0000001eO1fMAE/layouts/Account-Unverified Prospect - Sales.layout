@@ -138,10 +138,6 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Billable__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Opportunity__c</field>
             </layoutItems>
             <layoutItems>

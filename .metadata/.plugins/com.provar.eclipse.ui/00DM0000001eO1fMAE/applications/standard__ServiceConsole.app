@@ -138,9 +138,13 @@
     <tab>standard-Knowledge</tab>
     <tab>standard-LiveAgent</tab>
     <tab>Job_Code__c</tab>
+    <tab>Medallia_Survey__c</tab>
     <workspaceMappings>
         <mapping>
             <tab>Job_Code__c</tab>
+        </mapping>
+        <mapping>
+            <tab>Medallia_Survey__c</tab>
         </mapping>
         <mapping>
             <tab>standard-Account</tab>

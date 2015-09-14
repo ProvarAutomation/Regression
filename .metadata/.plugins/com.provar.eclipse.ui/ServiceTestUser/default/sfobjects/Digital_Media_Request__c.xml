@@ -379,4 +379,5 @@
     <string>Submitted_By__c</string>
     <string>CREATEDBY_USER</string>
   </homeListColumns>
+  <lookupColumns/>
 </sfObject>

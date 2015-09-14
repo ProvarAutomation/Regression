@@ -5,4 +5,5 @@
     <label>Layout Page</label>
     <tab>ClerisoftPages__LayoutPage</tab>
     <tab>ClerisoftPages__About</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

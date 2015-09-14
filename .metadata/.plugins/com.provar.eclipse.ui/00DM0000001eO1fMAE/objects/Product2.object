@@ -813,6 +813,10 @@ Cost Factor for packages. Should default to 1.</description>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+                <fullName>Advanced Display</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>Alpha</fullName>
                 <default>false</default>
             </picklistValues>
@@ -948,6 +952,10 @@ Cost Factor for packages. Should default to 1.</description>
             </picklistValues>
             <picklistValues>
                 <fullName>Core</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Custom</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>

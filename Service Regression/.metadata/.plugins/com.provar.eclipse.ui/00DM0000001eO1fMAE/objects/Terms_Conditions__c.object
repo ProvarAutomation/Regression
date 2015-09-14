@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <content>TermsConditionsDeletePageSense</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>TermsConditionsEditPageSense</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used for ATC Ts&amp;Cs</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>ARA_Agreements1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Agreement_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Ready to Sign</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Signed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>ARA_Agreements1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EchoSign_Template_Id__c</fullName>
+        <description>Filled in by flow</description>
+        <externalId>false</externalId>
+        <label>EchoSign Template Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>T_C_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>T&amp;C Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ATC Advertising Relationship Agreement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TIM Terms and Conditions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Terms &amp; Conditions</label>
+    <nameField>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Terms &amp; Conditions</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Ready_to_Sign</fullName>
+        <active>true</active>
+        <description>Page with EchoSign button</description>
+        <label>Ready to Sign</label>
+        <picklistValues>
+            <picklist>Agreement_Status__c</picklist>
+            <values>
+                <fullName>Ready to Sign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>T_C_Type__c</picklist>
+            <values>
+                <fullName>ATC Advertising Relationship Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM Terms and Conditions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Signed</fullName>
+        <active>true</active>
+        <description>Page without EchoSign button</description>
+        <label>Signed</label>
+        <picklistValues>
+            <picklist>Agreement_Status__c</picklist>
+            <values>
+                <fullName>Ready to Sign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>T_C_Type__c</picklist>
+            <values>
+                <fullName>ATC Advertising Relationship Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM Terms and Conditions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Agreement_Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Create_Terms_and_Conditions</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create Terms and Conditions</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/flow/New_Terms_and_Conditions?varAccountId={!Account.Id}&amp;retURL=/{!Account.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Edit_Terms_and_Conditions</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Edit Terms and Conditions</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/flow/Edit_Terms_and_Conditions?varTCId={!Terms_Conditions__c.Id}&amp;retURL=/{!Terms_Conditions__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_to_Echosign</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send to Echosign</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/echosign_dev1__AgreementTemplateProcess?masterid={!Terms_Conditions__c.Id}&amp;templateId={!Terms_Conditions__c.EchoSign_Template_Id__c}</url>
+    </webLinks>
+</CustomObject>

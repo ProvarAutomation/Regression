@@ -122,6 +122,10 @@
                 <behavior>Readonly</behavior>
                 <field>Sales_Order_Category__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>TIM_Contract_Type__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>

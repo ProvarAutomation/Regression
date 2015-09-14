@@ -24,6 +24,8 @@
     </sfField>
     <sfField createable="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
     <sfField createable="false" n="LastActivityDate" t="Last Activity Date" type="date" updateable="false"/>
+    <sfField createable="false" n="LastViewedDate" t="Last Viewed Date" type="datetime" updateable="false"/>
+    <sfField createable="false" n="LastReferencedDate" t="Last Referenced Date" type="datetime" updateable="false"/>
     <sfField createable="false" length="18" n="ConnectionReceivedId" relationshipName="ConnectionReceived" t="Received Connection ID" type="reference" updateable="false">
       <referenceTos>
         <string>PartnerNetworkConnection</string>
@@ -95,6 +97,10 @@
     <sfField length="100" n="Survey_Type__c" t="Survey Type"/>
     <sfField length="20" n="Times_Contacted__c" t="Times Contacted"/>
     <sfField length="255" n="Medallia_Survey_URL__c" t="Medallia Survey URL" type="url"/>
+    <sfField length="16" n="Integration_ID__c" t="Integration ID"/>
+    <sfField length="20" n="SVOC_Master__c" t="SVOC Master"/>
+    <sfField length="200" n="Account_Name__c" t="Account Name"/>
+    <sfField length="15" n="Survey_Status__c" t="Survey Status"/>
   </fields>
   <childRelationships>
     <sfObjectRelationship alias="RelatedHistoryList" childName="ActivityHistory" field="WhatId" n="ActivityHistories" relationshipName="ActivityHistories" s="2-" t="ActivityHistory"/>
@@ -146,7 +152,11 @@
                             <sfLIC n="Medallia_Program__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
                           </children>
                         </sfLI>
-                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                        <sfLI editableForUpdate="false" label="Integration ID" n="Integration ID" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Integration_ID__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
                       </children>
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="2">
@@ -191,9 +201,39 @@
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="6">
                       <children>
-                        <sfLI editableForUpdate="false" label="Medallia Survey View" n="Medallia Survey View" s="" seqNum="0" t="Web Layout Item">
+                        <sfLI editableForUpdate="false" label="Medallia Survey URL" n="Medallia Survey URL" s="" seqNum="0" t="Web Layout Item">
                           <children>
-                            <sfLIC n="Medallia_Survey_View__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                            <sfLIC n="Medallia_Survey_URL__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="7">
+                      <children>
+                        <sfLI editableForUpdate="false" label="SVOC Master" n="SVOC Master" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="SVOC_Master__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="8">
+                      <children>
+                        <sfLI editableForUpdate="false" label="Account Name" n="Account Name" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Account_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="9">
+                      <children>
+                        <sfLI editableForUpdate="false" label="Survey Status" n="Survey Status" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Survey_Status__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
                           </children>
                         </sfLI>
                         <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
@@ -464,7 +504,11 @@
                             <sfLIC n="Medallia_Program__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
                           </children>
                         </sfLI>
-                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                        <sfLI editableForUpdate="false" label="Integration ID" n="Integration ID" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Integration_ID__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
                       </children>
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="2">
@@ -509,9 +553,39 @@
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="6">
                       <children>
-                        <sfLI editableForUpdate="false" label="Medallia Survey View" n="Medallia Survey View" s="" seqNum="0" t="Web Layout Item">
+                        <sfLI editableForUpdate="false" label="Medallia Survey URL" n="Medallia Survey URL" s="" seqNum="0" t="Web Layout Item">
                           <children>
-                            <sfLIC n="Medallia_Survey_View__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                            <sfLIC n="Medallia_Survey_URL__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="7">
+                      <children>
+                        <sfLI editableForUpdate="false" label="SVOC Master" n="SVOC Master" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="SVOC_Master__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="8">
+                      <children>
+                        <sfLI editableForUpdate="false" label="Account Name" n="Account Name" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Account_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="9">
+                      <children>
+                        <sfLI editableForUpdate="false" label="Survey Status" n="Survey Status" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Survey_Status__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
                           </children>
                         </sfLI>
                         <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
@@ -854,8 +928,11 @@
       </children>
     </sfSearchLayout>
   </searchLayouts>
-  <listViews/>
+  <listViews>
+    <sfListView n="All" s="List View"/>
+  </listViews>
   <homeListColumns>
     <string>MEDALLIA_SURVEY__C.NAME</string>
   </homeListColumns>
+  <lookupColumns/>
 </sfObject>

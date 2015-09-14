@@ -145,9 +145,13 @@
     <tab>standard-KnowledgePublishing</tab>
     <tab>standard-Knowledge</tab>
     <tab>Action_Plan__c</tab>
+    <tab>Medallia_Survey__c</tab>
     <workspaceMappings>
         <mapping>
             <tab>Action_Plan__c</tab>
+        </mapping>
+        <mapping>
+            <tab>Medallia_Survey__c</tab>
         </mapping>
         <mapping>
             <tab>standard-Account</tab>

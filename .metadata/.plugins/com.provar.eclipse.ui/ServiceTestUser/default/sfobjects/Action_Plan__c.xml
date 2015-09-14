@@ -924,7 +924,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,2349,13472,9160,2537</value>
+          <value valueClass="string">81,2349,54614,9160,2537</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1785,7 +1785,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,2349,13472,9160,2537</value>
+          <value valueClass="string">81,2349,54614,9160,2537</value>
         </entry>
         <entry>
           <key valueClass="string">Call_Tracking_New__c</key>
@@ -1829,7 +1829,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Type__c</key>
-          <value valueClass="string">13501</value>
+          <value valueClass="string">54643</value>
         </entry>
         <entry>
           <key valueClass="string">Confirm_Map_Coordinates__c</key>
@@ -3058,7 +3058,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,2349,13472,9160,2537</value>
+          <value valueClass="string">81,2349,54614,9160,2537</value>
         </entry>
         <entry>
           <key valueClass="string">Trade_Show_Consultant_s__c</key>
@@ -4581,7 +4581,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,2349,13472,9160,2537</value>
+          <value valueClass="string">81,2349,54614,9160,2537</value>
         </entry>
         <entry>
           <key valueClass="string">Call_Tracking_New__c</key>
@@ -4625,7 +4625,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Type__c</key>
-          <value valueClass="string">13502</value>
+          <value valueClass="string">54644</value>
         </entry>
         <entry>
           <key valueClass="string">Confirm_Map_Coordinates__c</key>
@@ -5246,7 +5246,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,2349,13472,9160,2537</value>
+          <value valueClass="string">81,2349,54614,9160,2537</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -5322,4 +5322,11 @@
     <string>Status__c</string>
     <string>Owner_Name__c</string>
   </homeListColumns>
+  <lookupColumns>
+    <string>Action_Plan_Name__c</string>
+    <string>Account__c</string>
+    <string>SVOC_ID__c</string>
+    <string>RECORDTYPE</string>
+    <string>Owner_Name__c</string>
+  </lookupColumns>
 </sfObject>

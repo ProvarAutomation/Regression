@@ -488,11 +488,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">13741,13742,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">54883,54884,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">13730,13731,13732,13733,13734,13735,13736,13737,13738,13739,13740</value>
+          <value valueClass="string">54872,54873,54874,54875,54876,54877,54878,54879,54880,54881,54882</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -675,11 +675,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">13741,13742,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">54883,54884,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">13730,13731,13732,13733,13734,13735,13736,13737,13738,13739,13740</value>
+          <value valueClass="string">54872,54873,54874,54875,54876,54877,54878,54879,54880,54881,54882</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1155,11 +1155,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">13741,13742,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">54883,54884,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">13730,13731,13732,13733,13734,13735,13736,13737,13738,13739,13740</value>
+          <value valueClass="string">54872,54873,54874,54875,54876,54877,54878,54879,54880,54881,54882</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1555,11 +1555,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">13741,13742,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">54883,54884,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">13730,13731,13732,13733,13734,13735,13736,13737,13738,13739,13740</value>
+          <value valueClass="string">54872,54873,54874,54875,54876,54877,54878,54879,54880,54881,54882</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1639,4 +1639,11 @@
   <homeListColumns>
     <string>BU_REFERRALS__C.NAME</string>
   </homeListColumns>
+  <lookupColumns>
+    <string>Product_Category__c</string>
+    <string>Source__c</string>
+    <string>Status__c</string>
+    <string>Submitted_by__c</string>
+    <string>Targ__c</string>
+  </lookupColumns>
 </sfObject>

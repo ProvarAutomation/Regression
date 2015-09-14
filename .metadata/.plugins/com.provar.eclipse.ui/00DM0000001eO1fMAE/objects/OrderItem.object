@@ -1775,6 +1775,590 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>GM_Front_Line_Pro_Model_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>New 1 GM Front-Line Pro Model</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.GM_New_Car_Make_1__c</field>
+                <operation>equals</operation>
+                <valueField>Model__c.Make__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Model__c</referenceTo>
+        <relationshipLabel>Order Products (GM Front-Line Pro Model 1)</relationshipLabel>
+        <relationshipName>Order_Products1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GM_Front_Line_Pro_Model_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>New 2 GM Front-Line Pro Model</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.GM_New_Car_Make_2__c</field>
+                <operation>equals</operation>
+                <valueField>Model__c.Make__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Model__c</referenceTo>
+        <relationshipLabel>Order Products (GM Front-Line Pro Model 2)</relationshipLabel>
+        <relationshipName>Order_Products2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GM_Front_Line_Pro_Model_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>New 3 GM Front-Line Pro Model</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.GM_New_Car_Make_3__c</field>
+                <operation>equals</operation>
+                <valueField>Model__c.Make__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Model__c</referenceTo>
+        <relationshipLabel>Order Products (GM Front-Line Pro Model 3)</relationshipLabel>
+        <relationshipName>Order_Products3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GM_Front_Line_Pro_Model_4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>New 4 GM Front-Line Pro Model</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.GM_New_Car_Make_4__c</field>
+                <operation>equals</operation>
+                <valueField>Model__c.Make__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Model__c</referenceTo>
+        <relationshipLabel>Order Products (GM Front-Line Pro Model 4)</relationshipLabel>
+        <relationshipName>Order_Products4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GM_NEW_CAR_SET_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GM NEW CAR SET 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_NEW_CAR_SET_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GM NEW CAR SET 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_NEW_CAR_SET_3__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GM NEW CAR SET 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_NEW_CAR_SET_4__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GM NEW CAR SET 4</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Blank_1__c</fullName>
+        <externalId>false</externalId>
+        <label>New 1 GM Blank</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Blank_2__c</fullName>
+        <externalId>false</externalId>
+        <label>New 2 GM Blank</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Blank_3__c</fullName>
+        <externalId>false</externalId>
+        <label>New 3 GM Blank</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Blank_4__c</fullName>
+        <externalId>false</externalId>
+        <label>New 4 GM Blank</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Make_1__c</fullName>
+        <externalId>false</externalId>
+        <label>New 1 GM Make</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Buick</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadillac</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chevrolet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GMC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Make_2__c</fullName>
+        <externalId>false</externalId>
+        <label>New 2 GM Make</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Buick</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadillac</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chevrolet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GMC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Make_3__c</fullName>
+        <externalId>false</externalId>
+        <label>New 3 GM Make</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Buick</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadillac</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chevrolet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GMC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Make_4__c</fullName>
+        <externalId>false</externalId>
+        <label>New 4 GM Make</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Buick</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadillac</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chevrolet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GMC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Make_Quantity_1__c</fullName>
+        <externalId>false</externalId>
+        <label>New 1 GM Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Make_Quantity_2__c</fullName>
+        <externalId>false</externalId>
+        <label>New 2 GM Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Make_Quantity_3__c</fullName>
+        <externalId>false</externalId>
+        <label>New 3 GM Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Make_Quantity_4__c</fullName>
+        <externalId>false</externalId>
+        <label>New 4 GM Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Set_1_Blank__c</fullName>
+        <externalId>false</externalId>
+        <label>GM New Car Set 1 Blank</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Set_2_Blank__c</fullName>
+        <externalId>false</externalId>
+        <label>GM New Car Set 2 Blank</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Set_3_Blank__c</fullName>
+        <externalId>false</externalId>
+        <label>GM New Car Set 3 Blank</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_New_Car_Set_4_Blank__c</fullName>
+        <externalId>false</externalId>
+        <label>GM New Car Set 4 Blank</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_USED_CAR_SET_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GM USED CAR SET 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_USED_CAR_SET_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GM USED CAR SET 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_USED_CAR_SET_3__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GM USED CAR SET 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_USED_CAR_SET_4__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GM USED CAR SET 4</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Make_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Used 1 GM Make</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Buick</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadillac</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chevrolet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GMC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Make_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Used 2 GM Make</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Buick</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadillac</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chevrolet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GMC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Make_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Used 3 GM Make</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Buick</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadillac</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chevrolet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GMC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Make_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Used 4 GM Make</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Buick</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadillac</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chevrolet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GMC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Make_Quantity_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Used 1 GM Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Make_Quantity_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Used 2 GM Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Make_Quantity_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Used 3 GM Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Make_Quantity_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Used 4 GM Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Set_1_Blank__c</fullName>
+        <externalId>false</externalId>
+        <label>GM Used Car Set 1 Blank</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Set_2_Blank__c</fullName>
+        <externalId>false</externalId>
+        <label>GM Used Car Set 2 Blank</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Set_3_Blank__c</fullName>
+        <externalId>false</externalId>
+        <label>GM Used Car Set 3 Blank</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GM_Used_Car_Set_4_Blank__c</fullName>
+        <externalId>false</externalId>
+        <label>GM Used Car Set 4 Blank</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Haystak_Dealer_Code__c</fullName>
         <externalId>false</externalId>
         <label>Haystak Dealer Code</label>
@@ -1784,6 +2368,14 @@
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Haystak_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Haystak URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
     </fields>
     <fields>
         <fullName>Inline_Display_New_Car_Ad_Artwork_GM__c</fullName>
@@ -2367,6 +2959,10 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>Use Existing</fullName>
                 <default>true</default>
             </picklistValues>
@@ -2379,6 +2975,17 @@
         <fullName>New_Quantity__c</fullName>
         <externalId>false</externalId>
         <label>New Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Non_reimbursable_amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Non-reimbursable amount</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -4065,6 +4672,10 @@ if( ISPICKVAL(Full_Rate_Below_Rate__c,&quot;Below Rate&quot;),&quot; - &quot; &a
             </picklistValues>
             <picklistValues>
                 <fullName>Other Inventory Source</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>vAuto</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>

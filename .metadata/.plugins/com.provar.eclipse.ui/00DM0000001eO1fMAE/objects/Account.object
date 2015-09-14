@@ -1004,13 +1004,14 @@
     <fields>
         <fullName>Billable__c</fullName>
         <externalId>false</externalId>
+        <formula>Total_Media_Spend__c + TIM_Spend__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Billable</label>
-        <length>255</length>
+        <precision>18</precision>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
+        <scale>2</scale>
         <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>Currency</type>
     </fields>
     <fields>
         <fullName>BillingAddress</fullName>

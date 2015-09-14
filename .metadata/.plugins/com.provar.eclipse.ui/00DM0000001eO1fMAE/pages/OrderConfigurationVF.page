@@ -67,10 +67,33 @@
                 </apex:repeat>
             </apex:pageBlockSection>
             
+            <apex:outputPanel id="carNewMakePanel" layout="block" rendered="{!OR(prodConfigObj.New_Car_Make_Fields_GM_Package__c)}">
+            <apex:pageBlockSection title="Package Configuration - GM New Car" collapsible="false">
+                <apex:repeat value="{!$ObjectType.Product_Configuration__c.FieldSets.Sales_Package_Configuration_GM_New_Car}" var="field"> 
+                    <apex:pageBlockSectionItem rendered="{!fieldPositionMap['sales_package_configuration_gm_new_car'+field]}">
+                        <apex:outputLabel value="{!$ObjectType.OrderItem.Fields[field].Label}" rendered="{!prodConfigObj[field]}" title="{!$ObjectType.OrderItem.Fields[field].InlineHelpText}"/>
+                        <apex:inputField value="{!orderItemObj[field]}" rendered="{!prodConfigObj[field]}"/>
+                    </apex:pageBlockSectionItem>
+                </apex:repeat>
+            </apex:pageBlockSection>
+            </apex:outputPanel>
+            
+             <apex:outputPanel id="carUsedMakePanel" layout="block" rendered="{!OR(prodConfigObj.Used_Car_Make_GM_Package__c)}">
+            <apex:pageBlockSection title="Package Configuration - GM Used Car" collapsible="false">
+                <apex:repeat value="{!$ObjectType.Product_Configuration__c.FieldSets.Sales_Package_Configuration_GM_Used_Car}" var="field"> 
+                    <apex:pageBlockSectionItem rendered="{!fieldPositionMap['sales_package_configuration_gm_used_car'+field]}">
+                        <apex:outputLabel value="{!$ObjectType.OrderItem.Fields[field].Label}" rendered="{!prodConfigObj[field]}" title="{!$ObjectType.OrderItem.Fields[field].InlineHelpText}"/>
+                        <apex:inputField value="{!orderItemObj[field]}" rendered="{!prodConfigObj[field]}"/>
+                    </apex:pageBlockSectionItem>
+                </apex:repeat>
+            </apex:pageBlockSection>
+            </apex:outputPanel>
+            
             <!-- 
                 Since Front-Line Pro Model fields are dependent on New Car Make fields rendered variable of 
                 outputPanel only include "New_Car_Make_Fields_GM_Package__c"
             -->
+            <!--
             <apex:outputPanel id="carMakePanelId" layout="block" rendered="{!OR(prodConfigObj.New_Car_Make_Fields_GM_Package__c, 
                                                                     prodConfigObj.Used_Car_Make_GM_Package__c, prodConfigObj.Used_Car_Make_Quantity_GM_Package__c)}">
                 <apex:variable var="fldGrpTypIndex" value="{!0}"/>
@@ -123,7 +146,8 @@
                 &nbsp;&nbsp;
                 <apex:commandLink value="Remove Car Make Fields" action="{!removeCarMakeFields}" rendered="{!isRemoveCarMakeFieldsVisible}" 
                                                 reRender="carMakePanelId,errMsgId" status="status" styleClass="custLinkStyle"/>
-            </apex:outputPanel>            
+            </apex:outputPanel>    
+            -->        
 
             
             <apex:outputPanel id="kbbLeadDriverPanelId" layout="block" rendered="{!prodConfigObj.KBB_Lead_Driver_Fields__c}">
@@ -286,7 +310,8 @@
         
         <apex:pageBlock title="Feature Configuration" mode="Edit" rendered="{!fieldPositionMap['feature_configuration']}">
             <apex:pageBlockSection />
-            <apex:pageBlockSection title="Alpha" collapsible="false" rendered="{!fieldPositionMap['alpha_fields']}">
+            <apex:pageBlockSection title="
+            " collapsible="false" rendered="{!fieldPositionMap['alpha_fields']}">
                 <apex:repeat value="{!$ObjectType.Product_Configuration__c.FieldSets.Alpha_Fields}" var="field"> 
                     <apex:pageBlockSectionItem rendered="{!fieldPositionMap['alpha_fields'+field]}">
                         <apex:outputLabel value="{!$ObjectType.OrderItem.Fields[field].Label}" rendered="{!prodConfigObj[field]}" title="{!$ObjectType.OrderItem.Fields[field].InlineHelpText}"/>

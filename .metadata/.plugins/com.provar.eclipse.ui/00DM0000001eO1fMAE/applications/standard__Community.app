@@ -11,4 +11,5 @@
     <tab>SFDC_Training</tab>
     <tab>Dealer_Analysis__c</tab>
     <tab>Job_Code__c</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

@@ -370,7 +370,7 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Status__c</key>
-          <value valueClass="string">81,80,13746,79,82,83</value>
+          <value valueClass="string">81,80,54888,79,82,83</value>
         </entry>
         <entry>
           <key valueClass="string">End_Reason__c</key>
@@ -934,4 +934,9 @@
   <homeListColumns>
     <string>ATG_PRODUCT__C.NAME</string>
   </homeListColumns>
+  <lookupColumns>
+    <string>Product_Name__c</string>
+    <string>Dealer__c</string>
+    <string>Product_Status__c</string>
+  </lookupColumns>
 </sfObject>

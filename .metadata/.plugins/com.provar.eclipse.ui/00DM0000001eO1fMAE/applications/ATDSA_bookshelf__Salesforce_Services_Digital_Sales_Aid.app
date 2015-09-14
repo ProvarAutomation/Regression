@@ -12,4 +12,5 @@
     <tab>ATDSA_bookshelf__CategoryMobileConfig__c</tab>
     <tab>ATDSA_bookshelf__ContentReview__c</tab>
     <tab>ATDSA_bookshelf__DSA_Playlist__c</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

@@ -15,4 +15,5 @@
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
     <tab>standard-ContentSearch</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>
