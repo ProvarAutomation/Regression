@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="6">
+<testCase id="1">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
@@ -30,7 +30,7 @@
           <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=List&amp;application=ATC_Service_Console&amp;listView=All_Open_Cases&amp;tab=standard-Case&amp;consoleTabType=HomeTab"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=List&amp;application=ATC_Service_Console&amp;listView=Dealer_Service_All_Open&amp;tab=standard-Case"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Always</value>
@@ -41,11 +41,20 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Case list screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="3">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="4" title="With List/listView/listTable {1}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="4" title="With Case rows {1}">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">ServiceUser</value>
@@ -57,8 +66,19 @@
                   <value class="value" valueClass="decimal">1</value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With List/listView/listTable {1}</value>
+                  <value class="value" valueClass="string">With Case rows {1}</value>
                 </argument>
+                <argument id="failIfNotFound">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="debugRowLocator"/>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Row</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Local</value>
+                </argument>
+                <argument id="autoPaginate"/>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="5">
@@ -96,6 +116,14 @@
                   </steps>
                 </clause>
               </clauses>
+              <generatedParameters>
+                <apiParam group="options" name="autoPaginate" title="Auto Paginate">
+                  <summary>Whether Show More/Next is clicked till the match condition succeeds.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
             </apiCall>
           </steps>
         </clause>
@@ -195,6 +223,9 @@
                 </argument>
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
                 </argument>
               </arguments>
             </apiCall>
@@ -369,14 +400,23 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Account lookup screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="18">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="19" title="Click the Result Name button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="27" title="Click the Account Name button">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=nameSelector&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=nameSelector+%3D+%27%231+Power+GM%27"/>
+                  <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=1"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -391,8 +431,9 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Result Name button</value>
+                  <value class="value" valueClass="string">Click the Account Name button</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
                 <apiParam group="value" name="hover" title="Hover before Clicking">
@@ -438,7 +479,7 @@
           <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=Edit&amp;recordType=ATC+Dealer+Service&amp;consoleTabType=CurrentTab"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=Edit&amp;recordType=ATC+Dealer+Service"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Dont</value>
@@ -452,6 +493,15 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Case edit (ATC Dealer Service) screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="21">
@@ -584,12 +634,18 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Set the Subject field to Test</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Case&amp;field=Subject" name="value" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <textType/>
+                    <textType>
+                      <constraints>
+                        <valueConstraint name="maxLength">255</valueConstraint>
+                        <valueConstraint name="maxLines">1</valueConstraint>
+                      </constraints>
+                    </textType>
                   </type>
                 </apiParam>
                 <apiParam group="value" name="blur" title="Tab off field">
@@ -606,7 +662,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="26" title="Click the Save button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="35" title="Click the Save button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=save&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3Dsave"/>
@@ -649,12 +705,6 @@
                 <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
               </constraints>
             </choiceType>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
-          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
-          <type>
-            <textType/>
           </type>
         </apiParam>
       </generatedParameters>
