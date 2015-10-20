@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <customSettingsType>Hierarchy</customSettingsType>
-    <customSettingsVisibility>Public</customSettingsVisibility>
     <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>echosign_dev1__Account_Retain_Agreement__c</fullName>
@@ -37,4 +36,5 @@
         <type>Checkbox</type>
     </fields>
     <label>EchoSign Lead Conversion Settings</label>
+    <visibility>Public</visibility>
 </CustomObject>

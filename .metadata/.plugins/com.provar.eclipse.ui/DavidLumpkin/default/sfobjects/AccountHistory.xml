@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject label="Account History" labelPlural="Account History" n="AccountHistory" queryable="true" retrieveable="true" s="" t="Account History">
+  <fields>
+    <sfField createable="false" length="18" n="Id" t="Account History ID" type="id" updateable="false"/>
+    <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" length="18" n="AccountId" relationshipName="Account" required="true" t="Account ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Account</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>SelfServiceUser</string>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" length="255" n="Field" required="true" restrictedPicklist="true" t="Changed Field" type="picklist" updateable="false">
+      <picklistEntryIds>665,82275,82276,82277,82278,82279,82280,82281,82282,82283,82284,82285,82286,82287,82288,82289,82290,82291,82292,82293,82294,82295,82296,82297,82298,82299,82300,82301,82302,82303,82304,82305,82306,82307,82308,82309,82310,82311,82312,82313,82314,82315,82316,82317,82318,82319,82320,82321,82322,82323,82324,82325,82326,82327,82328,720,721,82329,82330,82331,82332,82333,82334,82335,82336,82337,82338,82339,82340,82341,82342,82343,82344,82345,82346,740,82347,82348,82349,82350,82351,82352,82353,82354,82355,82356,82357,82358,82359,82360,82361,82362,82363,82364,82365,82366,82367,82368,82369,82370,82371,82372,82373,768,769,82374,82375,82376,82377,82378,82379,82380,82381,82382,82383,82384,82385,82386,82387,82388,82389,82390,82391,82392,82393,82394,82395,82396,82397,82398,82399,82400,797,798,82401,82402,82403,82404,82405,82406,82407,82408,82409,82410,82411,82412,82413,82414,82415,82416,815,82417,817,82418,82419,82420,82421,82422,82423,82424,82425,82426,82427,82428,82429,82430,82431,82432,82433,82434,82435,82436,82437,82438,82439,82440,82441,82442,82443,82444,82445,82446,82447,82448,82449,82450,82451,82452,82453,82454,82455,82456,82457,82458,82459,82460,82461,82462,82463,82464,82465,82466,82467,82468,82469,82470,82471,82472,82473,82474,82475,82476,82477,82478,82479,82480,82481,82482,82483,82484,82485,82486,82487,82488,82489,82490,82491,82492,82493,82494,82495,82496,82497,82498,82499,82500,82501,82502,82503,82504,82505,82506,82507,82508,82509,82510</picklistEntryIds>
+    </sfField>
+    <sfField createable="false" length="255" n="OldValue" t="Old Value" type="anyType" updateable="false"/>
+    <sfField createable="false" length="255" n="NewValue" t="New Value" type="anyType" updateable="false"/>
+  </fields>
+  <childRelationships/>
+  <recordTypes/>
+  <standardActions>
+    <sfActionLink modes="ObjectHome Histories" n="New"/>
+    <sfActionLink modes="View Histories" n="Edit" requiresRow="true" s="1"/>
+    <sfActionLink modes="View Histories" n="Delete" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Histories" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Histories" n="GoToList" t="Go To List"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+</sfObject>

@@ -122,6 +122,10 @@
                 <behavior>Readonly</behavior>
                 <field>Sales_Order_Category__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>TIM_Contract_Type__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -353,7 +357,7 @@
     <showRunAssignmentRulesCheckbox>true</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hE000000LBbbX</masterLabel>
+        <masterLabel>00hM0000000KOvn</masterLabel>
         <sizeX>3</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

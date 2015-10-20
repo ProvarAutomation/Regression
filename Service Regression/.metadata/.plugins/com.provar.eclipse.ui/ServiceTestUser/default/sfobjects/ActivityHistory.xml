@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject label="Activity History" labelPlural="Activity History" n="ActivityHistory" s="" t="Activity History">
+<?xml version="1.0" encoding="UTF-8"?><sfObject label="Activity History" labelPlural="Activity History" n="ActivityHistory" s="" standardLabel="Activity History" t="Activity History">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Activity ID" type="id" updateable="false"/>
     <sfField createable="false" length="18" n="AccountId" relationshipName="Account" t="Account ID" type="reference" updateable="false">
@@ -19,6 +18,7 @@
         <string>APXTConga4__Conga_Email_Template__c</string>
         <string>ATDSA_bookshelf__Cat_Content_Junction__c</string>
         <string>ATG_Product__c</string>
+        <string>Account</string>
         <string>Action_Plan__c</string>
         <string>Asset</string>
         <string>BU_Referrals__c</string>
@@ -74,7 +74,7 @@
     </sfField>
     <sfField createable="false" n="IsHighPriority" t="High Priority" type="_boolean" updateable="false"/>
     <sfField createable="false" length="40" n="ActivityType" t="Type" type="picklist" updateable="false">
-      <picklistEntryIds>9161,9162,9163,9164,9164,9165,9166,9166,9167,9167,9168,9169,9170,9171</picklistEntryIds>
+      <picklistEntryIds>62711,62712,62713,62714,62714,62715,62716,62716,62717,62717,62718,62719,62720,62721</picklistEntryIds>
     </sfField>
     <sfField createable="false" n="IsClosed" t="Closed" type="_boolean" updateable="false"/>
     <sfField createable="false" n="IsAllDayEvent" t="All-Day Event" type="_boolean" updateable="false"/>
@@ -149,6 +149,7 @@
   <childRelationships/>
   <recordTypes/>
   <standardActions>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
     <sfActionLink modes="ActivityHistories" n="new" newAction="true" t="Log a Call"/>
     <sfActionLink massAction="true" modes="ActivityHistories" n="mm" t="Mail Merge"/>
     <sfActionLink massAction="true" modes="ActivityHistories" n="email" t="Send a Email"/>

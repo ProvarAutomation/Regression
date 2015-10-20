@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="a2K" label="Terms &amp; Conditions" labelPlural="Terms &amp; Conditions" layoutable="true" n="Terms_Conditions__c" queryable="true" retrieveable="true" s="" t="Terms &amp; Conditions (a2K)" updatable="true">
+  <recordTypes>
+    <sfRecordType available="false" defaultRecordType="false" fullName="Ready_to_Sign" n="Ready to Sign" recordTypeId="012M00000008xyOIAQ" s="3-" t="Web Record Type Mapping">
+      <children>
+        <sfLayout n="Primary" profileLayout="false" s="" t="Page Layout">
+          <layoutTypes>
+            <sfLayoutType layoutType="Edit" n="Edit" t="Web Layout Type">
+              <children>
+                <sfLayoutSection detailHeading="false" n="Information" s="" seqNum="0" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForUpdate="false" n="OwnerId" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Account__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Account__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Contact__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Contact__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection detailHeading="false" n="System Information" s="" seqNum="1" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="CreatedById" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="CreatedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="LastModifiedById" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="LastModifiedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+            <sfLayoutType layoutType="Detail" n="Detail" s="2-" t="Web Layout Type">
+              <children>
+                <sfLayoutSection detailHeading="false" editHeading="false" n="Information" s="" seqNum="0" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForUpdate="false" n="OwnerId" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Account__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Account__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Contact__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Contact__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection detailHeading="false" editHeading="false" n="System Information" s="" seqNum="1" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="CreatedById" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="CreatedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="LastModifiedById" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="LastModifiedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+          </layoutTypes>
+          <relatedLists>
+            <sfRelatedList label="echosign_dev1__SIGN_Agreement__c.Terms_Conditions__c" n="echosign_dev1__SIGN_Agreement__c.Terms_Conditions__c" relationshipName="echosign_dev1__SIGN_Agreement__c.Terms_Conditions__c" s="3-">
+              <children>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="echosign_dev1__DateSentDate__c" s="" seq="1"/>
+                <sfRelatedListColumn n="echosign_dev1__Recipient__c" s="" seq="2"/>
+                <sfRelatedListColumn n="echosign_dev1__Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="echosign_dev1__Document__c" s="" seq="4"/>
+              </children>
+              <customActions/>
+              <excludeButtons/>
+              <customButtons/>
+            </sfRelatedList>
+          </relatedLists>
+          <actionLinks>
+            <sfActionLink n="Send_to_Echosign" s=""/>
+            <sfActionLink n="Edit_Terms_and_Conditions" s=""/>
+          </actionLinks>
+          <excludeButtons>
+            <string>Clone</string>
+            <string>Delete</string>
+            <string>Edit</string>
+            <string>Share</string>
+            <string>Submit</string>
+          </excludeButtons>
+        </sfLayout>
+      </children>
+      <picklistOverrideIds>
+        <entry>
+          <key valueClass="string">T_C_Type__c</key>
+          <value valueClass="string">25941,25942</value>
+        </entry>
+        <entry>
+          <key valueClass="string">Agreement_Status__c</key>
+          <value valueClass="string">25939,25940</value>
+        </entry>
+      </picklistOverrideIds>
+    </sfRecordType>
+    <sfRecordType available="false" defaultRecordType="false" fullName="Signed" n="Signed" recordTypeId="012M00000008xyPIAQ" s="3-" t="Web Record Type Mapping">
+      <children>
+        <sfLayout n="Primary" profileLayout="false" s="" t="Page Layout">
+          <layoutTypes>
+            <sfLayoutType layoutType="Edit" n="Edit" t="Web Layout Type">
+              <children>
+                <sfLayoutSection detailHeading="false" n="Information" s="" seqNum="0" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForUpdate="false" n="OwnerId" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Account__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Account__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Contact__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Contact__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection detailHeading="false" n="System Information" s="" seqNum="1" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="CreatedById" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="CreatedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="LastModifiedById" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="LastModifiedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+            <sfLayoutType layoutType="Detail" n="Detail" s="2-" t="Web Layout Type">
+              <children>
+                <sfLayoutSection detailHeading="false" editHeading="false" n="Information" s="" seqNum="0" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForUpdate="false" n="OwnerId" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Account__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Account__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Contact__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Contact__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection detailHeading="false" editHeading="false" n="System Information" s="" seqNum="1" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="CreatedById" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="CreatedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="LastModifiedById" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="LastModifiedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+          </layoutTypes>
+          <relatedLists>
+            <sfRelatedList label="echosign_dev1__SIGN_Agreement__c.Terms_Conditions__c" n="echosign_dev1__SIGN_Agreement__c.Terms_Conditions__c" relationshipName="echosign_dev1__SIGN_Agreement__c.Terms_Conditions__c" s="3-">
+              <children>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="echosign_dev1__DateSentDate__c" s="" seq="1"/>
+                <sfRelatedListColumn n="echosign_dev1__Recipient__c" s="" seq="2"/>
+                <sfRelatedListColumn n="echosign_dev1__Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="echosign_dev1__Document__c" s="" seq="4"/>
+              </children>
+              <customActions/>
+              <excludeButtons/>
+              <customButtons/>
+            </sfRelatedList>
+          </relatedLists>
+          <actionLinks/>
+          <excludeButtons>
+            <string>Clone</string>
+            <string>Delete</string>
+            <string>Edit</string>
+            <string>Share</string>
+            <string>Submit</string>
+          </excludeButtons>
+        </sfLayout>
+      </children>
+      <picklistOverrideIds>
+        <entry>
+          <key valueClass="string">T_C_Type__c</key>
+          <value valueClass="string">25941,25942</value>
+        </entry>
+        <entry>
+          <key valueClass="string">Agreement_Status__c</key>
+          <value valueClass="string">25939,25940</value>
+        </entry>
+      </picklistOverrideIds>
+    </sfRecordType>
+    <sfRecordType n="&lt;default&gt;" t="Web Record Type Mapping">
+      <children>
+        <sfLayout n="Terms_Conditions__c" profileLayout="false" s="" t="Page Layout">
+          <layoutTypes>
+            <sfLayoutType layoutType="Edit" n="Edit" t="Web Layout Type">
+              <children>
+                <sfLayoutSection detailHeading="false" n="Information" s="" seqNum="0" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForUpdate="false" n="OwnerId" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Account__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Account__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Contact__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Contact__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection detailHeading="false" n="System Information" s="" seqNum="1" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="CreatedById" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="CreatedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="LastModifiedById" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="LastModifiedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+            <sfLayoutType layoutType="Detail" n="Detail" s="2-" t="Web Layout Type">
+              <children>
+                <sfLayoutSection detailHeading="false" editHeading="false" n="Information" s="" seqNum="0" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForUpdate="false" n="OwnerId" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Account__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Account__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForUpdate="false" n="Contact__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Contact__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection detailHeading="false" editHeading="false" n="System Information" s="" seqNum="1" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="CreatedById" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="CreatedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" n="LastModifiedById" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="LastModifiedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+          </layoutTypes>
+          <relatedLists>
+            <sfRelatedList label="echosign_dev1__SIGN_Agreement__c.Terms_Conditions__c" n="echosign_dev1__SIGN_Agreement__c.Terms_Conditions__c" relationshipName="echosign_dev1__SIGN_Agreement__c.Terms_Conditions__c" s="3-">
+              <children>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="echosign_dev1__DateSentDate__c" s="" seq="1"/>
+                <sfRelatedListColumn n="echosign_dev1__Recipient__c" s="" seq="2"/>
+                <sfRelatedListColumn n="echosign_dev1__Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="echosign_dev1__Document__c" s="" seq="4"/>
+              </children>
+              <customActions/>
+              <excludeButtons/>
+              <customButtons/>
+            </sfRelatedList>
+          </relatedLists>
+          <actionLinks>
+            <sfActionLink n="Send_to_Echosign" s=""/>
+            <sfActionLink n="Edit_Terms_and_Conditions" s=""/>
+          </actionLinks>
+          <excludeButtons>
+            <string>Clone</string>
+            <string>Delete</string>
+            <string>Edit</string>
+            <string>Share</string>
+            <string>Submit</string>
+          </excludeButtons>
+        </sfLayout>
+      </children>
+    </sfRecordType>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink modes="ObjectHome ARA_Agreements1__r" n="New"/>
+    <sfActionLink modes="View ARA_Agreements1__r" n="Edit" requiresRow="true" s="1"/>
+    <sfActionLink modes="View ARA_Agreements1__r" n="Delete" requiresRow="true" s="2"/>
+    <sfActionLink modes="View ARA_Agreements1__r" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View ARA_Agreements1__r" n="GoToList" t="Go To List"/>
+  </standardActions>
+</sfObject>

@@ -12,4 +12,5 @@
     <tab>echosign_dev1__EchoSign_Group_Mappings</tab>
     <tab>echosign_dev1__Agreement_Mobile</tab>
     <tab>echosign_dev1__Template_Batch</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

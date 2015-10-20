@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject label="Case History" labelPlural="Case History" n="CaseHistory" queryable="true" retrieveable="true" s="" t="Case History">
+  <fields>
+    <sfField createable="false" length="18" n="Id" t="Case History ID" type="id" updateable="false"/>
+    <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" length="18" n="CaseId" relationshipName="Case" required="true" t="Case ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Case</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>SelfServiceUser</string>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" length="255" n="Field" required="true" restrictedPicklist="true" t="Changed Field" type="picklist" updateable="false">
+      <picklistEntryIds>51298,51234,50984,51299,51300,51301,51302,51303,51304,51305,51306,51307,51235,51308,51309,51310,50991,51311,51312,51313,51314,51315,51316,51317,51318,51319,51320,51321,51322,51323,51324,51325,51326,51327,51328,51329,51330,51030,51031,51331,51332,51333,51334,51335,51336,51337,51338,51339,2670,51340,51245,51341,51342,51343,51344,51345,51346,51347,51348,51349,51350,720,51351,51352,51353,51354,51355,51356,51357,51046,51047,51048,51358,51359,51360,51361,51362,51363,51364,51365,51366,51367,51368,51369,740,51370,51371,51372,51373,51374,51375,51376,51377,51378,51379,51380,51381,51382,51383,51384,51385,51081,51082,51386,51094,51387,51388,51389,51390,51391,51392,51393,51394,51395,51396,51397,51107,797,798,2729,51109,51398,51399,51400,51401,51402,51403,51404,815,51124,817,51405,51406,51127,51407,51408,51409,51293,51410,51411,51412,51413,51414,51415,51416,51192,51417,51212,51418,51419</picklistEntryIds>
+    </sfField>
+    <sfField createable="false" length="255" n="OldValue" t="Old Value" type="anyType" updateable="false"/>
+    <sfField createable="false" length="255" n="NewValue" t="New Value" type="anyType" updateable="false"/>
+  </fields>
+  <childRelationships/>
+  <recordTypes/>
+  <standardActions>
+    <sfActionLink modes="ObjectHome Histories" n="New"/>
+    <sfActionLink modes="View Histories" n="Edit" requiresRow="true" s="1"/>
+    <sfActionLink modes="View Histories" n="Delete" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Histories" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Histories" n="GoToList" t="Go To List"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+</sfObject>

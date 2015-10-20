@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="a0J" label="BU Referral" labelPlural="BU Referral" layoutable="true" n="BU_Referrals__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IE0000000BbArMAK" t="BU Referral (a0J)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a0J/e">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="a0J" label="BU Referral" labelPlural="BU Referral" layoutable="true" n="BU_Referrals__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IE0000000BbArMAK" t="BU Referral (a0J)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a0J/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
@@ -47,7 +46,7 @@
       <picklistEntryIds>1214,1215,68,70,73,74,71,72</picklistEntryIds>
     </sfField>
     <sfField length="100" n="Created_by_Role__c" t="Created by Role"/>
-    <sfField length="4099" n="Product_Category__c" t="Product Category" type="multipicklist">
+    <sfField length="4099" n="Product_Category__c" precision="10" t="Product Category" type="multipicklist">
       <picklistEntryIds>108,1216,1217,1218,510,1219,1220,1221,520</picklistEntryIds>
     </sfField>
     <sfField extraTypeInfo="plaintextarea" length="32768" n="Add_l_Lead_Info__c" t="Add'l Lead Notes" type="textarea"/>
@@ -488,11 +487,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">13741,13742,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">70495,70496,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">13730,13731,13732,13733,13734,13735,13736,13737,13738,13739,13740</value>
+          <value valueClass="string">70484,70485,70486,70487,70488,70489,70490,70491,70492,70493,70494</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -675,11 +674,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">13741,13742,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">70495,70496,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">13730,13731,13732,13733,13734,13735,13736,13737,13738,13739,13740</value>
+          <value valueClass="string">70484,70485,70486,70487,70488,70489,70490,70491,70492,70493,70494</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1155,11 +1154,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">13741,13742,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">70495,70496,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">13730,13731,13732,13733,13734,13735,13736,13737,13738,13739,13740</value>
+          <value valueClass="string">70484,70485,70486,70487,70488,70489,70490,70491,70492,70493,70494</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1555,11 +1554,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">13741,13742,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">70495,70496,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">13730,13731,13732,13733,13734,13735,13736,13737,13738,13739,13740</value>
+          <value valueClass="string">70484,70485,70486,70487,70488,70489,70490,70491,70492,70493,70494</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1583,12 +1582,12 @@
     <sfActionLink n="Tab" s=""/>
     <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
     <sfActionLink n="Create_Opp" s="" t="Create Opp" target="sf:ui:target?object=BU_Referrals__c&amp;url=https%3A%2F%2Fna9.salesforce.com%2F006%2Fe%3FretURL%3D%252F006%252Fo+%0A%26accid%3D%7B%21BU_Referrals__c.DealerId__c%7D+%0A%26opp3%3DSet+by+the+System+upon+Save+%0A%26opp11%3D%22Prospect%22+%0A%26CF00NE0000003Nd1G%3D%7B%21BU_Referrals__c.Name%7D%0A%26opp9%3D%7B%21TODAY%28%29%7D%0A%26opp17%3DBU+Lead+Campaign%0A%26opp6%3DEmployee+Referral"/>
-    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
     <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
     <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
     <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
     <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
     <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
   </standardActions>
   <searchLayouts>
     <sfSearchLayout n="Search Results" s="" t="Search Layout">
@@ -1639,4 +1638,12 @@
   <homeListColumns>
     <string>BU_REFERRALS__C.NAME</string>
   </homeListColumns>
+  <lookupColumns>
+    <string>BU_REFERRALS__C.NAME</string>
+    <string>Product_Category__c</string>
+    <string>Source__c</string>
+    <string>Status__c</string>
+    <string>Submitted_by__c</string>
+    <string>Targ__c</string>
+  </lookupColumns>
 </sfObject>

@@ -1,0 +1,19 @@
+package pageobjects;
+
+import java.util.List;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import com.provar.core.testapi.annotations.*;
+
+@Page( title="My Page Object"                                
+     , summary=""
+     , relativeUrl=""
+     , connection="ServiceTestUser"
+     )             
+public class MyPageObject {
+
+	@FindBy(xpath = "//*[@id=\\\"crmForm\\\"]/table/tbody/tr[6]/td[2]")
+	@TextType()
+	public WebElement CRM;
+			
+}

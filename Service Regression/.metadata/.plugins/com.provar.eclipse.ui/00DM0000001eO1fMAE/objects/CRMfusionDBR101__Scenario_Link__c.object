@@ -44,6 +44,7 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <customHelpPage>CRMfusionDBR101__DB_Help</customHelpPage>
     <deploymentStatus>Deployed</deploymentStatus>

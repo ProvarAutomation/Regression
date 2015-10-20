@@ -1767,6 +1767,23 @@ Account.ShippingPostalCode
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>mti_pb__PriceBook_To_Use__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>PriceBook To Use</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ATC Price book</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>rrpu__Alert_Message__c</fullName>
         <deprecated>false</deprecated>
         <description>This field is installed by Riptide Pop-up Alerts and is used in conjunction with the Pop-up Alert S-Control.</description>
@@ -2680,6 +2697,13 @@ Account.ShippingPostalCode
             </values>
             <values>
                 <fullName>Upsell</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>mti_pb__PriceBook_To_Use__c</picklist>
+            <values>
+                <fullName>ATC Price book</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

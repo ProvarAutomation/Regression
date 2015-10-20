@@ -6528,7 +6528,7 @@ IF(CONTAINS(&quot;27:28:29:30:32:West&quot;,SVOC_Region__c), &quot;West&quot;, &
             <operation>notEqual</operation>
             <value>OUT OF BUSINESS</value>
         </filters>
-        <label>All Accounts</label>
+        <label>Garcia Group</label>
     </listViews>
     <listViews>
         <fullName>Assigned_Accounts_No_Recent_Activity</fullName>

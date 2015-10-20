@@ -4,4 +4,5 @@
     <tab>standard-Chatter</tab>
     <tab>standard-Workspace</tab>
     <tab>standard-ContentSearch</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

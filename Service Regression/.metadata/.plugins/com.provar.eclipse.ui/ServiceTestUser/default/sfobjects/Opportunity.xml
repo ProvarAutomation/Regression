@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" feedEnabled="true" keyPrefix="006" label="Opportunity" labelPlural="Opportunities" layoutable="true" n="Opportunity" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="" t="Opportunity (006)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/006/e">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" feedEnabled="true" keyPrefix="006" label="Opportunity" labelPlural="Opportunities" layoutable="true" n="Opportunity" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="" standardLabel="Opportunity" t="Opportunity (006)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/006/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Opportunity ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
@@ -222,7 +221,7 @@
     <sfObjectRelationship childName="Partner" field="OpportunityId" n="Partners" relationshipName="Partners" s="2-" t="Partner"/>
     <sfObjectRelationship childName="ProcessInstance" field="TargetObjectId" n="ProcessInstances" relationshipName="ProcessInstances" s="2-" t="ProcessInstance"/>
     <sfObjectRelationship alias="RelatedProcessHistoryList" childName="ProcessInstanceHistory" field="TargetObjectId" n="ProcessSteps" relationshipName="ProcessSteps" s="2-" t="ProcessInstanceHistory"/>
-    <sfObjectRelationship childName="Quote" field="OpportunityId" n="Quotes" relationshipName="Quotes" s="2-" t="Quote"/>
+    <sfObjectRelationship alias="RelatedQuoteList" childName="Quote" field="OpportunityId" n="Quotes" relationshipName="Quotes" s="2-" t="Quote"/>
     <sfObjectRelationship childName="Task" field="WhatId" n="Tasks" relationshipName="Tasks" s="2-" t="Task"/>
     <sfObjectRelationship childName="TaskRelation" field="RelationId" n="TaskRelations" relationshipName="TaskRelations" s="2-" t="TaskRelation"/>
     <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
@@ -1112,26 +1111,6 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Opportunity__c" label="Sales Orders" n="Opp_Products__r" relationshipName="Opp_Products__r" s="3-" t="Sales Orders (Opportunity__c)">
-              <children>
-                <sfRelatedListColumn n="Document_Action__c" s="" seq="0" t="Document Action"/>
-                <sfRelatedListColumn n="RECORDTYPE" s="" seq="1"/>
-                <sfRelatedListColumn n="Signature_Action__c" s="" seq="2" t="Signature Action"/>
-                <sfRelatedListColumn n="Fulfillment_Action__c" s="" seq="3" t="Fulfillment Action"/>
-                <sfRelatedListColumn n="Sent__c" s="" seq="4" t="Sent"/>
-                <sfRelatedListColumn n="CREATED_DATE" s="" seq="5"/>
-                <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="6"/>
-              </children>
-              <customActions>
-                <sfActionLink n="New_Sales_Order" s=""/>
-              </customActions>
-              <excludeButtons>
-                <string>New</string>
-              </excludeButtons>
-              <customButtons>
-                <string>New_Sales_Order</string>
-              </customButtons>
-            </sfRelatedList>
             <sfRelatedList label="RelatedOrderList" n="RelatedOrderList" relationshipName="RelatedOrderList" s="3-">
               <children>
                 <sfRelatedListColumn n="ORDERS.ORDER_NUMBER" s="" seq="0"/>
@@ -1185,7 +1164,15 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="OpportunityId" label="Contact Role" n="OpportunityContactRoles" relationshipName="OpportunityContactRoles" s="3-" t="Contact Role (OpportunityId)">
+            <sfRelatedList fieldName="OpportunityId" label="Contact Roles" n="OpportunityContactRoles" relationshipName="OpportunityContactRoles" s="3-" t="Contact Roles">
+              <children>
+                <sfRelatedListColumn n="Contact.Name" s="" seq="0" t="Contact Name"/>
+                <sfRelatedListColumn n="Contact.Account.Name" s="" seq="1" t="Account Name"/>
+                <sfRelatedListColumn n="Contact.Email" s="" seq="2" t="Email"/>
+                <sfRelatedListColumn n="Contact.Phone" s="" seq="3" t="Phone"/>
+                <sfRelatedListColumn n="Role" s="" seq="4"/>
+                <sfRelatedListColumn n="IsPrimary" s="" seq="5" t="Primary"/>
+              </children>
               <customActions/>
               <excludeButtons/>
               <customButtons/>
@@ -1251,7 +1238,7 @@
         </entry>
         <entry>
           <key valueClass="string">LeadSource</key>
-          <value valueClass="string">484,13464,489,619,485,486,487,490,491,492,493,494,495,496,497,13465,499,620,621,500,501,502,503,504,93,622,505,506,623,624,625,507,626,508,627,509,510,13466,511,628</value>
+          <value valueClass="string">484,70219,489,619,485,486,487,490,491,492,493,494,495,496,497,70220,499,620,621,500,501,502,503,504,93,622,505,506,623,624,625,507,626,508,627,509,510,70221,511,628</value>
         </entry>
         <entry>
           <key valueClass="string">BU__c</key>
@@ -1259,7 +1246,7 @@
         </entry>
         <entry>
           <key valueClass="string">Campaign_Types__c</key>
-          <value valueClass="string">7431,7432,7433,7434,7435,7436,13496,7438,7439,7440,7441,7443,7442,7444,7445,7446,7447,7448,2984,7449,7450,7452,7453,7451</value>
+          <value valueClass="string">7431,7432,7433,7434,7435,7436,70251,7438,7439,7440,7441,7443,7442,7444,7445,7446,7447,7448,2984,7449,7450,7452,7453,7451</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -2122,26 +2109,6 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Opportunity__c" label="Sales Orders" n="Opp_Products__r" relationshipName="Opp_Products__r" s="3-" t="Sales Orders (Opportunity__c)">
-              <children>
-                <sfRelatedListColumn n="Document_Action__c" s="" seq="0" t="Document Action"/>
-                <sfRelatedListColumn n="RECORDTYPE" s="" seq="1"/>
-                <sfRelatedListColumn n="Signature_Action__c" s="" seq="2" t="Signature Action"/>
-                <sfRelatedListColumn n="Fulfillment_Action__c" s="" seq="3" t="Fulfillment Action"/>
-                <sfRelatedListColumn n="Sent__c" s="" seq="4" t="Sent"/>
-                <sfRelatedListColumn n="CREATED_DATE" s="" seq="5"/>
-                <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="6"/>
-              </children>
-              <customActions>
-                <sfActionLink n="New_Sales_Order" s=""/>
-              </customActions>
-              <excludeButtons>
-                <string>New</string>
-              </excludeButtons>
-              <customButtons>
-                <string>New_Sales_Order</string>
-              </customButtons>
-            </sfRelatedList>
             <sfRelatedList label="RelatedOrderList" n="RelatedOrderList" relationshipName="RelatedOrderList" s="3-">
               <children>
                 <sfRelatedListColumn n="ORDERS.ORDER_NUMBER" s="" seq="0"/>
@@ -2195,7 +2162,15 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="OpportunityId" label="Contact Role" n="OpportunityContactRoles" relationshipName="OpportunityContactRoles" s="3-" t="Contact Role (OpportunityId)">
+            <sfRelatedList fieldName="OpportunityId" label="Contact Roles" n="OpportunityContactRoles" relationshipName="OpportunityContactRoles" s="3-" t="Contact Roles">
+              <children>
+                <sfRelatedListColumn n="Contact.Name" s="" seq="0" t="Contact Name"/>
+                <sfRelatedListColumn n="Contact.Account.Name" s="" seq="1" t="Account Name"/>
+                <sfRelatedListColumn n="Contact.Email" s="" seq="2" t="Email"/>
+                <sfRelatedListColumn n="Contact.Phone" s="" seq="3" t="Phone"/>
+                <sfRelatedListColumn n="Role" s="" seq="4"/>
+                <sfRelatedListColumn n="IsPrimary" s="" seq="5" t="Primary"/>
+              </children>
               <customActions/>
               <excludeButtons/>
               <customButtons/>
@@ -2247,28 +2222,28 @@
     <sfActionLink n="Tab" s=""/>
     <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
     <sfActionLink n="ADD_PRODUCT" s="" t="ADD PRODUCT" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fna9.salesforce.com%2Foppitm%2Fchoosepricebook.jsp%3Fid%3D%7B%21Opportunity.Id%7D%0A%26retURL%3D%252F%7B%21Opportunity.Id%7D%0A%26saveURL%3D%252Fp%252Fopp%252FSelectSearch%253FaddTo%253D%7B%21Opportunity.Id%7D%2526retURL%253D%25252Fp%25252Fopp%25252FSelectSearch%25253FaddTo%25253D%7B%21Opportunity.Id%7D%252526retURL%25253D%2525252F%7B%21Opportunity.Id%7D"/>
-    <sfActionLink n="APXTConga4__Conga_Composer_OAuth" s="" t="Conga Composer (OAuth)" target="sf:ui:target?object=Opportunity&amp;page=APXTConga4__Conga_Composer%0A&amp;url=%2Fapex%2FAPXTConga4__Conga_Composer%0A%3Fid%3D%7B%21Opportunity.Id%7D&amp;window=*"/>
-    <sfActionLink n="APXTConga4__Conga_Mail_Merge" s="" t="Conga Composer" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fcomposer.congamerge.com%0A%3FsessionId%3D%7B%21API.Session_ID%7D%0A%26serverUrl%3D%7B%21API.Partner_Server_URL_290%7D%0A%26id%3D%7B%21Opportunity.Id%7D&amp;window=*"/>
+    <sfActionLink n="APXTConga4__Conga_Composer_OAuth" s="" t="Conga Composer (OAuth)" target="sf:ui:target?object=Opportunity&amp;window=*&amp;url=%2Fapex%2FAPXTConga4__Conga_Composer%0A%3Fid%3D%7B%21Opportunity.Id%7D&amp;page=APXTConga4__Conga_Composer%0A"/>
+    <sfActionLink n="APXTConga4__Conga_Mail_Merge" s="" t="Conga Composer" target="sf:ui:target?object=Opportunity&amp;window=*&amp;url=https%3A%2F%2Fcomposer.congamerge.com%0A%3FsessionId%3D%7B%21API.Session_ID%7D%0A%26serverUrl%3D%7B%21API.Partner_Server_URL_290%7D%0A%26id%3D%7B%21Opportunity.Id%7D"/>
     <sfActionLink n="Generate_Contract" s="" t="Generate Contract" target="sf:ui:target?object=Opportunity&amp;url=%2Fflow%2FOpportunity_to_Contract%3FOpptyID%3D%7B%21Opportunity.Id%7D%26retURL%3D%2F%7B%21Opportunity.Id%7D"/>
     <sfActionLink n="Generate_Order" s="" t="Generate Order" target="sf:ui:target?object=Opportunity&amp;url=%2Fflow%2FOpportunity_to_Order%3FOpptyID%3D%7B%21Opportunity.Id%7D%26retURL%3D%2F%7B%21Opportunity.Id%7D"/>
     <sfActionLink n="Generate_Order_Contract" s="" t="Generate Order &amp; Contract" target="sf:ui:target?object=Opportunity&amp;url=%2Fflow%2FOpportunity_to_Order_with_Contract%3FOpptyID%3D%7B%21Opportunity.Id%7D%26retURL%3D%2F%7B%21Opportunity.Id%7D"/>
     <sfActionLink n="Log_a_Call" s="" t="Log a Call" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fna9.salesforce.com%2F00T%2Fe%3Ftitle%3DCall%26who_id%3D%7B%21Account.Id%7D%26what_id%3D%7B%21Opportunity.Id%7D%26followup%3D1%26retURL%3D%252F%7B%21Opportunity.Id%7D"/>
-    <sfActionLink n="Loop__LOOP" s="" t="Create PDF" target="sf:ui:target?object=Opportunity&amp;page=loop__loop&amp;url=%2Fapex%2Floop__loop%3Feid%3D%7B%21Opportunity.Id%7D"/>
-    <sfActionLink n="Loop__LOOP_Merge" s="" t="Deprecated LM" target="sf:ui:target?object=Opportunity&amp;page=loop__loopmerge&amp;url=%2Fapex%2Floop__loopmerge%3Feid%3D%7B%21Opportunity.Id%7D%26accountId%3D%7B%21Opportunity.AccountId%7D"/>
-    <sfActionLink n="Loop__LOOPlus" s="" t="Run DDP" target="sf:ui:target?object=Opportunity&amp;page=loop__looplus&amp;url=%2Fapex%2Floop__looplus%3Feid%3D%7B%21Opportunity.Id%7D%26accountId%3D%7B%21Opportunity.AccountId%7D%26sessionId%3D%7B%21%24Api.Session_ID%7D"/>
+    <sfActionLink n="Loop__LOOP" s="" t="Create PDF" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Floop__loop%3Feid%3D%7B%21Opportunity.Id%7D&amp;page=loop__loop"/>
+    <sfActionLink n="Loop__LOOP_Merge" s="" t="Deprecated LM" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Floop__loopmerge%3Feid%3D%7B%21Opportunity.Id%7D%26accountId%3D%7B%21Opportunity.AccountId%7D&amp;page=loop__loopmerge"/>
+    <sfActionLink n="Loop__LOOPlus" s="" t="Run DDP" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Floop__looplus%3Feid%3D%7B%21Opportunity.Id%7D%26accountId%3D%7B%21Opportunity.AccountId%7D%26sessionId%3D%7B%21%24Api.Session_ID%7D&amp;page=loop__looplus"/>
     <sfActionLink massAction="true" n="Loop__Mass_LOOP_Merge" requiresRow="true" s="" t="Deprecated Mass LM" target="sf:ui:target?object=Opportunity"/>
     <sfActionLink massAction="true" n="Loop__Mass_LOOPlus" requiresRow="true" s="" t="Run DDP" target="sf:ui:target?object=Opportunity"/>
-    <sfActionLink n="View_Swots" s="" t="View Swots" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fna9.salesforce.com%2F00OE0000001atqP&amp;window=*"/>
-    <sfActionLink n="echosign_dev1__Conga_Send_to_EchoSign" s="" t="Send to EchoSign - Conga" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fwww.appextremes.com%2Fapps%2FConga%2FPointMerge.aspx%0A%3FSessionId%3D%7B%21API.Session_ID%7D%0A%26ServerUrl%3D%7B%21API.Partner_Server_URL_80%7D%0A%26Id%3D%7B%21Opportunity.Id%7D%0A%26ESOpportunityid%3D%7B%21Opportunity.Id%7D%0A%26ESVisible%3D1%0A%26ESSignatureType%3D2%0A%26ESAgreementName%3DAgreement%2Bfor%2B%7B%21Opportunity.Name%7D%2B-%2B%7B%21Today%7D%0A%26ESCustomField%3Dechosign_dev1__Recipient_User__c%0A%26ESCustomFieldValue%3D%7B%21Opportunity.OwnerId%7D&amp;window=*"/>
-    <sfActionLink n="echosign_dev1__Send_to_EchoSign" s="" t="Send to EchoSign" target="sf:ui:target?object=Opportunity&amp;page=echosign_dev1__AgreementTemplateProcess&amp;url=%2Fapex%2Fechosign_dev1__AgreementTemplateProcess%3FmasterId%3D%7B%21Opportunity.Id%7D&amp;window=*"/>
+    <sfActionLink n="View_Swots" s="" t="View Swots" target="sf:ui:target?object=Opportunity&amp;window=*&amp;url=https%3A%2F%2Fna9.salesforce.com%2F00OE0000001atqP"/>
+    <sfActionLink n="echosign_dev1__Conga_Send_to_EchoSign" s="" t="Send to EchoSign - Conga" target="sf:ui:target?object=Opportunity&amp;window=*&amp;url=https%3A%2F%2Fwww.appextremes.com%2Fapps%2FConga%2FPointMerge.aspx%0A%3FSessionId%3D%7B%21API.Session_ID%7D%0A%26ServerUrl%3D%7B%21API.Partner_Server_URL_80%7D%0A%26Id%3D%7B%21Opportunity.Id%7D%0A%26ESOpportunityid%3D%7B%21Opportunity.Id%7D%0A%26ESVisible%3D1%0A%26ESSignatureType%3D2%0A%26ESAgreementName%3DAgreement%2Bfor%2B%7B%21Opportunity.Name%7D%2B-%2B%7B%21Today%7D%0A%26ESCustomField%3Dechosign_dev1__Recipient_User__c%0A%26ESCustomFieldValue%3D%7B%21Opportunity.OwnerId%7D"/>
+    <sfActionLink n="echosign_dev1__Send_to_EchoSign" s="" t="Send to EchoSign" target="sf:ui:target?object=Opportunity&amp;window=*&amp;url=%2Fapex%2Fechosign_dev1__AgreementTemplateProcess%3FmasterId%3D%7B%21Opportunity.Id%7D&amp;page=echosign_dev1__AgreementTemplateProcess"/>
     <sfActionLink massAction="true" n="loli_oppwall__Opportunity_Planning_Wall" s="" t="Open Planning Wall..." target="sf:ui:target?object=Opportunity"/>
     <sfActionLink n="loli_oppwall__Opportunity_Planning_Wall2" s="" t="Open Planning Wall..." target="sf:ui:target?object=Opportunity"/>
-    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
     <sfActionLink modes="detail" n="Submit" requiresRow="true"/>
     <sfActionLink modes="new,edit,Clone,clone" n="save" requiresRow="true" t="Save"/>
     <sfActionLink modes="new,edit,Clone,clone" n="save_new" requiresRow="true" t="Save and New"/>
     <sfActionLink modes="new,edit,Clone,clone" n="cancel" requiresRow="true" t="Cancel"/>
     <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
     <sfActionLink modes="home" n="home" t="Home"/>
     <sfActionLink modes="home" n="detail" t="Detail"/>
     <sfActionLink modes="detail" n="share" t="Sharing"/>
@@ -2795,4 +2770,9 @@
     <string>OPPORTUNITY.PROBABILITY</string>
     <string>OPPORTUNITY.TYPE</string>
   </homeListColumns>
+  <lookupColumns>
+    <string>OPPORTUNITY.NAME</string>
+    <string>ACCOUNT.NAME</string>
+    <string>ACCOUNT.SITE</string>
+  </lookupColumns>
 </sfObject>

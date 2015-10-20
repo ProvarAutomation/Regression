@@ -66,7 +66,7 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Order Product - Premium Required Fields</shortDescription>
-        <value>Premium contract information required. Please ensure that Premium Type, Premium Value, Premium Advertised Make, Premium Vehicle Quantity, and Premium Vehicle Monthly Rate are filled out.</value>
+        <value>Premium contract information required. Please ensure that Premium Type, Premium Value, Premium Advertised Make, Premium Vehicle Quantity, Premium Vehicle Monthly Rate, and Premium Co-op Level of Service are filled out.</value>
     </labels>
     <labels>
         <fullName>Order_Product_Required_Fields_Message</fullName>

@@ -5,4 +5,5 @@
     <tab>standard-UserProfile</tab>
     <tab>standard-OtherUserProfile</tab>
     <tab>standard-CollaborationGroup</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

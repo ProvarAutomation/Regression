@@ -35,6 +35,7 @@
         </feedFilters>
         <fullWidthFeed>false</fullWidthFeed>
         <hideSidebar>false</hideSidebar>
+        <highlightExternalFeedItems>false</highlightExternalFeedItems>
         <rightComponents>
             <componentType>HelpAndToolLinks</componentType>
         </rightComponents>

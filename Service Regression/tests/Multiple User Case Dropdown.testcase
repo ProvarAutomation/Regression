@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="31">
+  <summary/>
+  <steps>
+    <caseCall testCaseId="c5109263-8729-4585-beba-a4ea46c6fb6c" testItemId="30">
+      <arguments>
+        <argument id="UserName">
+          <value class="value" valueClass="string">pamela.barksdale@atgdealer.atg.qa</value>
+        </argument>
+      </arguments>
+    </caseCall>
+    <caseCall testCaseId="c5109263-8729-4585-beba-a4ea46c6fb6c" testItemId="31">
+      <arguments>
+        <argument id="UserName">
+          <value class="value" valueClass="string">amy.basini@atg.atg.qa</value>
+        </argument>
+      </arguments>
+    </caseCall>
+  </steps>
+</testCase>

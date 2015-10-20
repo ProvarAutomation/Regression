@@ -16,4 +16,5 @@
     <tab>standard-ContentSearch</tab>
     <tab>FulfillmentSnapshotSummary__c</tab>
     <tab>Action_Plan__c</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

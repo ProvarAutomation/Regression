@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="01M" label="Account Team Member" labelPlural="Account Team Member" n="AccountTeamMember" queryable="true" retrieveable="true" s="" t="Account Team Member (01M)" updatable="true">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="01M" label="Account Team Member" labelPlural="Account Team Member" n="AccountTeamMember" queryable="true" retrieveable="true" s="" standardLabel="Account Team Member" t="Account Team Member (01M)" updatable="true">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Account Team Member ID" type="id" updateable="false"/>
     <sfField length="18" n="AccountId" relationshipName="Account" required="true" t="Account ID" type="reference" updateable="false">
@@ -36,6 +35,7 @@
   <childRelationships/>
   <recordTypes/>
   <standardActions>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
     <sfActionLink modes="AccountTeamMembers" n="add" newAction="true" t="Add"/>
     <sfActionLink modes="AccountTeamMembers" n="addAccTeam" t="Add Default Team"/>
     <sfActionLink modes="AccountTeamMembers" n="showAccessButton" t="Display Access"/>

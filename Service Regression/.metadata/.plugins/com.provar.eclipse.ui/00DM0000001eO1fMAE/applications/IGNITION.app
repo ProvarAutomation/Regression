@@ -7,4 +7,5 @@
     <tab>standard-ContentSearch</tab>
     <tab>standard-Workspace</tab>
     <tab>standard-CollaborationGroup</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

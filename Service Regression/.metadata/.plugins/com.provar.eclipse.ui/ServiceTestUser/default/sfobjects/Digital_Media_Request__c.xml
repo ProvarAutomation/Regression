@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="a1u" label="Digital Media Request" labelPlural="Digital Media Requests" layoutable="true" n="Digital_Media_Request__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IM00000009ro3MAA" t="Digital Media Request (a1u)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a1u/e">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="a1u" label="Digital Media Request" labelPlural="Digital Media Requests" layoutable="true" n="Digital_Media_Request__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IM00000009ro3MAA" t="Digital Media Request (a1u)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a1u/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
     <sfField length="18" n="OwnerId" relationshipName="Owner" t="Owner ID" type="reference">
@@ -357,12 +356,12 @@
     <sfActionLink modes="View" n="SaveEdit"/>
     <sfActionLink n="Tab" s=""/>
     <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
-    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
     <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
     <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
     <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
     <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
     <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
   </standardActions>
   <searchLayouts>
     <sfSearchLayout n="Search Results" s="" t="Search Layout">
@@ -379,4 +378,7 @@
     <string>Submitted_By__c</string>
     <string>CREATEDBY_USER</string>
   </homeListColumns>
+  <lookupColumns>
+    <string>DIGITAL_MEDIA_REQUEST__C.NAME</string>
+  </lookupColumns>
 </sfObject>

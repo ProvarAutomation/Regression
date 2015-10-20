@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="a0H" label="Action Plan" labelPlural="Action Plans" layoutable="true" n="Action_Plan__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IE0000001234NMAQ" t="Action Plan (a0H)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a0H/e">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="a0H" label="Action Plan" labelPlural="Action Plans" layoutable="true" n="Action_Plan__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IE0000001234NMAQ" t="Action Plan (a0H)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a0H/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
     <sfField length="18" n="OwnerId" relationshipName="Owner" t="Owner ID" type="reference">
@@ -924,7 +923,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,2349,13472,9160,2537</value>
+          <value valueClass="string">81,2349,70227,9160,2537</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1785,7 +1784,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,2349,13472,9160,2537</value>
+          <value valueClass="string">81,2349,70227,9160,2537</value>
         </entry>
         <entry>
           <key valueClass="string">Call_Tracking_New__c</key>
@@ -1829,7 +1828,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Type__c</key>
-          <value valueClass="string">13501</value>
+          <value valueClass="string">70256</value>
         </entry>
         <entry>
           <key valueClass="string">Confirm_Map_Coordinates__c</key>
@@ -3058,7 +3057,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,2349,13472,9160,2537</value>
+          <value valueClass="string">81,2349,70227,9160,2537</value>
         </entry>
         <entry>
           <key valueClass="string">Trade_Show_Consultant_s__c</key>
@@ -4581,7 +4580,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,2349,13472,9160,2537</value>
+          <value valueClass="string">81,2349,70227,9160,2537</value>
         </entry>
         <entry>
           <key valueClass="string">Call_Tracking_New__c</key>
@@ -4625,7 +4624,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Type__c</key>
-          <value valueClass="string">13502</value>
+          <value valueClass="string">70257</value>
         </entry>
         <entry>
           <key valueClass="string">Confirm_Map_Coordinates__c</key>
@@ -5246,7 +5245,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,2349,13472,9160,2537</value>
+          <value valueClass="string">81,2349,70227,9160,2537</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -5281,12 +5280,12 @@
     <sfActionLink n="Create_Opportunity" s="" t="Create Opportunity" target="sf:ui:target?object=Action_Plan__c&amp;url=%2F006%2Fe%3FretURL%3D%7B%21Action_Plan__c.Id%7D%0A%26opp3%3Dset+by+the+system%0A%26accid%3D%7B%21Action_Plan__c.AccountId__c%7D%0A%26CF00NM0000000xTJ2%3D%7B%21Action_Plan__c.Name%7D"/>
     <sfActionLink n="Open_Case" s="" t="Open Case" target="sf:ui:target?object=Action_Plan__c&amp;url=%2F500%2Fe%3FretURL%3D%7B%21Action_Plan__c.Id%7D%0A%26def_account_id%3D%7B%21Action_Plan__c.AccountId__c%7D"/>
     <sfActionLink n="ViewPDF" s="" t="PDF" target="sf:ui:target?object=Action_Plan__c"/>
-    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
     <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
     <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
     <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
     <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
     <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
   </standardActions>
   <searchLayouts>
     <sfSearchLayout n="Search Results" s="" t="Search Layout">
@@ -5322,4 +5321,12 @@
     <string>Status__c</string>
     <string>Owner_Name__c</string>
   </homeListColumns>
+  <lookupColumns>
+    <string>ACTION_PLAN__C.NAME</string>
+    <string>Action_Plan_Name__c</string>
+    <string>Account__c</string>
+    <string>SVOC_ID__c</string>
+    <string>RECORDTYPE</string>
+    <string>Owner_Name__c</string>
+  </lookupColumns>
 </sfObject>

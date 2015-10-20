@@ -44,6 +44,7 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
@@ -2611,7 +2612,7 @@ Unqualified_Lead__c = TRUE</errorConditionFormula>
         <masterLabel>Create Opp</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>https://na9.salesforce.com/006/e?retURL=%2F006%2Fo 
+        <url>/006/e?retURL=%2F006%2Fo 
 &amp;accid={!BU_Referrals__c.DealerId__c} 
 &amp;opp3=Set by the System upon Save 
 &amp;opp11=&quot;Prospect&quot; 

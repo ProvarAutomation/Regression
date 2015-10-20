@@ -2,17 +2,13 @@
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <defaultLandingTab>standard-home</defaultLandingTab>
     <tab>standard-Chatter</tab>
-    <tab>standard-UserProfile</tab>
-    <tab>standard-CollaborationGroup</tab>
-    <tab>standard-File</tab>
-    <tab>standard-Campaign</tab>
-    <tab>standard-Lead</tab>
+    <tab>standard-ContentSearch</tab>
+    <tab>standard-Workspace</tab>
+    <tab>standard-Account</tab>
     <tab>standard-Contact</tab>
+    <tab>standard-Lead</tab>
+    <tab>standard-Campaign</tab>
     <tab>standard-Opportunity</tab>
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
-    <tab>SFDC_Training</tab>
-    <tab>Dealer_Analysis__c</tab>
-    <tab>Job_Code__c</tab>
-    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

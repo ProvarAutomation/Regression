@@ -71,6 +71,10 @@
                 <behavior>Required</behavior>
                 <field>ATC_Sub_Reason__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ATC_Root_Cause_Temp__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

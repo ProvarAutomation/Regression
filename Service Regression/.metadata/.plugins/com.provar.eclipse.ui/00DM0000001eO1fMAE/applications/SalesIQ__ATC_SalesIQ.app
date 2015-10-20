@@ -12,4 +12,5 @@
     <tab>SalesIQ__Requests</tab>
     <tab>SalesIQ__Approval</tab>
     <tab>standard-report</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

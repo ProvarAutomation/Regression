@@ -44,6 +44,7 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Note: In software, the Project object is named SFDC_520_Quote.  This object will be a Detail to Fulfillment Snapshot Summary  in a Master-Detail relationship.</description>

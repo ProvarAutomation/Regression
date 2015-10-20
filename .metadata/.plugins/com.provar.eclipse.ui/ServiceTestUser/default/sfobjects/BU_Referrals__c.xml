@@ -44,15 +44,15 @@
       <picklistEntryIds>68,70,71,72,73,74</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Source__c" t="Source" type="picklist">
-      <picklistEntryIds>1214,1215,68,70,73,74,71,72</picklistEntryIds>
+      <picklistEntryIds>1243,1244,68,70,73,74,71,72</picklistEntryIds>
     </sfField>
     <sfField length="100" n="Created_by_Role__c" t="Created by Role"/>
-    <sfField length="4099" n="Product_Category__c" t="Product Category" type="multipicklist">
-      <picklistEntryIds>108,1216,1217,1218,510,1219,1220,1221,520</picklistEntryIds>
+    <sfField length="4099" n="Product_Category__c" precision="10" t="Product Category" type="multipicklist">
+      <picklistEntryIds>108,1245,1246,1247,510,1248,1249,1250,520</picklistEntryIds>
     </sfField>
     <sfField extraTypeInfo="plaintextarea" length="32768" n="Add_l_Lead_Info__c" t="Add'l Lead Notes" type="textarea"/>
     <sfField length="255" n="Status__c" t="Status" type="picklist">
-      <picklistEntryIds>1222,591,1223,1224,1225,1226,1227,1228,1229,1230,1231,1232,1233</picklistEntryIds>
+      <picklistEntryIds>1251,591,1252,1253,1254,1255,1256,1257,1258,1259,1260,1261,1262</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" formula="IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.FileDownload?file=015E0000001Eyh3&quot;, &quot;Help&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Help_Info__c" t="Help Info" updateable="false"/>
     <sfField calculated="true" createable="false" formula="CASE( Dealer__r.District__c, \n&quot;1&quot;,&quot;1&quot;, \n&quot;2&quot;,&quot;2&quot;, \n&quot;3&quot;,&quot;3&quot;, \n&quot;4&quot;,&quot;4&quot;,\n&quot;&quot;)" length="1300" n="District__c" summary="formula field that reads the District field from the Account" t="Dealer District" updateable="false"/>
@@ -73,10 +73,10 @@
     <sfField length="100" n="Next_Step__c" summary="input a short sentence as to what you are doing to convert this lead" t="Next Step"/>
     <sfField calculated="true" createable="false" formula="CreatedBy.MobilePhone" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Owner_Cell__c" t="Submitted by Phone" updateable="false"/>
     <sfField length="255" n="Product_Selection__c" t="Product Selection" type="picklist">
-      <picklistEntryIds>1234,1235,1236,1237,1238,1239,1240,1241,1242,1243,1244</picklistEntryIds>
+      <picklistEntryIds>1263,1264,1265,1266,1267,1268,1269,1270,1271,1272,1273</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Product_Type__c" t="Product Type" type="picklist">
-      <picklistEntryIds>1245,1246,490,1247,1248,1249,1250,1251,1252,1253,1254,1255,1256,1257,73,1258,1259,1260,1261,1262,1263</picklistEntryIds>
+      <picklistEntryIds>1274,1275,490,1276,1277,1278,1279,1280,1281,1282,1283,1284,1285,1286,73,1287,1288,1289,1290,1291,1292</picklistEntryIds>
     </sfField>
     <sfField extraTypeInfo="plaintextarea" length="32768" n="Final_Comments__c" t="Final Comments" type="textarea"/>
     <sfField calculated="true" createable="false" formula="IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000003vKun&quot;, &quot;Product Matrix - Updated 7-16-2014&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Product_Matrix__c" t="Product Matrix" updateable="false"/>
@@ -457,6 +457,7 @@
               <children>
                 <sfRelatedListColumn n="CreatedDate" s="" seq="0" t="Date"/>
                 <sfRelatedListColumn n="User" s="" seq="1"/>
+                <sfRelatedListColumn n="Connection" s="" seq="2"/>
                 <sfRelatedListColumn n="Action" s="" seq="2"/>
               </children>
               <customActions/>
@@ -476,7 +477,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Product_Category__c</key>
-          <value valueClass="string">1216,1220,1219,1217,108,1218,520,1221,510</value>
+          <value valueClass="string">1245,1249,1248,1246,108,1247,520,1250,510</value>
         </entry>
         <entry>
           <key valueClass="string">Targ__c</key>
@@ -484,19 +485,19 @@
         </entry>
         <entry>
           <key valueClass="string">Source__c</key>
-          <value valueClass="string">68,1214,1215,70,71,72,74,73</value>
+          <value valueClass="string">68,1243,1244,70,71,72,74,73</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">54883,54884,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">43559,43560,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">54872,54873,54874,54875,54876,54877,54878,54879,54880,54881,54882</value>
+          <value valueClass="string">43548,43549,43550,43551,43552,43553,43554,43555,43556,43557,43558</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
-          <value valueClass="string">1222,591,1223,1224,1225,1226,1227,1230,1228,1229,1231,1232,1233</value>
+          <value valueClass="string">1251,591,1252,1253,1254,1255,1256,1259,1257,1258,1260,1261,1262</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -663,7 +664,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Product_Category__c</key>
-          <value valueClass="string">1216,1220,1219,1217,108,1218,520,1221,510</value>
+          <value valueClass="string">1245,1249,1248,1246,108,1247,520,1250,510</value>
         </entry>
         <entry>
           <key valueClass="string">Targ__c</key>
@@ -671,19 +672,19 @@
         </entry>
         <entry>
           <key valueClass="string">Source__c</key>
-          <value valueClass="string">68,1214,1215,70,71,72,74,73</value>
+          <value valueClass="string">68,1243,1244,70,71,72,74,73</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">54883,54884,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">43559,43560,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">54872,54873,54874,54875,54876,54877,54878,54879,54880,54881,54882</value>
+          <value valueClass="string">43548,43549,43550,43551,43552,43553,43554,43555,43556,43557,43558</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
-          <value valueClass="string">1222,591,1223,1224,1225,1226,1227,1230,1228,1229,1231,1232,1233</value>
+          <value valueClass="string">1251,591,1252,1253,1254,1255,1256,1259,1257,1258,1260,1261,1262</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -1126,6 +1127,7 @@
               <children>
                 <sfRelatedListColumn n="CreatedDate" s="" seq="0" t="Date"/>
                 <sfRelatedListColumn n="User" s="" seq="1"/>
+                <sfRelatedListColumn n="Connection" s="" seq="2"/>
                 <sfRelatedListColumn n="Action" s="" seq="2"/>
               </children>
               <customActions/>
@@ -1143,7 +1145,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Product_Category__c</key>
-          <value valueClass="string">1216,1220,1219,1217,108,1218,520,1221,510</value>
+          <value valueClass="string">1245,1249,1248,1246,108,1247,520,1250,510</value>
         </entry>
         <entry>
           <key valueClass="string">Targ__c</key>
@@ -1151,19 +1153,19 @@
         </entry>
         <entry>
           <key valueClass="string">Source__c</key>
-          <value valueClass="string">68,1214,1215,70,71,72,74,73</value>
+          <value valueClass="string">68,1243,1244,70,71,72,74,73</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">54883,54884,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">43559,43560,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">54872,54873,54874,54875,54876,54877,54878,54879,54880,54881,54882</value>
+          <value valueClass="string">43548,43549,43550,43551,43552,43553,43554,43555,43556,43557,43558</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
-          <value valueClass="string">1222,591,1223,1224,1225,1226,1227,1230,1228,1229,1231,1232,1233</value>
+          <value valueClass="string">1251,591,1252,1253,1254,1255,1256,1259,1257,1258,1260,1261,1262</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -1526,6 +1528,7 @@
               <children>
                 <sfRelatedListColumn n="CreatedDate" s="" seq="0" t="Date"/>
                 <sfRelatedListColumn n="User" s="" seq="1"/>
+                <sfRelatedListColumn n="Connection" s="" seq="2"/>
                 <sfRelatedListColumn n="Action" s="" seq="2"/>
               </children>
               <customActions/>
@@ -1543,7 +1546,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Product_Category__c</key>
-          <value valueClass="string">1216,1220,1219,1217,108,1218,520,1221,510</value>
+          <value valueClass="string">1245,1249,1248,1246,108,1247,520,1250,510</value>
         </entry>
         <entry>
           <key valueClass="string">Targ__c</key>
@@ -1551,19 +1554,19 @@
         </entry>
         <entry>
           <key valueClass="string">Source__c</key>
-          <value valueClass="string">68,1214,1215,70,71,72,74,73</value>
+          <value valueClass="string">68,1243,1244,70,71,72,74,73</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">54883,54884,490,1248,1249,1250,1251,1252,1253,1255,1256,1257,1262,1263,73,1258,1259,1261</value>
+          <value valueClass="string">43559,43560,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">54872,54873,54874,54875,54876,54877,54878,54879,54880,54881,54882</value>
+          <value valueClass="string">43548,43549,43550,43551,43552,43553,43554,43555,43556,43557,43558</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
-          <value valueClass="string">1222,591,1223,1224,1225,1226,1227,1230,1228,1229,1231,1232,1233</value>
+          <value valueClass="string">1251,591,1252,1253,1254,1255,1256,1259,1257,1258,1260,1261,1262</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -1582,13 +1585,13 @@
     <sfActionLink modes="View" n="SaveEdit"/>
     <sfActionLink n="Tab" s=""/>
     <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
-    <sfActionLink n="Create_Opp" s="" t="Create Opp" target="sf:ui:target?object=BU_Referrals__c&amp;url=https%3A%2F%2Fna9.salesforce.com%2F006%2Fe%3FretURL%3D%252F006%252Fo+%0A%26accid%3D%7B%21BU_Referrals__c.DealerId__c%7D+%0A%26opp3%3DSet+by+the+System+upon+Save+%0A%26opp11%3D%22Prospect%22+%0A%26CF00NE0000003Nd1G%3D%7B%21BU_Referrals__c.Name%7D%0A%26opp9%3D%7B%21TODAY%28%29%7D%0A%26opp17%3DBU+Lead+Campaign%0A%26opp6%3DEmployee+Referral"/>
-    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+    <sfActionLink n="Create_Opp" s="" t="Create Opp" target="sf:ui:target?object=BU_Referrals__c&amp;url=%2F006%2Fe%3FretURL%3D%252F006%252Fo+%0A%26accid%3D%7B%21BU_Referrals__c.DealerId__c%7D+%0A%26opp3%3DSet+by+the+System+upon+Save+%0A%26opp11%3D%22Prospect%22+%0A%26CF00NE0000003Nd1G%3D%7B%21BU_Referrals__c.Name%7D%0A%26opp9%3D%7B%21TODAY%28%29%7D%0A%26opp17%3DBU+Lead+Campaign%0A%26opp6%3DEmployee+Referral"/>
     <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
     <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
     <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
     <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
     <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
   </standardActions>
   <searchLayouts>
     <sfSearchLayout n="Search Results" s="" t="Search Layout">
@@ -1640,6 +1643,7 @@
     <string>BU_REFERRALS__C.NAME</string>
   </homeListColumns>
   <lookupColumns>
+    <string>BU_REFERRALS__C.NAME</string>
     <string>Product_Category__c</string>
     <string>Source__c</string>
     <string>Status__c</string>

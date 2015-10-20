@@ -2514,7 +2514,7 @@
             <picklistValues>
                 <fullName>Graphic Rework</fullName>
                 <controllingFieldValues>Product Changes</controllingFieldValues>
-                <default>false</default>
+                <default>true</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Group Login</fullName>
@@ -3633,6 +3633,21 @@
                 <controllingFieldValues>Customer Service/Sales Request</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>HTML5 Conversion</fullName>
+                <controllingFieldValues>Product Changes</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outdated Graphics</fullName>
+                <controllingFieldValues>Product Changes</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expired Co-op graphic</fullName>
+                <controllingFieldValues>Product Changes</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <trackFeedHistory>true</trackFeedHistory>
@@ -4695,6 +4710,10 @@ HYPERLINK(&quot;/apex/NewCaseServiceCaseButton?scontrolCaching=1&amp;id=&quot;&a
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+                <fullName>Hibernation:  Non Restricted-Display</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>Pending Cancellation</fullName>
                 <default>false</default>
             </picklistValues>
@@ -4703,7 +4722,11 @@ HYPERLINK(&quot;/apex/NewCaseServiceCaseButton?scontrolCaching=1&amp;id=&quot;&a
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Pending w/Restricted</fullName>
+                <fullName>Restricted:  Non-Compliant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Restricted:  Non-Pay</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -12625,6 +12648,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Fraud</fullName>
                 <default>false</default>
             </values>
@@ -12635,6 +12662,10 @@ TEXT(Priority)
             <values>
                 <fullName>Graphic Rework</fullName>
                 <default>true</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
+                <default>false</default>
             </values>
             <values>
                 <fullName>Incorrect Graphics</fullName>
@@ -12658,6 +12689,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>No Updates Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -13958,6 +13993,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -14039,6 +14078,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -14247,6 +14290,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -15286,7 +15333,7 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
-                <fullName>Pending w%2FRestricted</fullName>
+                <fullName>Restricted%3A  Non-Pay</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -19537,6 +19584,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -19618,6 +19669,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -19826,6 +19881,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -22286,6 +22345,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -22367,6 +22430,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -22575,6 +22642,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -23595,7 +23666,7 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
-                <fullName>Pending w%2FRestricted</fullName>
+                <fullName>Restricted%3A  Non-Pay</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -27594,6 +27665,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -27675,6 +27750,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -27883,6 +27962,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -32818,6 +32901,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -32899,6 +32986,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -33107,6 +33198,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -38043,6 +38138,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -38124,6 +38223,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -38332,6 +38435,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -43268,6 +43375,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -43349,6 +43460,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -43557,6 +43672,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -48493,6 +48612,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -48574,6 +48697,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -48782,6 +48909,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -53226,6 +53357,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -53307,6 +53442,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -53515,6 +53654,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -54527,6 +54670,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Hibernation%3A  Non Restricted-Display</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Pending Cancellation</fullName>
                 <default>false</default>
             </values>
@@ -54535,7 +54682,11 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
-                <fullName>Pending w%2FRestricted</fullName>
+                <fullName>Restricted%3A  Non-Compliant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restricted%3A  Non-Pay</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -57763,6 +57914,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -57844,6 +57999,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -58052,6 +58211,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -61487,11 +61650,19 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Fraud</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>General Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -61516,6 +61687,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>No Updates Required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -62887,6 +63062,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -62968,6 +63147,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -63176,6 +63359,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -64312,7 +64499,7 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
-                <fullName>Pending w%2FRestricted</fullName>
+                <fullName>Restricted%3A  Non-Pay</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -69223,6 +69410,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -69304,6 +69495,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -69512,6 +69707,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -70594,7 +70793,7 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
-                <fullName>Pending w%2FRestricted</fullName>
+                <fullName>Restricted%3A  Non-Pay</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -74994,6 +75193,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -75075,6 +75278,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -75283,6 +75490,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -76419,7 +76630,7 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
-                <fullName>Pending w%2FRestricted</fullName>
+                <fullName>Restricted%3A  Non-Pay</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -81138,6 +81349,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -81219,6 +81434,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -81427,6 +81646,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -82563,7 +82786,7 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
-                <fullName>Pending w%2FRestricted</fullName>
+                <fullName>Restricted%3A  Non-Pay</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -87205,6 +87428,10 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Expired Co-op graphic</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expired%2FRetrieve</fullName>
                 <default>false</default>
             </values>
@@ -87282,6 +87509,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Group Update Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTML5 Conversion</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -87482,6 +87713,10 @@ TEXT(Priority)
             </values>
             <values>
                 <fullName>Out of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdated Graphics</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -88544,7 +88779,7 @@ TEXT(Priority)
                 <default>false</default>
             </values>
             <values>
-                <fullName>Pending w%2FRestricted</fullName>
+                <fullName>Restricted%3A  Non-Pay</fullName>
                 <default>false</default>
             </values>
             <values>

@@ -44,6 +44,7 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>To be used for Performance/Account Management</description>
@@ -2882,15 +2883,15 @@
         <columns>X7_Day_Review_Completed__c</columns>
         <columns>X30_Day_Review_Due_Date__c</columns>
         <columns>X30_Day_Review_Completed__c</columns>
-        <columns>X60_Day_Audit_Due_Date__c</columns>
-        <columns>X60_Day_Audit_Completed_Date__c</columns>
+        <columns>X60_Day_Review_Due_Date__c</columns>
+        <columns>X60_Day_Review_Completed__c</columns>
         <columns>X90_Day_Review_Due_Date__c</columns>
         <columns>X90_Day_Review_Completed__c</columns>
         <filterScope>Mine</filterScope>
         <filters>
             <field>RECORDTYPE</field>
             <operation>equals</operation>
-            <value>Action_Plan__c.New_Business</value>
+            <value>Action_Plan__c.High_Risk</value>
         </filters>
         <filters>
             <field>Status__c</field>

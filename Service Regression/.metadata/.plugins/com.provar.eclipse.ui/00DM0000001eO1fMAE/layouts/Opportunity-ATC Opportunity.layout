@@ -369,20 +369,6 @@
         <relatedList>RelatedOpportunitySalesTeam</relatedList>
     </relatedLists>
     <relatedLists>
-        <customButtons>New_Sales_Order</customButtons>
-        <excludeButtons>New</excludeButtons>
-        <fields>Document_Action__c</fields>
-        <fields>RECORDTYPE</fields>
-        <fields>Signature_Action__c</fields>
-        <fields>Fulfillment_Action__c</fields>
-        <fields>Sent__c</fields>
-        <fields>CREATED_DATE</fields>
-        <fields>CREATEDBY_USER</fields>
-        <relatedList>Opp_Product__c.Opportunity__c</relatedList>
-        <sortField>CREATED_DATE</sortField>
-        <sortOrder>Desc</sortOrder>
-    </relatedLists>
-    <relatedLists>
         <fields>ORDERS.ORDER_NUMBER</fields>
         <fields>ORDERS.STATUS</fields>
         <fields>ORDERS.TOTAL_AMOUNT</fields>

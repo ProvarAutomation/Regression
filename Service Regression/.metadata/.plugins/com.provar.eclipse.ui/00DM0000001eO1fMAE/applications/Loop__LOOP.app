@@ -15,4 +15,5 @@
     <tab>standard-Case</tab>
     <tab>standard-report</tab>
     <tab>Loop__Document_Request__c</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

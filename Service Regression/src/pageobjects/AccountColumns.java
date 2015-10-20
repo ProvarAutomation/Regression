@@ -57,5 +57,11 @@ public class AccountColumns {
 	@TextType()
 	@FindBy(xpath = "//*[@id=\"ext-gen16\"]/div/table/thead/tr/td[17]/div")
 	public WebElement Column15;
+	@LinkType()
+	@FindBy(xpath = "//*[@id=\"001E000000mERcs_RelatedCaseList_body\"]/table/tbody/tr[2]/td[1]/a[1]")
+	public WebElement Edit;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"500E000000IoJle_RelatedEntityHistoryList_body\"]/table/tbody/tr[2]/td[3]")
+	public WebElement Action;
 			
 }

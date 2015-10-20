@@ -29,6 +29,10 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>LinkToSetupUserDetailAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>ManagePermSetsAction</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -491,15 +495,15 @@ IF(
     </listViews>
     <listViews>
         <fullName>All_Active_Users</fullName>
-        <columns>CORE.USER_ROLE.NAME</columns>
-        <columns>CORE.USERS.DIVISION</columns>
         <columns>FULL_NAME</columns>
         <columns>CORE.USERS.TITLE</columns>
-        <columns>CORE.USERS.SAML_SUBJECT</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.PROFILE.NAME</columns>
         <columns>MANAGER</columns>
+        <columns>CORE.USERS.DIVISION</columns>
+        <columns>CORE.USERS.SAML_SUBJECT</columns>
         <columns>CORE.USERS.LAST_LOGIN</columns>
         <columns>CORE.PROFILE.USERTYPE</columns>
-        <columns>CORE.PROFILE.NAME</columns>
         <columns>Region__c</columns>
         <columns>District__c</columns>
         <columns>CORE.USERS.EMAIL</columns>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject label="Case History" labelPlural="Case History" n="CaseHistory" queryable="true" retrieveable="true" s="" t="Case History">
+  <fields>
+    <sfField createable="false" length="18" n="Id" t="Case History ID" type="id" updateable="false"/>
+    <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" length="18" n="CaseId" relationshipName="Case" required="true" t="Case ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Case</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>SelfServiceUser</string>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" length="255" n="Field" required="true" restrictedPicklist="true" t="Changed Field" type="picklist" updateable="false">
+      <picklistEntryIds>74569,74504,74254,74570,74571,74572,74573,74574,74575,74576,74577,74578,74505,74579,74580,74581,74261,74582,74583,74584,74585,74586,74587,74588,74589,74590,74591,74592,74593,74594,74595,74596,74597,74598,74599,74600,74601,74300,74301,74602,74603,74604,74605,74606,74607,74608,74609,74610,2670,74611,74515,74612,74613,74614,74615,74616,74617,74618,74619,74620,74621,720,74622,74623,74624,74625,74626,74627,74628,74316,74317,74318,74629,74630,74631,74632,74633,74634,74635,74636,74637,74638,74639,74640,740,74641,74642,74643,74644,74645,74646,74647,74648,74649,74650,74651,74652,74653,74654,74655,74656,74351,74352,74657,74364,74658,74659,74660,74661,74662,74663,74664,74665,74666,74667,74668,74377,797,798,2729,74379,74669,74670,74671,74672,74673,74674,74675,815,74394,817,74676,74677,74397,74678,74679,74680,74563,74681,74682,74683,74684,74685,74686,74687,74462,74688,74482,74689,74690</picklistEntryIds>
+    </sfField>
+    <sfField createable="false" length="255" n="OldValue" t="Old Value" type="anyType" updateable="false"/>
+    <sfField createable="false" length="255" n="NewValue" t="New Value" type="anyType" updateable="false"/>
+  </fields>
+  <childRelationships/>
+  <recordTypes/>
+  <standardActions>
+    <sfActionLink modes="ObjectHome Histories" n="New"/>
+    <sfActionLink modes="View Histories" n="Edit" requiresRow="true" s="1"/>
+    <sfActionLink modes="View Histories" n="Delete" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Histories" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Histories" n="GoToList" t="Go To List"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+</sfObject>

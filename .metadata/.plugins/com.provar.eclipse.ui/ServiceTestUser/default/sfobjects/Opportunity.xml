@@ -16,13 +16,13 @@
     <sfField length="120" n="Name" nameField="true" required="true" summary="set by the system, please do not modify"/>
     <sfField extraTypeInfo="plaintextarea" length="32000" n="Description" type="textarea"/>
     <sfField length="40" n="StageName" required="true" t="Stage" type="picklist">
-      <picklistEntryIds>6503,6504,6505,7403,7404,6544,7406</picklistEntryIds>
+      <picklistEntryIds>6633,6634,6635,10602,10603,6674,10605</picklistEntryIds>
     </sfField>
     <sfField n="Amount" precision="18" scale="2" type="currency"/>
     <sfField n="Probability" precision="3" summary="users can override the probability during a stage" t="Probability (%)" type="percent"/>
     <sfField n="CloseDate" required="true" summary="upon creation of Opportunity the system sets the close date to 30 days from the create date by workflow - user can update the date accordingly" t="Close Date" type="date"/>
     <sfField length="40" n="Type" t="Opportunity Type" type="picklist">
-      <picklistEntryIds>7407,2537,1715,2349,7410</picklistEntryIds>
+      <picklistEntryIds>10606,1017,1745,1018,10607</picklistEntryIds>
     </sfField>
     <sfField length="255" n="NextStep" t="Next Step"/>
     <sfField length="40" n="LeadSource" t="Lead Source" type="picklist">
@@ -31,10 +31,10 @@
     <sfField createable="false" n="IsClosed" t="Closed" type="_boolean" updateable="false"/>
     <sfField createable="false" n="IsWon" t="Won" type="_boolean" updateable="false"/>
     <sfField createable="false" length="40" n="ForecastCategory" required="true" restrictedPicklist="true" t="Forecast Category" type="picklist" updateable="false">
-      <picklistEntryIds>6502,7411,7412,7413,1570</picklistEntryIds>
+      <picklistEntryIds>6632,10608,10609,10610,1600</picklistEntryIds>
     </sfField>
     <sfField length="40" n="ForecastCategoryName" restrictedPicklist="true" t="Forecast Category" type="picklist">
-      <picklistEntryIds>6502,6503,6504,6505,1570</picklistEntryIds>
+      <picklistEntryIds>6632,6633,6634,6635,1600</picklistEntryIds>
     </sfField>
     <sfField length="18" n="CampaignId" relationshipName="Campaign" t="Campaign ID" type="reference">
       <referenceTos>
@@ -87,10 +87,10 @@
       </referenceTos>
     </sfField>
     <sfField length="255" n="BU__c" t="Business Unit" type="picklist">
-      <picklistEntryIds>7414,7415,70,71,72,73,74</picklistEntryIds>
+      <picklistEntryIds>10611,10612,70,71,72,73,74</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Lost_Reason__c" t="Lost Reason" type="picklist">
-      <picklistEntryIds>7416,84,7417,7418,2582,7420,7421,578,7422,7423,7424,7410,7425</picklistEntryIds>
+      <picklistEntryIds>10613,84,10614,10615,2445,10616,10617,578,10618,10619,10620,10607,10621</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" n="Total_List_Price__c" precision="18" scale="2" summarizedField="OpportunityLineItem.List_Price_Grand_Total__c" summaryForeignKey="OpportunityLineItem.OpportunityId" summaryOperation="sum" t="Total List Price" type="currency" updateable="false"/>
     <sfField calculated="true" createable="false" formula="IF(Total_List_Price__c &gt;0,  ( Total_List_Price__c - Amount)/ Total_List_Price__c, null)" formulaTreatBlanksAs="BlankAsZero" n="Total_Discount__c" precision="18" scale="2" t="Total Discount %" type="percent" updateable="false"/>
@@ -119,7 +119,7 @@
     </sfField>
     <sfField calculated="true" createable="false" formula="HYPERLINK( Id , &quot;link&quot; , &quot;_blank&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Opp_Link__c" t="Opp Link" updateable="false"/>
     <sfField length="255" n="DB_Competitor__c" t="DB Competitor" type="picklist">
-      <picklistEntryIds>7426,7427,7428</picklistEntryIds>
+      <picklistEntryIds>10622,10623,10624</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" formula="IF( CloseDate &lt; today() &amp;&amp;  IsClosed = False, \n IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.FileDownload?file=015E0000001Gjka&quot;, &quot;update close Date&quot; ), NULL)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Close_Date_Alert__c" t="Close Date Alert" updateable="false"/>
     <sfField calculated="true" createable="false" formula="Account.Parent.Name" length="1300" n="Related_Auto_Group__c" summary="Formula field that reads the Parent Account Name from the Account." t="Related Auto Group" updateable="false"/>
@@ -135,11 +135,14 @@
     <sfField length="8" n="ATDSA_bookshelf__OrderNumber__c" t="Order Number"/>
     <sfField n="Order_Generated__c" t="Order Generated" type="_boolean"/>
     <sfField n="IsQuickView__c" t="IsQuickView" type="_boolean"/>
+    <sfField length="255" n="mti_pb__PriceBook_To_Use__c" t="PriceBook To Use" type="picklist">
+      <picklistEntryIds>10625</picklistEntryIds>
+    </sfField>
     <sfField calculated="true" createable="false" formula="PS_Forecast__c *  Probability" formulaTreatBlanksAs="BlankAsZero" n="PS_Probability__c" precision="18" scale="2" t="PS Probability" type="currency" updateable="false"/>
     <sfField calculated="true" createable="false" n="PS_Forecast__c" precision="18" summarizedField="OpportunityLineItem.PS_Forecast__c" summaryForeignKey="OpportunityLineItem.OpportunityId" summaryOperation="sum" t="PS Forecast" type="currency" updateable="false"/>
     <sfField length="100" n="ATDSA_bookshelf__CurrentGenerators__c" notVisibleToMetadataUser="true" t="Current Generator(s)"/>
     <sfField n="ATDSA_bookshelf__DeliveryInstallationStatus__c" notVisibleToMetadataUser="true" t="Delivery/Installation Status" type="picklist">
-      <picklistEntryIds>7429,7430,1027</picklistEntryIds>
+      <picklistEntryIds>10626,10627,1071</picklistEntryIds>
     </sfField>
     <sfField length="100" n="ATDSA_bookshelf__MainCompetitors__c" notVisibleToMetadataUser="true" t="Main Competitor(s)"/>
     <sfField length="12" n="ATDSA_bookshelf__TrackingNumber__c" notVisibleToMetadataUser="true" t="Tracking Number"/>
@@ -152,7 +155,7 @@
     <sfField formula="IF(\nCustom_Billing_Address__c = True,\nBilling_Zip_Postal_Code__c,\nAccount.BillingPostalCode\n)" formulaTreatBlanksAs="BlankAsZero" n="Billing_Zip_Postal_Code_Display__c" notVisibleToMetadataUser="true" t="Billing Zip/Postal Code (Display)"/>
     <sfField length="255" n="Billing_Zip_Postal_Code__c" notVisibleToMetadataUser="true" t="Billing Zip/Postal Code"/>
     <sfField n="Campaign_Types__c" notVisibleToMetadataUser="true" t="Campaign Types" type="multipicklist">
-      <picklistEntryIds>7431,7432,7433,7434,7435,7436,7437,7438,7439,7440,7441,7442,7443,7444,7445,7446,7447,7448,2984,7449,7450,7451,7452,7453</picklistEntryIds>
+      <picklistEntryIds>10628,10629,10630,10631,10632,10633,10634,10635,10636,10637,10638,10639,10640,10641,10642,10643,10644,10645,3005,10646,10647,10648,10649,10650</picklistEntryIds>
     </sfField>
     <sfField n="Contact_Email__c" notVisibleToMetadataUser="true" t="Contact Email" type="email"/>
     <sfField length="255" n="Contact_Name__c" notVisibleToMetadataUser="true" t="Contact Name"/>
@@ -163,7 +166,7 @@
     <sfField n="Dealer_Website_URL__c" notVisibleToMetadataUser="true" t="Dealer Website URL" type="url"/>
     <sfField length="255" n="Dealership_Name__c" notVisibleToMetadataUser="true" t="Dealership Name"/>
     <sfField n="Discount_Approval_Status__c" notVisibleToMetadataUser="true" t="Approval Status" type="picklist">
-      <picklistEntryIds>7454,540,7455</picklistEntryIds>
+      <picklistEntryIds>10651,540,10652</picklistEntryIds>
     </sfField>
     <sfField formula="IF(\nCustom_Billing_Address__c = True,\nFalse,\nTrue\n)" formulaTreatBlanksAs="BlankAsZero" n="Existing_Billing_Address_Conga__c" notVisibleToMetadataUser="true" t="Existing Billing Address (Conga)" type="boolean"/>
     <sfField formula="IF(\nCustom_Physical_Address__c = True,\nFalse,\nTrue\n)" formulaTreatBlanksAs="BlankAsZero" n="Existing_Physical_Address_Conga__c" notVisibleToMetadataUser="true" t="Existing Physical Address (Conga)" type="boolean"/>
@@ -189,7 +192,7 @@
     <sfField n="Submit_For_Approval__c" notVisibleToMetadataUser="true" t="Submit For Approval" type="boolean"/>
     <sfField n="Sync_Errors__c" notVisibleToMetadataUser="true" t="Sync Errors" type="textarea"/>
     <sfField n="Sync_Status__c" notVisibleToMetadataUser="true" t="Sync Status" type="picklist">
-      <picklistEntryIds>7456,7457</picklistEntryIds>
+      <picklistEntryIds>10653,10654</picklistEntryIds>
     </sfField>
     <sfField n="TotalOpportunityQuantity" notVisibleToMetadataUser="true"/>
     <sfField length="255" n="Used_Car_Inventory_Source__c" notVisibleToMetadataUser="true" t="Used Car Inventory Source"/>
@@ -222,7 +225,7 @@
     <sfObjectRelationship childName="Partner" field="OpportunityId" n="Partners" relationshipName="Partners" s="2-" t="Partner"/>
     <sfObjectRelationship childName="ProcessInstance" field="TargetObjectId" n="ProcessInstances" relationshipName="ProcessInstances" s="2-" t="ProcessInstance"/>
     <sfObjectRelationship alias="RelatedProcessHistoryList" childName="ProcessInstanceHistory" field="TargetObjectId" n="ProcessSteps" relationshipName="ProcessSteps" s="2-" t="ProcessInstanceHistory"/>
-    <sfObjectRelationship childName="Quote" field="OpportunityId" n="Quotes" relationshipName="Quotes" s="2-" t="Quote"/>
+    <sfObjectRelationship alias="RelatedQuoteList" childName="Quote" field="OpportunityId" n="Quotes" relationshipName="Quotes" s="2-" t="Quote"/>
     <sfObjectRelationship childName="Task" field="WhatId" n="Tasks" relationshipName="Tasks" s="2-" t="Task"/>
     <sfObjectRelationship childName="TaskRelation" field="RelationId" n="TaskRelations" relationshipName="TaskRelations" s="2-" t="TaskRelation"/>
     <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
@@ -308,9 +311,9 @@
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="5">
                       <children>
-                        <sfLI editableForUpdate="false" label="Dealer Interested Product" n="Dealer Interested Product" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <sfLI editableForUpdate="false" label="PriceBook To Use" n="PriceBook To Use" required="true" s="" seqNum="0" t="Web Layout Item">
                           <children>
-                            <sfLIC n="Product_Line__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                            <sfLIC n="mti_pb__PriceBook_To_Use__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
                           </children>
                         </sfLI>
                         <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
@@ -322,9 +325,9 @@
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="6">
                       <children>
-                        <sfLI editableForUpdate="false" label="Dealer Website URL" n="Dealer Website URL" s="" seqNum="0" t="Web Layout Item">
+                        <sfLI editableForUpdate="false" label="Dealer Interested Product" n="Dealer Interested Product" required="true" s="" seqNum="0" t="Web Layout Item">
                           <children>
-                            <sfLIC n="Dealer_Website_URL__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                            <sfLIC n="Product_Line__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
                           </children>
                         </sfLI>
                         <sfLI editableForUpdate="false" label="Order Generated" n="Order Generated" s="" seqNum="1" t="Web Layout Item">
@@ -336,7 +339,11 @@
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="7">
                       <children>
-                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI editableForUpdate="false" label="Dealer Website URL" n="Dealer Website URL" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Dealer_Website_URL__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
                         <sfLI editableForNew="false" editableForUpdate="false" label="PS Forecast" n="PS Forecast" s="" seqNum="1" t="Web Layout Item">
                           <children>
                             <sfLIC n="PS_Forecast__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
@@ -720,9 +727,9 @@
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="5">
                       <children>
-                        <sfLI editableForUpdate="false" label="Dealer Interested Product" n="Dealer Interested Product" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <sfLI editableForUpdate="false" label="PriceBook To Use" n="PriceBook To Use" required="true" s="" seqNum="0" t="Web Layout Item">
                           <children>
-                            <sfLIC n="Product_Line__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                            <sfLIC n="mti_pb__PriceBook_To_Use__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
                           </children>
                         </sfLI>
                         <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
@@ -734,9 +741,9 @@
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="6">
                       <children>
-                        <sfLI editableForUpdate="false" label="Dealer Website URL" n="Dealer Website URL" s="" seqNum="0" t="Web Layout Item">
+                        <sfLI editableForUpdate="false" label="Dealer Interested Product" n="Dealer Interested Product" required="true" s="" seqNum="0" t="Web Layout Item">
                           <children>
-                            <sfLIC n="Dealer_Website_URL__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                            <sfLIC n="Product_Line__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
                           </children>
                         </sfLI>
                         <sfLI editableForUpdate="false" label="Order Generated" n="Order Generated" s="" seqNum="1" t="Web Layout Item">
@@ -748,7 +755,11 @@
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="7">
                       <children>
-                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI editableForUpdate="false" label="Dealer Website URL" n="Dealer Website URL" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Dealer_Website_URL__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
                         <sfLI editableForNew="false" editableForUpdate="false" label="PS Forecast" n="PS Forecast" s="" seqNum="1" t="Web Layout Item">
                           <children>
                             <sfLIC n="PS_Forecast__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
@@ -1165,7 +1176,15 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="OpportunityId" label="Contact Role" n="OpportunityContactRoles" relationshipName="OpportunityContactRoles" s="3-" t="Contact Role (OpportunityId)">
+            <sfRelatedList fieldName="OpportunityId" label="Contact Roles" n="OpportunityContactRoles" relationshipName="OpportunityContactRoles" s="3-" t="Contact Roles">
+              <children>
+                <sfRelatedListColumn n="Contact.Name" s="" seq="0" t="Contact Name"/>
+                <sfRelatedListColumn n="Contact.Account.Name" s="" seq="1" t="Account Name"/>
+                <sfRelatedListColumn n="Contact.Email" s="" seq="2" t="Email"/>
+                <sfRelatedListColumn n="Contact.Phone" s="" seq="3" t="Phone"/>
+                <sfRelatedListColumn n="Role" s="" seq="4"/>
+                <sfRelatedListColumn n="IsPrimary" s="" seq="5" t="Primary"/>
+              </children>
               <customActions/>
               <excludeButtons/>
               <customButtons/>
@@ -1215,31 +1234,35 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">DB_Competitor__c</key>
-          <value valueClass="string">7426,7427,7428</value>
+          <value valueClass="string">10622,10623,10624</value>
         </entry>
         <entry>
           <key valueClass="string">Type</key>
-          <value valueClass="string">1715,2349,7407,7410,2537</value>
+          <value valueClass="string">1745,1018,10606,10607,1017</value>
         </entry>
         <entry>
           <key valueClass="string">ForecastCategoryName</key>
-          <value valueClass="string">1570,6502</value>
+          <value valueClass="string">1600,6632</value>
         </entry>
         <entry>
           <key valueClass="string">Lost_Reason__c</key>
-          <value valueClass="string">7416,84,7417,7418,2582,7420,7421,578,7422,7423,7424,7410,7425</value>
+          <value valueClass="string">10613,84,10614,10615,2445,10616,10617,578,10618,10619,10620,10607,10621</value>
         </entry>
         <entry>
           <key valueClass="string">LeadSource</key>
-          <value valueClass="string">484,54606,489,619,485,486,487,490,491,492,493,494,495,496,497,54607,499,620,621,500,501,502,503,504,93,622,505,506,623,624,625,507,626,508,627,509,510,54608,511,628</value>
+          <value valueClass="string">484,43280,489,619,485,486,487,490,491,492,493,494,495,496,497,43281,499,620,621,500,501,502,503,504,93,622,505,506,623,624,625,507,626,508,627,509,510,43282,511,628</value>
+        </entry>
+        <entry>
+          <key valueClass="string">mti_pb__PriceBook_To_Use__c</key>
+          <value valueClass="string">10625</value>
         </entry>
         <entry>
           <key valueClass="string">BU__c</key>
-          <value valueClass="string">7414,7415,70,71,72,74,73</value>
+          <value valueClass="string">10611,10612,70,71,72,74,73</value>
         </entry>
         <entry>
           <key valueClass="string">Campaign_Types__c</key>
-          <value valueClass="string">7431,7432,7433,7434,7435,7436,54638,7438,7439,7440,7441,7443,7442,7444,7445,7446,7447,7448,2984,7449,7450,7452,7453,7451</value>
+          <value valueClass="string">10628,10629,10630,10631,10632,10633,43312,10635,10636,10637,10638,10640,10639,10641,10642,10643,10644,10645,3005,10646,10647,10649,10650,10648</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -2155,7 +2178,15 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="OpportunityId" label="Contact Role" n="OpportunityContactRoles" relationshipName="OpportunityContactRoles" s="3-" t="Contact Role (OpportunityId)">
+            <sfRelatedList fieldName="OpportunityId" label="Contact Roles" n="OpportunityContactRoles" relationshipName="OpportunityContactRoles" s="3-" t="Contact Roles">
+              <children>
+                <sfRelatedListColumn n="Contact.Name" s="" seq="0" t="Contact Name"/>
+                <sfRelatedListColumn n="Contact.Account.Name" s="" seq="1" t="Account Name"/>
+                <sfRelatedListColumn n="Contact.Email" s="" seq="2" t="Email"/>
+                <sfRelatedListColumn n="Contact.Phone" s="" seq="3" t="Phone"/>
+                <sfRelatedListColumn n="Role" s="" seq="4"/>
+                <sfRelatedListColumn n="IsPrimary" s="" seq="5" t="Primary"/>
+              </children>
               <customActions/>
               <excludeButtons/>
               <customButtons/>
@@ -2207,7 +2238,7 @@
     <sfActionLink n="Tab" s=""/>
     <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
     <sfActionLink n="ADD_PRODUCT" s="" t="ADD PRODUCT" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fna9.salesforce.com%2Foppitm%2Fchoosepricebook.jsp%3Fid%3D%7B%21Opportunity.Id%7D%0A%26retURL%3D%252F%7B%21Opportunity.Id%7D%0A%26saveURL%3D%252Fp%252Fopp%252FSelectSearch%253FaddTo%253D%7B%21Opportunity.Id%7D%2526retURL%253D%25252Fp%25252Fopp%25252FSelectSearch%25253FaddTo%25253D%7B%21Opportunity.Id%7D%252526retURL%25253D%2525252F%7B%21Opportunity.Id%7D"/>
-    <sfActionLink n="APXTConga4__Conga_Composer_OAuth" s="" t="Conga Composer (OAuth)" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2FAPXTConga4__Conga_Composer%0A%3Fid%3D%7B%21Opportunity.Id%7D&amp;window=*&amp;page=APXTConga4__Conga_Composer%0A"/>
+    <sfActionLink n="APXTConga4__Conga_Composer_OAuth" s="" t="Conga Composer (OAuth)" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2FAPXTConga4__Conga_Composer%0A%3Fid%3D%7B%21Opportunity.Id%7D&amp;page=APXTConga4__Conga_Composer%0A&amp;window=*"/>
     <sfActionLink n="APXTConga4__Conga_Mail_Merge" s="" t="Conga Composer" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fcomposer.congamerge.com%0A%3FsessionId%3D%7B%21API.Session_ID%7D%0A%26serverUrl%3D%7B%21API.Partner_Server_URL_290%7D%0A%26id%3D%7B%21Opportunity.Id%7D&amp;window=*"/>
     <sfActionLink n="Generate_Contract" s="" t="Generate Contract" target="sf:ui:target?object=Opportunity&amp;url=%2Fflow%2FOpportunity_to_Contract%3FOpptyID%3D%7B%21Opportunity.Id%7D%26retURL%3D%2F%7B%21Opportunity.Id%7D"/>
     <sfActionLink n="Generate_Order" s="" t="Generate Order" target="sf:ui:target?object=Opportunity&amp;url=%2Fflow%2FOpportunity_to_Order%3FOpptyID%3D%7B%21Opportunity.Id%7D%26retURL%3D%2F%7B%21Opportunity.Id%7D"/>
@@ -2216,19 +2247,19 @@
     <sfActionLink n="Loop__LOOP" s="" t="Create PDF" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Floop__loop%3Feid%3D%7B%21Opportunity.Id%7D&amp;page=loop__loop"/>
     <sfActionLink n="Loop__LOOP_Merge" s="" t="Deprecated LM" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Floop__loopmerge%3Feid%3D%7B%21Opportunity.Id%7D%26accountId%3D%7B%21Opportunity.AccountId%7D&amp;page=loop__loopmerge"/>
     <sfActionLink n="Loop__LOOPlus" s="" t="Run DDP" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Floop__looplus%3Feid%3D%7B%21Opportunity.Id%7D%26accountId%3D%7B%21Opportunity.AccountId%7D%26sessionId%3D%7B%21%24Api.Session_ID%7D&amp;page=loop__looplus"/>
-    <sfActionLink massAction="true" n="Loop__Mass_LOOP_Merge" requiresRow="true" s="" t="Deprecated Mass LM" target="sf:ui:target?object=Opportunity"/>
-    <sfActionLink massAction="true" n="Loop__Mass_LOOPlus" requiresRow="true" s="" t="Run DDP" target="sf:ui:target?object=Opportunity"/>
+    <sfActionLink massAction="true" n="Loop__Mass_LOOP_Merge" requiresRow="true" s="" t="Deprecated Mass LM" target="sf:ui:target?action=Loop__Mass_LOOP_Merge&amp;object=Opportunity"/>
+    <sfActionLink massAction="true" n="Loop__Mass_LOOPlus" requiresRow="true" s="" t="Run DDP" target="sf:ui:target?action=Loop__Mass_LOOPlus&amp;object=Opportunity"/>
     <sfActionLink n="View_Swots" s="" t="View Swots" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fna9.salesforce.com%2F00OE0000001atqP&amp;window=*"/>
     <sfActionLink n="echosign_dev1__Conga_Send_to_EchoSign" s="" t="Send to EchoSign - Conga" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fwww.appextremes.com%2Fapps%2FConga%2FPointMerge.aspx%0A%3FSessionId%3D%7B%21API.Session_ID%7D%0A%26ServerUrl%3D%7B%21API.Partner_Server_URL_80%7D%0A%26Id%3D%7B%21Opportunity.Id%7D%0A%26ESOpportunityid%3D%7B%21Opportunity.Id%7D%0A%26ESVisible%3D1%0A%26ESSignatureType%3D2%0A%26ESAgreementName%3DAgreement%2Bfor%2B%7B%21Opportunity.Name%7D%2B-%2B%7B%21Today%7D%0A%26ESCustomField%3Dechosign_dev1__Recipient_User__c%0A%26ESCustomFieldValue%3D%7B%21Opportunity.OwnerId%7D&amp;window=*"/>
-    <sfActionLink n="echosign_dev1__Send_to_EchoSign" s="" t="Send to EchoSign" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Fechosign_dev1__AgreementTemplateProcess%3FmasterId%3D%7B%21Opportunity.Id%7D&amp;window=*&amp;page=echosign_dev1__AgreementTemplateProcess"/>
-    <sfActionLink massAction="true" n="loli_oppwall__Opportunity_Planning_Wall" s="" t="Open Planning Wall..." target="sf:ui:target?object=Opportunity"/>
-    <sfActionLink n="loli_oppwall__Opportunity_Planning_Wall2" s="" t="Open Planning Wall..." target="sf:ui:target?object=Opportunity"/>
-    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+    <sfActionLink n="echosign_dev1__Send_to_EchoSign" s="" t="Send to EchoSign" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Fechosign_dev1__AgreementTemplateProcess%3FmasterId%3D%7B%21Opportunity.Id%7D&amp;page=echosign_dev1__AgreementTemplateProcess&amp;window=*"/>
+    <sfActionLink massAction="true" n="loli_oppwall__Opportunity_Planning_Wall" s="" t="Open Planning Wall..." target="sf:ui:target?action=loli_oppwall__Opportunity_Planning_Wall&amp;object=Opportunity"/>
+    <sfActionLink n="loli_oppwall__Opportunity_Planning_Wall2" s="" t="Open Planning Wall..." target="sf:ui:target?action=loli_oppwall__Opportunity_Planning_Wall2&amp;object=Opportunity"/>
     <sfActionLink modes="detail" n="Submit" requiresRow="true"/>
     <sfActionLink modes="new,edit,Clone,clone" n="save" requiresRow="true" t="Save"/>
     <sfActionLink modes="new,edit,Clone,clone" n="save_new" requiresRow="true" t="Save and New"/>
     <sfActionLink modes="new,edit,Clone,clone" n="cancel" requiresRow="true" t="Cancel"/>
     <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
     <sfActionLink modes="home" n="home" t="Home"/>
     <sfActionLink modes="home" n="detail" t="Detail"/>
     <sfActionLink modes="detail" n="share" t="Sharing"/>
@@ -2274,478 +2305,7 @@
     <sfListView n="WonATC" s="List View" t="My Won Opps - Last 120 Days"/>
     <sfListView n="r19Opportunities" s="List View" t="R19 Opportunities"/>
   </listViews>
-  <quickActions>
-    <sfQuickAction label="Log a Call" n="LogACall" s="Quick Action" t="Log a Call" targetSObject="Task" type="LogACall">
-      <quickActionLayout n="LogACall" profileLayout="false" s="" t="Quick Action Layout">
-        <layoutTypes>
-          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
-            <children>
-              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
-                <children>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
-                    <children>
-                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI label="Comments" n="Comments" s="" seqNum="1" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Description" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
-                    <children>
-                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI label="Related To" n="Related To" s="" seqNum="1" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="WhatId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                    </children>
-                  </sfLayoutRow>
-                </children>
-              </sfLayoutSection>
-            </children>
-          </sfLayoutType>
-        </layoutTypes>
-      </quickActionLayout>
-    </sfQuickAction>
-    <sfQuickAction label="New Contact" n="NewContact" s="Quick Action" t="New Contact" targetSObject="Contact" type="Create">
-      <quickActionLayout n="NewContact" profileLayout="false" s="" t="Quick Action Layout">
-        <layoutTypes>
-          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
-            <children>
-              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
-                <children>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
-                    <children>
-                      <sfLI label="Name" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
-                    <children>
-                      <sfLI label="Email" n="Email" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Email" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
-                    <children>
-                      <sfLI label="Phone" n="Phone" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Phone" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
-                    <children>
-                      <sfLI label="Account Name" n="Account Name" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="AccountId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="4">
-                    <children>
-                      <sfLI label="Title" n="Title" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Title" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                </children>
-              </sfLayoutSection>
-            </children>
-          </sfLayoutType>
-        </layoutTypes>
-      </quickActionLayout>
-    </sfQuickAction>
-    <sfQuickAction label="New Event" n="NewEvent" s="Quick Action" t="New Event" targetSObject="Event" type="Create">
-      <quickActionLayout n="NewEvent" profileLayout="false" s="" t="Quick Action Layout">
-        <layoutTypes>
-          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
-            <children>
-              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
-                <children>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
-                    <children>
-                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
-                    <children>
-                      <sfLI label="Start" n="Start" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="StartDateTime" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
-                    <children>
-                      <sfLI label="End" n="End" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="EndDateTime" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
-                    <children>
-                      <sfLI label="All-Day Event" n="All-Day Event" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="IsAllDayEvent" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="4">
-                    <children>
-                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="5">
-                    <children>
-                      <sfLI label="Related To" n="Related To" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="WhatId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="6">
-                    <children>
-                      <sfLI label="Assigned To" n="Assigned To" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="7">
-                    <children>
-                      <sfLI label="Location" n="Location" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Location" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                </children>
-              </sfLayoutSection>
-            </children>
-          </sfLayoutType>
-        </layoutTypes>
-      </quickActionLayout>
-    </sfQuickAction>
-    <sfQuickAction label="New Group" n="NewGroup" s="Quick Action" t="New Group" targetSObject="CollaborationGroup" type="Create">
-      <quickActionLayout n="NewGroup" profileLayout="false" s="" t="Quick Action Layout">
-        <layoutTypes>
-          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
-            <children>
-              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
-                <children>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
-                    <children>
-                      <sfLI label="Name" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
-                    <children>
-                      <sfLI label="Description" n="Description" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Description" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
-                    <children>
-                      <sfLI label="Access Type" n="Access Type" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="CollaborationType" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
-                    <children>
-                      <sfLI label="Allow Customers" n="Allow Customers" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="CanHaveGuests" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                </children>
-              </sfLayoutSection>
-            </children>
-          </sfLayoutType>
-        </layoutTypes>
-      </quickActionLayout>
-    </sfQuickAction>
-    <sfQuickAction label="New Note" n="NewNote" s="Quick Action" t="New Note" targetSObject="Note" type="Create">
-      <quickActionLayout n="NewNote" profileLayout="false" s="" t="Quick Action Layout">
-        <layoutTypes>
-          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
-            <children>
-              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
-                <children>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
-                    <children>
-                      <sfLI label="Title" n="Title" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Title" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
-                    <children>
-                      <sfLI label="Private" n="Private" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="IsPrivate" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
-                    <children>
-                      <sfLI label="Body" n="Body" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Body" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                </children>
-              </sfLayoutSection>
-            </children>
-          </sfLayoutType>
-        </layoutTypes>
-      </quickActionLayout>
-    </sfQuickAction>
-    <sfQuickAction label="New Task" n="NewTask" s="Quick Action" t="New Task" targetSObject="Task" type="Create">
-      <quickActionLayout n="NewTask" profileLayout="false" s="" t="Quick Action Layout">
-        <layoutTypes>
-          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
-            <children>
-              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
-                <children>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
-                    <children>
-                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
-                    <children>
-                      <sfLI label="Due Date" n="Due Date" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="ActivityDate" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
-                    <children>
-                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
-                    <children>
-                      <sfLI label="Related To" n="Related To" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="WhatId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="4">
-                    <children>
-                      <sfLI label="Assigned To" n="Assigned To" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="5">
-                    <children>
-                      <sfLI label="Status" n="Status" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Status" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                </children>
-              </sfLayoutSection>
-            </children>
-          </sfLayoutType>
-        </layoutTypes>
-      </quickActionLayout>
-    </sfQuickAction>
-    <sfQuickAction label="Log a Call" n="WrapAround_Email2" s="Quick Action" t="Log a Call" targetSObject="Task" type="Create">
-      <quickActionLayout n="WrapAround_Email2" profileLayout="false" s="" t="Quick Action Layout">
-        <layoutTypes>
-          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
-            <children>
-              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
-                <children>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
-                    <children>
-                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
-                    <children>
-                      <sfLI label="Assigned To" n="Assigned To" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
-                    <children>
-                      <sfLI label="Status" n="Status" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Status" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
-                    <children>
-                      <sfLI label="Priority" n="Priority" required="true" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Priority" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                </children>
-              </sfLayoutSection>
-            </children>
-          </sfLayoutType>
-        </layoutTypes>
-      </quickActionLayout>
-    </sfQuickAction>
-    <sfQuickAction label="In Person Visit" n="Opportunity.In_Person_Visit_Opportunity" s="Quick Action" t="In Person Visit" targetSObject="Task" type="LogACall">
-      <quickActionLayout n="Opportunity.In_Person_Visit_Opportunity" profileLayout="false" s="" t="Quick Action Layout">
-        <layoutTypes>
-          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
-            <children>
-              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
-                <children>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
-                    <children>
-                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
-                    <children>
-                      <sfLI label="Comments" n="Comments" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="Description" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
-                    <children>
-                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
-                        <children>
-                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
-                        </children>
-                      </sfLI>
-                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
-                    </children>
-                  </sfLayoutRow>
-                </children>
-              </sfLayoutSection>
-            </children>
-          </sfLayoutType>
-        </layoutTypes>
-      </quickActionLayout>
-    </sfQuickAction>
-  </quickActions>
+  <quickActions/>
   <homeListColumns>
     <string>OPPORTUNITY.NAME</string>
     <string>CORE.USERS.FULL_NAME</string>

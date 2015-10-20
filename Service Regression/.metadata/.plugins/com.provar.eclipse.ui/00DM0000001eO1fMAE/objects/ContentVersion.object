@@ -238,7 +238,6 @@
     </fields>
     <fields>
         <fullName>FileType</fullName>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Hot_Topics__c</fullName>
@@ -610,6 +609,10 @@
         </picklist>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SharingOption</fullName>
+        <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>TIM__c</fullName>

@@ -8,6 +8,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Medallia_Survey__c.Account_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Medallia_Survey__c.Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -138,6 +143,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Medallia_Survey__c.Integration_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Medallia_Survey__c.Issue_Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -238,6 +248,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Medallia_Survey__c.SVOC_Master__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Medallia_Survey__c.Sales_Rep_Service_You_Better__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -254,6 +269,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Medallia_Survey__c.Survey_Alert__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Medallia_Survey__c.Survey_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -333,6 +353,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>RunReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SelectFilesFromSalesforce</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

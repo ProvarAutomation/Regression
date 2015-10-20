@@ -44,7 +44,7 @@
       </referenceTos>
     </sfField>
     <sfField length="255" n="Agreement_Status__c" t="Agreement Status" type="picklist">
-      <picklistEntryIds>8724,8725</picklistEntryIds>
+      <picklistEntryIds>12063,12064</picklistEntryIds>
     </sfField>
     <sfField length="18" n="Contact__c" relationshipName="Contact__r" t="Contact" type="reference">
       <referenceTos>
@@ -53,7 +53,7 @@
     </sfField>
     <sfField length="20" n="EchoSign_Template_Id__c" t="EchoSign Template Id"/>
     <sfField length="255" n="T_C_Type__c" t="T&amp;C Type" type="picklist">
-      <picklistEntryIds>8726,8727</picklistEntryIds>
+      <picklistEntryIds>12065,12066</picklistEntryIds>
     </sfField>
   </fields>
   <childRelationships>
@@ -243,11 +243,11 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">T_C_Type__c</key>
-          <value valueClass="string">8726,8727</value>
+          <value valueClass="string">12065,12066</value>
         </entry>
         <entry>
           <key valueClass="string">Agreement_Status__c</key>
-          <value valueClass="string">54894,8725</value>
+          <value valueClass="string">43569,12064</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -417,11 +417,11 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">T_C_Type__c</key>
-          <value valueClass="string">8726,8727</value>
+          <value valueClass="string">12065,12066</value>
         </entry>
         <entry>
           <key valueClass="string">Agreement_Status__c</key>
-          <value valueClass="string">54894,8725</value>
+          <value valueClass="string">43569,12064</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -610,12 +610,12 @@
     <sfActionLink massAction="true" n="Create_Terms_and_Conditions" requiresRow="true" s="" t="Create Terms and Conditions" target="sf:ui:target?object=Terms_Conditions__c&amp;url=%2Fflow%2FNew_Terms_and_Conditions%3FvarAccountId%3D%7B%21Account.Id%7D%26retURL%3D%2F%7B%21Account.Id%7D"/>
     <sfActionLink n="Edit_Terms_and_Conditions" s="" t="Edit Terms and Conditions" target="sf:ui:target?object=Terms_Conditions__c&amp;url=%2Fflow%2FEdit_Terms_and_Conditions%3FvarTCId%3D%7B%21Terms_Conditions__c.Id%7D%26retURL%3D%2F%7B%21Terms_Conditions__c.Id%7D"/>
     <sfActionLink n="Send_to_Echosign" s="" t="Send to Echosign" target="sf:ui:target?object=Terms_Conditions__c&amp;url=%2Fapex%2Fechosign_dev1__AgreementTemplateProcess%3Fmasterid%3D%7B%21Terms_Conditions__c.Id%7D%26templateId%3D%7B%21Terms_Conditions__c.EchoSign_Template_Id__c%7D&amp;page=echosign_dev1__AgreementTemplateProcess"/>
-    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
     <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
     <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
     <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
     <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
     <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
   </standardActions>
   <searchLayouts>
     <sfSearchLayout n="Search Results" s="" t="Search Layout">
@@ -631,5 +631,7 @@
   <homeListColumns>
     <string>TERMS_CONDITIONS__C.NAME</string>
   </homeListColumns>
-  <lookupColumns/>
+  <lookupColumns>
+    <string>TERMS_CONDITIONS__C.NAME</string>
+  </lookupColumns>
 </sfObject>

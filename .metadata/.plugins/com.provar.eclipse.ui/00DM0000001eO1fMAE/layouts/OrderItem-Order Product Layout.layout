@@ -322,6 +322,10 @@
                 <behavior>Edit</behavior>
                 <field>Full_Rate_Below_Rate__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Make_with_Any_Make__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

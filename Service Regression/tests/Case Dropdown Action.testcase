@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="5">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="13" title="Grab excel values">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Grab excel values</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource url="excel:templates/UpdatedCase Queue List QA.xlsx?worksheet=Sheet1&amp;range=A1%3AB2&amp;namesLocation=FirstRowOfRange&amp;whereName=User&amp;whereComparison=EqualTo&amp;whereValue=%7BUserName%7D" variableName="ExcelData" variableScope="Test">
+          <cacheToken>C:/Users/bjweber/Provar/Workspace1/Service Regression/templates/UpdatedCase Queue List QA.xlsx;1444064934318</cacheToken>
+          <cachedParameters>
+            <apiParam name="RowNumber"/>
+            <apiParam name="User"/>
+            <apiParam name="QueueList"/>
+          </cachedParameters>
+        </parameterValueSource>
+      </parameterValueSources>
+      <clauses>
+        <clause name="hidden" testItemId="14"/>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="16" title="Grab case dropdown">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Grab case dropdown</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="17">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="19" title="Salesforce Connect: ServiceTestUser (Test)">
+              <arguments>
+                <argument id="connectionName">
+                  <value class="value" valueClass="string">ServiceTestUser</value>
+                </argument>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">ServiceTestUser</value>
+                </argument>
+                <argument id="reuseConnectionName"/>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="alreadyOpenBehaviour">
+                  <value class="value" valueClass="string">Fail</value>
+                </argument>
+                <argument id="uiApplicationName"/>
+                <argument id="closeAllPrimaryTabs">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="quickUiLogin">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="vfDebug"/>
+                <argument id="enableObjectIdLogging">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="autoCleanup"/>
+                <argument id="cleanupConnectionName"/>
+                <argument id="logFileLocation"/>
+                <argument id="username">
+                  <value class="variable">
+                    <path element="UserName"/>
+                  </value>
+                </argument>
+                <argument id="password"/>
+                <argument id="environment">
+                  <value class="value" valueClass="string">SANDBOX</value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="20" title="On SF Case list screen">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">ServiceTestUser</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=List&amp;application=ATC_Service_Console&amp;listView=All_Open_Cases&amp;tab=standard-Case"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Always</value>
+                </argument>
+                <argument id="scTabType">
+                  <value class="value" valueClass="string">HomeTab</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Case list screen</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore"/>
+                <argument id="captureAfter"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="45">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="46" title="UI Assert">
+                      <arguments>
+                        <argument id="resultName">
+                          <value class="value" valueClass="string">Values</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                        <argument id="pageAssertions">
+                          <value class="valueList" mutable="Mutable">
+                            <uiPageAssertion/>
+                          </value>
+                        </argument>
+                        <argument id="fieldAssertions">
+                          <value class="valueList" mutable="Mutable">
+                            <uiFieldAssertion resultName="searchType">
+                              <fieldLocator uri="ui:locator?name=searchType&amp;path=List%2FSearchButtons"/>
+                              <attributeAssertions>
+                                <uiAttributeAssertion attributeName="value" comparisonType="None"/>
+                              </attributeAssertions>
+                            </uiFieldAssertion>
+                          </value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="columnAssertions">
+                          <value class="valueList" mutable="Mutable"/>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters/>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+  <params>
+    <param name="UserName" title="UserName">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+  </params>
+  <args>
+    <argument id="UserName">
+      <value class="value" valueClass="string">pamela.barksdale@atgdealer.atg.qa</value>
+    </argument>
+  </args>
+</testCase>

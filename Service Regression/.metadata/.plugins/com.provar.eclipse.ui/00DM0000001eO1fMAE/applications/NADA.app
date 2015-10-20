@@ -7,4 +7,5 @@
     <tab>Action_Plan__c</tab>
     <tab>standard-Dashboard</tab>
     <tab>Show_Consultant__c</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

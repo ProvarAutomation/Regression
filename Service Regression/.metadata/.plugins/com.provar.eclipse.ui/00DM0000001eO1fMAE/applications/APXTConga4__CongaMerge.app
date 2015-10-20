@@ -11,4 +11,5 @@
     <tab>APXTConga4__Conga_Merge_Query__c</tab>
     <tab>APXTConga4__CongaMerge</tab>
     <tab>standard-report</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

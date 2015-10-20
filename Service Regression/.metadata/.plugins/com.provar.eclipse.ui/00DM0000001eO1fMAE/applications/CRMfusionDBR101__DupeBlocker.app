@@ -12,4 +12,5 @@
     <tab>standard-report</tab>
     <tab>Job_Code__c</tab>
     <tab>SVOC_Request__c</tab>
+    <tab>Medallia_Survey__c</tab>
 </CustomApplication>

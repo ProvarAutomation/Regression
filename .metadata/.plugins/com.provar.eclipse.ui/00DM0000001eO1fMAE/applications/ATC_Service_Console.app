@@ -11,8 +11,10 @@
     <domainWhitelist>
         <domain>atgdealer.my.salesforce.com</domain>
     </domainWhitelist>
+    <enableCustomizeMyTabs>false</enableCustomizeMyTabs>
     <enableKeyboardShortcuts>true</enableKeyboardShortcuts>
     <enableMultiMonitorComponents>true</enableMultiMonitorComponents>
+    <enablePinTabs>true</enablePinTabs>
     <isServiceCloudConsole>true</isServiceCloudConsole>
     <keyboardShortcuts>
         <defaultShortcut>
@@ -125,6 +127,46 @@
             <active>false</active>
             <keyCommand>M</keyCommand>
         </defaultShortcut>
+        <defaultShortcut>
+            <action>FOCUS_FOOTER_PANEL</action>
+            <active>false</active>
+            <keyCommand>F</keyCommand>
+        </defaultShortcut>
+        <defaultShortcut>
+            <action>TOGGLE_LIST_VIEW</action>
+            <active>false</active>
+            <keyCommand>SHIFT+N</keyCommand>
+        </defaultShortcut>
+        <defaultShortcut>
+            <action>TOGGLE_LEFT_SIDEBAR</action>
+            <active>false</active>
+            <keyCommand>SHIFT+LEFT ARROW</keyCommand>
+        </defaultShortcut>
+        <defaultShortcut>
+            <action>TOGGLE_RIGHT_SIDEBAR</action>
+            <active>false</active>
+            <keyCommand>SHIFT+RIGHT ARROW</keyCommand>
+        </defaultShortcut>
+        <defaultShortcut>
+            <action>TOGGLE_TOP_SIDEBAR</action>
+            <active>false</active>
+            <keyCommand>SHIFT+UP ARROW</keyCommand>
+        </defaultShortcut>
+        <defaultShortcut>
+            <action>TOGGLE_BOTTOM_SIDEBAR</action>
+            <active>false</active>
+            <keyCommand>SHIFT+DOWN ARROW</keyCommand>
+        </defaultShortcut>
+        <defaultShortcut>
+            <action>TOGGLE_APP_LEVEL_COMPONENTS</action>
+            <active>false</active>
+            <keyCommand>Z</keyCommand>
+        </defaultShortcut>
+        <defaultShortcut>
+            <action>REOPEN_LAST_TAB</action>
+            <active>false</active>
+            <keyCommand>SHIFT+C</keyCommand>
+        </defaultShortcut>
     </keyboardShortcuts>
     <label>ATC Service Console</label>
     <listPlacement>
@@ -154,6 +196,7 @@
     <tab>standard-KnowledgePublishing</tab>
     <tab>SLX__Change_Control__c</tab>
     <tab>Medallia_Survey__c</tab>
+    <tab>standard-Workspace</tab>
     <workspaceMappings>
         <mapping>
             <tab>Action_Plan__c</tab>
@@ -192,6 +235,9 @@
         </mapping>
         <mapping>
             <tab>standard-KnowledgePublishing</tab>
+        </mapping>
+        <mapping>
+            <tab>standard-Workspace</tab>
         </mapping>
         <mapping>
             <tab>standard-report</tab>
