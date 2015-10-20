@@ -12,10 +12,10 @@
       </referenceTos>
     </sfField>
     <sfField length="40" n="TeamMemberRole" t="Team Role" type="picklist">
-      <picklistEntryIds>923,924,925,926,927,928,929,930,931,932,933,934</picklistEntryIds>
+      <picklistEntryIds>922,923,924,925,926,927,928,929,930,931,932,933</picklistEntryIds>
     </sfField>
     <sfField createable="false" length="40" n="AccountAccessLevel" restrictedPicklist="true" t="Account Access" type="picklist" updateable="false">
-      <picklistEntryIds>921,7,8,9</picklistEntryIds>
+      <picklistEntryIds>920,7,8,9</picklistEntryIds>
     </sfField>
     <sfField createable="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
     <sfField createable="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="a06" label="ATG Product" labelPlural="ATG Products" layoutable="true" n="ATG_Product__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IE0000000AcJdMAK" t="ATG Product (a06)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a06/e">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="a06" label="ATG Product" labelPlural="ATG Products" layoutable="true" n="ATG_Product__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IE0000000AcJdMAK" t="ATG Product (a06)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a06/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
@@ -370,7 +369,7 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Status__c</key>
-          <value valueClass="string">81,80,9409,79,82,83</value>
+          <value valueClass="string">81,80,9418,79,82,83</value>
         </entry>
         <entry>
           <key valueClass="string">End_Reason__c</key>

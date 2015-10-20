@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" feedEnabled="true" keyPrefix="006" label="Opportunity" labelPlural="Opportunities" layoutable="true" n="Opportunity" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="" standardLabel="Opportunity" t="Opportunity (006)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/006/e">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" feedEnabled="true" keyPrefix="006" label="Opportunity" labelPlural="Opportunities" layoutable="true" n="Opportunity" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="" standardLabel="Opportunity" t="Opportunity (006)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/006/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Opportunity ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
@@ -16,13 +15,13 @@
     <sfField length="120" n="Name" nameField="true" required="true" summary="set by the system, please do not modify"/>
     <sfField extraTypeInfo="plaintextarea" length="32000" n="Description" type="textarea"/>
     <sfField length="40" n="StageName" required="true" t="Stage" type="picklist">
-      <picklistEntryIds>6630,6631,6632,10598,10599,6671,10601</picklistEntryIds>
+      <picklistEntryIds>6638,6639,6640,10607,10608,6679,10610</picklistEntryIds>
     </sfField>
     <sfField n="Amount" precision="18" scale="2" type="currency"/>
     <sfField n="Probability" precision="3" summary="users can override the probability during a stage" t="Probability (%)" type="percent"/>
     <sfField n="CloseDate" required="true" summary="upon creation of Opportunity the system sets the close date to 30 days from the create date by workflow - user can update the date accordingly" t="Close Date" type="date"/>
     <sfField length="40" n="Type" t="Opportunity Type" type="picklist">
-      <picklistEntryIds>10602,1017,1745,1018,10603</picklistEntryIds>
+      <picklistEntryIds>10611,1017,1745,1018,10612</picklistEntryIds>
     </sfField>
     <sfField length="255" n="NextStep" t="Next Step"/>
     <sfField length="40" n="LeadSource" t="Lead Source" type="picklist">
@@ -31,10 +30,10 @@
     <sfField createable="false" n="IsClosed" t="Closed" type="_boolean" updateable="false"/>
     <sfField createable="false" n="IsWon" t="Won" type="_boolean" updateable="false"/>
     <sfField createable="false" length="40" n="ForecastCategory" required="true" restrictedPicklist="true" t="Forecast Category" type="picklist" updateable="false">
-      <picklistEntryIds>6629,10604,10605,10606,1600</picklistEntryIds>
+      <picklistEntryIds>6637,10613,10614,10615,1600</picklistEntryIds>
     </sfField>
     <sfField length="40" n="ForecastCategoryName" restrictedPicklist="true" t="Forecast Category" type="picklist">
-      <picklistEntryIds>6629,6630,6631,6632,1600</picklistEntryIds>
+      <picklistEntryIds>6637,6638,6639,6640,1600</picklistEntryIds>
     </sfField>
     <sfField length="18" n="CampaignId" relationshipName="Campaign" t="Campaign ID" type="reference">
       <referenceTos>
@@ -87,10 +86,10 @@
       </referenceTos>
     </sfField>
     <sfField length="255" n="BU__c" t="Business Unit" type="picklist">
-      <picklistEntryIds>10607,10608,70,71,72,73,74</picklistEntryIds>
+      <picklistEntryIds>10616,10617,70,71,72,73,74</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Lost_Reason__c" t="Lost Reason" type="picklist">
-      <picklistEntryIds>10609,84,10610,10611,2443,10612,10613,578,10614,10615,10616,10603,10617</picklistEntryIds>
+      <picklistEntryIds>10618,84,10619,10620,2445,10621,10622,578,10623,10624,10625,10612,10626</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" n="Total_List_Price__c" precision="18" scale="2" summarizedField="OpportunityLineItem.List_Price_Grand_Total__c" summaryForeignKey="OpportunityLineItem.OpportunityId" summaryOperation="sum" t="Total List Price" type="currency" updateable="false"/>
     <sfField calculated="true" createable="false" formula="IF(Total_List_Price__c &gt;0,  ( Total_List_Price__c - Amount)/ Total_List_Price__c, null)" formulaTreatBlanksAs="BlankAsZero" n="Total_Discount__c" precision="18" scale="2" t="Total Discount %" type="percent" updateable="false"/>
@@ -119,7 +118,7 @@
     </sfField>
     <sfField calculated="true" createable="false" formula="HYPERLINK( Id , &quot;link&quot; , &quot;_blank&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Opp_Link__c" t="Opp Link" updateable="false"/>
     <sfField length="255" n="DB_Competitor__c" t="DB Competitor" type="picklist">
-      <picklistEntryIds>10618,10619,10620</picklistEntryIds>
+      <picklistEntryIds>10627,10628,10629</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" formula="IF( CloseDate &lt; today() &amp;&amp;  IsClosed = False, \n IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.FileDownload?file=015E0000001Gjka&quot;, &quot;update close Date&quot; ), NULL)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Close_Date_Alert__c" t="Close Date Alert" updateable="false"/>
     <sfField calculated="true" createable="false" formula="Account.Parent.Name" length="1300" n="Related_Auto_Group__c" summary="Formula field that reads the Parent Account Name from the Account." t="Related Auto Group" updateable="false"/>
@@ -136,13 +135,13 @@
     <sfField n="Order_Generated__c" t="Order Generated" type="_boolean"/>
     <sfField n="IsQuickView__c" t="IsQuickView" type="_boolean"/>
     <sfField length="255" n="mti_pb__PriceBook_To_Use__c" t="PriceBook To Use" type="picklist">
-      <picklistEntryIds>58645</picklistEntryIds>
+      <picklistEntryIds>10630</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" formula="PS_Forecast__c *  Probability" formulaTreatBlanksAs="BlankAsZero" n="PS_Probability__c" precision="18" scale="2" t="PS Probability" type="currency" updateable="false"/>
     <sfField calculated="true" createable="false" n="PS_Forecast__c" precision="18" summarizedField="OpportunityLineItem.PS_Forecast__c" summaryForeignKey="OpportunityLineItem.OpportunityId" summaryOperation="sum" t="PS Forecast" type="currency" updateable="false"/>
     <sfField length="100" n="ATDSA_bookshelf__CurrentGenerators__c" notVisibleToMetadataUser="true" t="Current Generator(s)"/>
     <sfField n="ATDSA_bookshelf__DeliveryInstallationStatus__c" notVisibleToMetadataUser="true" t="Delivery/Installation Status" type="picklist">
-      <picklistEntryIds>10621,10622,1071</picklistEntryIds>
+      <picklistEntryIds>10631,10632,1071</picklistEntryIds>
     </sfField>
     <sfField length="100" n="ATDSA_bookshelf__MainCompetitors__c" notVisibleToMetadataUser="true" t="Main Competitor(s)"/>
     <sfField length="12" n="ATDSA_bookshelf__TrackingNumber__c" notVisibleToMetadataUser="true" t="Tracking Number"/>
@@ -155,7 +154,7 @@
     <sfField formula="IF(\nCustom_Billing_Address__c = True,\nBilling_Zip_Postal_Code__c,\nAccount.BillingPostalCode\n)" formulaTreatBlanksAs="BlankAsZero" n="Billing_Zip_Postal_Code_Display__c" notVisibleToMetadataUser="true" t="Billing Zip/Postal Code (Display)"/>
     <sfField length="255" n="Billing_Zip_Postal_Code__c" notVisibleToMetadataUser="true" t="Billing Zip/Postal Code"/>
     <sfField n="Campaign_Types__c" notVisibleToMetadataUser="true" t="Campaign Types" type="multipicklist">
-      <picklistEntryIds>10623,10624,10625,10626,10627,10628,10629,10630,10631,10632,10633,10634,10635,10636,10637,10638,10639,10640,3003,10641,10642,10643,10644,10645</picklistEntryIds>
+      <picklistEntryIds>10633,10634,10635,10636,10637,10638,10639,10640,10641,10642,10643,10644,10645,10646,10647,10648,10649,10650,3005,10651,10652,10653,10654,10655</picklistEntryIds>
     </sfField>
     <sfField n="Contact_Email__c" notVisibleToMetadataUser="true" t="Contact Email" type="email"/>
     <sfField length="255" n="Contact_Name__c" notVisibleToMetadataUser="true" t="Contact Name"/>
@@ -166,7 +165,7 @@
     <sfField n="Dealer_Website_URL__c" notVisibleToMetadataUser="true" t="Dealer Website URL" type="url"/>
     <sfField length="255" n="Dealership_Name__c" notVisibleToMetadataUser="true" t="Dealership Name"/>
     <sfField n="Discount_Approval_Status__c" notVisibleToMetadataUser="true" t="Approval Status" type="picklist">
-      <picklistEntryIds>10646,540,10647</picklistEntryIds>
+      <picklistEntryIds>10656,540,10657</picklistEntryIds>
     </sfField>
     <sfField formula="IF(\nCustom_Billing_Address__c = True,\nFalse,\nTrue\n)" formulaTreatBlanksAs="BlankAsZero" n="Existing_Billing_Address_Conga__c" notVisibleToMetadataUser="true" t="Existing Billing Address (Conga)" type="boolean"/>
     <sfField formula="IF(\nCustom_Physical_Address__c = True,\nFalse,\nTrue\n)" formulaTreatBlanksAs="BlankAsZero" n="Existing_Physical_Address_Conga__c" notVisibleToMetadataUser="true" t="Existing Physical Address (Conga)" type="boolean"/>
@@ -192,7 +191,7 @@
     <sfField n="Submit_For_Approval__c" notVisibleToMetadataUser="true" t="Submit For Approval" type="boolean"/>
     <sfField n="Sync_Errors__c" notVisibleToMetadataUser="true" t="Sync Errors" type="textarea"/>
     <sfField n="Sync_Status__c" notVisibleToMetadataUser="true" t="Sync Status" type="picklist">
-      <picklistEntryIds>10648,10649</picklistEntryIds>
+      <picklistEntryIds>10658,10659</picklistEntryIds>
     </sfField>
     <sfField n="TotalOpportunityQuantity" notVisibleToMetadataUser="true"/>
     <sfField length="255" n="Used_Car_Inventory_Source__c" notVisibleToMetadataUser="true" t="Used Car Inventory Source"/>
@@ -1234,35 +1233,35 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">DB_Competitor__c</key>
-          <value valueClass="string">10618,10619,10620</value>
+          <value valueClass="string">10627,10628,10629</value>
         </entry>
         <entry>
           <key valueClass="string">Type</key>
-          <value valueClass="string">1745,1018,10602,10603,1017</value>
+          <value valueClass="string">1745,1018,10611,10612,1017</value>
         </entry>
         <entry>
           <key valueClass="string">ForecastCategoryName</key>
-          <value valueClass="string">1600,6629</value>
+          <value valueClass="string">1600,6637</value>
         </entry>
         <entry>
           <key valueClass="string">Lost_Reason__c</key>
-          <value valueClass="string">10609,84,10610,10611,2443,10612,10613,578,10614,10615,10616,10603,10617</value>
+          <value valueClass="string">10618,84,10619,10620,2445,10621,10622,578,10623,10624,10625,10612,10626</value>
         </entry>
         <entry>
           <key valueClass="string">LeadSource</key>
-          <value valueClass="string">484,12256,489,619,485,486,487,490,491,492,493,494,495,496,497,12257,499,620,621,500,501,502,503,504,93,622,505,506,623,624,625,507,626,508,627,509,510,12258,511,628</value>
+          <value valueClass="string">484,20050,489,619,485,486,487,490,491,492,493,494,495,496,497,20051,499,620,621,500,501,502,503,504,93,622,505,506,623,624,625,507,626,508,627,509,510,20052,511,628</value>
         </entry>
         <entry>
           <key valueClass="string">mti_pb__PriceBook_To_Use__c</key>
-          <value valueClass="string">58645</value>
+          <value valueClass="string">10630</value>
         </entry>
         <entry>
           <key valueClass="string">BU__c</key>
-          <value valueClass="string">10607,10608,70,71,72,74,73</value>
+          <value valueClass="string">10616,10617,70,71,72,74,73</value>
         </entry>
         <entry>
           <key valueClass="string">Campaign_Types__c</key>
-          <value valueClass="string">10623,10624,10625,10626,10627,10628,12288,10630,10631,10632,10633,10635,10634,10636,10637,10638,10639,10640,3003,10641,10642,10644,10645,10643</value>
+          <value valueClass="string">10633,10634,10635,10636,10637,10638,20086,10640,10641,10642,10643,10645,10644,10646,10647,10648,10649,10650,3005,10651,10652,10654,10655,10653</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -2283,8 +2282,8 @@
     <sfActionLink n="Tab" s=""/>
     <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
     <sfActionLink n="ADD_PRODUCT" s="" t="ADD PRODUCT" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fna9.salesforce.com%2Foppitm%2Fchoosepricebook.jsp%3Fid%3D%7B%21Opportunity.Id%7D%0A%26retURL%3D%252F%7B%21Opportunity.Id%7D%0A%26saveURL%3D%252Fp%252Fopp%252FSelectSearch%253FaddTo%253D%7B%21Opportunity.Id%7D%2526retURL%253D%25252Fp%25252Fopp%25252FSelectSearch%25253FaddTo%25253D%7B%21Opportunity.Id%7D%252526retURL%25253D%2525252F%7B%21Opportunity.Id%7D"/>
-    <sfActionLink n="APXTConga4__Conga_Composer_OAuth" s="" t="Conga Composer (OAuth)" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2FAPXTConga4__Conga_Composer%0A%3Fid%3D%7B%21Opportunity.Id%7D&amp;page=APXTConga4__Conga_Composer%0A&amp;window=*"/>
-    <sfActionLink n="APXTConga4__Conga_Mail_Merge" s="" t="Conga Composer" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fcomposer.congamerge.com%0A%3FsessionId%3D%7B%21API.Session_ID%7D%0A%26serverUrl%3D%7B%21API.Partner_Server_URL_290%7D%0A%26id%3D%7B%21Opportunity.Id%7D&amp;window=*"/>
+    <sfActionLink n="APXTConga4__Conga_Composer_OAuth" s="" t="Conga Composer (OAuth)" target="sf:ui:target?object=Opportunity&amp;window=*&amp;url=%2Fapex%2FAPXTConga4__Conga_Composer%0A%3Fid%3D%7B%21Opportunity.Id%7D&amp;page=APXTConga4__Conga_Composer%0A"/>
+    <sfActionLink n="APXTConga4__Conga_Mail_Merge" s="" t="Conga Composer" target="sf:ui:target?object=Opportunity&amp;window=*&amp;url=https%3A%2F%2Fcomposer.congamerge.com%0A%3FsessionId%3D%7B%21API.Session_ID%7D%0A%26serverUrl%3D%7B%21API.Partner_Server_URL_290%7D%0A%26id%3D%7B%21Opportunity.Id%7D"/>
     <sfActionLink n="Generate_Contract" s="" t="Generate Contract" target="sf:ui:target?object=Opportunity&amp;url=%2Fflow%2FOpportunity_to_Contract%3FOpptyID%3D%7B%21Opportunity.Id%7D%26retURL%3D%2F%7B%21Opportunity.Id%7D"/>
     <sfActionLink n="Generate_Order" s="" t="Generate Order" target="sf:ui:target?object=Opportunity&amp;url=%2Fflow%2FOpportunity_to_Order%3FOpptyID%3D%7B%21Opportunity.Id%7D%26retURL%3D%2F%7B%21Opportunity.Id%7D"/>
     <sfActionLink n="Generate_Order_Contract" s="" t="Generate Order &amp; Contract" target="sf:ui:target?object=Opportunity&amp;url=%2Fflow%2FOpportunity_to_Order_with_Contract%3FOpptyID%3D%7B%21Opportunity.Id%7D%26retURL%3D%2F%7B%21Opportunity.Id%7D"/>
@@ -2292,13 +2291,13 @@
     <sfActionLink n="Loop__LOOP" s="" t="Create PDF" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Floop__loop%3Feid%3D%7B%21Opportunity.Id%7D&amp;page=loop__loop"/>
     <sfActionLink n="Loop__LOOP_Merge" s="" t="Deprecated LM" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Floop__loopmerge%3Feid%3D%7B%21Opportunity.Id%7D%26accountId%3D%7B%21Opportunity.AccountId%7D&amp;page=loop__loopmerge"/>
     <sfActionLink n="Loop__LOOPlus" s="" t="Run DDP" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Floop__looplus%3Feid%3D%7B%21Opportunity.Id%7D%26accountId%3D%7B%21Opportunity.AccountId%7D%26sessionId%3D%7B%21%24Api.Session_ID%7D&amp;page=loop__looplus"/>
-    <sfActionLink massAction="true" n="Loop__Mass_LOOP_Merge" requiresRow="true" s="" t="Deprecated Mass LM" target="sf:ui:target?action=Loop__Mass_LOOP_Merge&amp;object=Opportunity"/>
-    <sfActionLink massAction="true" n="Loop__Mass_LOOPlus" requiresRow="true" s="" t="Run DDP" target="sf:ui:target?action=Loop__Mass_LOOPlus&amp;object=Opportunity"/>
-    <sfActionLink n="View_Swots" s="" t="View Swots" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fna9.salesforce.com%2F00OE0000001atqP&amp;window=*"/>
-    <sfActionLink n="echosign_dev1__Conga_Send_to_EchoSign" s="" t="Send to EchoSign - Conga" target="sf:ui:target?object=Opportunity&amp;url=https%3A%2F%2Fwww.appextremes.com%2Fapps%2FConga%2FPointMerge.aspx%0A%3FSessionId%3D%7B%21API.Session_ID%7D%0A%26ServerUrl%3D%7B%21API.Partner_Server_URL_80%7D%0A%26Id%3D%7B%21Opportunity.Id%7D%0A%26ESOpportunityid%3D%7B%21Opportunity.Id%7D%0A%26ESVisible%3D1%0A%26ESSignatureType%3D2%0A%26ESAgreementName%3DAgreement%2Bfor%2B%7B%21Opportunity.Name%7D%2B-%2B%7B%21Today%7D%0A%26ESCustomField%3Dechosign_dev1__Recipient_User__c%0A%26ESCustomFieldValue%3D%7B%21Opportunity.OwnerId%7D&amp;window=*"/>
-    <sfActionLink n="echosign_dev1__Send_to_EchoSign" s="" t="Send to EchoSign" target="sf:ui:target?object=Opportunity&amp;url=%2Fapex%2Fechosign_dev1__AgreementTemplateProcess%3FmasterId%3D%7B%21Opportunity.Id%7D&amp;page=echosign_dev1__AgreementTemplateProcess&amp;window=*"/>
-    <sfActionLink massAction="true" n="loli_oppwall__Opportunity_Planning_Wall" s="" t="Open Planning Wall..." target="sf:ui:target?action=loli_oppwall__Opportunity_Planning_Wall&amp;object=Opportunity"/>
-    <sfActionLink n="loli_oppwall__Opportunity_Planning_Wall2" s="" t="Open Planning Wall..." target="sf:ui:target?action=loli_oppwall__Opportunity_Planning_Wall2&amp;object=Opportunity"/>
+    <sfActionLink massAction="true" n="Loop__Mass_LOOP_Merge" requiresRow="true" s="" t="Deprecated Mass LM" target="sf:ui:target?object=Opportunity&amp;action=Loop__Mass_LOOP_Merge"/>
+    <sfActionLink massAction="true" n="Loop__Mass_LOOPlus" requiresRow="true" s="" t="Run DDP" target="sf:ui:target?object=Opportunity&amp;action=Loop__Mass_LOOPlus"/>
+    <sfActionLink n="View_Swots" s="" t="View Swots" target="sf:ui:target?object=Opportunity&amp;window=*&amp;url=https%3A%2F%2Fna9.salesforce.com%2F00OE0000001atqP"/>
+    <sfActionLink n="echosign_dev1__Conga_Send_to_EchoSign" s="" t="Send to EchoSign - Conga" target="sf:ui:target?object=Opportunity&amp;window=*&amp;url=https%3A%2F%2Fwww.appextremes.com%2Fapps%2FConga%2FPointMerge.aspx%0A%3FSessionId%3D%7B%21API.Session_ID%7D%0A%26ServerUrl%3D%7B%21API.Partner_Server_URL_80%7D%0A%26Id%3D%7B%21Opportunity.Id%7D%0A%26ESOpportunityid%3D%7B%21Opportunity.Id%7D%0A%26ESVisible%3D1%0A%26ESSignatureType%3D2%0A%26ESAgreementName%3DAgreement%2Bfor%2B%7B%21Opportunity.Name%7D%2B-%2B%7B%21Today%7D%0A%26ESCustomField%3Dechosign_dev1__Recipient_User__c%0A%26ESCustomFieldValue%3D%7B%21Opportunity.OwnerId%7D"/>
+    <sfActionLink n="echosign_dev1__Send_to_EchoSign" s="" t="Send to EchoSign" target="sf:ui:target?object=Opportunity&amp;window=*&amp;url=%2Fapex%2Fechosign_dev1__AgreementTemplateProcess%3FmasterId%3D%7B%21Opportunity.Id%7D&amp;page=echosign_dev1__AgreementTemplateProcess"/>
+    <sfActionLink massAction="true" n="loli_oppwall__Opportunity_Planning_Wall" s="" t="Open Planning Wall..." target="sf:ui:target?object=Opportunity&amp;action=loli_oppwall__Opportunity_Planning_Wall"/>
+    <sfActionLink n="loli_oppwall__Opportunity_Planning_Wall2" s="" t="Open Planning Wall..." target="sf:ui:target?object=Opportunity&amp;action=loli_oppwall__Opportunity_Planning_Wall2"/>
     <sfActionLink modes="detail" n="Submit" requiresRow="true"/>
     <sfActionLink modes="new,edit,Clone,clone" n="save" requiresRow="true" t="Save"/>
     <sfActionLink modes="new,edit,Clone,clone" n="save_new" requiresRow="true" t="Save and New"/>

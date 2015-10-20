@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="02Z" label="Account Contact Role" labelPlural="Account Contact Roles" n="AccountContactRole" queryable="true" retrieveable="true" s="" sfObjectId="" standardLabel="Account Contact Role" t="Account Contact Role (02Z)" updatable="true">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="02Z" label="Account Contact Role" labelPlural="Account Contact Roles" n="AccountContactRole" queryable="true" retrieveable="true" s="" sfObjectId="" standardLabel="Account Contact Role" t="Account Contact Role (02Z)" updatable="true">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Contact Role ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>

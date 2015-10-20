@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="00k" label="Opportunity Product" labelPlural="Opportunity Product" layoutable="true" n="OpportunityLineItem" queryable="true" retrieveable="true" s="" sfObjectId="" standardLabel="OpportunityLineItem" t="Opportunity Product (00k)" updatable="true">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="00k" label="Opportunity Product" labelPlural="Opportunity Product" layoutable="true" n="OpportunityLineItem" queryable="true" retrieveable="true" s="" sfObjectId="" standardLabel="OpportunityLineItem" t="Opportunity Product (00k)" updatable="true">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Line Item ID" type="id" updateable="false"/>
     <sfField length="18" n="OpportunityId" relationshipName="Opportunity" required="true" t="Opportunity ID" type="reference" updateable="false">

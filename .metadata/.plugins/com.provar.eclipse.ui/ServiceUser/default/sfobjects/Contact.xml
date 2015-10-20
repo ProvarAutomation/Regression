@@ -15,7 +15,7 @@
     <sfField extraTypeInfo="personname" length="80" n="LastName" required="true" t="Last Name"/>
     <sfField extraTypeInfo="personname" length="40" n="FirstName" t="First Name"/>
     <sfField extraTypeInfo="personname" length="40" n="Salutation" type="picklist">
-      <picklistEntryIds>1566,1567,1568,1569,1570</picklistEntryIds>
+      <picklistEntryIds>1541,1542,1543,1544,1545</picklistEntryIds>
     </sfField>
     <sfField createable="false" extraTypeInfo="personname" length="121" n="Name" nameField="true" required="true" t="Full Name" updateable="false"/>
     <sfField extraTypeInfo="plaintextarea" length="255" n="OtherStreet" t="Other Street" type="textarea"/>
@@ -95,30 +95,30 @@
     <sfField length="50" n="Contact_GUID__c" t="Contact GUID"/>
     <sfField calculated="true" createable="false" formula="1" formulaTreatBlanksAs="BlankAsZero" n="Contact_Counter__c" precision="18" t="Contact Counter" type="_double" updateable="false"/>
     <sfField length="255" n="Role__c" summary="describes the contact's role at the dealership" t="Role" type="picklist">
-      <picklistEntryIds>2783,2784,2785,657,658,2786,93,2787,2788,2789</picklistEntryIds>
+      <picklistEntryIds>2754,2755,2756,657,658,2757,93,2758,2759,2760</picklistEntryIds>
     </sfField>
     <sfField extraTypeInfo="richtextarea" length="32768" n="Contact_Photo__c" t="Contact Photo" type="textarea"/>
     <sfField length="255" n="Status__c" summary="shows the status of a contact at a dealership" t="Status" type="picklist">
-      <picklistEntryIds>75,2790</picklistEntryIds>
+      <picklistEntryIds>75,2761</picklistEntryIds>
     </sfField>
     <sfField length="100" n="Status_Notes__c" summary="updated by workflow with the contact status is updated to Gone - shows No Longer with Dealership&quot;" t="Status Notes"/>
     <sfField length="4099" n="Primary_BU_Contact__c" precision="6" summary="Select which BUs this person should be made the primary contact for." t="Primary Contact" type="multipicklist">
-      <picklistEntryIds>68,2791,71,72,2792,2793</picklistEntryIds>
+      <picklistEntryIds>68,2762,71,72,2763,2764</picklistEntryIds>
     </sfField>
     <sfField n="Duplicate_Contact__c" summary="Check if this is a duplicate contact and it will be flagged for removal." t="Duplicate Flag" type="_boolean"/>
     <sfField calculated="true" createable="false" formula="1" formulaTreatBlanksAs="BlankAsZero" n="Contact__c" precision="18" t="Contact" type="_double" updateable="false"/>
     <sfField length="255" n="Birth_Day__c" t="Birth Day" type="picklist">
-      <picklistEntryIds>2794,2795,2796,2797,2798,2799,2800,2801,2802,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,2803</picklistEntryIds>
+      <picklistEntryIds>2765,2766,2767,2768,2769,2770,2771,2772,2773,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,2774</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Birth_Month__c" t="Birth Month" type="picklist">
-      <picklistEntryIds>2794,2795,2796,2797,2798,2799,2800,2801,2802,454,455,456</picklistEntryIds>
+      <picklistEntryIds>2765,2766,2767,2768,2769,2770,2771,2772,2773,454,455,456</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Contact_Title__c" t="Contact Title" type="picklist">
-      <picklistEntryIds>2804,2805,2806,2807,2808,2809,2810,2811,2812,2813,2814,2815,2816,2817,2818,2819,2820,2821,93</picklistEntryIds>
+      <picklistEntryIds>2775,2776,2777,2778,2779,2780,2781,2782,2783,2784,2785,2786,2787,2788,2789,2790,2791,2792,93</picklistEntryIds>
     </sfField>
     <sfField length="100" n="ATDSA_bookshelf__Languages__c" notVisibleToMetadataUser="true" t="Languages"/>
     <sfField n="ATDSA_bookshelf__Level__c" notVisibleToMetadataUser="true" t="Level" type="picklist">
-      <picklistEntryIds>2822,2823,956</picklistEntryIds>
+      <picklistEntryIds>2793,2794,2795</picklistEntryIds>
     </sfField>
     <sfField n="DoNotCall" notVisibleToMetadataUser="true"/>
     <sfField n="FormPos__Current_Position_Start__c" notVisibleToMetadataUser="true" summary="Tracks the start date of a Contact's association with an Account for future use in the Former Position record when the Contact is re-associated with a different Account." t="Current Position Start" type="date"/>

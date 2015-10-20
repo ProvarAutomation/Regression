@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="a2K" label="Terms &amp; Conditions" labelPlural="Terms &amp; Conditions" layoutable="true" n="Terms_Conditions__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IM00000005LI8MAM" t="Terms &amp; Conditions (a2K)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a2K/e">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="a2K" label="Terms &amp; Conditions" labelPlural="Terms &amp; Conditions" layoutable="true" n="Terms_Conditions__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IM00000005LI8MAM" t="Terms &amp; Conditions (a2K)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a2K/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
     <sfField length="18" n="OwnerId" relationshipName="Owner" t="Owner ID" type="reference">
@@ -44,7 +43,7 @@
       </referenceTos>
     </sfField>
     <sfField length="255" n="Agreement_Status__c" t="Agreement Status" type="picklist">
-      <picklistEntryIds>12057,12058</picklistEntryIds>
+      <picklistEntryIds>12087,12088</picklistEntryIds>
     </sfField>
     <sfField length="18" n="Contact__c" relationshipName="Contact__r" t="Contact" type="reference">
       <referenceTos>
@@ -53,7 +52,7 @@
     </sfField>
     <sfField length="20" n="EchoSign_Template_Id__c" t="EchoSign Template Id"/>
     <sfField length="255" n="T_C_Type__c" t="T&amp;C Type" type="picklist">
-      <picklistEntryIds>12059,12060</picklistEntryIds>
+      <picklistEntryIds>12089,12090</picklistEntryIds>
     </sfField>
   </fields>
   <childRelationships>
@@ -243,11 +242,11 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">T_C_Type__c</key>
-          <value valueClass="string">12059,12060</value>
+          <value valueClass="string">12089,12090</value>
         </entry>
         <entry>
           <key valueClass="string">Agreement_Status__c</key>
-          <value valueClass="string">12543,12058</value>
+          <value valueClass="string">20341,12088</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -417,11 +416,11 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">T_C_Type__c</key>
-          <value valueClass="string">12059,12060</value>
+          <value valueClass="string">12089,12090</value>
         </entry>
         <entry>
           <key valueClass="string">Agreement_Status__c</key>
-          <value valueClass="string">12543,12058</value>
+          <value valueClass="string">20341,12088</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>

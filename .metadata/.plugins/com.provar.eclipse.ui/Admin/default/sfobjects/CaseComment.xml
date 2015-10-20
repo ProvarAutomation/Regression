@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="00a" label="Case Comment" labelPlural="Case Comments" n="CaseComment" queryable="true" retrieveable="true" s="" standardLabel="Case Comment" t="Case Comment (00a)" updatable="true">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="00a" label="Case Comment" labelPlural="Case Comments" n="CaseComment" queryable="true" retrieveable="true" s="" standardLabel="Case Comment" t="Case Comment (00a)" updatable="true">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Case Comment ID" type="id" updateable="false"/>
     <sfField length="18" n="ParentId" relationshipName="Parent" required="true" t="Parent ID" type="reference" updateable="false">

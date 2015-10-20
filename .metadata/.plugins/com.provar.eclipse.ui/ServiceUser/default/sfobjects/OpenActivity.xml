@@ -57,7 +57,7 @@
       </referenceTos>
     </sfField>
     <sfField createable="false" length="80" n="Subject" nameField="true" type="combobox" updateable="false">
-      <picklistEntryIds>1068</picklistEntryIds>
+      <picklistEntryIds>1028</picklistEntryIds>
     </sfField>
     <sfField createable="false" n="IsTask" t="Task" type="_boolean" updateable="false"/>
     <sfField createable="false" n="ActivityDate" t="Date" type="date" updateable="false"/>
@@ -67,14 +67,14 @@
       </referenceTos>
     </sfField>
     <sfField createable="false" length="40" n="Status" type="picklist" updateable="false">
-      <picklistEntryIds>1069,1070,1071,1072,1073</picklistEntryIds>
+      <picklistEntryIds>1029,1030,1031,1032,1033</picklistEntryIds>
     </sfField>
     <sfField createable="false" length="40" n="Priority" type="picklist" updateable="false">
-      <picklistEntryIds>611,1075,612</picklistEntryIds>
+      <picklistEntryIds>611,1035,612</picklistEntryIds>
     </sfField>
     <sfField createable="false" n="IsHighPriority" t="High Priority" type="_boolean" updateable="false"/>
     <sfField createable="false" length="40" n="ActivityType" t="Type" type="picklist" updateable="false">
-      <picklistEntryIds>82231,82232,82233,82234,82234,82235,82236,82236,82237,82237,82238,82239,82240,82241</picklistEntryIds>
+      <picklistEntryIds>239820,239821,239822,239823,239823,239824,239825,239825,239826,239826,239827,239828,239829,239830</picklistEntryIds>
     </sfField>
     <sfField createable="false" n="IsClosed" t="Closed" type="_boolean" updateable="false"/>
     <sfField createable="false" n="IsAllDayEvent" t="All-Day Event" type="_boolean" updateable="false"/>
@@ -97,7 +97,7 @@
     <sfField createable="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
     <sfField createable="false" digits="8" n="CallDurationInSeconds" t="Call Duration" type="_int" updateable="false"/>
     <sfField createable="false" length="40" n="CallType" restrictedPicklist="true" t="Call Type" type="picklist" updateable="false">
-      <picklistEntryIds>1088,1089,1090</picklistEntryIds>
+      <picklistEntryIds>1048,1049,1050</picklistEntryIds>
     </sfField>
     <sfField createable="false" length="255" n="CallDisposition" t="Call Result" updateable="false"/>
     <sfField createable="false" length="255" n="CallObject" t="Call Object Identifier" updateable="false"/>
@@ -130,18 +130,18 @@
     <sfField createable="false" length="100" n="Preview__c" summary="updated by workflow - pulls the first 97 characters of the logged activity for viewing in related list and views" t="Preview" updateable="false"/>
     <sfField createable="false" length="100" n="Created_by_Role__c" summary="updated by workflow" t="Created by Role" updateable="false"/>
     <sfField createable="false" length="255" n="Meeting_Status__c" t="Meeting Status" type="picklist" updateable="false">
-      <picklistEntryIds>1091,1092,1093,1071,81</picklistEntryIds>
+      <picklistEntryIds>1051,1052,1053,1031,81</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" formula="IF(CONTAINS( Subject , &quot;Email&quot;), &quot;Email&quot;, IF(CONTAINS( Subject , &quot;Cold Call&quot;), &quot;Cold Call&quot;, IF(CONTAINS( Subject , &quot;Call&quot;), &quot;Call&quot;, IF(CONTAINS( Subject , &quot;Meeting&quot;), &quot;Meeting&quot;, IF(CONTAINS( Subject , &quot;On Site Visit&quot;), &quot;Site Visit&quot;, IF(CONTAINS( Subject , &quot;Quote&quot;), &quot;Send Letter/Quote&quot;, &quot;Other&quot;))))))" length="1300" n="DB_Activity_Type__c" t="DB Activity Type" updateable="false"/>
     <sfField calculated="true" createable="false" formula="CreatedBy.Division" length="1300" n="Assigned_Division__c" t="Assigned Division" updateable="false"/>
     <sfField createable="false" length="50" n="Activity_Type_2__c" t="Activity Type" updateable="false"/>
     <sfField createable="false" length="255" n="Activity_Type_3__c" t="Activity Type 3" type="picklist" updateable="false">
-      <picklistEntryIds>1094,1095,1096,1097,93</picklistEntryIds>
+      <picklistEntryIds>1054,1037,1040,1042,93</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" formula="IF( \nActivity_Type_2__c  = &quot;Outbound Call/Fax&quot;,TODAY()-Date_Completed__c,0 )" n="Days_Since_Last_OB_Call__c" precision="18" t="Days Since Last OB Call" type="_double" updateable="false"/>
     <sfField createable="false" length="255" n="Location__c" t="Location" updateable="false"/>
     <sfField createable="false" length="255" n="SubType__c" t="SubType" type="picklist" updateable="false">
-      <picklistEntryIds>1098,1099,1100,1101,1102</picklistEntryIds>
+      <picklistEntryIds>1058,1059,1060,1061,1062</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" formula="IF( \nActivity_Type_2__c = &quot;In Person Visit&quot;,TODAY()-Date_Completed__c,0 )" n="Days_Since_Last_In_Person__c" precision="18" t="Days Since Last In Person" type="_double" updateable="false"/>
     <sfField createable="false" n="Task_Completed_Date__c" t="Task Completed Date" type="datetime" updateable="false"/>

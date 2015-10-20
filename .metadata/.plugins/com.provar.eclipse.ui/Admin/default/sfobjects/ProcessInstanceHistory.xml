@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject label="Process Instance History" labelPlural="Process Instance History" n="ProcessInstanceHistory" s="" standardLabel="Approval History" t="Process Instance History">
+<?xml version="1.0" encoding="UTF-8"?><sfObject label="Process Instance History" labelPlural="Process Instance History" n="ProcessInstanceHistory" s="" standardLabel="Approval History" t="Process Instance History">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Process Instance History ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsPending" t="Is Pending" type="_boolean" updateable="false"/>

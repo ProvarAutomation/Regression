@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject keyPrefix="008" label="Opportunity History" labelPlural="Opportunity History" n="OpportunityHistory" queryable="true" retrieveable="true" s="" t="Opportunity History (008)">
+<?xml version="1.0" encoding="UTF-8"?><sfObject keyPrefix="008" label="Opportunity History" labelPlural="Opportunity History" n="OpportunityHistory" queryable="true" retrieveable="true" s="" t="Opportunity History (008)">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Opportunity History ID" type="id" updateable="false"/>
     <sfField createable="false" length="18" n="OpportunityId" relationshipName="Opportunity" required="true" t="Opportunity ID" type="reference" updateable="false">
@@ -14,14 +13,14 @@
     </sfField>
     <sfField createable="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
     <sfField createable="false" length="40" n="StageName" required="true" t="Stage Name" type="picklist" updateable="false">
-      <picklistEntryIds>6633,6634,6635,10602,10603,6674,10605</picklistEntryIds>
+      <picklistEntryIds>6627,6628,6629,10595,10596,6668,10598</picklistEntryIds>
     </sfField>
     <sfField createable="false" n="Amount" precision="18" scale="2" type="currency" updateable="false"/>
     <sfField createable="false" n="ExpectedRevenue" precision="18" scale="2" t="Expected Revenue" type="currency" updateable="false"/>
     <sfField createable="false" n="CloseDate" t="Close Date" type="date" updateable="false"/>
     <sfField createable="false" n="Probability" precision="3" type="percent" updateable="false"/>
     <sfField createable="false" length="40" n="ForecastCategory" restrictedPicklist="true" t="To ForecastCategory" type="picklist" updateable="false">
-      <picklistEntryIds>6632,10608,10609,10610,1600</picklistEntryIds>
+      <picklistEntryIds>6626,10601,10602,10603,1600</picklistEntryIds>
     </sfField>
     <sfField createable="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>

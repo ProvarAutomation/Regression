@@ -7,7 +7,7 @@
       </referenceTos>
     </sfField>
     <sfField length="40" n="OwnerExpirationNotice" restrictedPicklist="true" t="Owner Expiration Notice" type="picklist">
-      <picklistEntryIds>2989,2990,2991,2992,2993,2994</picklistEntryIds>
+      <picklistEntryIds>2974,2975,2976,2977,2978,2979</picklistEntryIds>
     </sfField>
     <sfField n="StartDate" t="Contract Start Date" type="date"/>
     <sfField n="EndDate" t="Contract End Date" type="date"/>
@@ -34,7 +34,7 @@
       </referenceTos>
     </sfField>
     <sfField length="40" n="Status" restrictedPicklist="true" type="picklist">
-      <picklistEntryIds>2995,2996,2997</picklistEntryIds>
+      <picklistEntryIds>2980,2981,2982</picklistEntryIds>
     </sfField>
     <sfField length="18" n="CompanySignedId" relationshipName="CompanySigned" t="Company Signed By ID" type="reference">
       <referenceTos>
@@ -57,7 +57,7 @@
     </sfField>
     <sfField createable="false" n="ActivatedDate" t="Activated Date" type="datetime"/>
     <sfField createable="false" length="40" n="StatusCode" required="true" restrictedPicklist="true" t="Status Category" type="picklist" updateable="false">
-      <picklistEntryIds>2997,2998,2996,2999,80</picklistEntryIds>
+      <picklistEntryIds>2982,2983,2981,2984,80</picklistEntryIds>
     </sfField>
     <sfField extraTypeInfo="plaintextarea" length="32000" n="Description" type="textarea"/>
     <sfField length="18" n="RecordTypeId" relationshipName="RecordType" t="Record Type ID" type="reference">
@@ -93,7 +93,7 @@
     <sfField length="50" n="ATC_Dynamics_Contract_ID__c" summary="MS Dynamics Contract ID" t="ATC Dynamics Contract ID"/>
     <sfField length="200" n="ATC_Package_Name__c" t="Package Name"/>
     <sfField length="255" n="ATC_Priority_Code__c" t="Priority Code" type="picklist">
-      <picklistEntryIds>3000,611</picklistEntryIds>
+      <picklistEntryIds>2985,611</picklistEntryIds>
     </sfField>
     <sfField length="100" n="ATC_Sales_Order_Category__c" t="Sales Order Category"/>
     <sfField length="75" n="ATC_BPM_Process_Instance_ID__c" summary="Unique id for ATC contracts across all systems (webMethods, Sterling)" t="ATC BPM Process Instance ID"/>
@@ -142,7 +142,7 @@
     <sfField length="100" n="ALERT__c" notVisibleToMetadataUser="true" summary="Haystak Field.ORACLE RMB field" t="ALERT"/>
     <sfField n="Accounting_Notes__c" notVisibleToMetadataUser="true" summary="Haystak Field.Used by the Order QA to insert notes into a contract" t="Accounting Notes" type="textarea"/>
     <sfField n="Action__c" notVisibleToMetadataUser="true" summary="Haystak Field.Action for this contract." t="Action" type="picklist">
-      <picklistEntryIds>1293,1294,3001</picklistEntryIds>
+      <picklistEntryIds>1268,1269,2986</picklistEntryIds>
     </sfField>
     <sfField length="50" n="Alternate_Contract_Id__c" notVisibleToMetadataUser="true" summary="Haystak Field.Contract id from external systems" t="Alternate Contract Id"/>
     <sfField length="25" n="BU__c" notVisibleToMetadataUser="true" summary="Haystak Field.Business Unit Identifier" t="BU"/>
@@ -154,11 +154,11 @@
     <sfField formula="Bill_To_Account__r.BillingStreet + ' ' + Bill_To_Account__r.BillingCity + ', ' + Bill_To_Account__r.BillingState + ' ' + Bill_To_Account__r.BillingPostalCode + ' ' + Bill_To_Account__r.BillingCountry" formulaTreatBlanksAs="BlankAsZero" n="BillingAddress2__c" notVisibleToMetadataUser="true" summary="Haystak Field." t="BillingAddress2"/>
     <sfField formula="TEXT(Cancellation_Reason__c)" formulaTreatBlanksAs="BlankAsZero" n="Cancel_Reason__c" notVisibleToMetadataUser="true" summary="Haystak Field." t="Cancel Reason"/>
     <sfField n="Cancellation_Reason__c" notVisibleToMetadataUser="true" summary="Haystak Field.Reason for contract cancellation" t="Cancellation Reason" type="picklist">
-      <picklistEntryIds>1301,1302,1304,1305,1306,3002,1309,1310</picklistEntryIds>
+      <picklistEntryIds>1276,1277,1279,1280,1281,2987,1284,1285</picklistEntryIds>
     </sfField>
     <sfField n="Contract_Total__c" notVisibleToMetadataUser="true" summarizedField="Billing_Item__c.Total_Price__c" summary="Haystak Field.Total of all billing items." summaryForeignKey="Billing_Item__c.Contract__c" summaryOperation="sum" t="Contract Total"/>
     <sfField n="Contract_Type__c" notVisibleToMetadataUser="true" summary="Haystak" t="Contract Type" type="picklist">
-      <picklistEntryIds>520,3003</picklistEntryIds>
+      <picklistEntryIds>520,2988</picklistEntryIds>
     </sfField>
     <sfField length="4" n="Currency__c" notVisibleToMetadataUser="true" summary="Haystak Field." t="Currency"/>
     <sfField n="Date_Activated_in_RMB__c" notVisibleToMetadataUser="true" summary="Haystak Field." t="Date Activated in RMB" type="datetime"/>
@@ -841,23 +841,23 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">ATC_Priority_Code__c</key>
-          <value valueClass="string">611,3000</value>
+          <value valueClass="string">611,2985</value>
         </entry>
         <entry>
           <key valueClass="string">Status</key>
-          <value valueClass="string">2996,2997,2995</value>
+          <value valueClass="string">2981,2982,2980</value>
         </entry>
         <entry>
           <key valueClass="string">Action__c</key>
-          <value valueClass="string">1293,3001,1294</value>
+          <value valueClass="string">1268,2986,1269</value>
         </entry>
         <entry>
           <key valueClass="string">Contract_Type__c</key>
-          <value valueClass="string">520,3003</value>
+          <value valueClass="string">520,2988</value>
         </entry>
         <entry>
           <key valueClass="string">Cancellation_Reason__c</key>
-          <value valueClass="string">90030,1302,1304,90031,1306,3002,1309,90032</value>
+          <value valueClass="string">51178,1277,1279,51179,1281,2987,1284,51180</value>
         </entry>
         <entry>
           <key valueClass="string">Co_Op__c</key>
@@ -1317,11 +1317,11 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Status</key>
-          <value valueClass="string">2996,2997,2995</value>
+          <value valueClass="string">2981,2982,2980</value>
         </entry>
         <entry>
           <key valueClass="string">Contract_Type__c</key>
-          <value valueClass="string">520,3003</value>
+          <value valueClass="string">520,2988</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="a1u" label="Digital Media Request" labelPlural="Digital Media Requests" layoutable="true" n="Digital_Media_Request__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IM00000009ro3MAA" t="Digital Media Request (a1u)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a1u/e">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="a1u" label="Digital Media Request" labelPlural="Digital Media Requests" layoutable="true" n="Digital_Media_Request__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IM00000009ro3MAA" t="Digital Media Request (a1u)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a1u/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
     <sfField length="18" n="OwnerId" relationshipName="Owner" t="Owner ID" type="reference">
@@ -50,12 +49,12 @@
       </referenceTos>
     </sfField>
     <sfField length="255" n="Status__c" t="Status" type="picklist">
-      <picklistEntryIds>3131,1600</picklistEntryIds>
+      <picklistEntryIds>3133,1600</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" formula="CreatedBy.Phone" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Submitted_By_Phone__c" t="Submitted By Phone" updateable="false"/>
     <sfField calculated="true" createable="false" formula="CreatedBy.Full_Name__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Submitted_By__c" t="Submitted By" updateable="false"/>
     <sfField length="255" n="Type__c" t="Type" type="picklist">
-      <picklistEntryIds>1156,3132,3133,3134</picklistEntryIds>
+      <picklistEntryIds>1156,3134,3135,3136</picklistEntryIds>
     </sfField>
   </fields>
   <childRelationships>

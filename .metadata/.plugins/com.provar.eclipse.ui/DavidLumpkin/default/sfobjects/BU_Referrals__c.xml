@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="a0J" label="BU Referral" labelPlural="BU Referral" layoutable="true" n="BU_Referrals__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IE0000000BbArMAK" t="BU Referral (a0J)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a0J/e">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="a0J" label="BU Referral" labelPlural="BU Referral" layoutable="true" n="BU_Referrals__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IE0000000BbArMAK" t="BU Referral (a0J)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a0J/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
@@ -489,11 +488,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">12533,12534,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
+          <value valueClass="string">20331,20332,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">12522,12523,12524,12525,12526,12527,12528,12529,12530,12531,12532</value>
+          <value valueClass="string">20320,20321,20322,20323,20324,20325,20326,20327,20328,20329,20330</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -676,11 +675,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">12533,12534,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
+          <value valueClass="string">20331,20332,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">12522,12523,12524,12525,12526,12527,12528,12529,12530,12531,12532</value>
+          <value valueClass="string">20320,20321,20322,20323,20324,20325,20326,20327,20328,20329,20330</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1157,11 +1156,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">12533,12534,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
+          <value valueClass="string">20331,20332,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">12522,12523,12524,12525,12526,12527,12528,12529,12530,12531,12532</value>
+          <value valueClass="string">20320,20321,20322,20323,20324,20325,20326,20327,20328,20329,20330</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1558,11 +1557,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">12533,12534,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
+          <value valueClass="string">20331,20332,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">12522,12523,12524,12525,12526,12527,12528,12529,12530,12531,12532</value>
+          <value valueClass="string">20320,20321,20322,20323,20324,20325,20326,20327,20328,20329,20330</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject label="Process Instance History" labelPlural="Process Instance History" n="ProcessInstanceHistory" s="" standardLabel="Approval History" t="Process Instance History">
+<?xml version="1.0" encoding="UTF-8"?><sfObject label="Process Instance History" labelPlural="Process Instance History" n="ProcessInstanceHistory" s="" standardLabel="Approval History" t="Process Instance History">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Process Instance History ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsPending" t="Is Pending" type="_boolean" updateable="false"/>
@@ -172,7 +171,7 @@
       </referenceTos>
     </sfField>
     <sfField createable="false" length="40" n="StepStatus" restrictedPicklist="true" t="Status" type="picklist" updateable="false">
-      <picklistEntryIds>540,541,11597,11598,76,11599,11600,11601,11602</picklistEntryIds>
+      <picklistEntryIds>540,541,11627,11628,76,11629,11630,11631,11632</picklistEntryIds>
     </sfField>
     <sfField createable="false" length="18" n="OriginalActorId" relationshipName="OriginalActor" required="true" t="Original Actor ID" type="reference" updateable="false">
       <referenceTos>

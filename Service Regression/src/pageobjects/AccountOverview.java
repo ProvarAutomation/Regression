@@ -54,5 +54,11 @@ public class AccountOverview {
 	@LinkType()
 	@FindBy(xpath = "//a[contains(@id,'00NM0000001PuSF_link')]")
 	public WebElement QuickviewDigitalMediaRequests;
+	@LinkType()
+	@FindBy(linkText = "G")
+	public WebElement g;
+	@LinkType()
+	@FindBy(linkText = "Request Help w/Salesforce")
+	public WebElement requestHelpWSalesforce;
 			
 }

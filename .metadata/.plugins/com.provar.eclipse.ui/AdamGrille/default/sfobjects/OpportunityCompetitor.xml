@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" keyPrefix="00J" label="Opportunity: Competitor" labelPlural="Opportunity: Competitor" n="OpportunityCompetitor" queryable="true" retrieveable="true" s="" sfObjectId="" standardLabel="Opportunity: Competitor" t="Opportunity: Competitor (00J)" updatable="true">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="00J" label="Opportunity: Competitor" labelPlural="Opportunity: Competitor" n="OpportunityCompetitor" queryable="true" retrieveable="true" s="" sfObjectId="" standardLabel="Opportunity: Competitor" t="Opportunity: Competitor (00J)" updatable="true">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Opportunity: Competitor ID" type="id" updateable="false"/>
     <sfField length="18" n="OpportunityId" relationshipName="Opportunity" required="true" t="Opportunity ID" type="reference" updateable="false">
