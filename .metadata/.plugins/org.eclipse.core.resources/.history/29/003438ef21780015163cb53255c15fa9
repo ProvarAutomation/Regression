@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="17">
+<testCase id="16">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UiConnection (Test)">
@@ -207,7 +207,7 @@
                   </value>
                 </argument>
                 <argument id="expectedChoices">
-                  <value class="value" valueClass="string">Inventory, Contract Delivery Issue, Contract Entry Error, Co-Op Related, Downsell/Cancellation Related, Field Service Related, Goodwill - RSD Approval Req., Inventory Issue, Negotiated Discount, Product Delivery Issue, Product Dissatisfaction, Spotlight Powerpack, Website - Technology Issue, Zero Out Past Due</value>
+                  <value class="value" valueClass="string">Inventory,Contract Delivery Issue,Contract Entry Error,Co-Op Related,Downsell/Cancellation Related,Field Service Related,Goodwill - RSD Approval Req.,Inventory Issue,Negotiated Discount,Product Delivery Issue,Product Dissatisfaction,Spotlight Powerpack,Wesbite - Technology Issue,Zero Out Past Due</value>
                 </argument>
                 <argument id="resultName">
                   <value class="value" valueClass="string">PicklistCheck</value>
