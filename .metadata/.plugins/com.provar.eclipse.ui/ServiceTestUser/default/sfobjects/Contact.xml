@@ -856,15 +856,15 @@
     <sfActionLink n="ViewCustomerPortal" s=""/>
     <sfActionLink n="ViewPartnerPortalUser" s=""/>
     <sfActionLink n="ViewSelfService" s=""/>
-    <sfActionLink n="APXTConga4__Conga_Composer_OAuth" s="" t="Conga Composer (OAuth)" target="sf:ui:target?object=Contact&amp;url=%2Fapex%2FAPXTConga4__Conga_Composer%0A%3Fid%3D%7B%21Contact.Id%7D&amp;page=APXTConga4__Conga_Composer%0A&amp;window=*"/>
+    <sfActionLink n="APXTConga4__Conga_Composer_OAuth" s="" t="Conga Composer (OAuth)" target="sf:ui:target?object=Contact&amp;url=%2Fapex%2FAPXTConga4__Conga_Composer%0A%3Fid%3D%7B%21Contact.Id%7D&amp;window=*&amp;page=APXTConga4__Conga_Composer%0A"/>
     <sfActionLink n="APXTConga4__Conga_Mail_Merge" s="" t="Conga Composer" target="sf:ui:target?object=Contact&amp;url=https%3A%2F%2Fcomposer.congamerge.com%0A%3FsessionId%3D%7B%21API.Session_ID%7D%0A%26serverUrl%3D%7B%21API.Partner_Server_URL_290%7D%0A%26id%3D%7B%21Contact.Id%7D&amp;window=*"/>
     <sfActionLink n="GoogleMaps" s="" t="Google Maps" target="sf:ui:target?object=Contact&amp;url=http%3A%2F%2Fmaps.google.com%2Fmaps%3Ff%3Dq%26hl%3Den%26q%3D%7B%21Contact_MailingStreet%7D%2B%7B%21Contact_MailingCity%7D%2B%7B%21Contact_MailingState%7D%26om%3D1&amp;window=*"/>
     <sfActionLink n="GoogleSearch" s="" t="Google Search" target="sf:ui:target?object=Contact&amp;url=http%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3D%7B%21Contact_FirstName%7D+%7B%21Contact_LastName%7D&amp;window=*"/>
     <sfActionLink n="Loop__LOOP" s="" t="Create PDF" target="sf:ui:target?object=Contact&amp;url=%2Fapex%2Floop__loop%3Feid%3D%7B%21Contact.Id%7D&amp;page=loop__loop"/>
     <sfActionLink n="Loop__LOOP_Merge" s="" t="Deprecated LM" target="sf:ui:target?object=Contact&amp;url=%2Fapex%2Floop__loopmerge%3Feid%3D%7B%21Contact.Id%7D%26accountId%3D%7B%21Account.Id%7D&amp;page=loop__loopmerge"/>
     <sfActionLink n="Loop__LOOPlus" s="" t="Run DDP" target="sf:ui:target?object=Contact&amp;url=%2Fapex%2Floop__looplus%3Feid%3D%7B%21Contact.Id%7D%26accountId%3D%7B%21Account.Id%7D%26sessionId%3D%7B%21%24Api.Session_ID%7D&amp;page=loop__looplus"/>
-    <sfActionLink massAction="true" n="Loop__Mass_LOOP_Merge" requiresRow="true" s="" t="Deprecated Mass LM" target="sf:ui:target?action=Loop__Mass_LOOP_Merge&amp;object=Contact"/>
-    <sfActionLink massAction="true" n="Loop__Mass_LOOPlus" requiresRow="true" s="" t="Run DDP" target="sf:ui:target?action=Loop__Mass_LOOPlus&amp;object=Contact"/>
+    <sfActionLink massAction="true" n="Loop__Mass_LOOP_Merge" requiresRow="true" s="" t="Deprecated Mass LM" target="sf:ui:target?object=Contact&amp;action=Loop__Mass_LOOP_Merge"/>
+    <sfActionLink massAction="true" n="Loop__Mass_LOOPlus" requiresRow="true" s="" t="Run DDP" target="sf:ui:target?object=Contact&amp;action=Loop__Mass_LOOPlus"/>
     <sfActionLink n="SendGmail" s="" t="Send Gmail" target="sf:ui:target?object=Contact&amp;url=https%3A%2F%2Fmail.google.com%2Fmail%3Fview%3Dcm%26tf%3D0%26to%3D%7B%21Contact_Email%7D%3C%7B%21Contact_LastName%7D%2C+%7B%21Contact_FirstName%7D%3E%26tf%3D1&amp;window=*"/>
     <sfActionLink n="YahooMaps" s="" t="Yahoo! Maps" target="sf:ui:target?object=Contact&amp;url=http%3A%2F%2Fmaps.yahoo.com%2Fpy%2Fmaps.py%3Fcn%3D%7B%21Contact_MailingCountry%7D%26csz%3D%7B%21Contact_MailingCity%7D%2B%7B%21Contact_MailingState%7D%2B%7B%21Contact_MailingPostalCode%7D%2B%26addr%3D%7B%21Contact_MailingAddress%7D&amp;window=*"/>
     <sfActionLink n="YahooWeather" s="" t="Yahoo! Weather" target="sf:ui:target?object=Contact&amp;url=http%3A%2F%2Fweather.yahoo.com%2Fsearch%2Fweather2%3Fp%3D%7B%21Contact_MailingPostalCode%7D&amp;window=*"/>
@@ -895,7 +895,468 @@
     <sfListView n="Duplicate_Contacts" s="List View" t="Duplicate Contacts"/>
     <sfListView n="NewThisWeek" s="List View" t="New This Week"/>
   </listViews>
-  <quickActions/>
+  <quickActions>
+    <sfQuickAction label="Log a Call" n="LogACall" s="Quick Action" t="Log a Call" targetSObject="Task" type="LogACall">
+      <quickActionLayout n="LogACall" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI label="Comments" n="Comments" s="" seqNum="1" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Description" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI label="Related To" n="Related To" s="" seqNum="1" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhatId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="New Contact" n="NewContact" s="Quick Action" t="New Contact" targetSObject="Contact" type="Create">
+      <quickActionLayout n="NewContact" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Name" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Email" n="Email" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Email" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="Phone" n="Phone" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Phone" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                    <children>
+                      <sfLI label="Account Name" n="Account Name" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="AccountId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="4">
+                    <children>
+                      <sfLI label="Title" n="Title" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Title" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="New Event" n="NewEvent" s="Quick Action" t="New Event" targetSObject="Event" type="Create">
+      <quickActionLayout n="NewEvent" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Start" n="Start" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="StartDateTime" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="End" n="End" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="EndDateTime" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                    <children>
+                      <sfLI label="All-Day Event" n="All-Day Event" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="IsAllDayEvent" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="4">
+                    <children>
+                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="5">
+                    <children>
+                      <sfLI label="Related To" n="Related To" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhatId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="6">
+                    <children>
+                      <sfLI label="Assigned To" n="Assigned To" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="7">
+                    <children>
+                      <sfLI label="Location" n="Location" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Location" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="New Group" n="NewGroup" s="Quick Action" t="New Group" targetSObject="CollaborationGroup" type="Create">
+      <quickActionLayout n="NewGroup" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Name" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Description" n="Description" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Description" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="Access Type" n="Access Type" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="CollaborationType" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                    <children>
+                      <sfLI label="Allow Customers" n="Allow Customers" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="CanHaveGuests" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="New Note" n="NewNote" s="Quick Action" t="New Note" targetSObject="Note" type="Create">
+      <quickActionLayout n="NewNote" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Title" n="Title" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Title" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Private" n="Private" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="IsPrivate" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="Body" n="Body" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Body" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="New Task" n="NewTask" s="Quick Action" t="New Task" targetSObject="Task" type="Create">
+      <quickActionLayout n="NewTask" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Due Date" n="Due Date" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="ActivityDate" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                    <children>
+                      <sfLI label="Related To" n="Related To" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhatId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="4">
+                    <children>
+                      <sfLI label="Assigned To" n="Assigned To" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="5">
+                    <children>
+                      <sfLI label="Status" n="Status" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Status" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="Log a Call" n="WrapAround_Email2" s="Quick Action" t="Log a Call" targetSObject="Task" type="Create">
+      <quickActionLayout n="WrapAround_Email2" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Assigned To" n="Assigned To" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="Status" n="Status" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Status" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                    <children>
+                      <sfLI label="Priority" n="Priority" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Priority" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="In Person Visit" n="Contact.In_Person_Visit_Contact" s="Quick Action" t="In Person Visit" targetSObject="Task" type="LogACall">
+      <quickActionLayout n="Contact.In_Person_Visit_Contact" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Comments" n="Comments" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Description" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+  </quickActions>
   <homeListColumns>
     <string>FULL_NAME</string>
     <string>ACCOUNT.NAME</string>

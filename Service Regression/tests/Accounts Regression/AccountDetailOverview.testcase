@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="3">
+<testCase id="0">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
@@ -291,6 +291,11 @@
                     <linkType/>
                   </type>
                 </apiParam>
+                <apiParam group="fields" name="field__sVOCRequestsSourceAccount0" screenBinding="ui:pageobject:field?field=sVOCRequestsSourceAccount0" title="S VOC Requests Source Account 0">
+                  <type>
+                    <linkType/>
+                  </type>
+                </apiParam>
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="87" title="On SF Account view (Dealer) screen">
@@ -380,8 +385,8 @@
                                 <uiAttributeAssertion attributeName="totalRowCount" comparisonType="None"/>
                               </attributeAssertions>
                             </uiFieldAssertion>
-                            <uiFieldAssertion resultName="ActivityHistories">
-                              <fieldLocator uri="ui:locator?name=ActivityHistories&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26relationship%3DActivityHistories"/>
+                            <uiFieldAssertion resultName="RelatedEntityHistoryList">
+                              <fieldLocator uri="ui:locator?name=RelatedEntityHistoryList&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26relationship%3DHistories"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="totalRowCount" comparisonType="None"/>
                               </attributeAssertions>
@@ -395,8 +400,8 @@
                             <uiFieldAssertion resultName="ATG_Products__r">
                               <fieldLocator uri="ui:locator?name=ATG_Products__r&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26relationship%3DATG_Products__r"/>
                               <attributeAssertions>
-                                <uiAttributeAssertion attributeName="totalRowCount" comparisonType="EqualTo"/>
-                                <uiAttributeAssertion attributeName="displayRowCount" comparisonType="EqualTo"/>
+                                <uiAttributeAssertion attributeName="totalRowCount" comparisonType="None"/>
+                                <uiAttributeAssertion attributeName="displayRowCount" comparisonType="None"/>
                               </attributeAssertions>
                             </uiFieldAssertion>
                             <uiFieldAssertion resultName="CombinedAttachments">
@@ -1411,37 +1416,6 @@
                         </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="324" title="Assert: 10 EqualTo {BracketNo}">
-                      <arguments>
-                        <argument id="expectedValue">
-                          <value class="value" valueClass="string">10</value>
-                        </argument>
-                        <argument id="actualValue">
-                          <value class="variable">
-                            <path element="BracketNo"/>
-                          </value>
-                        </argument>
-                        <argument id="comparisonType">
-                          <value class="value" valueClass="string">EqualTo</value>
-                        </argument>
-                        <argument id="caseSensitive">
-                          <value class="value" valueClass="boolean">true</value>
-                        </argument>
-                        <argument id="retainDecimals">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="nullGreater">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="matchMultiLine">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="matchDotAll">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="failureMessage"/>
-                      </arguments>
-                    </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="223" title="Click the Quickview Activity History">
                       <arguments>
                         <argument id="locator">
@@ -1473,13 +1447,13 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="322" title="Assert: {NumRowsRead.fields.RelatedEntityHistoryList.totalRowCount} GreaterThanOrEqualTo {BracketNo}">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="322" title="Assert: {NumRowsRead.fields.ActivityHistories.totalRowCount} GreaterThanOrEqualTo {BracketNo}">
                       <arguments>
                         <argument id="expectedValue">
                           <value class="variable">
                             <path element="NumRowsRead"/>
                             <path element="fields"/>
-                            <path element="RelatedEntityHistoryList"/>
+                            <path element="ActivityHistories"/>
                             <path element="totalRowCount"/>
                           </value>
                         </argument>
@@ -2108,10 +2082,15 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="319" title="Assert: {NumRowsRead.} GreaterThanOrEqualTo {BracketNo}">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="319" title="Assert: {NumRowsRead.fields.RelatedEntityHistoryList.totalRowCount} GreaterThanOrEqualTo {BracketNo}">
                       <arguments>
                         <argument id="expectedValue">
-                          <value class="invalid">{NumRowsRead.}</value>
+                          <value class="variable">
+                            <path element="NumRowsRead"/>
+                            <path element="fields"/>
+                            <path element="RelatedEntityHistoryList"/>
+                            <path element="totalRowCount"/>
+                          </value>
                         </argument>
                         <argument id="actualValue">
                           <value class="variable">
@@ -2131,7 +2110,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="matchMultiLine">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="matchDotAll">
                           <value class="value" valueClass="boolean">false</value>

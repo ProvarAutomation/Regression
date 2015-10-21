@@ -247,7 +247,7 @@
         </entry>
         <entry>
           <key valueClass="string">Agreement_Status__c</key>
-          <value valueClass="string">43569,12064</value>
+          <value valueClass="string">51323,12064</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -421,7 +421,7 @@
         </entry>
         <entry>
           <key valueClass="string">Agreement_Status__c</key>
-          <value valueClass="string">43569,12064</value>
+          <value valueClass="string">51323,12064</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>

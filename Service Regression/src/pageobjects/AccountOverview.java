@@ -60,5 +60,8 @@ public class AccountOverview {
 	@LinkType()
 	@FindBy(linkText = "Request Help w/Salesforce")
 	public WebElement requestHelpWSalesforce;
+	@LinkType()
+	@FindBy(xpath = "//*[@id=\"001E000000mEZZY_00NE0000005Bwnz_link\"]")
+	public WebElement sVOCRequestsSourceAccount0;
 			
 }

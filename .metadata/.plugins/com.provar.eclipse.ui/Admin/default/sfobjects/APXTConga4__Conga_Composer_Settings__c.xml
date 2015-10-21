@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject keyPrefix="a0Q" label="Conga Composer Settings" labelPlural="Conga Composer Settings" layoutable="true" n="APXTConga4__Conga_Composer_Settings__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IE00000012AktMAE" t="Conga Composer Settings (a0Q)" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a0Q/e">
+  <fields>
+    <sfField createable="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
+    <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" length="38" n="Name" nameField="true" updateable="false"/>
+    <sfField createable="false" length="18" n="SetupOwnerId" relationshipName="SetupOwner" t="Location" type="reference" updateable="false">
+      <referenceTos>
+        <string>Organization</string>
+        <string>Profile</string>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField createable="false" extraTypeInfo="plaintextarea" length="255" n="APXTConga4__Comments__c" t="Comments" type="textarea" updateable="false"/>
+    <sfField createable="false" n="APXTConga4__Disable_C7_Triggers__c" t="Disable C7 Triggers" type="_boolean" updateable="false"/>
+    <sfField createable="false" length="18" n="APXTConga4__Production_Org_Id__c" summary="The Org ID of the company's production instance of Salesforce.  This is used when Sandbox editions are created from the production. Conga applies organizational settings to sandbox accounts." t="Production Org Id" updateable="false"/>
+    <sfField createable="false" length="255" n="APXTConga4__Server_Override__c" summary="Overrides the ServerURL parameter in Composer and Mail Merge interactions with Salesforce.\nhttps://na14.salesforce.com/services/Soap/u/8.0/00Dd0000000dy26\nThe override value would replace na14.salesforce.com" t="Server Endpoint URL" updateable="false"/>
+  </fields>
+  <childRelationships>
+    <sfObjectRelationship childName="AttachedContentDocument" field="LinkedEntityId" n="AttachedContentDocuments" relationshipName="AttachedContentDocuments" s="2-" t="AttachedContentDocument"/>
+    <sfObjectRelationship childName="CollaborationGroupRecord" field="RecordId" n="RecordAssociatedGroups" relationshipName="RecordAssociatedGroups" s="2-" t="CollaborationGroupRecord"/>
+    <sfObjectRelationship alias="RelatedNoteList" childName="CombinedAttachment" field="ParentId" n="CombinedAttachments" relationshipName="CombinedAttachments" s="2-" t="CombinedAttachment"/>
+    <sfObjectRelationship childName="DuplicateRecordItem" field="RecordId" n="DuplicateRecordItems" relationshipName="DuplicateRecordItems" s="2-" t="DuplicateRecordItem"/>
+    <sfObjectRelationship childName="EntitySubscription" field="ParentId" n="FeedSubscriptionsForEntity" relationshipName="FeedSubscriptionsForEntity" s="2-" t="EntitySubscription"/>
+    <sfObjectRelationship childName="EventRelation" field="RelationId" n="EventRelations" relationshipName="EventRelations" s="2-" t="EventRelation"/>
+    <sfObjectRelationship childName="ProcessInstance" field="TargetObjectId" n="ProcessInstances" relationshipName="ProcessInstances" s="2-" t="ProcessInstance"/>
+    <sfObjectRelationship alias="RelatedProcessHistoryList" childName="ProcessInstanceHistory" field="TargetObjectId" n="ProcessSteps" relationshipName="ProcessSteps" s="2-" t="ProcessInstanceHistory"/>
+    <sfObjectRelationship childName="TaskRelation" field="RelationId" n="TaskRelations" relationshipName="TaskRelations" s="2-" t="TaskRelation"/>
+    <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
+  </childRelationships>
+  <recordTypes>
+    <sfRecordType n="Master" recordTypeId="012000000000000AAA" s="3-" t="Web Record Type Mapping">
+      <picklistOverrideIds/>
+    </sfRecordType>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="ObjectHome" n="View" requiresRow="true" t="Detail"/>
+    <sfActionLink modes="ObjectHome List" n="New"/>
+    <sfActionLink modes="View" n="Edit" requiresRow="true" s="1"/>
+    <sfActionLink modes="View" n="Clone" requiresRow="true"/>
+    <sfActionLink modes="View" n="Delete" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink modes="View" n="SaveEdit" t="Save"/>
+    <sfActionLink modes="View" n="CancelEdit" t="Cancel"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+  <searchLayouts>
+    <sfSearchLayout n="Search Results" s="" t="Search Layout">
+      <children>
+        <sfSearchColumn field="APXTConga4__Conga_Composer_Settings__c.Name" label="Name" n="Name" s="" t="Search Column"/>
+      </children>
+    </sfSearchLayout>
+  </searchLayouts>
+  <listViews/>
+  <homeListColumns>
+    <string>APXTCONGA4__CONGA_COMPOSER_SETTINGS__C.NAME</string>
+  </homeListColumns>
+  <lookupColumns>
+    <string>APXTCONGA4__CONGA_COMPOSER_SETTINGS__C.NAME</string>
+  </lookupColumns>
+</sfObject>

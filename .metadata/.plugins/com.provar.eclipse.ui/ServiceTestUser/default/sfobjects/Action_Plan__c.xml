@@ -924,7 +924,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,1018,43288,1016,1017</value>
+          <value valueClass="string">81,1018,51042,1016,1017</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1785,7 +1785,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,1018,43288,1016,1017</value>
+          <value valueClass="string">81,1018,51042,1016,1017</value>
         </entry>
         <entry>
           <key valueClass="string">Call_Tracking_New__c</key>
@@ -1829,7 +1829,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Type__c</key>
-          <value valueClass="string">43317</value>
+          <value valueClass="string">51071</value>
         </entry>
         <entry>
           <key valueClass="string">Confirm_Map_Coordinates__c</key>
@@ -3058,7 +3058,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,1018,43288,1016,1017</value>
+          <value valueClass="string">81,1018,51042,1016,1017</value>
         </entry>
         <entry>
           <key valueClass="string">Trade_Show_Consultant_s__c</key>
@@ -4581,7 +4581,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,1018,43288,1016,1017</value>
+          <value valueClass="string">81,1018,51042,1016,1017</value>
         </entry>
         <entry>
           <key valueClass="string">Call_Tracking_New__c</key>
@@ -4625,7 +4625,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Type__c</key>
-          <value valueClass="string">43318</value>
+          <value valueClass="string">51072</value>
         </entry>
         <entry>
           <key valueClass="string">Confirm_Map_Coordinates__c</key>
@@ -5246,7 +5246,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,1018,43288,1016,1017</value>
+          <value valueClass="string">81,1018,51042,1016,1017</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -5280,7 +5280,7 @@
     <sfActionLink n="Create_BU_Referral" s="" t="Create BU Referral" target="sf:ui:target?object=Action_Plan__c&amp;url=a0J%2Fe%3FCF00NE0000003MomL%3D%7B%21Action_Plan__c.Account__c%7D%0A%26Name%3D%22set+by+the+system+upon+save%22+%0A%26CF00NE0000003MomL_lkid%3D%7B%21Action_Plan__c.AccountId__c%7D+%0A%26CF00NE0000003OAyi%3D%7B%21%24User.FirstName%7D%22+%22%7B%21%24User.LastName%7D+%0A%26retURL%3D%252F%7B%21Action_Plan__c.Id%7D%7B%21Action_Plan__c.AccountId__c%7D"/>
     <sfActionLink n="Create_Opportunity" s="" t="Create Opportunity" target="sf:ui:target?object=Action_Plan__c&amp;url=%2F006%2Fe%3FretURL%3D%7B%21Action_Plan__c.Id%7D%0A%26opp3%3Dset+by+the+system%0A%26accid%3D%7B%21Action_Plan__c.AccountId__c%7D%0A%26CF00NM0000000xTJ2%3D%7B%21Action_Plan__c.Name%7D"/>
     <sfActionLink n="Open_Case" s="" t="Open Case" target="sf:ui:target?object=Action_Plan__c&amp;url=%2F500%2Fe%3FretURL%3D%7B%21Action_Plan__c.Id%7D%0A%26def_account_id%3D%7B%21Action_Plan__c.AccountId__c%7D"/>
-    <sfActionLink n="ViewPDF" s="" t="PDF" target="sf:ui:target?action=ViewPDF&amp;object=Action_Plan__c"/>
+    <sfActionLink n="ViewPDF" s="" t="PDF" target="sf:ui:target?object=Action_Plan__c&amp;action=ViewPDF"/>
     <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
     <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
     <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
