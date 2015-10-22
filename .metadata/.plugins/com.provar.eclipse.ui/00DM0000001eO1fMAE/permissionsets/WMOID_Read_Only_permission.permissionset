@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>allows Morgan White and Josh Ussery of the App Support team to view the WMOID field to be able to troubleshoot issues with connections between SF and BPM.</description>
-    <label>WMOID Read-Only permission</label>
-    <userLicense>Salesforce</userLicense>
-</PermissionSet>

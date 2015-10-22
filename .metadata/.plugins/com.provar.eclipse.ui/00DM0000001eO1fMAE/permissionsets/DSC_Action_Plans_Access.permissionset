@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>This permission set grants DSC users access to the Action Plans object and the ATC Action Plan record type</description>
-    <label>DSC Action Plans Access</label>
-    <userLicense>Salesforce</userLicense>
-</PermissionSet>

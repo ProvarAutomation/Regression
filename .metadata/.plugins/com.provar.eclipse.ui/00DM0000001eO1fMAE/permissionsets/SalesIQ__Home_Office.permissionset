@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Permission sets for Home Office User who has similar rights and access as Home Office Approver but does not has the ability to approve.</description>
-    <label>SalesIQ Home Office</label>
-    <userLicense>Salesforce</userLicense>
-</PermissionSet>

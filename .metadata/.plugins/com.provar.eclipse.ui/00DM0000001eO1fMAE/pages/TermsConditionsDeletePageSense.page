@@ -1,3 +1,0 @@
-<apex:page standardController="Terms_Conditions__c" extensions="TermsConditionsDeleteController" 
-    action="{!nullValue(redir.url, urlFor($Action.Terms_Conditions__c.Delete, Terms_Conditions__c.id, null, true))}">
-</apex:page>
