@@ -52,8 +52,8 @@
     <sfField length="255" n="Status__c" t="Status" type="picklist">
       <picklistEntryIds>3133,1600</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="CreatedBy.Phone" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Submitted_By_Phone__c" t="Submitted By Phone" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="CreatedBy.Full_Name__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Submitted_By__c" t="Submitted By" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CreatedBy.Phone" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Submitted_By_Phone__c" t="Submitted By Phone" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CreatedBy.Full_Name__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Submitted_By__c" t="Submitted By" updateable="false"/>
     <sfField length="255" n="Type__c" t="Type" type="picklist">
       <picklistEntryIds>1156,3134,3135,3136</picklistEntryIds>
     </sfField>

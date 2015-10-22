@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" feedEnabled="true" keyPrefix="001" label="Account" labelPlural="Accounts" layoutable="true" n="Account" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="" standardLabel="Account" t="Account (001)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/001/e">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" feedEnabled="true" keyPrefix="001" label="Account" labelPlural="Accounts" layoutable="true" listViewFilterType="a" n="Account" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="" standardLabel="Account" t="Account (001)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/001/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Account ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
@@ -79,43 +80,43 @@
         <string>PartnerNetworkConnection</string>
       </referenceTos>
     </sfField>
-    <sfField length="255" n="Vin_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="Vin Status" type="picklist">
+    <sfField editPermission="false" length="255" n="Vin_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="Vin Status" type="picklist">
       <picklistEntryIds>116,117,118</picklistEntryIds>
     </sfField>
-    <sfField length="255" n="ATC_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="ATC Status" type="picklist">
+    <sfField editPermission="false" length="255" n="ATC_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="ATC Status" type="picklist">
       <picklistEntryIds>116,117,118</picklistEntryIds>
     </sfField>
-    <sfField length="255" n="vAuto_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="vAuto Status" type="picklist">
+    <sfField editPermission="false" length="255" n="vAuto_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="vAuto Status" type="picklist">
       <picklistEntryIds>116,117,118</picklistEntryIds>
     </sfField>
-    <sfField length="255" n="KBB_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="KBB Status" type="picklist">
+    <sfField editPermission="false" length="255" n="KBB_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="KBB Status" type="picklist">
       <picklistEntryIds>116,117,118</picklistEntryIds>
     </sfField>
-    <sfField length="255" n="HomeNet_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="HomeNet Status" type="picklist">
+    <sfField editPermission="false" length="255" n="HomeNet_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="HomeNet Status" type="picklist">
       <picklistEntryIds>116,117,118</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="CASE( Vin_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/VIN_Active.png&quot;, &quot;VIN Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/VIN_Former.png&quot;, &quot;VIN Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/VIN_Prospect.png&quot;, &quot;VIN Prospect&quot;), \n&quot;/s.gif&quot; \n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Vin_Flair__c" t="Vin Flair" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="CASE( ATC_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/AutoTrader_Active.png&quot;, &quot;ATC Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/AutoTrader_Former.png&quot;, &quot;ATC Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/AutoTrader_Prospect.png&quot;, &quot;ATC Prospect&quot;), \n&quot;/s.gif&quot; \n)" length="1300" n="ATC_Flair__c" t="ATC Flair" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="CASE( vAuto_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/vAuto_Active.png&quot;, &quot;vAuto Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/vAuto_Former.png&quot;, &quot;vAuto Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/vAuto_Prospect.png&quot;, &quot;vAuto Prospect&quot;), \n&quot;/s.gif&quot; \n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="vAuto_Flair__c" t="vAuto Flair" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="CASE( KBB_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/KBB_Active.png&quot;, &quot;KBB Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/KBB_Former.png&quot;, &quot;KBB Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/KBB_Prospect.png&quot;, &quot;KBB Prospect&quot;), \n&quot;/s.gif&quot; \n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="KBB_Flair__c" t="KBB Flair" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="CASE( HomeNet_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/HomeNet_Active.png&quot;, &quot;HomeNet Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/HomeNet_Former.png&quot;, &quot;HomeNet Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/HomeNet_Prospect.png&quot;, &quot;HomeNet Prospect&quot;), \n&quot;/s.gif&quot; \n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="HomeNet_Flair__c" t="HomeNet Flair" updateable="false"/>
-    <sfField createable="false" length="30" n="NGSS_Dealer_ID__c" t="NGSS Dealer ID" updateable="false"/>
-    <sfField length="50" n="ATC_Dealer_Id__c" t="ATC Dealer Id"/>
-    <sfField length="50" n="vAuto_Dealer_Id__c" t="vAuto Dealer Id"/>
-    <sfField length="50" n="Vin_Dealer_Id__c" t="Vin Dealer Id"/>
-    <sfField length="50" n="HomeNet_Dealer_Id__c" t="HomeNet Dealer Id"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CASE( Vin_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/VIN_Active.png&quot;, &quot;VIN Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/VIN_Former.png&quot;, &quot;VIN Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/VIN_Prospect.png&quot;, &quot;VIN Prospect&quot;), \n&quot;/s.gif&quot; \n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Vin_Flair__c" t="Vin Flair" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CASE( ATC_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/AutoTrader_Active.png&quot;, &quot;ATC Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/AutoTrader_Former.png&quot;, &quot;ATC Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/AutoTrader_Prospect.png&quot;, &quot;ATC Prospect&quot;), \n&quot;/s.gif&quot; \n)" length="1300" n="ATC_Flair__c" t="ATC Flair" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CASE( vAuto_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/vAuto_Active.png&quot;, &quot;vAuto Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/vAuto_Former.png&quot;, &quot;vAuto Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/vAuto_Prospect.png&quot;, &quot;vAuto Prospect&quot;), \n&quot;/s.gif&quot; \n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="vAuto_Flair__c" t="vAuto Flair" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CASE( KBB_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/KBB_Active.png&quot;, &quot;KBB Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/KBB_Former.png&quot;, &quot;KBB Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/KBB_Prospect.png&quot;, &quot;KBB Prospect&quot;), \n&quot;/s.gif&quot; \n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="KBB_Flair__c" t="KBB Flair" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CASE( HomeNet_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/HomeNet_Active.png&quot;, &quot;HomeNet Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/HomeNet_Former.png&quot;, &quot;HomeNet Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/HomeNet_Prospect.png&quot;, &quot;HomeNet Prospect&quot;), \n&quot;/s.gif&quot; \n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="HomeNet_Flair__c" t="HomeNet Flair" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="30" n="NGSS_Dealer_ID__c" t="NGSS Dealer ID" updateable="false"/>
+    <sfField editPermission="false" length="50" n="ATC_Dealer_Id__c" t="ATC Dealer Id"/>
+    <sfField editPermission="false" length="50" n="vAuto_Dealer_Id__c" t="vAuto Dealer Id"/>
+    <sfField editPermission="false" length="50" n="Vin_Dealer_Id__c" t="Vin Dealer Id"/>
+    <sfField editPermission="false" length="50" n="HomeNet_Dealer_Id__c" t="HomeNet Dealer Id"/>
     <sfField length="255" n="Dealer_Type__c" t="Dealer Type" type="picklist">
       <picklistEntryIds>119,120</picklistEntryIds>
     </sfField>
     <sfField n="Monthly_Sales_Volume__c" precision="18" summary="Number of cars sold monthly." t="Monthly Sales Volume" type="_double"/>
-    <sfField length="4099" n="Dealer_Nameplates__c" precision="10" summary="Select the OEM names that the Dealer has" t="Dealer Nameplates" type="multipicklist">
+    <sfField editPermission="false" length="4099" n="Dealer_Nameplates__c" precision="10" summary="Select the OEM names that the Dealer has" t="Dealer Nameplates" type="multipicklist">
       <picklistEntryIds>121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" n="ATC_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="ATC Spend" type="currency" updateable="false"/>
-    <sfField calculated="true" createable="false" n="vAuto_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="vAuto Spend" type="currency" updateable="false"/>
-    <sfField calculated="true" createable="false" n="Vin_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="Vin Spend" type="currency" updateable="false"/>
-    <sfField calculated="true" createable="false" n="HomeNet_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="HomeNet Spend" type="currency" updateable="false"/>
-    <sfField calculated="true" createable="false" n="KBB_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="KBB Spend" type="currency" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" n="ATC_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="ATC Spend" type="currency" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" n="vAuto_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="vAuto Spend" type="currency" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" n="Vin_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="Vin Spend" type="currency" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" n="HomeNet_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="HomeNet Spend" type="currency" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" n="KBB_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="KBB Spend" type="currency" updateable="false"/>
     <sfField length="255" n="DMS_System__c" t="DMS System" type="picklist">
       <picklistEntryIds>172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209</picklistEntryIds>
     </sfField>
@@ -139,105 +140,105 @@
     <sfField n="OTL_Contract_End_Date__c" t="OTL Contract End Date" type="date"/>
     <sfField length="100" n="Prior_CRM__c" summary="Field is updated by workflow when the CRM field is changed." t="Prior CRM"/>
     <sfField length="100" n="Prior_ILM__c" summary="Field is updated by workflow when the ILM field is changed." t="Prior ILM"/>
-    <sfField calculated="true" createable="false" formula="IF( ISPICKVAL( CRM__c ,&quot;&quot;), 0,20) + IF( ISPICKVAL( DMS_System__c ,&quot;&quot;), 0,20) + IF( ISPICKVAL( ILM__c ,&quot;&quot;), 0,20) + IF( ISPICKVAL( OnTheLot__c ,&quot;&quot;), 0,15) + IF( ISPICKVAL( Website__c ,&quot;&quot;), 0,15) + IF( ISPICKVAL( PricingTool__c ,&quot;&quot;), 0,10)" formulaTreatBlanksAs="BlankAsZero" n="Data_Quality_Score__c" precision="18" scale="2" t="Data Quality Score" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="IF( Data_Quality_Score__c =100,&quot;All Lead Details Captured&quot;, &quot;Missing: &quot;&amp;IF( ISPICKVAL(CRM__c,&quot;&quot;), &quot;CRM, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL(DMS_System__c,&quot;&quot;), &quot;DMS, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL(ILM__c,&quot;&quot;), &quot;ILM, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL(OnTheLot__c,&quot;&quot;), &quot;OTL, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL(Website__c,&quot;&quot;), &quot;Website, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL( PricingTool__c ,&quot;&quot;), &quot;Pricing Tool, &quot;,&quot;&quot;))" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Data_Quality_Description__c" t="Data Quality Description" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( ISPICKVAL( CRM__c ,&quot;&quot;), 0,20) + IF( ISPICKVAL( DMS_System__c ,&quot;&quot;), 0,20) + IF( ISPICKVAL( ILM__c ,&quot;&quot;), 0,20) + IF( ISPICKVAL( OnTheLot__c ,&quot;&quot;), 0,15) + IF( ISPICKVAL( Website__c ,&quot;&quot;), 0,15) + IF( ISPICKVAL( PricingTool__c ,&quot;&quot;), 0,10)" formulaTreatBlanksAs="BlankAsZero" n="Data_Quality_Score__c" precision="18" scale="2" t="Data Quality Score" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( Data_Quality_Score__c =100,&quot;All Lead Details Captured&quot;, &quot;Missing: &quot;&amp;IF( ISPICKVAL(CRM__c,&quot;&quot;), &quot;CRM, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL(DMS_System__c,&quot;&quot;), &quot;DMS, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL(ILM__c,&quot;&quot;), &quot;ILM, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL(OnTheLot__c,&quot;&quot;), &quot;OTL, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL(Website__c,&quot;&quot;), &quot;Website, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL( PricingTool__c ,&quot;&quot;), &quot;Pricing Tool, &quot;,&quot;&quot;))" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Data_Quality_Description__c" t="Data Quality Description" updateable="false"/>
     <sfField n="Buy_Here_Pay_Here_Flag__c" t="Buy Here/Pay Here Flag" type="_boolean"/>
     <sfField n="Used_Car_Sales_Volume__c" precision="18" scale="2" t="Used Car Sales Volume" type="_double"/>
     <sfField n="New_Car_Sales_Volume__c" precision="18" scale="2" t="New Car Sales Volume" type="_double"/>
-    <sfField length="255" n="ATC_Product_Type__c" t="ATC Product Type" type="picklist">
+    <sfField editPermission="false" length="255" n="ATC_Product_Type__c" t="ATC Product Type" type="picklist">
       <picklistEntryIds>438,439,440</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" n="ATC_Total_Product_Count__c" precision="5" summarizedField="ATG_Product__c.Product_Status_Value__c" summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="ATC Total Product Count" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" n="ATC_Total_Product_Count__c" precision="5" summarizedField="ATG_Product__c.Product_Status_Value__c" summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="ATC Total Product Count" type="_double" updateable="false"/>
     <sfField calculated="true" createable="false" n="KBB_Total_Product_Count__c" precision="5" summarizedField="ATG_Product__c.Product_Status_Value__c" summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="KBB Total Product Count" type="_double" updateable="false"/>
     <sfField calculated="true" createable="false" n="HomeNet_Total_Product_Count__c" precision="5" summarizedField="ATG_Product__c.Product_Status_Value__c" summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="HomeNet Total Product Count" type="_double" updateable="false"/>
     <sfField calculated="true" createable="false" n="vAuto_Total_Product_Count__c" precision="5" summarizedField="ATG_Product__c.Product_Status_Value__c" summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="vAuto Total Product Count" type="_double" updateable="false"/>
     <sfField calculated="true" createable="false" n="Vin_Total_Product_Count__c" precision="5" summarizedField="ATG_Product__c.Product_Status_Value__c" summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="Vin Total Product Count" type="_double" updateable="false"/>
-    <sfField extraTypeInfo="plaintextarea" length="4000" n="ATC_Co_op__c" summary="Co-op details:  (brands, current co-op dollars, overall spending across channels)" t="ATC Co-op" type="textarea"/>
-    <sfField length="255" n="ATC_Collection_Status__c" t="ATC Collection Status" type="picklist">
+    <sfField editPermission="false" extraTypeInfo="plaintextarea" length="4000" n="ATC_Co_op__c" summary="Co-op details:  (brands, current co-op dollars, overall spending across channels)" t="ATC Co-op" type="textarea"/>
+    <sfField editPermission="false" length="255" n="ATC_Collection_Status__c" t="ATC Collection Status" type="picklist">
       <picklistEntryIds>441,442,443</picklistEntryIds>
     </sfField>
-    <sfField length="60" n="ATC_Core_Four_Last_Updated_By__c" summary="Indicates last person that updated one of the Core Four fields" t="Core Four Last Updated By"/>
-    <sfField calculated="true" createable="false" formula="TODAY() -  Last_In_Person__c" formulaTreatBlanksAs="BlankAsZero" n="Days_Since_Last_In_Person__c" precision="18" t="Days Since Last In Person" type="_double" updateable="false"/>
-    <sfField extraTypeInfo="plaintextarea" length="4000" n="ATC_Current_Advertising__c" summary="Advertising Budget, Advertising Strategy, Upcoming Events…What’s ATC’s competition?" t="ATC Current Advertising" type="textarea"/>
-    <sfField calculated="true" createable="false" formula="IF( LastActivityDate != Null, Today()- LastActivityDate , 0)" formulaTreatBlanksAs="BlankAsZero" n="Last_Activity_Age__c" precision="18" scale="2" t="Last Activity Age" type="_double" updateable="false"/>
-    <sfField n="Last_Update_by_SVOC__c" summary="this field is populated by the integration to SVOC when the last request to SVOC was processed" t="Last Update by SVOC" type="datetime"/>
+    <sfField editPermission="false" length="60" n="ATC_Core_Four_Last_Updated_By__c" summary="Indicates last person that updated one of the Core Four fields" t="Core Four Last Updated By"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="TODAY() -  Last_In_Person__c" formulaTreatBlanksAs="BlankAsZero" n="Days_Since_Last_In_Person__c" precision="18" t="Days Since Last In Person" type="_double" updateable="false"/>
+    <sfField editPermission="false" extraTypeInfo="plaintextarea" length="4000" n="ATC_Current_Advertising__c" summary="Advertising Budget, Advertising Strategy, Upcoming Events…What’s ATC’s competition?" t="ATC Current Advertising" type="textarea"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( LastActivityDate != Null, Today()- LastActivityDate , 0)" formulaTreatBlanksAs="BlankAsZero" n="Last_Activity_Age__c" precision="18" scale="2" t="Last Activity Age" type="_double" updateable="false"/>
+    <sfField editPermission="false" n="Last_Update_by_SVOC__c" summary="this field is populated by the integration to SVOC when the last request to SVOC was processed" t="Last Update by SVOC" type="datetime"/>
     <sfField length="255" n="District__c" t="District" type="picklist">
       <picklistEntryIds>444,445,446,447,448,449,450,451,452,453,454</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Region__c" t="Region" type="picklist">
       <picklistEntryIds>454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="IF ( ISPICKVAL (SVOC_Status__c, &quot;OUT OF BUSINESS&quot;), IMAGE(&quot;/resource/Flair_Logos/OOB_Account.png&quot;, &quot;Out Of Business&quot;) , \nATC_Flair__c &amp; &quot; &quot; &amp; HomeNet_Flair__c &amp; &quot; &quot; &amp; KBB_Flair__c &amp; &quot; &quot; &amp; vAuto_Flair__c &amp; &quot; &quot; &amp; Vin_Flair__c &amp; &quot; &quot; &amp; TIM_Flair__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="NGSS_Flair__c" t="ATG Company Status" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF ( ISPICKVAL (SVOC_Status__c, &quot;OUT OF BUSINESS&quot;), IMAGE(&quot;/resource/Flair_Logos/OOB_Account.png&quot;, &quot;Out Of Business&quot;) , \nATC_Flair__c &amp; &quot; &quot; &amp; HomeNet_Flair__c &amp; &quot; &quot; &amp; KBB_Flair__c &amp; &quot; &quot; &amp; vAuto_Flair__c &amp; &quot; &quot; &amp; Vin_Flair__c &amp; &quot; &quot; &amp; TIM_Flair__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="NGSS_Flair__c" t="ATG Company Status" updateable="false"/>
     <sfField length="50" n="Polk_Id__c" t="Polk Id"/>
     <sfField length="150" n="Group_Name__c" summary="Placeholder for import." t="Group Name"/>
     <sfField length="50" n="Pre_Pilot_Potential__c" t="Pre Pilot Potential"/>
     <sfField length="50" n="Pre_Pilot_Penetration__c" t="Pre Pilot Penetration"/>
     <sfField calculated="true" createable="false" formula="Pre_Pilot_Potential__c &amp;&quot;-&quot;&amp;  Pre_Pilot_Penetration__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="pre_pilot__c" t="Pre Pilot Segment" updateable="false"/>
     <sfField length="100" n="Targeted_for_DSC__c" t="Targeted for DSC"/>
-    <sfField calculated="true" createable="false" n="TIM_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="TIM Spend" type="currency" updateable="false"/>
-    <sfField length="255" n="TIM_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="TIM Status" type="picklist">
+    <sfField calculated="true" createable="false" editPermission="false" n="TIM_Spend__c" precision="18" scale="2" summarizedField="ATG_Product__c.Spend__c" summary="System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status." summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="TIM Spend" type="currency" updateable="false"/>
+    <sfField editPermission="false" length="255" n="TIM_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="TIM Status" type="picklist">
       <picklistEntryIds>116,117,118</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="CASE( TIM_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/TIM_Active.png&quot;, &quot;TIM Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/TIM_Former.png&quot;, &quot;TIM Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/TIM_Prospect.png&quot;, &quot;TIM Prospect&quot;), \n&quot;/s.gif&quot; \n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="TIM_Flair__c" t="TIM Flair" updateable="false"/>
-    <sfField calculated="true" createable="false" n="TIM_Total_Product_Count__c" precision="5" summarizedField="ATG_Product__c.Product_Status_Value__c" summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="TIM Total Product Count" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.ImageServer?id=015E0000001EkIU&amp;oid=00Dc0000003sc66&amp;lastMod=1348598137000&quot;, &quot;Major Account&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Major_Account_Flair__c" t="Major Account Flair" updateable="false"/>
-    <sfField calculated="true" createable="false" n="of_BU_Leads__c" precision="18" summaryForeignKey="BU_Referrals__c.Dealer__c" summaryOperation="count" t="# of BU Referrals" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" n="of_Opps__c" precision="18" summary="Formula field that counts the number of open opportunities that are in the planning or presentation stage." summaryForeignKey="Opportunity.AccountId" summaryOperation="count" t="# of Opps" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CASE( TIM_Status__c , \n&quot;Active&quot;, IMAGE(&quot;/resource/Flair_Logos/TIM_Active.png&quot;, &quot;TIM Active&quot;), \n&quot;Former&quot;, IMAGE(&quot;/resource/Flair_Logos/TIM_Former.png&quot;, &quot;TIM Former&quot;), \n&quot;Prospect&quot;,IMAGE(&quot;/resource/Flair_Logos/TIM_Prospect.png&quot;, &quot;TIM Prospect&quot;), \n&quot;/s.gif&quot; \n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="TIM_Flair__c" t="TIM Flair" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" n="TIM_Total_Product_Count__c" precision="5" summarizedField="ATG_Product__c.Product_Status_Value__c" summaryForeignKey="ATG_Product__c.Dealer__c" summaryOperation="sum" t="TIM Total Product Count" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.ImageServer?id=015E0000001EkIU&amp;oid=00Dc0000003sc66&amp;lastMod=1348598137000&quot;, &quot;Major Account&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Major_Account_Flair__c" t="Major Account Flair" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" n="of_BU_Leads__c" precision="18" summaryForeignKey="BU_Referrals__c.Dealer__c" summaryOperation="count" t="# of BU Referrals" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" n="of_Opps__c" precision="18" summary="Formula field that counts the number of open opportunities that are in the planning or presentation stage." summaryForeignKey="Opportunity.AccountId" summaryOperation="count" t="# of Opps" type="_double" updateable="false"/>
     <sfField n="MDC_Last_Activity_Date__c" t="MDC Last Activity Date" type="date"/>
     <sfField n="PM_Last_Activity_Date__c" t="Last Solid Engagement Date" type="date"/>
     <sfField n="PS_Last_Activity_Date__c" t="PS Last Activity Date" type="date"/>
-    <sfField calculated="true" createable="false" formula="IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.ImageServer?id=015E0000001F4q1&amp;oid=00Dc0000003sc66&amp;lastMod=1349820566000&quot;, &quot;DSC&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="DSC_Flair__c" t="DSC Flair" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="Total_Media_Spend__c + Total_Software_Spend__c" formulaTreatBlanksAs="BlankAsZero" n="Total_Spend__c" precision="18" scale="2" t="Total Spend" type="currency" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.ImageServer?id=015E0000001F4q1&amp;oid=00Dc0000003sc66&amp;lastMod=1349820566000&quot;, &quot;DSC&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="DSC_Flair__c" t="DSC Flair" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Total_Media_Spend__c + Total_Software_Spend__c" formulaTreatBlanksAs="BlankAsZero" n="Total_Spend__c" precision="18" scale="2" t="Total Spend" type="currency" updateable="false"/>
     <sfField length="255" n="Lead_Source__c" t="Lead Source" type="picklist">
       <picklistEntryIds>484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,93,505,506,507,508,509,510,511,512</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.FileDownload?file=015E0000001GXJo&quot;, &quot;OOB&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="OOB_Flair__c" t="OOB Flair" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.FileDownload?file=015E0000001GXJo&quot;, &quot;OOB&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="OOB_Flair__c" t="OOB Flair" updateable="false"/>
     <sfField n="Prior_Solid_Engagement__c" t="Prior Solid Engagement" type="date"/>
-    <sfField calculated="true" createable="false" formula="IF(  ISBLANK(PM_Last_Activity_Date__c), Today(), PM_Last_Activity_Date__c +30)" formulaTreatBlanksAs="BlankAsZero" n="Next_SE_Date__c" summary="Formula field that looks at the PM Last Solid Engagement Date and adds 21 days to that to create the due date for the new solid engagement task." t="Next SE Date" type="date" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="ATC_Spend__c + KBB_Spend__c  +  Haystack_Spend__c" formulaTreatBlanksAs="BlankAsZero" n="Total_Media_Spend__c" precision="18" scale="2" t="Total Media Spend" type="currency" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="HomeNet_Spend__c +  TIM_Spend__c + vAuto_Spend__c + Vin_Spend__c" formulaTreatBlanksAs="BlankAsZero" n="Total_Software_Spend__c" precision="18" scale="2" summary="Adds all the software BU spend together" t="Total Software Spend" type="currency" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="IF(Total_Software_Spend__c &gt; 0 &amp;&amp; OR(PM_Last_Activity_Date__c  &lt;= Today()-30, ISBLANK(PM_Last_Activity_Date__c) ) , \n&quot;Needs Attention&quot;, \n&quot;Goal Completed&quot;)" length="1300" n="SE_Status__c" summary="formula field that looks at the Last SE date and determines whether it is on schedule, past due" t="SE Status" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(  ISBLANK(PM_Last_Activity_Date__c), Today(), PM_Last_Activity_Date__c +30)" formulaTreatBlanksAs="BlankAsZero" n="Next_SE_Date__c" summary="Formula field that looks at the PM Last Solid Engagement Date and adds 21 days to that to create the due date for the new solid engagement task." t="Next SE Date" type="date" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="ATC_Spend__c + KBB_Spend__c  +  Haystack_Spend__c" formulaTreatBlanksAs="BlankAsZero" n="Total_Media_Spend__c" precision="18" scale="2" t="Total Media Spend" type="currency" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="HomeNet_Spend__c +  TIM_Spend__c + vAuto_Spend__c + Vin_Spend__c" formulaTreatBlanksAs="BlankAsZero" n="Total_Software_Spend__c" precision="18" scale="2" summary="Adds all the software BU spend together" t="Total Software Spend" type="currency" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(Total_Software_Spend__c &gt; 0 &amp;&amp; OR(PM_Last_Activity_Date__c  &lt;= Today()-30, ISBLANK(PM_Last_Activity_Date__c) ) , \n&quot;Needs Attention&quot;, \n&quot;Goal Completed&quot;)" length="1300" n="SE_Status__c" summary="formula field that looks at the Last SE date and determines whether it is on schedule, past due" t="SE Status" updateable="false"/>
     <sfField n="Swot_Value__c" precision="2" t="Swot Value" type="_double"/>
     <sfField length="4099" n="Media_Competitor__c" precision="4" t="Media Competitor" type="multipicklist">
       <picklistEntryIds>513,222,514,515,497,516,517,518,519,520,521</picklistEntryIds>
     </sfField>
     <sfField n="Media_Competitor_Spend__c" precision="18" scale="2" summary="Combined amount spent from the Media Competitor field." t="Media Competitor Spend" type="currency"/>
     <sfField n="PM_Added__c" summary="Check this box after adding a PM to an account to trigger an email alert to them letting them know that they have a new account." t="PM Added" type="_boolean"/>
-    <sfField calculated="true" createable="false" formula="IF  (Last_Activity_Age__c  &gt;= 21, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Neglected_Value__c" precision="18" t="Neglected Value" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="IF( Total_Media_Spend__c &gt; 0, 1,0)" n="Media_Value__c" precision="18" summary="Used for reporting on penetration between media and software.  If media spend is greater than zero, then insert a value of 1." t="Media Value" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="IF( Total_Software_Spend__c &gt;0, 1, 0)" n="Software_Value__c" precision="18" summary="Used for reporting on penetration between media and software.  If sofrware spend is greater than zero, then insert a value of 1." t="Software Value" type="_double" updateable="false"/>
-    <sfField length="150" n="Current_AC__c" t="Current AC"/>
-    <sfField n="MDC_Transition_Needed__c" t="MDC Transition Needed?" type="_boolean"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF  (Last_Activity_Age__c  &gt;= 21, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Neglected_Value__c" precision="18" t="Neglected Value" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( Total_Media_Spend__c &gt; 0, 1,0)" n="Media_Value__c" precision="18" summary="Used for reporting on penetration between media and software.  If media spend is greater than zero, then insert a value of 1." t="Media Value" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( Total_Software_Spend__c &gt;0, 1, 0)" n="Software_Value__c" precision="18" summary="Used for reporting on penetration between media and software.  If sofrware spend is greater than zero, then insert a value of 1." t="Software Value" type="_double" updateable="false"/>
+    <sfField editPermission="false" length="150" n="Current_AC__c" t="Current AC"/>
+    <sfField editPermission="false" n="MDC_Transition_Needed__c" t="MDC Transition Needed?" type="_boolean"/>
     <sfField length="255" n="SEM_Provider__c" t="SEM Provider" type="picklist">
       <picklistEntryIds>432,522,523,524,525,526,527,528,93</picklistEntryIds>
     </sfField>
     <sfField n="SEM_Spend__c" precision="9" scale="2" t="SEM Spend" type="currency"/>
-    <sfField calculated="true" createable="false" formula="IF( ATC_Total_Product_Count__c  &gt; 0, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Active_ATC_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active ATC Dealer" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="IF( KBB_Total_Product_Count__c  &gt; 0, 1, 0)" n="Active_KBB_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active KBB Dealer" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="IF( TIM_Total_Product_Count__c  &gt; 0, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Active_TIM_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active TIM Dealer" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="IF( vAuto_Total_Product_Count__c  &gt; 0, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Active_vAuto_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active vAuto Dealer" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="IF( Vin_Total_Product_Count__c  &gt; 0, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Active_Vin_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active Vin Dealer" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="IF( HomeNet_Total_Product_Count__c  &gt; 0, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Active_HomeNet_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active HomeNet Dealer" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="Owner.Manager.FirstName &amp; &quot; &quot; &amp; Owner.Manager.LastName" length="1300" n="Account_Owner_Manager__c" summary="Formula field that reads the account owner's manager for reporting." t="Account Owner Manager" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( ATC_Total_Product_Count__c  &gt; 0, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Active_ATC_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active ATC Dealer" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( KBB_Total_Product_Count__c  &gt; 0, 1, 0)" n="Active_KBB_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active KBB Dealer" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( TIM_Total_Product_Count__c  &gt; 0, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Active_TIM_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active TIM Dealer" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( vAuto_Total_Product_Count__c  &gt; 0, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Active_vAuto_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active vAuto Dealer" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( Vin_Total_Product_Count__c  &gt; 0, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Active_Vin_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active Vin Dealer" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( HomeNet_Total_Product_Count__c  &gt; 0, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="Active_HomeNet_Dealer__c" precision="18" summary="Used for reporting active dealer count by BU." t="Active HomeNet Dealer" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Owner.Manager.FirstName &amp; &quot; &quot; &amp; Owner.Manager.LastName" length="1300" n="Account_Owner_Manager__c" summary="Formula field that reads the account owner's manager for reporting." t="Account Owner Manager" updateable="false"/>
     <sfField length="4099" n="Media__c" precision="4" t="Media" type="multipicklist">
       <picklistEntryIds>529,519,517,515,530,222,531,532,533,93</picklistEntryIds>
     </sfField>
-    <sfField n="Share_of_Wallet__c" precision="18" scale="2" t="Share of Wallet" type="currency"/>
-    <sfField length="100" n="Segment__c" summary="updated from SVOC" t="Segment"/>
-    <sfField length="18" n="Primary_SVOC_Account__c" relationshipLabel="Secondary Customer" relationshipName="Primary_SVOC_Account__r" summary="lookup the primary svoc account this secondary is related to" t="Primary SVOC Account" type="reference">
+    <sfField editPermission="false" n="Share_of_Wallet__c" precision="18" scale="2" t="Share of Wallet" type="currency"/>
+    <sfField editPermission="false" length="100" n="Segment__c" summary="updated from SVOC" t="Segment"/>
+    <sfField editPermission="false" length="18" n="Primary_SVOC_Account__c" relationshipLabel="Secondary Customer" relationshipName="Primary_SVOC_Account__r" summary="lookup the primary svoc account this secondary is related to" t="Primary SVOC Account" type="reference">
       <referenceTos>
         <string>Account</string>
       </referenceTos>
     </sfField>
-    <sfField calculated="true" createable="false" formula="IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000002kqV0&quot;, &quot;Secondary&quot;)" length="1300" n="Relationship_Info__c" t="Relationship Info" updateable="false"/>
-    <sfField length="10" n="SVOC_District__c" summary="updated by the integration w/SVOC" t="SVOC District"/>
-    <sfField length="100" n="SVOC_Id__c" t="SVOC Master_Id"/>
-    <sfField length="10" n="SVOC_Region__c" summary="updated by the integration w/SVOC" t="SVOC Region"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000002kqV0&quot;, &quot;Secondary&quot;)" length="1300" n="Relationship_Info__c" t="Relationship Info" updateable="false"/>
+    <sfField editPermission="false" length="10" n="SVOC_District__c" summary="updated by the integration w/SVOC" t="SVOC District"/>
+    <sfField editPermission="false" length="100" n="SVOC_Id__c" t="SVOC Master_Id"/>
+    <sfField editPermission="false" length="10" n="SVOC_Region__c" summary="updated by the integration w/SVOC" t="SVOC Region"/>
     <sfField calculated="true" createable="false" formula="CASE(  RecordType.Id  ,\n &quot;012M00000008uG1&quot;, &quot;Unverified Prospect&quot;, \n&quot;012M00000008uGV&quot;, &quot;Secondary Customer&quot;,\n&quot;012E000000052TQ&quot;, &quot;Primary&quot;,\n&quot;Other&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_Relationship__c" summary="formula field setup for admins only - to trigger worklfow related to the svoc integration" t="SVOC Relationship" updateable="false"/>
-    <sfField length="255" n="SVOC_Status__c" t="SVOC Status" type="picklist">
+    <sfField editPermission="false" length="255" n="SVOC_Status__c" t="SVOC Status" type="picklist">
       <picklistEntryIds>534,535,536,537,538,539,540,541</picklistEntryIds>
     </sfField>
-    <sfField length="255" n="SVOC_Sub_Type__c" summary="updated by SVOC" t="Customer Sub Type" type="picklist">
+    <sfField editPermission="false" length="255" n="SVOC_Sub_Type__c" summary="updated by SVOC" t="Customer Sub Type" type="picklist">
       <picklistEntryIds>542,543,544,545,546,102,547,548,549,550,551,552,553,339,554,555,556,557,558,559,560,561,562,563,564,565</picklistEntryIds>
     </sfField>
     <sfField length="100" n="Segment_Classification__c" summary="initially imported but eventually will be updated from SVOC" t="Segment Classification"/>
@@ -245,44 +246,44 @@
     <sfField length="50" n="Web_Address_State__c" summary="updated by SVOC" t="Web Address State"/>
     <sfField length="100" n="Web_Address_Street__c" summary="updated by SVOC" t="Web Address Street"/>
     <sfField length="50" n="Web_Address_zipcode__c" summary="updated by SVOC" t="Web Address Zipcode"/>
-    <sfField length="50" n="Lot_Size_New__c" t="Lot Size - New"/>
-    <sfField length="50" n="Lot_Size_Used__c" summary="updated by SVOC" t="Lot Size - Used"/>
-    <sfField extraTypeInfo="plaintextarea" length="4000" n="ATC_Current_Dealership_Processes__c" summary="Consider Pricing Strategy, Inventory Strategy, Co-op, Reconditioning Process, etc." t="ATC Current Dealership Processes" type="textarea"/>
+    <sfField editPermission="false" length="50" n="Lot_Size_New__c" t="Lot Size - New"/>
+    <sfField editPermission="false" length="50" n="Lot_Size_Used__c" summary="updated by SVOC" t="Lot Size - Used"/>
+    <sfField editPermission="false" extraTypeInfo="plaintextarea" length="4000" n="ATC_Current_Dealership_Processes__c" summary="Consider Pricing Strategy, Inventory Strategy, Co-op, Reconditioning Process, etc." t="ATC Current Dealership Processes" type="textarea"/>
     <sfField length="3" n="Web_Address_Country__c" summary="updated by SVOC" t="Web Address Country"/>
-    <sfField extraTypeInfo="plaintextarea" length="4000" n="ATC_Dealer_Expectations__c" summary="What are the expectations for the Dealership in regards to AutoTrader.com?  What's their expectations for the Advertising Consultant?" t="ATC Dealer Expectations" type="textarea"/>
-    <sfField length="50" n="ATC_Dynamics_Acct_GUID_Id__c" t="ATC Dynamics Acct GUID Id"/>
-    <sfField extraTypeInfo="plaintextarea" length="4000" n="ATC_Goals_Objectives__c" summary="The Sales Person should enter the short &amp; long term goals of the Dealership here." t="ATC Goals &amp; Objectives" type="textarea"/>
-    <sfField length="255" n="ATC_Sales_Alert_Message__c" t="ATC Sales Alert Message"/>
-    <sfField length="255" n="ATC_Service_Alert_Message__c" t="ATC Service Alert Message"/>
-    <sfField length="255" n="ATC_Visit_Expectations__c" t="ATC Visit Expectations" type="picklist">
+    <sfField editPermission="false" extraTypeInfo="plaintextarea" length="4000" n="ATC_Dealer_Expectations__c" summary="What are the expectations for the Dealership in regards to AutoTrader.com?  What's their expectations for the Advertising Consultant?" t="ATC Dealer Expectations" type="textarea"/>
+    <sfField editPermission="false" length="50" n="ATC_Dynamics_Acct_GUID_Id__c" t="ATC Dynamics Acct GUID Id"/>
+    <sfField editPermission="false" extraTypeInfo="plaintextarea" length="4000" n="ATC_Goals_Objectives__c" summary="The Sales Person should enter the short &amp; long term goals of the Dealership here." t="ATC Goals &amp; Objectives" type="textarea"/>
+    <sfField editPermission="false" length="255" n="ATC_Sales_Alert_Message__c" t="ATC Sales Alert Message"/>
+    <sfField editPermission="false" length="255" n="ATC_Service_Alert_Message__c" t="ATC Service Alert Message"/>
+    <sfField editPermission="false" length="255" n="ATC_Visit_Expectations__c" t="ATC Visit Expectations" type="picklist">
       <picklistEntryIds>566,567,568,569</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" n="Open_Opportuntities__c" precision="18" summaryForeignKey="Opportunity.AccountId" summaryOperation="count" t="Open Opportuntities" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="HYPERLINK(&quot;https://fastlane.autotrader.com/freedom/dealer-profile/report.seam?dealerIdparam=&quot;&amp; SVOC_Id__c &amp;&quot;&amp;activeNav=DEALER_PROFILE&amp;cid=2130&quot;,&quot;Open Dealer Profile in Fastlane&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Dealer_Profile__c" summary="Open this Account in ATC Fastlane." t="ATC Dealer Profile" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="HYPERLINK(&quot;https://dealers-admin.autotrader.com/admin/admanagercontroller.jsp?action=changedealer&amp;dealership_id=&quot;&amp; SVOC_Id__c ,&quot;Open Account in Dealer Site&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Dealer_Site__c" summary="Click this link to access this Account in the ATC Dealer Site." t="ATC Dealer Site" updateable="false"/>
-    <sfField length="255" n="ATC_Security_Question__c" t="ATC Security Question" type="picklist">
+    <sfField calculated="true" createable="false" editPermission="false" n="Open_Opportuntities__c" precision="18" summaryForeignKey="Opportunity.AccountId" summaryOperation="count" t="Open Opportuntities" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="HYPERLINK(&quot;https://fastlane.autotrader.com/freedom/dealer-profile/report.seam?dealerIdparam=&quot;&amp; SVOC_Id__c &amp;&quot;&amp;activeNav=DEALER_PROFILE&amp;cid=2130&quot;,&quot;Open Dealer Profile in Fastlane&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Dealer_Profile__c" summary="Open this Account in ATC Fastlane." t="ATC Dealer Profile" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="HYPERLINK(&quot;https://dealers-admin.autotrader.com/admin/admanagercontroller.jsp?action=changedealer&amp;dealership_id=&quot;&amp; SVOC_Id__c ,&quot;Open Account in Dealer Site&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Dealer_Site__c" summary="Click this link to access this Account in the ATC Dealer Site." t="ATC Dealer Site" updateable="false"/>
+    <sfField editPermission="false" length="255" n="ATC_Security_Question__c" t="ATC Security Question" type="picklist">
       <picklistEntryIds>570,571,572,573</picklistEntryIds>
     </sfField>
-    <sfField length="30" n="ATC_Security_Response__c" t="ATC Security Response"/>
-    <sfField calculated="true" createable="false" formula="IF(NOT( ISBLANK(ATC_Dynamics_Acct_GUID_Id__c)),\nHYPERLINK(&quot;http://crm.autotrader.int/CRMD/sfa/accts/edit.aspx?id=&quot;&amp; ATC_Dynamics_Acct_GUID_Id__c,&quot;Open in MS Dynamics&quot;), &quot;This account is not in MS Dynamics&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="MS_Dynamics_Account__c" summary="Open this account in MS Dynamics.  Must be on the internal network or on the VPN.  Internet Explorer required." t="MS Dynamics Account" updateable="false"/>
+    <sfField editPermission="false" length="30" n="ATC_Security_Response__c" t="ATC Security Response"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(NOT( ISBLANK(ATC_Dynamics_Acct_GUID_Id__c)),\nHYPERLINK(&quot;http://crm.autotrader.int/CRMD/sfa/accts/edit.aspx?id=&quot;&amp; ATC_Dynamics_Acct_GUID_Id__c,&quot;Open in MS Dynamics&quot;), &quot;This account is not in MS Dynamics&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="MS_Dynamics_Account__c" summary="Open this account in MS Dynamics.  Must be on the internal network or on the VPN.  Internet Explorer required." t="MS Dynamics Account" updateable="false"/>
     <sfField n="of_Active_Contracts__c" precision="18" t="# of Active Contracts" type="_double"/>
     <sfField n="of_Pending_Contracts__c" precision="18" t="# of Pending Contracts" type="_double"/>
-    <sfField n="ATC_Core_Four_Last_Updated_Date__c" summary="This date shows the last time one of the core four fields has been updated." t="Core Four Last Updated Date" type="datetime"/>
-    <sfField length="255" n="Sales_View_Flag__c" t="Sales View Flag" type="picklist">
+    <sfField editPermission="false" n="ATC_Core_Four_Last_Updated_Date__c" summary="This date shows the last time one of the core four fields has been updated." t="Core Four Last Updated Date" type="datetime"/>
+    <sfField editPermission="false" length="255" n="Sales_View_Flag__c" t="Sales View Flag" type="picklist">
       <picklistEntryIds>574,575</picklistEntryIds>
     </sfField>
-    <sfField length="255" n="Web_Inventory_Status__c" t="Web Inventory Status" type="picklist">
+    <sfField editPermission="false" length="255" n="Web_Inventory_Status__c" t="Web Inventory Status" type="picklist">
       <picklistEntryIds>117,76,576,577,578,579</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="HYPERLINK( \n&quot;/merge/accmergewizard.jsp?srch=&quot; &amp; Name &amp; \n&quot;&amp;retURL=%2F&quot; &amp; Id &amp; \n&quot;&amp;cancelURL=%2F&quot; &amp; Id, &quot;Merge Accounts&quot;, &quot;_top&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SA_TABOVER__Merge_Action__c" t="Merge Action" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="HYPERLINK( \n&quot;/merge/accmergewizard.jsp?srch=&quot; &amp; Name &amp; \n&quot;&amp;retURL=%2F&quot; &amp; Id &amp; \n&quot;&amp;cancelURL=%2F&quot; &amp; Id, &quot;Merge Accounts&quot;, &quot;_top&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SA_TABOVER__Merge_Action__c" t="Merge Action" updateable="false"/>
     <sfField length="50" n="Merge_ID__c" t="Merge ID"/>
     <sfField n="Merge_Winner__c" t="Merge Winner" type="_boolean"/>
     <sfField calculated="true" createable="false" formula="1" formulaTreatBlanksAs="BlankAsZero" n="Account_Count__c" precision="18" t="Account Count" type="_double" updateable="false"/>
-    <sfField n="Last_In_Person__c" t="Last In Person" type="date"/>
-    <sfField calculated="true" createable="false" formula="Parent.SVOC_Id__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_Parent_Id__c" t="SVOC Parent_Id" updateable="false"/>
-    <sfField length="22" n="ATC_Service_Alert_Last_Modified_By__c" t="ATC Service Alert Last Modified By:"/>
-    <sfField n="ATC_Service_Alert_Last_Modified__c" t="ATC Service Alert Last Modified" type="datetime"/>
-    <sfField calculated="true" createable="false" formula="IF(ISBLANK(SVOC_Region__c), &quot;None&quot;,\nIF(CONTAINS(&quot;20:21:33:34:Great Lakes&quot;, SVOC_Region__c), &quot;Great Lakes&quot;,\nIF(CONTAINS(&quot;22:23:24:25:26:Central&quot;,SVOC_Region__c ), &quot;Central&quot;,\nIF(CONTAINS(&quot;15:16:17:18:19:Northeast&quot;,SVOC_Region__c ), &quot;NorthEast&quot;,\nIF(CONTAINS(&quot;10:11:12:13:14:Southeast&quot;, SVOC_Region__c), &quot;SouthEast&quot;,\nIF(CONTAINS(&quot;35:43:44&quot;,SVOC_Region__c),&quot;Major Accounts&quot;,\nIF(CONTAINS(&quot;39&quot;,SVOC_Region__c),&quot;DSC&quot;,\nIF(CONTAINS(&quot;27:28:29:30:32:West&quot;,SVOC_Region__c), &quot;West&quot;, &quot;Other&quot;))))))))" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SFDC_Division__c" t="SFDC Division" updateable="false"/>
+    <sfField editPermission="false" n="Last_In_Person__c" t="Last In Person" type="date"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Parent.SVOC_Id__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_Parent_Id__c" t="SVOC Parent_Id" updateable="false"/>
+    <sfField editPermission="false" length="22" n="ATC_Service_Alert_Last_Modified_By__c" t="ATC Service Alert Last Modified By:"/>
+    <sfField editPermission="false" n="ATC_Service_Alert_Last_Modified__c" t="ATC Service Alert Last Modified" type="datetime"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(ISBLANK(SVOC_Region__c), &quot;None&quot;,\nIF(CONTAINS(&quot;20:21:33:34:Great Lakes&quot;, SVOC_Region__c), &quot;Great Lakes&quot;,\nIF(CONTAINS(&quot;22:23:24:25:26:Central&quot;,SVOC_Region__c ), &quot;Central&quot;,\nIF(CONTAINS(&quot;15:16:17:18:19:Northeast&quot;,SVOC_Region__c ), &quot;NorthEast&quot;,\nIF(CONTAINS(&quot;10:11:12:13:14:Southeast&quot;, SVOC_Region__c), &quot;SouthEast&quot;,\nIF(CONTAINS(&quot;35:43:44&quot;,SVOC_Region__c),&quot;Major Accounts&quot;,\nIF(CONTAINS(&quot;39&quot;,SVOC_Region__c),&quot;DSC&quot;,\nIF(CONTAINS(&quot;27:28:29:30:32:West&quot;,SVOC_Region__c), &quot;West&quot;, &quot;Other&quot;))))))))" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SFDC_Division__c" t="SFDC Division" updateable="false"/>
     <sfField length="255" n="Secondary__c" summary="&quot;A secondary account exists when a different representation of the customer is needed for merchandising,inventory or billing needs.  (E.G. Lincoln co-op restricitons)&quot;" t="Secondary" type="picklist">
       <picklistEntryIds>574,575</picklistEntryIds>
     </sfField>
@@ -328,8 +329,8 @@
     <sfField n="SalesIQ__SVOCReqLotsizePending__c" t="SVOCReqLotsizePending" type="_boolean"/>
     <sfField n="SalesIQ__SVOCRequestPending__c" t="SVOCRequestPending" type="_boolean"/>
     <sfField n="SalesIQ__Total_Billable__c" precision="18" scale="2" t="Total Billable" type="_double"/>
-    <sfField n="Haystack_Spend__c" precision="18" scale="2" t="Haystack Spend" type="currency"/>
-    <sfField length="255" n="Haystack_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="Haystack Status" type="picklist">
+    <sfField editPermission="false" n="Haystack_Spend__c" precision="18" scale="2" t="Haystack Spend" type="currency"/>
+    <sfField editPermission="false" length="255" n="Haystack_Status__c" summary="Field is updated by the system based on the product status in the ATG Product library." t="Haystack Status" type="picklist">
       <picklistEntryIds>116,117,118</picklistEntryIds>
     </sfField>
     <sfField n="SalesIQ__Total_Opportunity__c" precision="18" scale="2" t="Total Opportunity" type="_double"/>
@@ -355,7 +356,7 @@
     <sfField length="255" n="Dealer_is_part_of_a_dealer_group__c" t="Dealer is part of a dealer group?" type="picklist">
       <picklistEntryIds>574,575</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="TEXT( Type )" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Type_Text__c" t="Type Text" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="TEXT( Type )" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Type_Text__c" t="Type Text" updateable="false"/>
     <sfField length="255" n="Website_URL__c" t="Website URL" type="url"/>
     <sfField calculated="true" createable="false" formula="Total_Media_Spend__c + TIM_Spend__c" formulaTreatBlanksAs="BlankAsZero" n="Billable__c" precision="18" scale="2" t="Billable" type="currency" updateable="false"/>
     <sfField length="22" n="ATC_Sales_Alert_Last_Modified_By__c" notVisibleToMetadataUser="true" t="ATC Sales Alert Last Modified By"/>
@@ -451,7 +452,7 @@
     <sfField n="Target_Number__c" notVisibleToMetadataUser="true" summary="haystak field" t="Target Number (Call Tracking)" type="phone"/>
     <sfField n="TickerSymbol" notVisibleToMetadataUser="true"/>
     <sfField formula="&quot;STREET&quot;&amp;&quot;:&quot;&amp;  Lead_Billing_Street__c &amp;&quot; &quot;&amp; &quot;CITY&quot;&amp;&quot;:&quot;&amp;  Lead_Billing_City__c  &amp;&quot; &quot;&amp; &quot;STATE&quot;&amp;&quot;:&quot;&amp;  Lead_Billing_State__c  &amp;&quot; &quot;&amp; &quot;ZIP&quot;&amp;&quot;:&quot;&amp;  Lead_Billing_Zip__c" n="Unverified_Prospect_Billing_Address__c" notVisibleToMetadataUser="true" summary="SVOC -formula field that concatenates the lead billing info into 1 string to display on the change request form" t="Unverified Prospect Billing Address"/>
-    <sfField formula="IF (\n   ISPICKVAL(Unverified_Prospect_Ready_to_Convert__c,&quot;Submitted&quot;),\n\n IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6Io&quot;, &quot;*&quot;, 16, 16) &amp; &quot; Account has been submitted to the CDG Team for verification.  See 'SVOC Request' related list for request information.&quot;,\n\n IF (\n   ISPICKVAL(Unverified_Prospect_Ready_to_Convert__c,&quot;No&quot;),\n\n   IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6KB&quot;, &quot;*&quot;, 16, 16) &amp; &quot; All fields in this section are required to submit an SVOC Request to the CDG Team. Once complete, you will see a 'Submit Unverified Prospect' button above.&quot;,\n\n   IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6RX&quot;, &quot;*&quot;, 16, 16) &amp; &quot; SVOC Request criteria has been met. Click the 'Submit Unverified Prospect' button above to send this account to the CDG Team for verification.&quot;\n )\n)" n="Unverified_Prospect_Help__c" notVisibleToMetadataUser="true" t="Unverified Prospect Help"/>
+    <sfField editPermission="false" formula="IF (\n   ISPICKVAL(Unverified_Prospect_Ready_to_Convert__c,&quot;Submitted&quot;),\n\n IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6Io&quot;, &quot;*&quot;, 16, 16) &amp; &quot; Account has been submitted to the CDG Team for verification.  See 'SVOC Request' related list for request information.&quot;,\n\n IF (\n   ISPICKVAL(Unverified_Prospect_Ready_to_Convert__c,&quot;No&quot;),\n\n   IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6KB&quot;, &quot;*&quot;, 16, 16) &amp; &quot; All fields in this section are required to submit an SVOC Request to the CDG Team. Once complete, you will see a 'Submit Unverified Prospect' button above.&quot;,\n\n   IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6RX&quot;, &quot;*&quot;, 16, 16) &amp; &quot; SVOC Request criteria has been met. Click the 'Submit Unverified Prospect' button above to send this account to the CDG Team for verification.&quot;\n )\n)" n="Unverified_Prospect_Help__c" notVisibleToMetadataUser="true" t="Unverified Prospect Help"/>
     <sfField n="Unverified_Prospect_Ready_to_Convert__c" notVisibleToMetadataUser="true" summary="Used to determine if SVOC Request can be submitted. - Set to True once all criteria have been met." t="Unverified Prospect Ready to Convert" type="picklist">
       <picklistEntryIds>618,574,654</picklistEntryIds>
     </sfField>
@@ -2426,11 +2427,11 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests (Source Account)" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source Account) (Source_Account__c)">
+            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="1" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Type__c" s="" seq="2" t="Request Type"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="1"/>
+                <sfRelatedListColumn n="Request_Type__c" s="" seq="2"/>
                 <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="3"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="4"/>
                 <sfRelatedListColumn n="UPDATEDBY_USER" s="" seq="5"/>
@@ -2440,14 +2441,14 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests (Final Account)" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final Account) (Final_Account__c)">
+            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1" t="SVOC Id"/>
-                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2" t="New Customer Name"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="3" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4" t="Date Request Submitted"/>
-                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5" t="Date Request Complete"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1"/>
+                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4"/>
+                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5"/>
               </children>
               <customActions/>
               <excludeButtons/>
@@ -2477,8 +2478,8 @@
             </sfRelatedList>
             <sfRelatedList fieldName="Account__c" label="Terms &amp; Conditions" n="ARA_Agreements1__r" relationshipName="ARA_Agreements1__r" s="3-" t="Terms &amp; Conditions (Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Name"/>
-                <sfRelatedListColumn n="Contact__c" s="" seq="1" t="Contact"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Contact__c" s="" seq="1"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="2"/>
               </children>
               <customActions>
@@ -4572,11 +4573,11 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests (Source Account)" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source Account) (Source_Account__c)">
+            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="1" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Type__c" s="" seq="2" t="Request Type"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="1"/>
+                <sfRelatedListColumn n="Request_Type__c" s="" seq="2"/>
                 <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="3"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="4"/>
                 <sfRelatedListColumn n="UPDATEDBY_USER" s="" seq="5"/>
@@ -4586,14 +4587,14 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests (Final Account)" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final Account) (Final_Account__c)">
+            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1" t="SVOC Id"/>
-                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2" t="New Customer Name"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="3" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4" t="Date Request Submitted"/>
-                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5" t="Date Request Complete"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1"/>
+                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4"/>
+                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5"/>
               </children>
               <customActions/>
               <excludeButtons/>
@@ -4623,8 +4624,8 @@
             </sfRelatedList>
             <sfRelatedList fieldName="Account__c" label="Terms &amp; Conditions" n="ARA_Agreements1__r" relationshipName="ARA_Agreements1__r" s="3-" t="Terms &amp; Conditions (Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Name"/>
-                <sfRelatedListColumn n="Contact__c" s="" seq="1" t="Contact"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Contact__c" s="" seq="1"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="2"/>
               </children>
               <customActions>
@@ -6710,11 +6711,11 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests (Source Account)" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source Account) (Source_Account__c)">
+            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="1" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Type__c" s="" seq="2" t="Request Type"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="1"/>
+                <sfRelatedListColumn n="Request_Type__c" s="" seq="2"/>
                 <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="3"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="4"/>
                 <sfRelatedListColumn n="UPDATEDBY_USER" s="" seq="5"/>
@@ -6724,14 +6725,14 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests (Final Account)" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final Account) (Final_Account__c)">
+            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1" t="SVOC Id"/>
-                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2" t="New Customer Name"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="3" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4" t="Date Request Submitted"/>
-                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5" t="Date Request Complete"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1"/>
+                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4"/>
+                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5"/>
               </children>
               <customActions/>
               <excludeButtons/>
@@ -6761,8 +6762,8 @@
             </sfRelatedList>
             <sfRelatedList fieldName="Account__c" label="Terms &amp; Conditions" n="ARA_Agreements1__r" relationshipName="ARA_Agreements1__r" s="3-" t="Terms &amp; Conditions (Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Name"/>
-                <sfRelatedListColumn n="Contact__c" s="" seq="1" t="Contact"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Contact__c" s="" seq="1"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="2"/>
               </children>
               <customActions>
@@ -8848,11 +8849,11 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests (Source Account)" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source Account) (Source_Account__c)">
+            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="1" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Type__c" s="" seq="2" t="Request Type"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="1"/>
+                <sfRelatedListColumn n="Request_Type__c" s="" seq="2"/>
                 <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="3"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="4"/>
                 <sfRelatedListColumn n="UPDATEDBY_USER" s="" seq="5"/>
@@ -8862,14 +8863,14 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests (Final Account)" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final Account) (Final_Account__c)">
+            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1" t="SVOC Id"/>
-                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2" t="New Customer Name"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="3" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4" t="Date Request Submitted"/>
-                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5" t="Date Request Complete"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1"/>
+                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4"/>
+                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5"/>
               </children>
               <customActions/>
               <excludeButtons/>
@@ -8899,8 +8900,8 @@
             </sfRelatedList>
             <sfRelatedList fieldName="Account__c" label="Terms &amp; Conditions" n="ARA_Agreements1__r" relationshipName="ARA_Agreements1__r" s="3-" t="Terms &amp; Conditions (Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Name"/>
-                <sfRelatedListColumn n="Contact__c" s="" seq="1" t="Contact"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Contact__c" s="" seq="1"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="2"/>
               </children>
               <customActions>
@@ -10986,11 +10987,11 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests (Source Account)" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source Account) (Source_Account__c)">
+            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="1" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Type__c" s="" seq="2" t="Request Type"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="1"/>
+                <sfRelatedListColumn n="Request_Type__c" s="" seq="2"/>
                 <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="3"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="4"/>
                 <sfRelatedListColumn n="UPDATEDBY_USER" s="" seq="5"/>
@@ -11000,14 +11001,14 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests (Final Account)" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final Account) (Final_Account__c)">
+            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1" t="SVOC Id"/>
-                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2" t="New Customer Name"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="3" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4" t="Date Request Submitted"/>
-                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5" t="Date Request Complete"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1"/>
+                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4"/>
+                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5"/>
               </children>
               <customActions/>
               <excludeButtons/>
@@ -11037,8 +11038,8 @@
             </sfRelatedList>
             <sfRelatedList fieldName="Account__c" label="Terms &amp; Conditions" n="ARA_Agreements1__r" relationshipName="ARA_Agreements1__r" s="3-" t="Terms &amp; Conditions (Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Name"/>
-                <sfRelatedListColumn n="Contact__c" s="" seq="1" t="Contact"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Contact__c" s="" seq="1"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="2"/>
               </children>
               <customActions>
@@ -13124,11 +13125,11 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests (Source Account)" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source Account) (Source_Account__c)">
+            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="1" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Type__c" s="" seq="2" t="Request Type"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="1"/>
+                <sfRelatedListColumn n="Request_Type__c" s="" seq="2"/>
                 <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="3"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="4"/>
                 <sfRelatedListColumn n="UPDATEDBY_USER" s="" seq="5"/>
@@ -13138,14 +13139,14 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests (Final Account)" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final Account) (Final_Account__c)">
+            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1" t="SVOC Id"/>
-                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2" t="New Customer Name"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="3" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4" t="Date Request Submitted"/>
-                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5" t="Date Request Complete"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1"/>
+                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4"/>
+                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5"/>
               </children>
               <customActions/>
               <excludeButtons/>
@@ -13175,8 +13176,8 @@
             </sfRelatedList>
             <sfRelatedList fieldName="Account__c" label="Terms &amp; Conditions" n="ARA_Agreements1__r" relationshipName="ARA_Agreements1__r" s="3-" t="Terms &amp; Conditions (Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Name"/>
-                <sfRelatedListColumn n="Contact__c" s="" seq="1" t="Contact"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Contact__c" s="" seq="1"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="2"/>
               </children>
               <customActions>
@@ -15361,14 +15362,14 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests (Final Account)" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final Account) (Final_Account__c)">
+            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1" t="SVOC Id"/>
-                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2" t="New Customer Name"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="3" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4" t="Date Request Submitted"/>
-                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5" t="Date Request Complete"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1"/>
+                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4"/>
+                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5"/>
               </children>
               <customActions/>
               <excludeButtons/>
@@ -17479,11 +17480,11 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests (Source Account)" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source Account) (Source_Account__c)">
+            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="1" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Type__c" s="" seq="2" t="Request Type"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="1"/>
+                <sfRelatedListColumn n="Request_Type__c" s="" seq="2"/>
                 <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="3"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="4"/>
                 <sfRelatedListColumn n="UPDATEDBY_USER" s="" seq="5"/>
@@ -17493,14 +17494,14 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests (Final Account)" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final Account) (Final_Account__c)">
+            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1" t="SVOC Id"/>
-                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2" t="New Customer Name"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="3" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4" t="Date Request Submitted"/>
-                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5" t="Date Request Complete"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1"/>
+                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4"/>
+                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5"/>
               </children>
               <customActions/>
               <excludeButtons/>
@@ -17530,8 +17531,8 @@
             </sfRelatedList>
             <sfRelatedList fieldName="Account__c" label="Terms &amp; Conditions" n="ARA_Agreements1__r" relationshipName="ARA_Agreements1__r" s="3-" t="Terms &amp; Conditions (Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Name"/>
-                <sfRelatedListColumn n="Contact__c" s="" seq="1" t="Contact"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Contact__c" s="" seq="1"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="2"/>
               </children>
               <customActions>
@@ -18387,11 +18388,11 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests (Source Account)" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source Account) (Source_Account__c)">
+            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="1" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Type__c" s="" seq="2" t="Request Type"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="1"/>
+                <sfRelatedListColumn n="Request_Type__c" s="" seq="2"/>
                 <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="3"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="4"/>
                 <sfRelatedListColumn n="UPDATEDBY_USER" s="" seq="5"/>
@@ -20628,11 +20629,11 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests (Source Account)" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source Account) (Source_Account__c)">
+            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="1" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Type__c" s="" seq="2" t="Request Type"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="1"/>
+                <sfRelatedListColumn n="Request_Type__c" s="" seq="2"/>
                 <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="3"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="4"/>
                 <sfRelatedListColumn n="UPDATEDBY_USER" s="" seq="5"/>
@@ -20642,14 +20643,14 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests (Final Account)" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final Account) (Final_Account__c)">
+            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1" t="SVOC Id"/>
-                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2" t="New Customer Name"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="3" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4" t="Date Request Submitted"/>
-                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5" t="Date Request Complete"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1"/>
+                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4"/>
+                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5"/>
               </children>
               <customActions/>
               <excludeButtons/>
@@ -20679,8 +20680,8 @@
             </sfRelatedList>
             <sfRelatedList fieldName="Account__c" label="Terms &amp; Conditions" n="ARA_Agreements1__r" relationshipName="ARA_Agreements1__r" s="3-" t="Terms &amp; Conditions (Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Name"/>
-                <sfRelatedListColumn n="Contact__c" s="" seq="1" t="Contact"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Contact__c" s="" seq="1"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="2"/>
               </children>
               <customActions>
@@ -22806,11 +22807,11 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests (Source Account)" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source Account) (Source_Account__c)">
+            <sfRelatedList fieldName="Source_Account__c" label="SVOC Requests" n="SVOC_Requests_Source_Account_del__r" relationshipName="SVOC_Requests_Source_Account_del__r" s="3-" t="SVOC Requests (Source_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="1" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Type__c" s="" seq="2" t="Request Type"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="1"/>
+                <sfRelatedListColumn n="Request_Type__c" s="" seq="2"/>
                 <sfRelatedListColumn n="CREATEDBY_USER" s="" seq="3"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="4"/>
                 <sfRelatedListColumn n="UPDATEDBY_USER" s="" seq="5"/>
@@ -22820,14 +22821,14 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests (Final Account)" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final Account) (Final_Account__c)">
+            <sfRelatedList fieldName="Final_Account__c" label="SVOC Requests" n="SVOC_Requests_Final_Account__r" relationshipName="SVOC_Requests_Final_Account__r" s="3-" t="SVOC Requests (Final_Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Number"/>
-                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1" t="SVOC Id"/>
-                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2" t="New Customer Name"/>
-                <sfRelatedListColumn n="Request_Status__c" s="" seq="3" t="Request Status"/>
-                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4" t="Date Request Submitted"/>
-                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5" t="Date Request Complete"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="SVOC_Id__c" s="" seq="1"/>
+                <sfRelatedListColumn n="New_Customer_Name__c" s="" seq="2"/>
+                <sfRelatedListColumn n="Request_Status__c" s="" seq="3"/>
+                <sfRelatedListColumn n="Request_Submitted_Date__c" s="" seq="4"/>
+                <sfRelatedListColumn n="Request_Complete_Date__c" s="" seq="5"/>
               </children>
               <customActions/>
               <excludeButtons/>
@@ -22857,8 +22858,8 @@
             </sfRelatedList>
             <sfRelatedList fieldName="Account__c" label="Terms &amp; Conditions" n="ARA_Agreements1__r" relationshipName="ARA_Agreements1__r" s="3-" t="Terms &amp; Conditions (Account__c)">
               <children>
-                <sfRelatedListColumn n="NAME" s="" seq="0" t="Name"/>
-                <sfRelatedListColumn n="Contact__c" s="" seq="1" t="Contact"/>
+                <sfRelatedListColumn n="NAME" s="" seq="0"/>
+                <sfRelatedListColumn n="Contact__c" s="" seq="1"/>
                 <sfRelatedListColumn n="CREATED_DATE" s="" seq="2"/>
               </children>
               <customActions>
@@ -23112,12 +23113,12 @@
     <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
     <sfActionLink n="ViewCustomerPortalUser" s=""/>
     <sfActionLink n="WebsiteHighlightAction" s=""/>
-    <sfActionLink n="APXTConga4__Conga_Composer_OAuth" s="" t="Conga Composer (OAuth)" target="sf:ui:target?object=Account&amp;window=*&amp;url=%2Fapex%2FAPXTConga4__Conga_Composer%0A%3Fid%3D%7B%21Account.Id%7D&amp;page=APXTConga4__Conga_Composer%0A"/>
-    <sfActionLink n="APXTConga4__Conga_Mail_Merge" s="" t="Conga Composer" target="sf:ui:target?object=Account&amp;window=*&amp;url=https%3A%2F%2Fcomposer.congamerge.com%0A%3FsessionId%3D%7B%21API.Session_ID%7D%0A%26serverUrl%3D%7B%21API.Partner_Server_URL_290%7D%0A%26id%3D%7B%21Account.Id%7D"/>
+    <sfActionLink n="APXTConga4__Conga_Composer_OAuth" s="" t="Conga Composer (OAuth)" target="sf:ui:target?object=Account&amp;url=%2Fapex%2FAPXTConga4__Conga_Composer%0A%3Fid%3D%7B%21Account.Id%7D&amp;window=*&amp;page=APXTConga4__Conga_Composer%0A"/>
+    <sfActionLink n="APXTConga4__Conga_Mail_Merge" s="" t="Conga Composer" target="sf:ui:target?object=Account&amp;url=https%3A%2F%2Fcomposer.congamerge.com%0A%3FsessionId%3D%7B%21API.Session_ID%7D%0A%26serverUrl%3D%7B%21API.Partner_Server_URL_290%7D%0A%26id%3D%7B%21Account.Id%7D&amp;window=*"/>
     <sfActionLink massAction="true" n="Add_Dealer_Analysis" requiresRow="true" s="" t="Add Dealer Analysis" target="sf:ui:target?object=Account&amp;url=https%3A%2F%2Fna9.salesforce.com%2Fa0M%2Fe%3FCF00NE0000003OrvF%3D%7B%21Account.Name%7D%0A%26CF00NE0000003OrvF_lkid%3D%7B%21Account.Id%7D%0A%26Name%3DSet+by+the+system%0A%26retURL%3D%252F%7B%21Account.Id%7D"/>
-    <sfActionLink n="AltavistaNews" s="" t="Altavista News" target="sf:ui:target?object=Account&amp;window=*&amp;url=http%3A%2F%2Fnews.altavista.com%2Fsearch%3Fnc%3D0%26q%3D%7B%21Account_Name%7D"/>
+    <sfActionLink n="AltavistaNews" s="" t="Altavista News" target="sf:ui:target?object=Account&amp;url=http%3A%2F%2Fnews.altavista.com%2Fsearch%3Fnc%3D0%26q%3D%7B%21Account_Name%7D&amp;window=*"/>
     <sfActionLink n="CNSR" s="" target="sf:ui:target?object=Account&amp;url=%2Fflow%2FCreate_Unverified_Prospect_Request%3FvarAcctId%3D%7B%21Account.Id%7D"/>
-    <sfActionLink n="Case_Comments" s="" t="Case Comments" target="sf:ui:target?object=Account&amp;window=*&amp;url=%2F00Oc0000000Pn69%3Fpv0%3D%7B%21Account.Id%7D"/>
+    <sfActionLink n="Case_Comments" s="" t="Case Comments" target="sf:ui:target?object=Account&amp;url=%2F00Oc0000000Pn69%3Fpv0%3D%7B%21Account.Id%7D&amp;window=*"/>
     <sfActionLink n="Create_BU_Referral" s="" t="Create BU Referral" target="sf:ui:target?object=Account&amp;url=%2Fa0J%2Fe%3FCF00NE0000003MomL%3D%7B%21Account.Name%7D%0A%26Name%3D%22SET+BY+THE+SYSTEM%22%0A%26CF00NE0000003MomL_lkid%3D%7B%21Account.Id%7D%0A%26retURL%3D%252F%7B%21Account.Id%7D%0A%26RecordType%3D012E00000005lEX"/>
     <sfActionLink n="Create_CCall" s="" t="Create CCall" target="sf:ui:target?object=Account&amp;url=https%3A%2F%2Fna9.salesforce.com%2Fa0J%2Fe%3FCF00NE0000003MomL%3D%7B%21Account.Name%7D%0A%26Name%3D%22CCall%22%0A%26CF00NE0000003MomL_lkid%3D%7B%21BU_Referrals__c.Id%7D%0A%26retURL%3D%252F%7B%21BU_Referrals__c.Id%7D"/>
     <sfActionLink n="Create_Change_Request" s="" t="Create Customer Change Request" target="sf:ui:target?object=Account&amp;url=%2Fa0m%2Fe%3F%26RecordType%3D012E00000005v47%26CF00NE0000005Bwnz%3D%7B%21Account.Name%7D%26CF00NE0000005Bwnz_lkid%3D%7B%21Account.Id%7D%2600NE0000005Bwng%3D%7B%21Account.SVOC_Id__c%7D%2600NM00000013QIV%3D1%26retURL%3D%252F%7B%21Account.Id%7D"/>
@@ -23126,21 +23127,21 @@
     <sfActionLink n="Create_SVOC_Request" s="" t="Create SVOC Request" target="sf:ui:target?object=Account&amp;url=%2Fa0m%2Fe%3Fent%3D01IE00000011wNP%26%0Anooverride%3D1%0A%26RecordType%3D012E00000005v46%0A%26retURL%3D%7B%21Account.Id%7D%0A%26ent%3D%7B%21SVOC_Request__c.Id%7D%0A%2600NE0000005BwnW%3D%7B%21Account.Name%7D%0A%2600NE0000005Bwnj%3D%7B%21Account.Type%7D%0A%2600NE0000005BwnO%3D%7B%21Account.Dealer_Type__c%7D%0A%2600NE0000005BwnX%3D%7B%21Account.Phone%7D%0A%2600NE0000005Bwo2%3D%7B%21Account.ShippingStreet%7D%0A%2600NE0000005BwnJ%3D%7B%21Account.ShippingCity%7D%0A%2600NE0000005Bwo1%3D%7B%21Account.ShippingState%7D%0A%2600NE0000005BwoF%3D%7B%21Account.ShippingPostalCode%7D%0A%2600NE0000005BwoE%3D%7B%21Account.Website%7D%0A%2600NE0000005BwnV%3D%7B%21Account.Lot_Size_New__c%7D%0A%2600NE0000005Bwo7%3D%7B%21Account.Lot_Size_Used__c%7D"/>
     <sfActionLink n="Create_TIM_Onboarding_Event" s="" t="Create TIM Onboarding Event" target="sf:ui:target?object=Account&amp;url=%2F00U%2Fe%3Fwhat_id%3D%7B%21Account.Id%7D%0A%26evt1_lkid%3D005E0000001rV7u%0A%26evt1%3D+%22Calvin+McDonald%22%0A%26evt5%3DTIM+Onboarding%0A%26evt3%3D%7B%21Account.Name%7D%0A%26retURL%3D%2F%7B%21Account.Id%7D"/>
     <sfActionLink n="Create_TIM_Relaunch_Training_Event" s="" t="Create TIM Relaunch Training Event" target="sf:ui:target?object=Account&amp;url=https%3A%2F%2Fna9.salesforce.com%2F00U%2Fe%3Fwhat_id%3D%7B%21Account.Id%7D%0A%26evt1_lkid%3D005E0000001rV7u+%0A%26evt1%3D+%22Calvin+McDonald%22%0A%26evt5%3DTIM+Relaunch+Training+%0A%26evt3%3D%7B%21Account.Name%7D+%0A+%0A%26retURL%3D%252F%7B%21Account.Id%7D"/>
-    <sfActionLink n="Dynamics_Account" s="" t="Dynamics Account" target="sf:ui:target?object=Account&amp;window=*&amp;url=http%3A%2F%2Fcrm.autotrader.int%2FCRMD%2Fsfa%2Faccts%2Fedit.aspx%3Fid%3D%7B%21Account.ATC_Dynamics_Acct_GUID_Id__c%7D%23"/>
-    <sfActionLink n="GoogleMaps" s="" t="Google Maps" target="sf:ui:target?object=Account&amp;window=*&amp;url=http%3A%2F%2Fmaps.google.com%2Fmaps%3Ff%3Dq%26hl%3Den%26q%3D%7B%21Account_BillingStreet%7D%2B%7B%21Account_BillingCity%7D%2B%7B%21Account_BillingState%7D%26om%3D1"/>
-    <sfActionLink n="GoogleNews" s="" t="Google News" target="sf:ui:target?object=Account&amp;window=*&amp;url=http%3A%2F%2Fwww.google.com%2Fnews%3F%26q%3D%7B%21Account_Name%7D%26btnG%3DSearch%2BNews"/>
-    <sfActionLink n="GoogleSearch" s="" t="Google Search" target="sf:ui:target?object=Account&amp;window=*&amp;url=http%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3D%7B%21Account_Name%7D"/>
-    <sfActionLink n="HooversProfile" s="" t="Hoovers Profile" target="sf:ui:target?object=Account&amp;window=*&amp;url=http%3A%2F%2Fsearch.hoovers.com%2Fcgi-bin%2Fhol_search%3Fwhich%3Dcompany%26query_string%3D%7B%21Account_Name%7D"/>
+    <sfActionLink n="Dynamics_Account" s="" t="Dynamics Account" target="sf:ui:target?object=Account&amp;url=http%3A%2F%2Fcrm.autotrader.int%2FCRMD%2Fsfa%2Faccts%2Fedit.aspx%3Fid%3D%7B%21Account.ATC_Dynamics_Acct_GUID_Id__c%7D%23&amp;window=*"/>
+    <sfActionLink n="GoogleMaps" s="" t="Google Maps" target="sf:ui:target?object=Account&amp;url=http%3A%2F%2Fmaps.google.com%2Fmaps%3Ff%3Dq%26hl%3Den%26q%3D%7B%21Account_BillingStreet%7D%2B%7B%21Account_BillingCity%7D%2B%7B%21Account_BillingState%7D%26om%3D1&amp;window=*"/>
+    <sfActionLink n="GoogleNews" s="" t="Google News" target="sf:ui:target?object=Account&amp;url=http%3A%2F%2Fwww.google.com%2Fnews%3F%26q%3D%7B%21Account_Name%7D%26btnG%3DSearch%2BNews&amp;window=*"/>
+    <sfActionLink n="GoogleSearch" s="" t="Google Search" target="sf:ui:target?object=Account&amp;url=http%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3D%7B%21Account_Name%7D&amp;window=*"/>
+    <sfActionLink n="HooversProfile" s="" t="Hoovers Profile" target="sf:ui:target?object=Account&amp;url=http%3A%2F%2Fsearch.hoovers.com%2Fcgi-bin%2Fhol_search%3Fwhich%3Dcompany%26query_string%3D%7B%21Account_Name%7D&amp;window=*"/>
     <sfActionLink n="Loop__LOOP" s="" t="Create PDF" target="sf:ui:target?object=Account&amp;url=%2Fapex%2Floop__loop%3Feid%3D%7B%21Account.Id%7D&amp;page=loop__loop"/>
     <sfActionLink n="Loop__LOOP_Merge" s="" t="Deprecated LM" target="sf:ui:target?object=Account&amp;url=%2Fapex%2Floop__loopmerge%3Feid%3D%7B%21Account.Id%7D&amp;page=loop__loopmerge"/>
     <sfActionLink n="Loop__LOOPlus" s="" t="Run DDP" target="sf:ui:target?object=Account&amp;url=%2Fapex%2Floop__looplus%3Feid%3D%7B%21Account.Id%7D%26sessionId%3D%7B%21%24Api.Session_ID%7D&amp;page=loop__looplus"/>
     <sfActionLink massAction="true" n="Loop__Mass_LOOP_Merge" requiresRow="true" s="" t="Deprecated Mass LM" target="sf:ui:target?object=Account&amp;action=Loop__Mass_LOOP_Merge"/>
-    <sfActionLink massAction="true" n="Loop__Mass_LOOPlus" requiresRow="true" s="" t="Run DDP" target="sf:ui:target?object=Account&amp;url=%22&amp;action=Loop__Mass_LOOPlus"/>
+    <sfActionLink massAction="true" n="Loop__Mass_LOOPlus" requiresRow="true" s="" t="Run DDP" target="sf:ui:target?object=Account&amp;action=Loop__Mass_LOOPlus&amp;url=%22"/>
     <sfActionLink n="Request_Rep_Reassignment" s="" t="Request Rep Reassignment" target="sf:ui:target?object=Account&amp;url=https%3A%2F%2Fna9.salesforce.com%2F00T%2Fe%3Fwhat_id%3D%7B%21Account.Id%7D%0A%26tsk1%3DShelly+Kay%0A%26tsk1_lkid%3D005E0000001u3MZIAY%0A%26tsk5%3DRep+Reassignment+Request%0A%26tsk6%3D******enter+the+Rep%27s+Name+to+assign%0A%26tsk4%3D%7B%21TODAY%28%29%7D%0A%26email%3D1"/>
     <sfActionLink n="Set_Owner" s="" t="Change Owner" target="sf:ui:target?object=Account&amp;url=%2F%7B%21Account.Id%7D%2Fa%3FretURL%3D%252F%7B%21Account.Id%7D"/>
     <sfActionLink n="Submit_Unverified_Prospect" s="" t="Submit Unverified Prospect" target="sf:ui:target?object=Account&amp;url=%2Fa0m%2Fe%3FCF00NE0000005Bwnz%3D%7B%21Account.Name%7D%0A%26CF00NE0000005Bwnz_lkid%3D%7B%21Account.Id%7D%0A%26retURL%3D%2F%7B%21Account.Id%7D%0A%26RecordType%3D012E00000005v46%0A%26ent%3D%7B%21SVOC_Request__c.Id%7D"/>
-    <sfActionLink n="View_ATC_Active_Products" s="" t="View ATC Active Products" target="sf:ui:target?object=Account&amp;window=*&amp;url=https%3A%2F%2Fna9.salesforce.com%2F00OE0000002KwKP%3Fpv0%3D%7B%21Account.Id%7D"/>
-    <sfActionLink n="YahooMaps" s="" t="Yahoo Maps" target="sf:ui:target?object=Account&amp;window=*&amp;url=http%3A%2F%2Fmaps.yahoo.com%2Fpy%2Fmaps.py%3Fcn%3D%7B%21Account_BillingCountry%7D%26csz%3D%7B%21Account_BillingCity%7D%2B%7B%21Account_BillingState%7D%2B%7B%21Account_BillingPostalCode%7D%2B%26addr%3D%7B%21Account_BillingAddress%7D"/>
+    <sfActionLink n="View_ATC_Active_Products" s="" t="View ATC Active Products" target="sf:ui:target?object=Account&amp;url=https%3A%2F%2Fna9.salesforce.com%2F00OE0000002KwKP%3Fpv0%3D%7B%21Account.Id%7D&amp;window=*"/>
+    <sfActionLink n="YahooMaps" s="" t="Yahoo Maps" target="sf:ui:target?object=Account&amp;url=http%3A%2F%2Fmaps.yahoo.com%2Fpy%2Fmaps.py%3Fcn%3D%7B%21Account_BillingCountry%7D%26csz%3D%7B%21Account_BillingCity%7D%2B%7B%21Account_BillingState%7D%2B%7B%21Account_BillingPostalCode%7D%2B%26addr%3D%7B%21Account_BillingAddress%7D&amp;window=*"/>
     <sfActionLink n="echosign_dev1__Send_to_EchoSign" s="" t="Send to EchoSign" target="sf:ui:target?object=Account&amp;url=%2Fapex%2Fechosign_dev1__AgreementTemplateProcess%3FmasterId%3D%7B%21Account.Id%7D&amp;page=echosign_dev1__AgreementTemplateProcess"/>
     <sfActionLink n="loli_oppwall__Opportunity_Planning_Wall" s="" t="Open Planning Wall..." target="sf:ui:target?object=Account&amp;action=loli_oppwall__Opportunity_Planning_Wall"/>
     <sfActionLink modes="View" n="Clone" requiresRow="true"/>
@@ -23182,7 +23183,478 @@
     <sfListView n="Prospective_Media_Accounts_I_am_Assigned" s="List View" t="My Prospect Accounts"/>
     <sfListView n="Unverified_Prospect_Accounts" s="List View" t="Unverified Prospect Accounts"/>
   </listViews>
-  <quickActions/>
+  <quickActions>
+    <sfQuickAction label="Log a Call" n="LogACall" s="Quick Action" t="Log a Call" targetSObject="Task" type="LogACall">
+      <quickActionLayout n="LogACall" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI label="Comments" n="Comments" s="" seqNum="1" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Description" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI label="Related To" n="Related To" s="" seqNum="1" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhatId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="New Contact" n="NewContact" s="Quick Action" t="New Contact" targetSObject="Contact" type="Create">
+      <quickActionLayout n="NewContact" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Name" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Email" n="Email" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Email" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="Phone" n="Phone" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Phone" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                    <children>
+                      <sfLI label="Account Name" n="Account Name" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="AccountId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="4">
+                    <children>
+                      <sfLI label="Title" n="Title" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Title" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="New Event" n="NewEvent" s="Quick Action" t="New Event" targetSObject="Event" type="Create">
+      <quickActionLayout n="NewEvent" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Start" n="Start" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="StartDateTime" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="End" n="End" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="EndDateTime" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                    <children>
+                      <sfLI label="All-Day Event" n="All-Day Event" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="IsAllDayEvent" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="4">
+                    <children>
+                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="5">
+                    <children>
+                      <sfLI label="Related To" n="Related To" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhatId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="6">
+                    <children>
+                      <sfLI label="Assigned To" n="Assigned To" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="7">
+                    <children>
+                      <sfLI label="Location" n="Location" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Location" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="New Group" n="NewGroup" s="Quick Action" t="New Group" targetSObject="CollaborationGroup" type="Create">
+      <quickActionLayout n="NewGroup" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Name" n="Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Description" n="Description" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Description" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="Access Type" n="Access Type" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="CollaborationType" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                    <children>
+                      <sfLI label="Allow Customers" n="Allow Customers" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="CanHaveGuests" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="New Note" n="NewNote" s="Quick Action" t="New Note" targetSObject="Note" type="Create">
+      <quickActionLayout n="NewNote" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Title" n="Title" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Title" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Private" n="Private" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="IsPrivate" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="Body" n="Body" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Body" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="New Task" n="NewTask" s="Quick Action" t="New Task" targetSObject="Task" type="Create">
+      <quickActionLayout n="NewTask" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Due Date" n="Due Date" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="ActivityDate" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                    <children>
+                      <sfLI label="Related To" n="Related To" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhatId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="4">
+                    <children>
+                      <sfLI label="Assigned To" n="Assigned To" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="5">
+                    <children>
+                      <sfLI label="Status" n="Status" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Status" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="Log a Call" n="WrapAround_Email2" s="Quick Action" t="Log a Call" targetSObject="Task" type="Create">
+      <quickActionLayout n="WrapAround_Email2" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Assigned To" n="Assigned To" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="OwnerId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="Status" n="Status" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Status" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                    <children>
+                      <sfLI label="Priority" n="Priority" required="true" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Priority" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+    <sfQuickAction label="In Person Visit" n="Account.In_Person_Visit_Account" s="Quick Action" t="In Person Visit" targetSObject="Task" type="LogACall">
+      <quickActionLayout n="Account.In_Person_Visit_Account" profileLayout="false" s="" t="Quick Action Layout">
+        <layoutTypes>
+          <sfLayoutType layoutType="QuickAction" n="QuickAction" t="Web Layout Type">
+            <children>
+              <sfLayoutSection detailHeading="false" editHeading="false" n="Publisher Action Form" s="" seqNum="0">
+                <children>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                    <children>
+                      <sfLI label="Subject" n="Subject" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Subject" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                    <children>
+                      <sfLI label="Comments" n="Comments" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="Description" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                  <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                    <children>
+                      <sfLI label="Name" n="Name" s="" seqNum="0" t="Web Layout Item">
+                        <children>
+                          <sfLIC n="WhoId" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                        </children>
+                      </sfLI>
+                      <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                    </children>
+                  </sfLayoutRow>
+                </children>
+              </sfLayoutSection>
+            </children>
+          </sfLayoutType>
+        </layoutTypes>
+      </quickActionLayout>
+    </sfQuickAction>
+  </quickActions>
   <homeListColumns>
     <string>ACCOUNT.NAME</string>
     <string>SVOC_Id__c</string>

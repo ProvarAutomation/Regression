@@ -117,7 +117,7 @@
     </sfField>
     <sfField extraTypeInfo="plaintextarea" length="500" n="Website_Domains__c" summary="URLs to tag" t="Website Domain(s)" type="textarea"/>
     <sfField length="100" n="Who_Will_Tag_Site__c" summary="First and Last name of who will tag the site" t="Site Contact Name"/>
-    <sfField calculated="true" createable="false" formula="IF (CreatedById = $User.Id, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="On_My_Team__c" precision="18" t="On My Team" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF (CreatedById = $User.Id, 1, 0)" formulaTreatBlanksAs="BlankAsZero" n="On_My_Team__c" precision="18" t="On My Team" type="_double" updateable="false"/>
     <sfField n="Custom_Comments__c" notVisibleToMetadataUser="true" t="Custom Comments" type="picklist">
       <picklistEntryIds>574,575</picklistEntryIds>
     </sfField>
@@ -935,7 +935,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Internet_Websites__c</key>
-          <value valueClass="string">51039,51068,51069,71,93,3115</value>
+          <value valueClass="string">67713,67742,67743,71,93,3115</value>
         </entry>
         <entry>
           <key valueClass="string">Quality_Vehicle_Images__c</key>
@@ -963,7 +963,7 @@
         </entry>
         <entry>
           <key valueClass="string">Stage__c</key>
-          <value valueClass="string">3127,3123,3130,3128,3129,79,3124,3125,3126,51070,3120,1188</value>
+          <value valueClass="string">3127,3123,3130,3128,3129,79,3124,3125,3126,67744,3120,1188</value>
         </entry>
         <entry>
           <key valueClass="string">VinSolutions_Website__c</key>
@@ -991,7 +991,7 @@
         </entry>
         <entry>
           <key valueClass="string">Analysis_Purpose__c</key>
-          <value valueClass="string">3109,3110,3107,51067</value>
+          <value valueClass="string">3109,3110,3107,67741</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -1753,7 +1753,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Internet_Websites__c</key>
-          <value valueClass="string">51039,51068,51069,71,93,3115</value>
+          <value valueClass="string">67713,67742,67743,71,93,3115</value>
         </entry>
         <entry>
           <key valueClass="string">Quality_Vehicle_Images__c</key>
@@ -1809,7 +1809,7 @@
         </entry>
         <entry>
           <key valueClass="string">Analysis_Purpose__c</key>
-          <value valueClass="string">3109,3110,3107,51067</value>
+          <value valueClass="string">3109,3110,3107,67741</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -2571,7 +2571,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Internet_Websites__c</key>
-          <value valueClass="string">51039,51068,51069,71,93,3115</value>
+          <value valueClass="string">67713,67742,67743,71,93,3115</value>
         </entry>
         <entry>
           <key valueClass="string">Quality_Vehicle_Images__c</key>
@@ -2599,7 +2599,7 @@
         </entry>
         <entry>
           <key valueClass="string">Stage__c</key>
-          <value valueClass="string">3127,3123,3130,3128,3129,79,3124,3125,3126,51070,3120,1188</value>
+          <value valueClass="string">3127,3123,3130,3128,3129,79,3124,3125,3126,67744,3120,1188</value>
         </entry>
         <entry>
           <key valueClass="string">VinSolutions_Website__c</key>
@@ -2627,7 +2627,7 @@
         </entry>
         <entry>
           <key valueClass="string">Analysis_Purpose__c</key>
-          <value valueClass="string">3109,3110,3107,51067</value>
+          <value valueClass="string">3109,3110,3107,67741</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allow ACs to read and edit action plans (can only edit status).  Assigns only NADA record type.</description>
+    <label>ATC Sales - Action Plans</label>
+    <userLicense>Salesforce</userLicense>
+</PermissionSet>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><sfObject label="Activity History" labelPlural="Activity History" n="ActivityHistory" s="" standardLabel="Activity History" t="Activity History">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject label="Activity History" labelPlural="Activity History" n="ActivityHistory" s="" standardLabel="Activity History" t="Activity History">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Activity ID" type="id" updateable="false"/>
     <sfField createable="false" length="18" n="AccountId" relationshipName="Account" t="Account ID" type="reference" updateable="false">
@@ -74,7 +75,7 @@
     </sfField>
     <sfField createable="false" n="IsHighPriority" t="High Priority" type="_boolean" updateable="false"/>
     <sfField createable="false" length="40" n="ActivityType" t="Type" type="picklist" updateable="false">
-      <picklistEntryIds>239820,239821,239822,239823,239823,239824,239825,239825,239826,239826,239827,239828,239829,239830</picklistEntryIds>
+      <picklistEntryIds>256101,256102,256103,256104,256104,256105,256106,256106,256107,256107,256108,256109,256110,256111</picklistEntryIds>
     </sfField>
     <sfField createable="false" n="IsClosed" t="Closed" type="_boolean" updateable="false"/>
     <sfField createable="false" n="IsAllDayEvent" t="All-Day Event" type="_boolean" updateable="false"/>

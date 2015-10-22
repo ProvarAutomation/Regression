@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="a2L" label="Medallia Survey" labelPlural="Medallia Surveys" layoutable="true" n="Medallia_Survey__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IM00000005PDlMAM" t="Medallia Survey (a2L)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a2L/e">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="a2L" label="Medallia Survey" labelPlural="Medallia Surveys" layoutable="true" n="Medallia_Survey__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IM00000005PDlMAM" t="Medallia Survey (a2L)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a2L/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
     <sfField length="18" n="OwnerId" relationshipName="Owner" t="Owner ID" type="reference">

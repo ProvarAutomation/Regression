@@ -7,11 +7,11 @@
         <string>Account</string>
       </referenceTos>
     </sfField>
-    <sfField length="40" n="OwnerExpirationNotice" restrictedPicklist="true" t="Owner Expiration Notice" type="picklist">
+    <sfField editPermission="false" length="40" n="OwnerExpirationNotice" restrictedPicklist="true" t="Owner Expiration Notice" type="picklist">
       <picklistEntryIds>2991,2992,2993,2994,2995,2996</picklistEntryIds>
     </sfField>
-    <sfField n="StartDate" t="Contract Start Date" type="date"/>
-    <sfField n="EndDate" t="Contract End Date" type="date"/>
+    <sfField editPermission="false" n="StartDate" t="Contract Start Date" type="date"/>
+    <sfField editPermission="false" n="EndDate" t="Contract End Date" type="date"/>
     <sfField extraTypeInfo="plaintextarea" length="255" n="BillingStreet" t="Billing Street" type="textarea"/>
     <sfField length="40" n="BillingCity" t="Billing City"/>
     <sfField length="80" n="BillingState" t="Billing State/Province"/>
@@ -19,7 +19,7 @@
     <sfField length="80" n="BillingCountry" t="Billing Country"/>
     <sfField n="BillingLatitude" precision="18" scale="15" t="Billing Latitude" type="_double"/>
     <sfField n="BillingLongitude" precision="18" scale="15" t="Billing Longitude" type="_double"/>
-    <sfField createable="false" n="BillingAddress" t="Billing Address" type="address" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="BillingAddress" t="Billing Address" type="address" updateable="false"/>
     <sfField extraTypeInfo="plaintextarea" length="255" n="ShippingStreet" t="Shipping Street" type="textarea"/>
     <sfField length="40" n="ShippingCity" t="Shipping City"/>
     <sfField length="80" n="ShippingState" t="Shipping State/Province"/>
@@ -27,8 +27,8 @@
     <sfField length="80" n="ShippingCountry" t="Shipping Country"/>
     <sfField n="ShippingLatitude" precision="18" scale="15" t="Shipping Latitude" type="_double"/>
     <sfField n="ShippingLongitude" precision="18" scale="15" t="Shipping Longitude" type="_double"/>
-    <sfField createable="false" n="ShippingAddress" t="Shipping Address" type="address" updateable="false"/>
-    <sfField digits="4" n="ContractTerm" t="Contract Term" type="_int"/>
+    <sfField createable="false" editPermission="false" n="ShippingAddress" t="Shipping Address" type="address" updateable="false"/>
+    <sfField digits="4" editPermission="false" n="ContractTerm" t="Contract Term" type="_int"/>
     <sfField length="18" n="OwnerId" relationshipName="Owner" t="Owner ID" type="reference">
       <referenceTos>
         <string>User</string>
@@ -42,25 +42,25 @@
         <string>User</string>
       </referenceTos>
     </sfField>
-    <sfField n="CompanySignedDate" t="Company Signed Date" type="date"/>
+    <sfField editPermission="false" n="CompanySignedDate" t="Company Signed Date" type="date"/>
     <sfField length="18" n="CustomerSignedId" relationshipName="CustomerSigned" t="Customer Signed By ID" type="reference">
       <referenceTos>
         <string>Contact</string>
       </referenceTos>
     </sfField>
-    <sfField length="40" n="CustomerSignedTitle" t="Customer Signed Title"/>
-    <sfField n="CustomerSignedDate" t="Customer Signed Date" type="date"/>
-    <sfField extraTypeInfo="plaintextarea" length="4000" n="SpecialTerms" t="Special Terms" type="textarea"/>
+    <sfField editPermission="false" length="40" n="CustomerSignedTitle" t="Customer Signed Title"/>
+    <sfField editPermission="false" n="CustomerSignedDate" t="Customer Signed Date" type="date"/>
+    <sfField editPermission="false" extraTypeInfo="plaintextarea" length="4000" n="SpecialTerms" t="Special Terms" type="textarea"/>
     <sfField createable="false" length="18" n="ActivatedById" relationshipName="ActivatedBy" t="Activated By ID" type="reference">
       <referenceTos>
         <string>User</string>
       </referenceTos>
     </sfField>
-    <sfField createable="false" n="ActivatedDate" t="Activated Date" type="datetime"/>
+    <sfField createable="false" editPermission="false" n="ActivatedDate" t="Activated Date" type="datetime"/>
     <sfField createable="false" length="40" n="StatusCode" required="true" restrictedPicklist="true" t="Status Category" type="picklist" updateable="false">
       <picklistEntryIds>2999,3000,2998,3001,80</picklistEntryIds>
     </sfField>
-    <sfField extraTypeInfo="plaintextarea" length="32000" n="Description" type="textarea"/>
+    <sfField editPermission="false" extraTypeInfo="plaintextarea" length="32000" n="Description" type="textarea"/>
     <sfField length="18" n="RecordTypeId" relationshipName="RecordType" t="Record Type ID" type="reference">
       <referenceTos>
         <string>RecordType</string>
@@ -85,59 +85,59 @@
     <sfField createable="false" n="LastActivityDate" t="Last Activity" type="date" updateable="false"/>
     <sfField createable="false" n="LastViewedDate" t="Last Viewed Date" type="datetime" updateable="false"/>
     <sfField createable="false" n="LastReferencedDate" t="Last Referenced Date" type="datetime" updateable="false"/>
-    <sfField length="100" n="ATC_Contract_Alpha_Zone__c" t="Contract Alpha Zone"/>
-    <sfField n="ATC_Contract_End_Date__c" t="Contract End Date" type="date"/>
-    <sfField length="100" n="ATC_Contract_ID__c" t="ATC Contract ID"/>
-    <sfField length="100" n="ATC_Contract_Status__c" summary="eSO Status" t="Contract Status"/>
-    <sfField length="100" n="ATC_Contract_Sys_ID__c" summary="eSO generated contract system identifier." t="ESO Contract Sys ID"/>
-    <sfField length="100" n="ATC_Contract_Type__c" summary="eSO Contract Type" t="Contract Type"/>
-    <sfField length="50" n="ATC_Dynamics_Contract_ID__c" summary="MS Dynamics Contract ID" t="ATC Dynamics Contract ID"/>
-    <sfField length="200" n="ATC_Package_Name__c" t="Package Name"/>
+    <sfField editPermission="false" length="100" n="ATC_Contract_Alpha_Zone__c" t="Contract Alpha Zone"/>
+    <sfField editPermission="false" n="ATC_Contract_End_Date__c" t="Contract End Date" type="date"/>
+    <sfField editPermission="false" length="100" n="ATC_Contract_ID__c" t="ATC Contract ID"/>
+    <sfField editPermission="false" length="100" n="ATC_Contract_Status__c" summary="eSO Status" t="Contract Status"/>
+    <sfField editPermission="false" length="100" n="ATC_Contract_Sys_ID__c" summary="eSO generated contract system identifier." t="ESO Contract Sys ID"/>
+    <sfField editPermission="false" length="100" n="ATC_Contract_Type__c" summary="eSO Contract Type" t="Contract Type"/>
+    <sfField editPermission="false" length="50" n="ATC_Dynamics_Contract_ID__c" summary="MS Dynamics Contract ID" t="ATC Dynamics Contract ID"/>
+    <sfField editPermission="false" length="200" n="ATC_Package_Name__c" t="Package Name"/>
     <sfField length="255" n="ATC_Priority_Code__c" t="Priority Code" type="picklist">
       <picklistEntryIds>3002,611</picklistEntryIds>
     </sfField>
-    <sfField length="100" n="ATC_Sales_Order_Category__c" t="Sales Order Category"/>
+    <sfField editPermission="false" length="100" n="ATC_Sales_Order_Category__c" t="Sales Order Category"/>
     <sfField length="75" n="ATC_BPM_Process_Instance_ID__c" summary="Unique id for ATC contracts across all systems (webMethods, Sterling)" t="ATC BPM Process Instance ID"/>
     <sfField length="18" n="Secondary_Customer__c" relationshipLabel="Contracts (Secondary)" relationshipName="Secondary_Customer__r" summary="If the contract is on a Secondary Customer, enter here, otherwise, leave blank." t="Secondary Customer" type="reference">
       <referenceTos>
         <string>Account</string>
       </referenceTos>
     </sfField>
-    <sfField calculated="true" createable="false" formula="StartDate" n="ATC_Delivery_Date__c" t="Delivery Date" type="date" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="StartDate" n="ATC_Delivery_Date__c" t="Delivery Date" type="date" updateable="false"/>
     <sfField extraTypeInfo="richtextarea" length="32768" n="ATC_Contract_Info__c" t="ATC Contract Info" type="textarea"/>
-    <sfField calculated="true" createable="false" formula="1" formulaTreatBlanksAs="BlankAsZero" n="Contract_Count__c" precision="18" t="Contract Count" type="_double" updateable="false"/>
-    <sfField length="100" n="ATC_Order_Sys_ID__c" summary="eSO generated order system identifier." t="ESO Order Sys ID"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="1" formulaTreatBlanksAs="BlankAsZero" n="Contract_Count__c" precision="18" t="Contract Count" type="_double" updateable="false"/>
+    <sfField editPermission="false" length="100" n="ATC_Order_Sys_ID__c" summary="eSO generated order system identifier." t="ESO Order Sys ID"/>
     <sfField n="Back_to_Contract__c" t="Back to Contract" type="_boolean"/>
     <sfField length="18" n="Case__c" relationshipLabel="Contracts (Case)" relationshipName="Case__r" t="Case" type="reference">
       <referenceTos>
         <string>Case</string>
       </referenceTos>
     </sfField>
-    <sfField length="255" n="Co_Op__c" t="Co-Op" type="picklist">
+    <sfField editPermission="false" length="255" n="Co_Op__c" t="Co-Op" type="picklist">
       <picklistEntryIds>618,574</picklistEntryIds>
     </sfField>
-    <sfField length="30" n="DMA__c" t="DMA"/>
+    <sfField editPermission="false" length="30" n="DMA__c" t="DMA"/>
     <sfField n="DMD__c" t="DMD" type="_boolean"/>
     <sfField n="Delivery_Date__c" summary="The contract is delivered immediately unless there is a future date." t="APFD Date" type="date"/>
     <sfField n="FM_Config__c" t="FM Config" type="_boolean"/>
     <sfField n="Inventory__c" t="Inventory" type="_boolean"/>
-    <sfField extraTypeInfo="plaintextarea" length="2000" n="Make__c" t="Make" type="textarea"/>
-    <sfField calculated="true" createable="false" formula="DATETIMEVALUE(DATEVALUE( OLDDelivery_Date__c ))+1.29236111111111" formulaTreatBlanksAs="BlankAsZero" n="Midnight_after_APFD_DateF__c" t="Midnight after APFD Date" type="datetime" updateable="false"/>
+    <sfField editPermission="false" extraTypeInfo="plaintextarea" length="2000" n="Make__c" t="Make" type="textarea"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="DATETIMEVALUE(DATEVALUE( OLDDelivery_Date__c ))+1.29236111111111" formulaTreatBlanksAs="BlankAsZero" n="Midnight_after_APFD_DateF__c" t="Midnight after APFD Date" type="datetime" updateable="false"/>
     <sfField n="OLDDelivery_Date__c" t="APFD Date" type="datetime"/>
     <sfField length="18" n="Order_Cases__c" relationshipLabel="Contract" relationshipName="Order_Cases__r" t="Order Entry Case" type="reference">
       <referenceTos>
         <string>Case</string>
       </referenceTos>
     </sfField>
-    <sfField n="Rate__c" precision="18" scale="2" t="Rate" type="_double"/>
-    <sfField length="18" n="eSO_Created_By_User__c" relationshipName="eSO_Created_By_User__r" t="eSO Created By (User)" type="reference">
+    <sfField editPermission="false" n="Rate__c" precision="18" scale="2" t="Rate" type="_double"/>
+    <sfField editPermission="false" length="18" n="eSO_Created_By_User__c" relationshipName="eSO_Created_By_User__r" t="eSO Created By (User)" type="reference">
       <referenceTos>
         <string>User</string>
       </referenceTos>
     </sfField>
-    <sfField calculated="true" createable="false" formula="Rate__c - Previous_Rate__c" formulaTreatBlanksAs="BlankAsZero" n="Net_Rate__c" precision="18" scale="2" t="Net Rate" type="_double" updateable="false"/>
-    <sfField n="Previous_Rate__c" precision="18" scale="2" t="Previous Rate" type="_double"/>
-    <sfField length="255" n="Zero_Dollar_Contract__c" t="Zero Dollar Contract" type="picklist">
+    <sfField calculated="true" createable="false" editPermission="false" formula="Rate__c - Previous_Rate__c" formulaTreatBlanksAs="BlankAsZero" n="Net_Rate__c" precision="18" scale="2" t="Net Rate" type="_double" updateable="false"/>
+    <sfField editPermission="false" n="Previous_Rate__c" precision="18" scale="2" t="Previous Rate" type="_double"/>
+    <sfField editPermission="false" length="255" n="Zero_Dollar_Contract__c" t="Zero Dollar Contract" type="picklist">
       <picklistEntryIds>574,575</picklistEntryIds>
     </sfField>
     <sfField length="100" n="ALERT__c" notVisibleToMetadataUser="true" summary="Haystak Field.ORACLE RMB field" t="ALERT"/>
@@ -196,7 +196,7 @@
     <sfField n="Total_Line_Items__c" notVisibleToMetadataUser="true" summary="Haystak Field.Count of Billing Items" summaryForeignKey="Billing_Item__c.Contract__c" summaryOperation="count" t="Total Line Items"/>
     <sfField n="Total_MRR__c" notVisibleToMetadataUser="true" summarizedField="Billing_Item__c.Total_Price__c" summary="Haystak Field.Formula field that sums the total recurring revenue for product" summaryForeignKey="Billing_Item__c.Contract__c" summaryOperation="sum" t="Total MRR"/>
     <sfField n="Total_Technology_Fee__c" notVisibleToMetadataUser="true" summarizedField="Billing_Item__c.Technology_Fee__c" summary="Haystak Field. Sum of tech fees (non recurring)" summaryForeignKey="Billing_Item__c.Contract__c" summaryOperation="sum" t="Total Technology Fee"/>
-    <sfField length="20" n="eSO_Created_By__c" notVisibleToMetadataUser="true" t="eSO Created By (NetId)"/>
+    <sfField editPermission="false" length="20" n="eSO_Created_By__c" notVisibleToMetadataUser="true" t="eSO Created By (NetId)"/>
   </fields>
   <childRelationships>
     <sfObjectRelationship alias="RelatedHistoryList" childName="ActivityHistory" field="WhatId" n="ActivityHistories" relationshipName="ActivityHistories" s="2-" t="ActivityHistory"/>
@@ -858,7 +858,7 @@
         </entry>
         <entry>
           <key valueClass="string">Cancellation_Reason__c</key>
-          <value valueClass="string">51315,1302,1304,51316,1306,3004,1309,51317</value>
+          <value valueClass="string">67989,1302,1304,67990,1306,3004,1309,67991</value>
         </entry>
         <entry>
           <key valueClass="string">Co_Op__c</key>
@@ -1329,8 +1329,8 @@
   </recordTypes>
   <standardActions>
     <sfActionLink modes="ObjectHome Contracts Contracts_Secondary__r Contracts1__r Contract__r ContractsSigned List" n="New"/>
-    <sfActionLink modes="Contracts ContractsSigned Contracts1__r" n="Edit" requiresRow="true" s="1"/>
-    <sfActionLink modes="Contracts ContractsSigned Contracts1__r" n="Delete" requiresRow="true" s="2"/>
+    <sfActionLink modes="Contracts" n="Edit" requiresRow="true" s="1"/>
+    <sfActionLink modes="Contracts" n="Delete" requiresRow="true" s="2"/>
     <sfActionLink modes="View Contracts Contracts_Secondary__r Contracts1__r Contract__r ContractsSigned" n="ShowMore" t="Show More"/>
     <sfActionLink modes="View Contracts Contracts_Secondary__r Contracts1__r Contract__r ContractsSigned" n="GoToList" t="Go To List"/>
     <sfActionLink n="Activate" s=""/>

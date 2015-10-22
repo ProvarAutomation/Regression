@@ -92077,7 +92077,7 @@ ISBLANK( Adjusted_Credit_Amount__c ) &amp;&amp;
     </validationRules>
     <validationRules>
         <fullName>Case_Back_To_Contract_Not_Sent</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>Do not send back to contract if there is a parent case or case is closed.</description>
         <errorConditionFormula>AND(Back_To_Contract__c =true,   
     OR( NOT(ISBLANK( ParentId )) ,IsClosed =true))</errorConditionFormula>

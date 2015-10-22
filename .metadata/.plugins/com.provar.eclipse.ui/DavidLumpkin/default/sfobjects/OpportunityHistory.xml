@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><sfObject keyPrefix="008" label="Opportunity History" labelPlural="Opportunity History" n="OpportunityHistory" queryable="true" retrieveable="true" s="" t="Opportunity History (008)">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject keyPrefix="008" label="Opportunity History" labelPlural="Opportunity History" n="OpportunityHistory" queryable="true" retrieveable="true" s="" t="Opportunity History (008)">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Opportunity History ID" type="id" updateable="false"/>
     <sfField createable="false" length="18" n="OpportunityId" relationshipName="Opportunity" required="true" t="Opportunity ID" type="reference" updateable="false">

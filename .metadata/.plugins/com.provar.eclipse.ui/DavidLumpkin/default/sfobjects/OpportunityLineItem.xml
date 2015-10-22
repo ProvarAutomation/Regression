@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="00k" label="Opportunity Product" labelPlural="Opportunity Product" layoutable="true" n="OpportunityLineItem" queryable="true" retrieveable="true" s="" sfObjectId="" standardLabel="OpportunityLineItem" t="Opportunity Product (00k)" updatable="true">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="00k" label="Opportunity Product" labelPlural="Opportunity Product" layoutable="true" n="OpportunityLineItem" queryable="true" retrieveable="true" s="" sfObjectId="" standardLabel="OpportunityLineItem" t="Opportunity Product (00k)" updatable="true">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Line Item ID" type="id" updateable="false"/>
     <sfField length="18" n="OpportunityId" relationshipName="Opportunity" required="true" t="Opportunity ID" type="reference" updateable="false">
@@ -17,12 +18,12 @@
         <string>Product2</string>
       </referenceTos>
     </sfField>
-    <sfField createable="false" length="255" n="ProductCode" t="Product Code" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="255" n="ProductCode" t="Product Code" updateable="false"/>
     <sfField createable="false" length="376" n="Name" nameField="true" t="Opportunity Product Name" updateable="false"/>
     <sfField n="Quantity" precision="12" required="true" scale="2" type="_double"/>
-    <sfField n="TotalPrice" precision="18" scale="2" summary="Sales Price times Quantity" t="Total Price" type="currency"/>
+    <sfField editPermission="false" n="TotalPrice" precision="18" scale="2" summary="Sales Price times Quantity" t="Total Price" type="currency"/>
     <sfField n="UnitPrice" precision="18" scale="2" summary="the price you are selling the product for" t="Sales Price" type="currency"/>
-    <sfField createable="false" n="ListPrice" precision="18" scale="2" summary="Price from the Standard Price Book - what price the company prefers you sell the product for" t="List Price" type="currency" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="ListPrice" precision="18" scale="2" summary="Price from the Standard Price Book - what price the company prefers you sell the product for" t="List Price" type="currency" updateable="false"/>
     <sfField n="ServiceDate" t="Date" type="date"/>
     <sfField createable="false" n="HasRevenueSchedule" t="Has Revenue Schedule" type="_boolean" updateable="false"/>
     <sfField createable="false" n="HasQuantitySchedule" t="Has Quantity Schedule" type="_boolean" updateable="false"/>
@@ -52,15 +53,15 @@
         <string>PartnerNetworkConnection</string>
       </referenceTos>
     </sfField>
-    <sfField calculated="true" createable="false" formula="Quantity *  ListPrice" formulaTreatBlanksAs="BlankAsZero" n="List_Price_Grand_Total__c" precision="18" scale="2" t="List Price Grand Total" type="currency" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="IF(List_Price_Grand_Total__c &gt; 0, (List_Price_Grand_Total__c - TotalPrice)/List_Price_Grand_Total__c, null)" formulaTreatBlanksAs="BlankAsZero" n="Discount__c" precision="18" scale="2" t="Discount %" type="percent" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Quantity *  ListPrice" formulaTreatBlanksAs="BlankAsZero" n="List_Price_Grand_Total__c" precision="18" scale="2" t="List Price Grand Total" type="currency" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(List_Price_Grand_Total__c &gt; 0, (List_Price_Grand_Total__c - TotalPrice)/List_Price_Grand_Total__c, null)" formulaTreatBlanksAs="BlankAsZero" n="Discount__c" precision="18" scale="2" t="Discount %" type="percent" updateable="false"/>
     <sfField calculated="true" createable="false" formula="if(PricebookEntry.Product2.IsPackageParent__c, &quot;T&quot;, &quot;F&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ProductIsParent__c" t="ProductIsParent" updateable="false"/>
     <sfField n="IsPackageChild__c" t="IsPackageChild" type="_boolean"/>
     <sfField calculated="true" createable="false" formula="IF(PricebookEntry.Product2.Disable_Price_Change__c ==TRUE, &quot;TRUE&quot;, &quot;FALSE&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Disable_Price_Change__c" t="Disable Price Change" updateable="false"/>
     <sfField length="18" n="StickyOpportunityID__c" t="StickyOpportunityID"/>
     <sfField calculated="true" createable="false" formula="PricebookEntry.Product2.Description" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ProductDescription__c" t="ProductDescription" updateable="false"/>
     <sfField calculated="true" createable="false" formula="PricebookEntry.Product2.Cost_Factor__c" formulaTreatBlanksAs="BlankAsZero" n="Product_Cost_Factor__c" precision="18" scale="4" t="Product Cost Factor" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="(UnitPrice * Quantity)  * Opportunity.Probability" formulaTreatBlanksAs="BlankAsZero" n="Weighted_Product_Amount__c" precision="18" t="Weighted Product Amount" type="currency" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="(UnitPrice * Quantity)  * Opportunity.Probability" formulaTreatBlanksAs="BlankAsZero" n="Weighted_Product_Amount__c" precision="18" t="Weighted Product Amount" type="currency" updateable="false"/>
     <sfField n="PS_Forecast__c" precision="18" t="PS Forecast" type="currency"/>
     <sfField n="Discount" notVisibleToMetadataUser="true"/>
     <sfField n="Monthly_Advertising_Budget__c" notVisibleToMetadataUser="true" precision="18" t="Monthly Advertising Budget" type="currency"/>
@@ -152,7 +153,7 @@
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="5">
                       <children>
-                        <sfLI editableForUpdate="false" label="Discount" n="Discount" s="" seqNum="0" t="Web Layout Item">
+                        <sfLI editableForUpdate="false" s="" seqNum="0" t="Web Layout Item">
                           <children>
                             <sfLIC n="Discount" s="" seqNum="0" t="Web Layout Field" type="Field"/>
                           </children>
@@ -357,7 +358,7 @@
                     </sfLayoutRow>
                     <sfLayoutRow n="LayoutRow" s="" seqNum="5">
                       <children>
-                        <sfLI editableForUpdate="false" label="Discount" n="Discount" s="" seqNum="0" t="Web Layout Item">
+                        <sfLI editableForUpdate="false" s="" seqNum="0" t="Web Layout Item">
                           <children>
                             <sfLIC n="Discount" s="" seqNum="0" t="Web Layout Field" type="Field"/>
                           </children>

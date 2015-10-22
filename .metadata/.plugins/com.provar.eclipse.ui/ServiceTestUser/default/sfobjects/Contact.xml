@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sfObject creatable="true" deleteable="true" feedEnabled="true" keyPrefix="003" label="Contact" labelPlural="Contacts" layoutable="true" n="Contact" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="" standardLabel="Contact" t="Contact (003)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/003/e">
+<sfObject creatable="true" deleteable="true" feedEnabled="true" keyPrefix="003" label="Contact" labelPlural="Contacts" layoutable="true" listViewFilterType="c" n="Contact" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="" standardLabel="Contact" t="Contact (003)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/003/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Contact ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
@@ -94,7 +94,7 @@
       </referenceTos>
     </sfField>
     <sfField length="50" n="Contact_GUID__c" t="Contact GUID"/>
-    <sfField calculated="true" createable="false" formula="1" formulaTreatBlanksAs="BlankAsZero" n="Contact_Counter__c" precision="18" t="Contact Counter" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="1" formulaTreatBlanksAs="BlankAsZero" n="Contact_Counter__c" precision="18" t="Contact Counter" type="_double" updateable="false"/>
     <sfField length="255" n="Role__c" summary="describes the contact's role at the dealership" t="Role" type="picklist">
       <picklistEntryIds>2785,2786,2787,657,658,2788,93,2789,2790,2791</picklistEntryIds>
     </sfField>
@@ -107,7 +107,7 @@
       <picklistEntryIds>68,2793,71,72,2794,2795</picklistEntryIds>
     </sfField>
     <sfField n="Duplicate_Contact__c" summary="Check if this is a duplicate contact and it will be flagged for removal." t="Duplicate Flag" type="_boolean"/>
-    <sfField calculated="true" createable="false" formula="1" formulaTreatBlanksAs="BlankAsZero" n="Contact__c" precision="18" t="Contact" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="1" formulaTreatBlanksAs="BlankAsZero" n="Contact__c" precision="18" t="Contact" type="_double" updateable="false"/>
     <sfField length="255" n="Birth_Day__c" t="Birth Day" type="picklist">
       <picklistEntryIds>2796,2797,2798,2799,2800,2801,2802,2803,2804,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,2805</picklistEntryIds>
     </sfField>
@@ -170,6 +170,7 @@
     <sfObjectRelationship childName="Terms_Conditions__c" field="Contact__c" n="ARA_Agreements1__r" relationshipName="ARA_Agreements1__r" s="2-" t="Terms_Conditions__c"/>
     <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
     <sfObjectRelationship alias="RelatedEventAttendeeNotDecided" childName="UndecidedEventRelation" field="RelationId" n="UndecidedEventRelations" relationshipName="UndecidedEventRelations" s="2-" t="UndecidedEventRelation"/>
+    <sfObjectRelationship alias="RelatedOpportunityList" childName="Opportunity" field="ContactId" n="Opportunities" relationshipName="Opportunities" s="2-" t="Opportunity"/>
   </childRelationships>
   <recordTypes>
     <sfRecordType fullName="Master" recordTypeId="012000000000000AAA" s="3-" t="Web Record Type Mapping">
@@ -731,7 +732,7 @@
               <excludeButtons/>
               <customButtons/>
             </sfRelatedList>
-            <sfRelatedList label="RelatedOpportunityList" n="RelatedOpportunityList" relationshipName="RelatedOpportunityList" s="3-">
+            <sfRelatedList fieldName="ContactId" label="Opportunities" n="Opportunities" relationshipName="Opportunities" s="3-" t="Opportunities (ContactId)">
               <children>
                 <sfRelatedListColumn n="OPPORTUNITY.NAME" s="" seq="0"/>
                 <sfRelatedListColumn n="OPPORTUNITY.STAGE_NAME" s="" seq="1"/>

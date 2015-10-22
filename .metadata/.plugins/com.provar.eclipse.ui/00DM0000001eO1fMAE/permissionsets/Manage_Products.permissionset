@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Users assigned to this permission set should be able to 
+View the Products Tab 
+create/modify/deactivate products 
+Assign a product to an existing price book</description>
+    <label>Manage Products</label>
+    <userLicense>Salesforce</userLicense>
+</PermissionSet>

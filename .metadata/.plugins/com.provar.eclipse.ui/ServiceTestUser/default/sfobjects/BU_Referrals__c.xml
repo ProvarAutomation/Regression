@@ -46,7 +46,7 @@
     <sfField length="255" n="Source__c" t="Source" type="picklist">
       <picklistEntryIds>1243,1244,68,70,73,74,71,72</picklistEntryIds>
     </sfField>
-    <sfField length="100" n="Created_by_Role__c" t="Created by Role"/>
+    <sfField editPermission="false" length="100" n="Created_by_Role__c" t="Created by Role"/>
     <sfField length="4099" n="Product_Category__c" precision="10" t="Product Category" type="multipicklist">
       <picklistEntryIds>108,1245,1246,1247,510,1248,1249,1250,520</picklistEntryIds>
     </sfField>
@@ -54,24 +54,24 @@
     <sfField length="255" n="Status__c" t="Status" type="picklist">
       <picklistEntryIds>1251,591,1252,1253,1254,1255,1256,1257,1258,1259,1260,1261,1262</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.FileDownload?file=015E0000001Eyh3&quot;, &quot;Help&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Help_Info__c" t="Help Info" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="CASE( Dealer__r.District__c, \n&quot;1&quot;,&quot;1&quot;, \n&quot;2&quot;,&quot;2&quot;, \n&quot;3&quot;,&quot;3&quot;, \n&quot;4&quot;,&quot;4&quot;,\n&quot;&quot;)" length="1300" n="District__c" summary="formula field that reads the District field from the Account" t="Dealer District" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.FileDownload?file=015E0000001Eyh3&quot;, &quot;Help&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Help_Info__c" t="Help Info" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CASE( Dealer__r.District__c, \n&quot;1&quot;,&quot;1&quot;, \n&quot;2&quot;,&quot;2&quot;, \n&quot;3&quot;,&quot;3&quot;, \n&quot;4&quot;,&quot;4&quot;,\n&quot;&quot;)" length="1300" n="District__c" summary="formula field that reads the District field from the Account" t="Dealer District" updateable="false"/>
     <sfField length="18" n="Submitted_by__c" relationshipName="Submitted_by__r" summary="records the name of the person who clicked the button to submit the lead" t="Submitted by:" type="reference">
       <referenceTos>
         <string>User</string>
       </referenceTos>
     </sfField>
     <sfField n="Lead_Converted__c" summary="Check this box when you're ready to convert this lead into an opportunity." t="Convert Lead" type="_boolean"/>
-    <sfField calculated="true" createable="false" formula="IF(  ISPICKVAL(Status__c, &quot;Open&quot;) &amp;&amp; DATEVALUE(CreatedDate)=Today(),1,Today()-  DATEVALUE(CreatedDate))" n="Lead_Age__c" precision="18" scale="2" summary="formula field that calculates the age of the lead when it is in open status" t="Lead Age" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(  ISPICKVAL(Status__c, &quot;Open&quot;) &amp;&amp; DATEVALUE(CreatedDate)=Today(),1,Today()-  DATEVALUE(CreatedDate))" n="Lead_Age__c" precision="18" scale="2" summary="formula field that calculates the age of the lead when it is in open status" t="Lead Age" type="_double" updateable="false"/>
     <sfField length="18" n="Dealer_Contact__c" relationshipName="Dealer_Contact__r" summary="lookup an existing contact or use &quot;New&quot; function to quickly add the dealer contact" t="Dealer Contact" type="reference">
       <referenceTos>
         <string>Contact</string>
       </referenceTos>
     </sfField>
-    <sfField calculated="true" createable="false" formula="Submitted_by__r.UserRole.Name" length="1300" n="Submitted_By_Role__c" summary="formula field that reads the role assigned to the person who submitted the lead" t="Submitted By Role" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="TEXT(Dealer__r.Region__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Dealer_Region__c" t="Dealer Region" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Submitted_by__r.UserRole.Name" length="1300" n="Submitted_By_Role__c" summary="formula field that reads the role assigned to the person who submitted the lead" t="Submitted By Role" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="TEXT(Dealer__r.Region__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Dealer_Region__c" t="Dealer Region" updateable="false"/>
     <sfField length="100" n="Next_Step__c" summary="input a short sentence as to what you are doing to convert this lead" t="Next Step"/>
-    <sfField calculated="true" createable="false" formula="CreatedBy.MobilePhone" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Owner_Cell__c" t="Submitted by Phone" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CreatedBy.MobilePhone" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Owner_Cell__c" t="Submitted by Phone" updateable="false"/>
     <sfField length="255" n="Product_Selection__c" t="Product Selection" type="picklist">
       <picklistEntryIds>1263,1264,1265,1266,1267,1268,1269,1270,1271,1272,1273</picklistEntryIds>
     </sfField>
@@ -79,14 +79,14 @@
       <picklistEntryIds>1274,1275,490,1276,1277,1278,1279,1280,1281,1282,1283,1284,1285,1286,73,1287,1288,1289,1290,1291,1292</picklistEntryIds>
     </sfField>
     <sfField extraTypeInfo="plaintextarea" length="32768" n="Final_Comments__c" t="Final Comments" type="textarea"/>
-    <sfField calculated="true" createable="false" formula="IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000003vKun&quot;, &quot;Product Matrix - Updated 7-16-2014&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Product_Matrix__c" t="Product Matrix" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="CreatedBy.FirstName &amp; &quot; &quot; &amp;  CreatedBy.LastName" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Lead_Owner__c" t="Submitted by" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000003vKun&quot;, &quot;Product Matrix - Updated 7-16-2014&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Product_Matrix__c" t="Product Matrix" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CreatedBy.FirstName &amp; &quot; &quot; &amp;  CreatedBy.LastName" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Lead_Owner__c" t="Submitted by" updateable="false"/>
     <sfField n="Duplicate_Lead__c" summary="Check this box to mark it as a duplicate." t="Duplicate Lead" type="_boolean"/>
     <sfField n="Unqualified_Lead__c" summary="Check this box to unqualify this lead." t="Unqualified Lead" type="_boolean"/>
-    <sfField length="8" n="BU_Type__c" t="BU Type"/>
-    <sfField calculated="true" createable="false" formula="Dealer_Contact__r.FirstName" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Contact_First_Name__c" t="Contact First Name" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="Dealer_Contact__r.LastName" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Contact_Last_Name__c" t="Contact Last Name" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="CreatedBy.Email" length="1300" n="Submitted_by_Email__c" t="Submitted by Email" updateable="false"/>
+    <sfField editPermission="false" length="8" n="BU_Type__c" t="BU Type"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Dealer_Contact__r.FirstName" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Contact_First_Name__c" t="Contact First Name" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Dealer_Contact__r.LastName" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Contact_Last_Name__c" t="Contact Last Name" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CreatedBy.Email" length="1300" n="Submitted_by_Email__c" t="Submitted by Email" updateable="false"/>
   </fields>
   <childRelationships>
     <sfObjectRelationship alias="RelatedHistoryList" childName="ActivityHistory" field="WhatId" n="ActivityHistories" relationshipName="ActivityHistories" s="2-" t="ActivityHistory"/>
@@ -489,11 +489,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">51313,51314,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
+          <value valueClass="string">67987,67988,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">51302,51303,51304,51305,51306,51307,51308,51309,51310,51311,51312</value>
+          <value valueClass="string">67976,67977,67978,67979,67980,67981,67982,67983,67984,67985,67986</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -676,11 +676,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">51313,51314,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
+          <value valueClass="string">67987,67988,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">51302,51303,51304,51305,51306,51307,51308,51309,51310,51311,51312</value>
+          <value valueClass="string">67976,67977,67978,67979,67980,67981,67982,67983,67984,67985,67986</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1157,11 +1157,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">51313,51314,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
+          <value valueClass="string">67987,67988,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">51302,51303,51304,51305,51306,51307,51308,51309,51310,51311,51312</value>
+          <value valueClass="string">67976,67977,67978,67979,67980,67981,67982,67983,67984,67985,67986</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1558,11 +1558,11 @@
         </entry>
         <entry>
           <key valueClass="string">Product_Type__c</key>
-          <value valueClass="string">51313,51314,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
+          <value valueClass="string">67987,67988,490,1277,1278,1279,1280,1281,1282,1284,1285,1286,1291,1292,73,1287,1288,1290</value>
         </entry>
         <entry>
           <key valueClass="string">Product_Selection__c</key>
-          <value valueClass="string">51302,51303,51304,51305,51306,51307,51308,51309,51310,51311,51312</value>
+          <value valueClass="string">67976,67977,67978,67979,67980,67981,67982,67983,67984,67985,67986</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>

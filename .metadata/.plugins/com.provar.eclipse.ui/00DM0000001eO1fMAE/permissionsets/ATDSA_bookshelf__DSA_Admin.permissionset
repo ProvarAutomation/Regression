@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission set provides the user with all the edit rights related to the Digital sales aid, Modifying Mobile application configurations, adjusting category structure, as well as categorizing content.</description>
+    <label>DSA Admin</label>
+    <userLicense>Salesforce</userLicense>
+</PermissionSet>

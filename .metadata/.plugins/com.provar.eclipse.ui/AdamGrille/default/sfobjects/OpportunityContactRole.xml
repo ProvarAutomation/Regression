@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="00K" label="Opportunity Contact Role" labelPlural="Opportunity Contact Role" layoutable="true" n="OpportunityContactRole" queryable="true" retrieveable="true" s="" sfObjectId="" standardLabel="OpportunityContactRole" t="Opportunity Contact Role (00K)" updatable="true">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="00K" label="Opportunity Contact Role" labelPlural="Opportunity Contact Role" layoutable="true" n="OpportunityContactRole" queryable="true" retrieveable="true" s="" sfObjectId="" standardLabel="OpportunityContactRole" t="Opportunity Contact Role (00K)" updatable="true">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Contact Role ID" type="id" updateable="false"/>
     <sfField length="18" n="OpportunityId" relationshipName="Opportunity" required="true" t="Opportunity ID" type="reference" updateable="false">

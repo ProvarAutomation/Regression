@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject label="History: BU Referral" labelPlural="History: BU Referral" n="BU_Referrals__History" queryable="true" retrieveable="true" s="" t="History: BU Referral">
+  <fields>
+    <sfField createable="false" length="18" n="Id" t="Entity History ID" type="id" updateable="false"/>
+    <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" length="18" n="ParentId" relationshipName="Parent" required="true" t="Parent ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>BU_Referrals__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>SelfServiceUser</string>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" length="255" n="Field" required="true" restrictedPicklist="true" t="Changed Field" type="picklist" updateable="false">
+      <picklistEntryIds>232301,232302,232303,720,231803,232304,232305,740,232306,232307,231799,232308,797,798,232309,232310,232155,815,231817,817,232311,232175,232312,232313,232314</picklistEntryIds>
+    </sfField>
+    <sfField createable="false" length="255" n="OldValue" t="Old Value" type="anyType" updateable="false"/>
+    <sfField createable="false" length="255" n="NewValue" t="New Value" type="anyType" updateable="false"/>
+  </fields>
+  <childRelationships/>
+  <recordTypes/>
+  <standardActions>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+    <sfActionLink modes="ObjectHome Histories" n="New"/>
+    <sfActionLink modes="View Histories" n="Edit" requiresRow="true" s="1"/>
+    <sfActionLink modes="View Histories" n="Delete" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Histories" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Histories" n="GoToList" t="Go To List"/>
+  </standardActions>
+</sfObject>

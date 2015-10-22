@@ -44,26 +44,26 @@
     <sfField length="255" n="ATC_Action_Plan_Type__c" t="ATC Action Plan Type" type="picklist">
       <picklistEntryIds>974,975</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="TEXT(Account__r.ATC_Collection_Status__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Collection_Status__c" t="ATC Collection Status" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="TEXT(Account__r.ATC_Security_Question__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Security_Question__c" t="ATC Security Question" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="Account__r.ATC_Security_Response__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Security_Response__c" t="ATC Security Response" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="TEXT(Account__r.Type)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Account_Type__c" summary="Updated by SVOC in the Account" t="Account Type" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="TEXT(Account__r.ATC_Collection_Status__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Collection_Status__c" t="ATC Collection Status" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="TEXT(Account__r.ATC_Security_Question__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Security_Question__c" t="ATC Security Question" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Account__r.ATC_Security_Response__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Security_Response__c" t="ATC Security Response" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="TEXT(Account__r.Type)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Account_Type__c" summary="Updated by SVOC in the Account" t="Account Type" updateable="false"/>
     <sfField length="18" n="Account__c" relationshipLabel="Action Plans" relationshipName="Account__r" summary="Dealership this Action Plan is related to." t="Account" type="reference">
       <referenceTos>
         <string>Account</string>
       </referenceTos>
     </sfField>
-    <sfField calculated="true" createable="false" formula="HYPERLINK(  &quot;/&quot;&amp;Id ,  RecordType.Name &amp;&quot; - &quot;&amp;  Account__r.Name,&quot;_self&quot; )" length="1300" n="Action_Plan_Name__c" t="Action Plan Name" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="HYPERLINK(  &quot;/&quot;&amp;Id ,  RecordType.Name &amp;&quot; - &quot;&amp;  Account__r.Name,&quot;_self&quot; )" length="1300" n="Action_Plan_Name__c" t="Action Plan Name" updateable="false"/>
     <sfField calculated="true" createable="false" formula="CASE(MOD( Last_Account_Engagement__c - DATE(1985,6,24),7), \n\n  0 , CASE( MOD( TODAY()  - Last_Account_Engagement__c ,7),1,2,2,3,3,4,4,5,5,5,6,5,1), \n\n  1 , CASE( MOD( TODAY()  - Last_Account_Engagement__c  ,7),1,2,2,3,3,4,4,4,5,4,6,5,1), \n\n  2 , CASE( MOD( TODAY()  - Last_Account_Engagement__c  ,7),1,2,2,3,3,3,4,3,5,4,6,5,1), \n\n  3 , CASE( MOD( TODAY()  - Last_Account_Engagement__c ,7),1,2,2,2,3,2,4,3,5,4,6,5,1), \n\n  4 , CASE( MOD( TODAY()  - Last_Account_Engagement__c ,7),1,1,2,1,3,2,4,3,5,4,6,5,1), \n\n  5 , CASE( MOD( TODAY()  - Last_Account_Engagement__c ,7),1,0,2,1,3,2,4,3,5,4,6,5,0), \n\n  6 , CASE( MOD( TODAY()  - Last_Account_Engagement__c ,7),1,1,2,2,3,3,4,4,5,5,6,5,0), \n\n  999) \n\n  + \n\n  (FLOOR(( TODAY() - Last_Account_Engagement__c )/7)*5)" formulaTreatBlanksAs="BlankAsZero" n="Business_Days_since_Last_Engagement__c" precision="18" t="Business Days since Last Engagement" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="TEXT(Account__r.Dealer_Type__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Dealer_Type__c" t="Dealer Type" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="TEXT(Account__r.Dealer_Type__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Dealer_Type__c" t="Dealer Type" updateable="false"/>
     <sfField n="Initial_Delivery_Call_Completed__c" t="Initial Delivery Call Completed" type="datetime"/>
     <sfField n="Last_Account_Engagement__c" t="Last Account Engagement" type="date"/>
     <sfField n="Last_Account_Review__c" t="Last Account Review" type="date"/>
     <sfField n="Next_Scheduled_Meeting__c" t="Next Scheduled Meeting" type="date"/>
     <sfField calculated="true" createable="false" formula="Owner:User.FirstName &amp; &quot; &quot; &amp; Owner:User.LastName" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Owner_Name_Concatenate__c" t="Owner Name Concatenate" updateable="false"/>
     <sfField calculated="true" createable="false" formula="HYPERLINK(&quot;/&quot; &amp;  Owner:User.Id , Owner_Name_Concatenate__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Owner_Name__c" t="Owner Name" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="Account__r.SVOC_Id__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_ID__c" t="SVOC ID" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="TEXT(Account__r.SVOC_Status__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_Status__c" t="SVOC Status" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Account__r.SVOC_Id__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_ID__c" t="SVOC ID" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="TEXT(Account__r.SVOC_Status__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_Status__c" t="SVOC Status" updateable="false"/>
     <sfField length="255" n="Status__c" t="Status" type="picklist">
       <picklistEntryIds>976,977,978,979,980,981,82</picklistEntryIds>
     </sfField>
@@ -220,8 +220,8 @@
     </sfField>
     <sfField length="40" n="Action_Plan_Owner__c" t="Action Plan Owner"/>
     <sfField n="CreatedDate__c" t="Created Date" type="date"/>
-    <sfField calculated="true" createable="false" formula="CreatedDate__c +7" formulaTreatBlanksAs="BlankAsZero" n="Welcome_Call_Date__c" t="Welcome Call Date" type="date" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="CreatedDate__c +60" formulaTreatBlanksAs="BlankAsZero" n="X60_Day_Audit_Date__c" t="60 Day Audit Date" type="date" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CreatedDate__c +7" formulaTreatBlanksAs="BlankAsZero" n="Welcome_Call_Date__c" t="Welcome Call Date" type="date" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CreatedDate__c +60" formulaTreatBlanksAs="BlankAsZero" n="X60_Day_Audit_Date__c" t="60 Day Audit Date" type="date" updateable="false"/>
     <sfField extraTypeInfo="plaintextarea" length="32768" n="Input_Setup_Comments__c" t="Input/Setup Comments" type="textarea"/>
     <sfField extraTypeInfo="plaintextarea" length="32768" n="KBB_Classified_Comments__c" t="KBB Classified Comments" type="textarea"/>
     <sfField extraTypeInfo="plaintextarea" length="32768" n="KBB_Elite_Comments__c" t="KBB Elite Comments" type="textarea"/>
@@ -233,8 +233,8 @@
     <sfField length="255" n="Action_Plan_Type__c" t="Action Plan Type" type="picklist">
       <picklistEntryIds>976,1014,1015</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="Account__r.SVOC_District__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_District__c" t="SVOC District" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="Account__r.SVOC_Region__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_Region__c" t="SVOC Region" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Account__r.SVOC_District__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_District__c" t="SVOC District" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Account__r.SVOC_Region__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_Region__c" t="SVOC Region" updateable="false"/>
     <sfField n="Welcome_Call_Completed_Date__c" t="Welcome Call Completed Date" type="datetime"/>
     <sfField n="Welcome_Call_Due_Date__c" t="Welcome Call Due Date" type="datetime"/>
     <sfField n="X30_Day_Review_Completed__c" t="30 Day Review Completed" type="datetime"/>
@@ -924,7 +924,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,1018,51042,1016,1017</value>
+          <value valueClass="string">81,1018,67716,1016,1017</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>
@@ -1785,7 +1785,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,1018,51042,1016,1017</value>
+          <value valueClass="string">81,1018,67716,1016,1017</value>
         </entry>
         <entry>
           <key valueClass="string">Call_Tracking_New__c</key>
@@ -1829,7 +1829,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Type__c</key>
-          <value valueClass="string">51071</value>
+          <value valueClass="string">67745</value>
         </entry>
         <entry>
           <key valueClass="string">Confirm_Map_Coordinates__c</key>
@@ -3058,7 +3058,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,1018,51042,1016,1017</value>
+          <value valueClass="string">81,1018,67716,1016,1017</value>
         </entry>
         <entry>
           <key valueClass="string">Trade_Show_Consultant_s__c</key>
@@ -4581,7 +4581,7 @@
       <picklistOverrideIds>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,1018,51042,1016,1017</value>
+          <value valueClass="string">81,1018,67716,1016,1017</value>
         </entry>
         <entry>
           <key valueClass="string">Call_Tracking_New__c</key>
@@ -4625,7 +4625,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Type__c</key>
-          <value valueClass="string">51072</value>
+          <value valueClass="string">67746</value>
         </entry>
         <entry>
           <key valueClass="string">Confirm_Map_Coordinates__c</key>
@@ -5246,7 +5246,7 @@
         </entry>
         <entry>
           <key valueClass="string">Action_Plan_Result__c</key>
-          <value valueClass="string">81,1018,51042,1016,1017</value>
+          <value valueClass="string">81,1018,67716,1016,1017</value>
         </entry>
         <entry>
           <key valueClass="string">Status__c</key>

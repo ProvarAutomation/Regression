@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="a1s" label="Haystak QuickView" labelPlural="Haystak QuickView" layoutable="true" n="FulfillmentSnapshotSummary__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IM00000009pd1MAA" t="Haystak QuickView (a1s)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a1s/e">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="a1s" label="Haystak QuickView" labelPlural="Haystak QuickView" layoutable="true" n="FulfillmentSnapshotSummary__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IM00000009pd1MAA" t="Haystak QuickView (a1s)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a1s/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>

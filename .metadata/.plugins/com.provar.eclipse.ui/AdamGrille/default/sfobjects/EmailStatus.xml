@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><sfObject keyPrefix="018" label="Email Status" labelPlural="Email Status" n="EmailStatus" s="" t="Email Status (018)">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject keyPrefix="018" label="Email Status" labelPlural="Email Status" n="EmailStatus" s="" t="Email Status (018)">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Email Status ID" type="id" updateable="false"/>
     <sfField createable="false" length="18" n="TaskId" relationshipName="Task" required="true" t="Activity ID" type="reference" updateable="false">

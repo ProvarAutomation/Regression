@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="a06" label="ATG Product" labelPlural="ATG Products" layoutable="true" n="ATG_Product__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IE0000000AcJdMAK" t="ATG Product (a06)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a06/e">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="a06" label="ATG Product" labelPlural="ATG Products" layoutable="true" n="ATG_Product__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="01IE0000000AcJdMAK" t="ATG Product (a06)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/a06/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
@@ -51,25 +52,25 @@
       <picklistEntryIds>84,85,86</picklistEntryIds>
     </sfField>
     <sfField n="Spend__c" precision="18" scale="2" t="Spend" type="currency"/>
-    <sfField calculated="true" createable="false" formula="Dealer__r.SVOC_Id__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_ID__c" t="SVOC ID" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Dealer__r.SVOC_Id__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="SVOC_ID__c" t="SVOC ID" updateable="false"/>
     <sfField length="100" n="BU_Product_Key__c" t="BU Product Key"/>
-    <sfField length="150" n="Product_Name__c" t="Product Name"/>
-    <sfField length="150" n="Product_Code__c" t="Product Code"/>
-    <sfField length="150" n="Order__c" t="Order #"/>
+    <sfField editPermission="false" length="150" n="Product_Name__c" t="Product Name"/>
+    <sfField editPermission="false" length="150" n="Product_Code__c" t="Product Code"/>
+    <sfField editPermission="false" length="150" n="Order__c" t="Order #"/>
     <sfField n="Product_Status_Value__c" precision="5" summary="Set by workflow as the product status is updated.  Active product = 1, Inactive Product = 0." t="Product Status Value" type="_double"/>
-    <sfField length="100" n="Product_Group__c" t="Product Group"/>
-    <sfField length="150" n="Sales_Rep__c" t="Sales Rep"/>
+    <sfField editPermission="false" length="100" n="Product_Group__c" t="Product Group"/>
+    <sfField editPermission="false" length="150" n="Sales_Rep__c" t="Sales Rep"/>
     <sfField length="150" n="Product_Dealer_Name__c" summary="Used for data checking on BU feeds." t="Product Dealer Name"/>
-    <sfField n="Expiration_Date__c" t="Expiration Date" type="date"/>
-    <sfField calculated="true" createable="false" formula="CASE( Dealer__r.RecordTypeId , \n&quot;012E000000052TQ&quot;, &quot;Dealer&quot;, \n&quot;012E00000005SLl&quot;, &quot;DSC Account&quot;,\n&quot;012E00000005NpL&quot;,&quot;Major Account&quot;,\n&quot;Other&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Dealer_Type__c" t="Dealer Type" updateable="false"/>
-    <sfField n="X45_day_renewal_notice_sent__c" summary="Updated by system workflow." t="45 day renewal notice sent" type="_boolean"/>
-    <sfField calculated="true" createable="false" formula="Dealer__r.Group_Name__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Group_Name__c" t="Group Name" updateable="false"/>
-    <sfField n="Prior_Spend__c" precision="18" scale="2" t="Prior Spend" type="currency"/>
-    <sfField calculated="true" createable="false" formula="Dealer__r.ATC_Dealer_Id__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Dealer_Id__c" t="ATC Dealer Id" updateable="false"/>
+    <sfField editPermission="false" n="Expiration_Date__c" t="Expiration Date" type="date"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CASE( Dealer__r.RecordTypeId , \n&quot;012E000000052TQ&quot;, &quot;Dealer&quot;, \n&quot;012E00000005SLl&quot;, &quot;DSC Account&quot;,\n&quot;012E00000005NpL&quot;,&quot;Major Account&quot;,\n&quot;Other&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Dealer_Type__c" t="Dealer Type" updateable="false"/>
+    <sfField editPermission="false" n="X45_day_renewal_notice_sent__c" summary="Updated by system workflow." t="45 day renewal notice sent" type="_boolean"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Dealer__r.Group_Name__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Group_Name__c" t="Group Name" updateable="false"/>
+    <sfField editPermission="false" n="Prior_Spend__c" precision="18" scale="2" t="Prior Spend" type="currency"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Dealer__r.ATC_Dealer_Id__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="ATC_Dealer_Id__c" t="ATC Dealer Id" updateable="false"/>
     <sfField n="Install_Date__c" t="Install Date" type="date"/>
     <sfField n="Purchase_Date__c" t="Purchase Date" type="date"/>
-    <sfField calculated="true" createable="false" formula="IF( \n AND(\n  ISPICKVAL(Business_Unit__c, &quot;ATC&quot;),\n  ISPICKVAL(Product_Status__c, &quot;Delivered&quot;),\n (Start_Date__c + 90)&lt; Today()), 0, 1)" n="Stale_Count__c" precision="18" scale="2" summary="Formula field that creates a value for product that has not been sold within the last 90 days." t="Stale Count" type="_double" updateable="false"/>
-    <sfField n="Cancel_Effective_Date__c" t="Cancel Effective Date" type="date"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( \n AND(\n  ISPICKVAL(Business_Unit__c, &quot;ATC&quot;),\n  ISPICKVAL(Product_Status__c, &quot;Delivered&quot;),\n (Start_Date__c + 90)&lt; Today()), 0, 1)" n="Stale_Count__c" precision="18" scale="2" summary="Formula field that creates a value for product that has not been sold within the last 90 days." t="Stale Count" type="_double" updateable="false"/>
+    <sfField editPermission="false" n="Cancel_Effective_Date__c" t="Cancel Effective Date" type="date"/>
   </fields>
   <childRelationships>
     <sfObjectRelationship childName="ATG_Product__History" field="ParentId" n="Histories" relationshipName="Histories" s="2-" t="ATG_Product__History"/>

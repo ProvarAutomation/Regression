@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="00Q" label="Lead" labelPlural="Leads" layoutable="true" n="Lead" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="" standardLabel="Lead" t="Lead (00Q)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/00Q/e">
+<?xml version="1.0" encoding="UTF-8"?><sfObject creatable="true" deleteable="true" keyPrefix="00Q" label="Lead" labelPlural="Leads" layoutable="true" listViewFilterType="l" n="Lead" queryable="true" retrieveable="true" s="" searchLayoutable="true" sfObjectId="" standardLabel="Lead" t="Lead (00Q)" updatable="true" urlDetail="https://atgdealer--QA.cs7.my.salesforce.com/{ID}" urlEdit="https://atgdealer--QA.cs7.my.salesforce.com/{ID}/e" urlNew="https://atgdealer--QA.cs7.my.salesforce.com/00Q/e">
   <fields>
     <sfField createable="false" length="18" n="Id" t="Lead ID" type="id" updateable="false"/>
     <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
@@ -113,7 +113,7 @@
     <sfField length="255" n="Business_Type__c" t="Business Type" type="picklist">
       <picklistEntryIds>2437,2438,2439,2440,2441,2442,2443,2444,2445</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="IF (\n RecordType.Name=&quot;Unqualified Lead&quot;,\n\n IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6KB&quot;, &quot;*&quot;, 16, 16) &amp; &quot; All fields in this section except 'Title' and 'Mobile' are required to convert the Lead.  Once complete, the 'Convert' button will appear above. Conversion requires both First and Last name.&quot;,\n\n IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6RX&quot;, &quot;*&quot;, 16, 16) &amp; &quot; Lead conversion criteria has been met. Complete any other information you have in the sections below then click the 'Convert' button above to create an Account, Contact, and Opportunity.&quot;\n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Lead_Help__c" t="Lead Help" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF (\n RecordType.Name=&quot;Unqualified Lead&quot;,\n\n IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6KB&quot;, &quot;*&quot;, 16, 16) &amp; &quot; All fields in this section except 'Title' and 'Mobile' are required to convert the Lead.  Once complete, the 'Convert' button will appear above. Conversion requires both First and Last name.&quot;,\n\n IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6RX&quot;, &quot;*&quot;, 16, 16) &amp; &quot; Lead conversion criteria has been met. Complete any other information you have in the sections below then click the 'Convert' button above to create an Account, Contact, and Opportunity.&quot;\n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Lead_Help__c" t="Lead Help" updateable="false"/>
     <sfField n="Monthly_Sales_Volume__c" precision="18" summary="Enter Number of Cars Sold per Month." t="Monthly Sales Volume" type="_double"/>
     <sfField extraTypeInfo="plaintextarea" length="255" n="Addl_Info__c" summary="enter any additional info regarding the link" t="Add'l Info" type="textarea"/>
     <sfField length="4099" n="Product_Category__c" precision="10" t="Product Category" type="multipicklist">
@@ -122,10 +122,10 @@
     <sfField length="4099" n="BU__c" precision="6" summary="optional" t="BU" type="multipicklist">
       <picklistEntryIds>68,71,72,70,73,74</picklistEntryIds>
     </sfField>
-    <sfField calculated="true" createable="false" formula="IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.ImageServer?id=015E0000001Ezt5&amp;oid=00DM0000001eO1f&amp;lastMod=1349446966000&quot;, &quot;Title&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Title__c" t="Title" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.ImageServer?id=015E0000001Ezt5&amp;oid=00DM0000001eO1f&amp;lastMod=1349446966000&quot;, &quot;Title&quot;)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Title__c" t="Title" updateable="false"/>
     <sfField calculated="true" createable="false" formula="CreatedDate" formulaTreatBlanksAs="BlankAsZero" n="DB_Created_Date_without_Time__c" t="DB Created Date without Time" type="date" updateable="false"/>
     <sfField calculated="true" createable="false" formula="IF( IsConverted = false, NOW() - LastModifiedDate, NULL)" n="DB_Lead_Age__c" precision="18" t="DB Lead Age" type="_double" updateable="false"/>
-    <sfField calculated="true" createable="false" formula="CreatedBy.Manager.FirstName &amp;&quot; &quot;&amp;CreatedBy.Manager.LastName" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Created_by_Manager__c" t="Created by Manager" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="CreatedBy.Manager.FirstName &amp;&quot; &quot;&amp;CreatedBy.Manager.LastName" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Created_by_Manager__c" t="Created by Manager" updateable="false"/>
     <sfField length="50" n="Billing_Street__c" t="Billing Street"/>
     <sfField length="50" n="Billing_City__c" t="Billing City"/>
     <sfField length="3" n="Billing_State__c" t="Billing State/Province"/>
@@ -229,6 +229,7 @@
     <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
     <sfObjectRelationship alias="RelatedEventAttendeeNotDecided" childName="UndecidedEventRelation" field="RelationId" n="UndecidedEventRelations" relationshipName="UndecidedEventRelations" s="2-" t="UndecidedEventRelation"/>
     <sfObjectRelationship childName="ProcessInstanceHistory" field="TargetObjectId" n="RelatedProcessHistoryList" relationshipName="RelatedProcessHistoryList" s="2-"/>
+    <sfObjectRelationship alias="RelatedOpportunityList" childName="Opportunity" field="LeadId" n="Opportunities" relationshipName="Opportunities" s="2-" t="Opportunity"/>
   </childRelationships>
   <recordTypes>
     <sfRecordType available="false" defaultRecordType="false" fullName="Qualified_Lead" n="Qualified Lead" recordTypeId="012E00000005v39IAA" s="3-" t="Web Record Type Mapping">
@@ -1089,7 +1090,7 @@
         </entry>
         <entry>
           <key valueClass="string">LeadSource</key>
-          <value valueClass="string">484,57795,489,619,485,486,487,490,491,492,493,494,495,496,497,57796,499,620,621,500,501,502,503,504,93,622,505,506,623,624,625,507,626,508,627,509,510,57797,511,628</value>
+          <value valueClass="string">484,66132,489,619,485,486,487,490,491,492,493,494,495,496,497,66133,499,620,621,500,501,502,503,504,93,622,505,506,623,624,625,507,626,508,627,509,510,66134,511,628</value>
         </entry>
         <entry>
           <key valueClass="string">BU__c</key>
@@ -1097,7 +1098,7 @@
         </entry>
         <entry>
           <key valueClass="string">Name</key>
-          <value valueClass="string">57799,57800,57801,57802,57803</value>
+          <value valueClass="string">66136,66137,66138,66139,66140</value>
         </entry>
         <entry>
           <key valueClass="string">Web_Address_Same_as_Physical__c</key>
@@ -1109,7 +1110,7 @@
         </entry>
         <entry>
           <key valueClass="string">Business_Type__c</key>
-          <value valueClass="string">2437,2438,2442,2439,2440,2441,57785,2444,2445</value>
+          <value valueClass="string">2437,2438,2442,2439,2440,2441,66122,2444,2445</value>
         </entry>
         <entry>
           <key valueClass="string">Rating</key>
@@ -1125,7 +1126,7 @@
         </entry>
         <entry>
           <key valueClass="string">Customer_Subtype__c</key>
-          <value valueClass="string">542,543,544,545,546,547,548,102,549,57793,551,552,6887,339,554,557,555,556,558,560,559,561,562,563,564,565</value>
+          <value valueClass="string">542,543,544,545,546,547,548,102,549,66130,551,552,6887,339,554,557,555,556,558,560,559,561,562,563,564,565</value>
         </entry>
         <entry>
           <key valueClass="string">Customer_Type__c</key>
@@ -1137,11 +1138,11 @@
         </entry>
         <entry>
           <key valueClass="string">Lot_Size_New__c</key>
-          <value valueClass="string">592,600,601,602,593,603,604,594,605,595,596,606,597,598,57798,599,6886</value>
+          <value valueClass="string">592,600,601,602,593,603,604,594,605,595,596,606,597,598,66135,599,6886</value>
         </entry>
         <entry>
           <key valueClass="string">Contact_Title__c</key>
-          <value valueClass="string">57786,57787,2817,2813,57788,2814,57789,57790,2816,2805,2811,57791,2809,2815,2820,93,2810,57792,2808</value>
+          <value valueClass="string">66123,66124,2817,2813,66125,2814,66126,66127,2816,2805,2811,66128,2809,2815,2820,93,2810,66129,2808</value>
         </entry>
         <entry>
           <key valueClass="string">Same_as_Physical_Address__c</key>
@@ -1149,7 +1150,7 @@
         </entry>
         <entry>
           <key valueClass="string">Lot_Size_Used__c</key>
-          <value valueClass="string">592,600,601,602,593,603,604,594,605,595,596,606,597,598,57798,599,6886</value>
+          <value valueClass="string">592,600,601,602,593,603,604,594,605,595,596,606,597,598,66135,599,6886</value>
         </entry>
         <entry>
           <key valueClass="string">Business_Size__c</key>
@@ -1157,7 +1158,7 @@
         </entry>
         <entry>
           <key valueClass="string">Industry</key>
-          <value valueClass="string">94,95,96,97,98,99,100,101,102,57794,104,105,106,107,108,109,93,110,111,112,113,114,115</value>
+          <value valueClass="string">94,95,96,97,98,99,100,101,102,66131,104,105,106,107,108,109,93,110,111,112,113,114,115</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
@@ -2018,7 +2019,7 @@
         </entry>
         <entry>
           <key valueClass="string">LeadSource</key>
-          <value valueClass="string">484,57795,489,619,485,486,487,490,491,492,493,494,495,496,497,57796,499,620,621,500,501,502,503,504,93,622,505,506,623,624,625,507,626,508,627,509,510,57797,511,628</value>
+          <value valueClass="string">484,66132,489,619,485,486,487,490,491,492,493,494,495,496,497,66133,499,620,621,500,501,502,503,504,93,622,505,506,623,624,625,507,626,508,627,509,510,66134,511,628</value>
         </entry>
         <entry>
           <key valueClass="string">BU__c</key>
@@ -2026,7 +2027,7 @@
         </entry>
         <entry>
           <key valueClass="string">Name</key>
-          <value valueClass="string">57799,57800,57801,57802,57803</value>
+          <value valueClass="string">66136,66137,66138,66139,66140</value>
         </entry>
         <entry>
           <key valueClass="string">Web_Address_Same_as_Physical__c</key>
@@ -2038,7 +2039,7 @@
         </entry>
         <entry>
           <key valueClass="string">Business_Type__c</key>
-          <value valueClass="string">2437,2438,2442,2439,2440,2441,57785,2444,2445</value>
+          <value valueClass="string">2437,2438,2442,2439,2440,2441,66122,2444,2445</value>
         </entry>
         <entry>
           <key valueClass="string">Rating</key>
@@ -2054,7 +2055,7 @@
         </entry>
         <entry>
           <key valueClass="string">Customer_Subtype__c</key>
-          <value valueClass="string">542,543,544,545,546,547,548,102,549,57793,551,552,6887,339,554,557,555,556,558,560,559,561,562,563,564,565</value>
+          <value valueClass="string">542,543,544,545,546,547,548,102,549,66130,551,552,6887,339,554,557,555,556,558,560,559,561,562,563,564,565</value>
         </entry>
         <entry>
           <key valueClass="string">Customer_Type__c</key>
@@ -2066,11 +2067,11 @@
         </entry>
         <entry>
           <key valueClass="string">Lot_Size_New__c</key>
-          <value valueClass="string">592,600,601,602,593,603,604,594,605,595,596,606,597,598,57798,599,6886</value>
+          <value valueClass="string">592,600,601,602,593,603,604,594,605,595,596,606,597,598,66135,599,6886</value>
         </entry>
         <entry>
           <key valueClass="string">Contact_Title__c</key>
-          <value valueClass="string">57786,57787,2817,2813,57788,2814,57789,57790,2816,2805,2811,57791,2809,2815,2820,93,2810,57792,2808</value>
+          <value valueClass="string">66123,66124,2817,2813,66125,2814,66126,66127,2816,2805,2811,66128,2809,2815,2820,93,2810,66129,2808</value>
         </entry>
         <entry>
           <key valueClass="string">Same_as_Physical_Address__c</key>
@@ -2078,7 +2079,7 @@
         </entry>
         <entry>
           <key valueClass="string">Lot_Size_Used__c</key>
-          <value valueClass="string">592,600,601,602,593,603,604,594,605,595,596,606,597,598,57798,599,6886</value>
+          <value valueClass="string">592,600,601,602,593,603,604,594,605,595,596,606,597,598,66135,599,6886</value>
         </entry>
         <entry>
           <key valueClass="string">Business_Size__c</key>
@@ -2086,7 +2087,7 @@
         </entry>
         <entry>
           <key valueClass="string">Industry</key>
-          <value valueClass="string">94,95,96,97,98,99,100,101,102,57794,104,105,106,107,108,109,93,110,111,112,113,114,115</value>
+          <value valueClass="string">94,95,96,97,98,99,100,101,102,66131,104,105,106,107,108,109,93,110,111,112,113,114,115</value>
         </entry>
       </picklistOverrideIds>
     </sfRecordType>
