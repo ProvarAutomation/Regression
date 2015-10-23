@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
-    <links>Mass_Merge_Link</links>
-    <links>Mass_Reassign_Accounts</links>
-    <links>Mass_Transfer_Accounts2</links>
-    <pageComponentType>links</pageComponentType>
-</HomePageComponent>

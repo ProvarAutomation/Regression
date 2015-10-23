@@ -1,3 +1,0 @@
-<apex:page controller="echosign_dev1.GlobalAgreementActionController">
-    <c:AgreementPublisherAction />
-</apex:page>

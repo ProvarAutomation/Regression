@@ -1,5 +1,0 @@
-<apex:component >
-    <div align="center">
-        <apex:outputlink value="/apex/{!$CurrentPage.Name}?width=1000&height=800" target="_blank">Larger version</apex:outputlink>
-    </div>
-</apex:component>
