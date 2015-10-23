@@ -1998,6 +1998,9 @@
       </generatedParameters>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="119" title="On SF Account view (Dealer) screen">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
@@ -2152,6 +2155,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="127" title="On SF Account view (Dealer) screen">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
@@ -2301,6 +2307,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="139" title="On SF Account view (Dealer) screen">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
