@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="1">
+<testCase id="3">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UiConnection (Test)">
@@ -120,9 +120,10 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the ATG Product Name field</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
@@ -206,7 +207,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="4" title="Set the Credit Reason picklist to Negotiated Discount">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="4" title="Set the Credit Reason picklist to Goodwill - RSD Approval Req.">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Credit_Reason__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DCredit_Reason__c"/>
@@ -215,7 +216,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">Negotiated Discount</value>
+                  <value class="value" valueClass="string">Goodwill - RSD Approval Req.</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -230,23 +231,29 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Credit Reason picklist to Negotiated Discount</value>
+                  <value class="value" valueClass="string">Set the Credit Reason picklist to Goodwill - RSD Approval Req.</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Case&amp;field=Credit_Reason__c" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <textType/>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Backoffice Operational Related:Backoffice Operational Related|Contract Delivery Issue:Contract Delivery Issue|Contract Entry Error:Contract Entry Error|Co-Op Related:Co-Op Related|Downsell/Cancellation Related:Downsell/Cancellation Related|Field Operational Related:Field Operational Related|Field Service Related:Field Service Related|Goodwill - RSD Approval Req.:Goodwill - RSD Approval Req.|Inventory:Inventory|Inventory Issue:Inventory Issue|Negotiated Discount:Negotiated Discount|Product Delivery Issue:Product Delivery Issue|Product Dissatisfaction:Product Dissatisfaction|Product Related:Product Related|Spotlight Powerpack:Spotlight Powerpack|Website - Technology Issue:Website - Technology Issue|Zero Out Past Due:Zero Out Past Due</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
@@ -357,7 +364,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="7" title="Set the Amount Requested by DSM field to 9999.99">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="7" title="Set the Amount Requested by DSM field to 20000">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Amount_Requested_by_DSM__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DAmount_Requested_by_DSM__c"/>
@@ -366,7 +373,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">9999.99</value>
+                  <value class="value" valueClass="string">20000</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -381,23 +388,29 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Amount Requested by DSM field to 9999.99</value>
+                  <value class="value" valueClass="string">Set the Amount Requested by DSM field to 20000</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Case&amp;field=Amount_Requested_by_DSM__c" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <textType/>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">11</valueConstraint>
+                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                      </constraints>
+                    </numericType>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
@@ -731,6 +744,9 @@
                         </argument>
                         <argument id="captureAfter">
                           <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="columnAssertions">
+                          <value class="valueList" mutable="Mutable"/>
                         </argument>
                       </arguments>
                     </apiCall>
