@@ -10,10 +10,19 @@ import com.provar.core.testapi.annotations.*;
                , page="NewCaseServiceAccountButton3"
                , namespacePrefix=""
                , object="Account"
-               , connection="Admin"
+               , connection="ServiceUser"
      )             
 public class NewCaseServiceAccountButton3 {
 
+	@LinkType()
+	@FindBy(linkText = "Cancellation")
+	public WebElement cancellation;
+	@LinkType()
+	@FindBy(linkText = "Collections")
+	public WebElement collections;
+	@LinkType()
+	@FindBy(linkText = "Collections")
+	public WebElement collections1;
 	@LinkType()
 	@FindBy(linkText = "Order Entry")
 	public WebElement orderEntry;

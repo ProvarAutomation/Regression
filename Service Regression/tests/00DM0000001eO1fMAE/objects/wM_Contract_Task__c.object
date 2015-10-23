@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object used for mapping Contract fulfillment fields in webMethods to a Salesforce Case.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>ATC_Case_Reason__c</fullName>
+        <description>Case Reason value</description>
+        <externalId>false</externalId>
+        <label>ATC Case Reason</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ATC_Sub_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>ATC Sub Reason</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_Record_Type_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Record Type ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_Record_Type_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Record Type Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Queue_ID__c</fullName>
+        <description>The id of the queue that is being looked up.</description>
+        <externalId>false</externalId>
+        <label>Queue ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Queue_Name__c</fullName>
+        <description>Readable name of the queue</description>
+        <externalId>false</externalId>
+        <label>Queue Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Queue_Owner_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>OwnerId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Queue Owner Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Queue_Owner_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:Queue.QueueName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Queue Owner Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>wM Contract Task</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>Queue_Owner_Name__c</columns>
+        <columns>NAME</columns>
+        <columns>Case_Record_Type_Name__c</columns>
+        <columns>Case_Record_Type_ID__c</columns>
+        <columns>ATC_Case_Reason__c</columns>
+        <columns>ATC_Sub_Reason__c</columns>
+        <columns>Queue_Name__c</columns>
+        <columns>Queue_Owner_Id__c</columns>
+        <columns>Queue_ID__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CONNECTION_RECEIVED.NAME</columns>
+        <columns>CONNECTION_SENT.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_wM_Contract_Tasks</fullName>
+        <columns>NAME</columns>
+        <columns>Queue_Owner_Name__c</columns>
+        <columns>Queue_Owner_Id__c</columns>
+        <columns>Case_Record_Type_Name__c</columns>
+        <columns>Case_Record_Type_ID__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All wM Contract Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Cancellations_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Cancellations</label>
+        <queue>ESO_Cancellations</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Collections_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Collections</label>
+        <queue>ESO_Collections</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Contract_FM_Config_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Contract FM Config</label>
+        <queue>ESO_Contract_FM_Config</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_DMD_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO DMD</label>
+        <queue>ESO_DMD</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Deal_Builder_Order_Entry_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Deal Builder Order Entry</label>
+        <queue>ESO_Deal_Builder_Order_Entry</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Fast_Ads_Order_Entry_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Fast Ads Order Entry</label>
+        <queue>ESO_Fast_Ads_Order_Entry</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Fast_Ads_Production_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Fast Ads Production</label>
+        <queue>ESO_Fast_Ads_Production</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Fast_Ads_Quality_Assurance_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Fast Ads Quality Assurance</label>
+        <queue>ESO_Fast_Ads_Quality_Assurance</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Inventory_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Inventory</label>
+        <queue>ESO_Inventory</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_KBB_Cancellations_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO KBB Cancellations</label>
+        <queue>ESO_KBB_Cancellations</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_KBB_Fulfillment_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO KBB Fulfillment</label>
+        <queue>ESO_KBB_Fulfillment</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_KBB_Quality_Assurance_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO KBB Quality Assurance</label>
+        <queue>ESO_KBB_Quality_Assurance</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Major_Account_Cancellations_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Major Account Cancellations</label>
+        <queue>ESO_Major_Account_Cancellations</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Major_Account_Quality_Assurance_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Major Account Quality Assurance</label>
+        <queue>ESO_Major_Account_Quality_Assurance</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Order_Entry_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Order Entry</label>
+        <queue>ESO_Order_Entry</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_PDC_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO PDC</label>
+        <queue>ESO_PDC</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ESO_Quality_Assurance_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ESO Quality Assurance</label>
+        <queue>ESO_Quality_Assurance</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>WM_Deprecated_wM_Contract_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>WM Deprecated</label>
+        <queue>WM_Deprecated</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>wM Contract Task Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>wM Contract Tasks</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>ATC_Case_Reason__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ATC_Sub_Reason__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Case_Record_Type_ID__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Case_Record_Type_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Queue_ID__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Queue_Name__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>ATC_Case_Reason__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ATC_Sub_Reason__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Case_Record_Type_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Case_Record_Type_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Queue_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Queue_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

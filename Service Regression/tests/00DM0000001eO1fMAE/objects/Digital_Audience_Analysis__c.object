@@ -1,0 +1,1686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used by ATC to request and track a dealer&apos;s website analysis</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Dealer the DAA Request is for</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>DAA</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Information__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is there any other relevant information?</inlineHelpText>
+        <label>Additional Information</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Amount_of_Potential_Upsell__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Dollar amount of potential upsell</inlineHelpText>
+        <label>Amount of Potential Upsell</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Analysis_Purpose__c</fullName>
+        <externalId>false</externalId>
+        <label>Analysis Purpose</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Potential Upsell</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Save (Revenue in Jeopardy)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Articulating Value Proposition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Increase Understanding of Online Traffic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Cars_Sold_per_Month_New__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Average number of new cars sold per month</inlineHelpText>
+        <label>Cars Sold per Month - New</label>
+        <length>5</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cars_Sold_per_Month_Used__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Average number of used cars sold per month.</inlineHelpText>
+        <label>Cars Sold per Month - Used</label>
+        <length>5</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Mobile__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.MobilePhone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Mobile</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact who will tag the dealer site(s).</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Digital_Audience_Analysis</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Custom_Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Does the dealer use custom comments?</inlineHelpText>
+        <label>Custom Comments</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>DAA_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot;&amp;Id,&quot;DAA&quot; &amp; &quot; - &quot; &amp; Account__r.Name &amp; &quot; - &quot; &amp; TEXT(DATEVALUE(CreatedDate)),&quot;_self&quot;)</formula>
+        <label>DAA Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Website_Provider_If_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer Website Provider (If Other)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Website__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Website</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dealer Website</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_s_Position_in_the_Market__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Example: Top 5 BMW dealer</inlineHelpText>
+        <label>Dealer&apos;s Position in the Market</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Delivered_to_Customer_Date__c</fullName>
+        <description>Follow Up Date is required if you have selected Follow Up Required.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>You must enter the date you have delivered the DAA to the customer.</inlineHelpText>
+        <label>Delivered to Customer Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Follow_Up_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Follow Up Required is selected only when a follow up date is entered for a DAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If selecting this checkbox please fill out the Follow Up Date needed.</inlineHelpText>
+        <label>Follow-Up Required</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Form_Help__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (
+   RecordType.Name=&quot;Incomplete Request&quot;,
+   IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6KB&quot;, &quot;*&quot;, 16, 16) &amp; &quot; All fields under the DAA Section are required to submit this form.  Once complete, your order will be submitted.  You are required to attach documentation.&quot;,
+
+   IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000000g6RX&quot;, &quot;*&quot;, 16, 16) &amp; &quot; Form Submission criteria has been met. Please check the status of your record for more details.&quot;
+)</formula>
+        <label>Form Help</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HomeNet_Dealer__c</fullName>
+        <externalId>false</externalId>
+        <label>HomeNet Dealer?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Incomplete_Reason_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Incomplete Reason Comment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incomplete_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Incomplete Reason</label>
+        <picklist>
+            <controllingField>Stage__c</controllingField>
+            <picklistValues>
+                <fullName>Tagging Agreement Missing</fullName>
+                <controllingFieldValues>Incomplete</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Altered Tagging Agreement Altered</fullName>
+                <controllingFieldValues>Incomplete</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tagging Agreement not Signed</fullName>
+                <controllingFieldValues>Incomplete</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <controllingFieldValues>Incomplete</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Internet_Websites_If_Other__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>you must enter information if you selected &quot;Other&quot; for Internet websites.</inlineHelpText>
+        <label>Internet Websites (If Other)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Internet_Websites__c</fullName>
+        <externalId>false</externalId>
+        <label>Internet Websites Used</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cars.com</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Craig&apos;s List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>eBay Motors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Edmunds.com</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Large_Events__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>in the past three months did the dealer have any events such as large sales or &quot;tent&quot; events?</inlineHelpText>
+        <label>Large Events?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Lot_Size_New__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Lot_Size_New__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lot Size - New</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lot_Size_Used__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Lot_Size_Used__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lot Size - Used</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Major_Competitors__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Who are their major competitors?</inlineHelpText>
+        <label>Major Competitors</label>
+        <length>500</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Offline_Advertising_If_Other__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>List of other offline advertising methods. you must enter information if you selected &quot;Other&quot;.</inlineHelpText>
+        <label>Offline Advertising (If Other)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offline_Advertising__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What types of offline advertising has the dealer done over the past three months?</inlineHelpText>
+        <label>Offline Advertising?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Direct Mailer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Newspaper</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outdoor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radio</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Television</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>On_My_Team__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (CreatedById = $User.Id, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>On My Team</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_DAA__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to associate similar DAA records. Similar to Related Case.</inlineHelpText>
+        <label>Parent DAA</label>
+        <referenceTo>Digital_Audience_Analysis__c</referenceTo>
+        <relationshipLabel>Related DAA</relationshipLabel>
+        <relationshipName>Digital_Audience_Analyses</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quality_Vehicle_Images__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Does this dealer use images of actual vehicle being sold?  (Not stock images)</inlineHelpText>
+        <label>Quality Vehicle Images</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recent_Downgrades__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>In the past three months has the dealer downgraded or upgraded products?  (Excluding Spotlights and Power Packs)</inlineHelpText>
+        <label>Recent Package Changes?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SEM_or_SEO__c</fullName>
+        <description>Does the Dealer Use SEM or SEO to Advertise?</description>
+        <externalId>false</externalId>
+        <label>SEM or SEO?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SVOC_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.SVOC_Id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SVOC ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Same_Pricing__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Does the dealer price inventory the same across all advertising media and in store?</inlineHelpText>
+        <label>Same Pricing?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Site_Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Email address of of who will tag the site</inlineHelpText>
+        <label>Site Contact Email</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Paperwork Complete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Setup</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Collect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Month 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Month 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Month 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analyze</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deliver</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delivered to Customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DAA Ready</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Tagging_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <label>Tagging Agreement</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Attached</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not attached</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>VinSolutions_Website_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>VinSolutions Website Time</label>
+        <picklist>
+            <controllingField>VinSolutions_Website__c</controllingField>
+            <picklistValues>
+                <fullName>Greater than 4 months</fullName>
+                <controllingFieldValues>Yes</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than 4 months</fullName>
+                <controllingFieldValues>Yes</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>VinSolutions_Website__c</fullName>
+        <externalId>false</externalId>
+        <label>VinSolutions Website Only?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Website_Domains__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>URLs to tag</inlineHelpText>
+        <label>Website Domain(s)</label>
+        <length>500</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Who_Will_Tag_Site__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>First and Last name of who will tag the site</inlineHelpText>
+        <label>Site Contact Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Digital Audience Analysis</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>DAA_Name__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>DAA_Complete_Digital_Audience_Analysis</fullName>
+        <filterScope>Queue</filterScope>
+        <label>DAA Complete</label>
+        <queue>DAA_Complete</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>DAA_In_Progress_Digital_Audience_Analysis</fullName>
+        <filterScope>Queue</filterScope>
+        <label>DAA In Progress</label>
+        <queue>DAA_In_Progress</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>DAA_Incomplete_Digital_Audience_Analysis</fullName>
+        <filterScope>Queue</filterScope>
+        <label>DAA Incomplete</label>
+        <queue>DAA_Incomplete</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>DAA Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Digital Audience Analyses</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Complete_Request</fullName>
+        <active>true</active>
+        <label>Complete Request</label>
+        <picklistValues>
+            <picklist>Analysis_Purpose__c</picklist>
+            <values>
+                <fullName>Articulating Value Proposition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increase Understanding of Online Traffic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Potential Upsell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Save %28Revenue in Jeopardy%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Custom_Comments__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HomeNet_Dealer__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Incomplete_Reason__c</picklist>
+            <values>
+                <fullName>Altered Tagging Agreement Altered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tagging Agreement Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tagging Agreement not Signed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Internet_Websites__c</picklist>
+            <values>
+                <fullName>Cars%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Craig%27s List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Edmunds%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eBay Motors</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Large_Events__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offline_Advertising__c</picklist>
+            <values>
+                <fullName>Direct Mailer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Newspaper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdoor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Television</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quality_Vehicle_Images__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Recent_Downgrades__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SEM_or_SEO__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Same_Pricing__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Analyze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DAA Ready</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deliver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivered to Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Paperwork Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tagging_Agreement__c</picklist>
+            <values>
+                <fullName>Attached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not attached</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>VinSolutions_Website_Time__c</picklist>
+            <values>
+                <fullName>Greater than 4 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than 4 months</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>VinSolutions_Website__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Incomplete_Request</fullName>
+        <active>true</active>
+        <description>Default record type, certain fields need to be completed in order to submit to DAA Team</description>
+        <label>Incomplete Request</label>
+        <picklistValues>
+            <picklist>Analysis_Purpose__c</picklist>
+            <values>
+                <fullName>Articulating Value Proposition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increase Understanding of Online Traffic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Potential Upsell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Save %28Revenue in Jeopardy%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Custom_Comments__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HomeNet_Dealer__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Incomplete_Reason__c</picklist>
+            <values>
+                <fullName>Altered Tagging Agreement Altered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tagging Agreement Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tagging Agreement not Signed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Internet_Websites__c</picklist>
+            <values>
+                <fullName>Cars%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Craig%27s List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Edmunds%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eBay Motors</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Large_Events__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offline_Advertising__c</picklist>
+            <values>
+                <fullName>Direct Mailer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Newspaper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdoor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Television</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quality_Vehicle_Images__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Recent_Downgrades__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SEM_or_SEO__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Same_Pricing__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Analyze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DAA Ready</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deliver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivered to Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paperwork Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tagging_Agreement__c</picklist>
+            <values>
+                <fullName>Attached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not attached</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>VinSolutions_Website_Time__c</picklist>
+            <values>
+                <fullName>Greater than 4 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than 4 months</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>VinSolutions_Website__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Resubmit_Order</fullName>
+        <active>true</active>
+        <description>record type to resubmit Incomplete Orders</description>
+        <label>Resubmit Order</label>
+        <picklistValues>
+            <picklist>Analysis_Purpose__c</picklist>
+            <values>
+                <fullName>Articulating Value Proposition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increase Understanding of Online Traffic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Potential Upsell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Save %28Revenue in Jeopardy%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Custom_Comments__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HomeNet_Dealer__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Incomplete_Reason__c</picklist>
+            <values>
+                <fullName>Altered Tagging Agreement Altered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tagging Agreement Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tagging Agreement not Signed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Internet_Websites__c</picklist>
+            <values>
+                <fullName>Cars%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Craig%27s List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Edmunds%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eBay Motors</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Large_Events__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offline_Advertising__c</picklist>
+            <values>
+                <fullName>Direct Mailer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Newspaper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdoor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Television</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quality_Vehicle_Images__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Recent_Downgrades__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SEM_or_SEO__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Same_Pricing__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Analyze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DAA Ready</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deliver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivered to Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Paperwork Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tagging_Agreement__c</picklist>
+            <values>
+                <fullName>Attached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not attached</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>VinSolutions_Website_Time__c</picklist>
+            <values>
+                <fullName>Greater than 4 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than 4 months</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>VinSolutions_Website__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>DAA_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Stage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>DAA_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Stage__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Follow_Up_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>And(
+Follow_Up_Required__c = True, OR(ISNULL(Delivered_to_Customer_Date__c), TODAY()&gt; Delivered_to_Customer_Date__c)
+)</errorConditionFormula>
+        <errorDisplayField>Delivered_to_Customer_Date__c</errorDisplayField>
+        <errorMessage>If Follow-Up Required is checked, then a Follow-Up Date greater than today is required.</errorMessage>
+    </validationRules>
+</CustomObject>

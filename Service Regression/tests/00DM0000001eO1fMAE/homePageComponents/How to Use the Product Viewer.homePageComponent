@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Type in all or part of the Dealer Name in the Search lookup in the blue bar&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Click on the Record id link next to the applicable Dealers name to view product for that dealer&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Click the &quot;View Spend&quot; link to see the revenue breakdown by BU&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;Click &lt;a href=&quot;https://na9.salesforce.com/sfc/#version?selectedVersionId=068E0000000StUF&quot;&gt;HERE&lt;/a&gt; to view document showing process in detail.&lt;/div&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>wide</width>
+</HomePageComponent>

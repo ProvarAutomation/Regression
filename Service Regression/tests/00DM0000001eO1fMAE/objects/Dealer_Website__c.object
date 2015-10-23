@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used in conjunction with Digital Audience Analysis (DAA)</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>field to capture the third party contact</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If there is a third party contact for this website please enter the name here</inlineHelpText>
+        <label>Contact</label>
+        <length>65</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DAA_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Related_DAA__r.DAA_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DAA Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <description>field to capture the email address for the third party contact for the dealer website</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If there is a third party contact for this website please enter the email here</inlineHelpText>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>How_Long_Has_Website_Been_Established__c</fullName>
+        <externalId>false</externalId>
+        <label>How Long Has Website Been Established?</label>
+        <picklist>
+            <controllingField>Website_Provider__c</controllingField>
+            <picklistValues>
+                <fullName>Less than 4 months</fullName>
+                <controllingFieldValues>Autofusion</controllingFieldValues>
+                <controllingFieldValues>ClickMotive</controllingFieldValues>
+                <controllingFieldValues>Cobalt</controllingFieldValues>
+                <controllingFieldValues>Dealer Apex</controllingFieldValues>
+                <controllingFieldValues>Dealer E Process</controllingFieldValues>
+                <controllingFieldValues>Dealer.com</controllingFieldValues>
+                <controllingFieldValues>Ford Direct</controllingFieldValues>
+                <controllingFieldValues>Manning</controllingFieldValues>
+                <controllingFieldValues>Motorwebs</controllingFieldValues>
+                <controllingFieldValues>Other</controllingFieldValues>
+                <controllingFieldValues>TK</controllingFieldValues>
+                <controllingFieldValues>VinSolutions</controllingFieldValues>
+                <controllingFieldValues>autoone</controllingFieldValues>
+                <controllingFieldValues>ebizautos</controllingFieldValues>
+                <controllingFieldValues>searchtopics</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Greater than 4 months</fullName>
+                <controllingFieldValues>Autofusion</controllingFieldValues>
+                <controllingFieldValues>ClickMotive</controllingFieldValues>
+                <controllingFieldValues>Cobalt</controllingFieldValues>
+                <controllingFieldValues>Dealer Apex</controllingFieldValues>
+                <controllingFieldValues>Dealer E Process</controllingFieldValues>
+                <controllingFieldValues>Dealer.com</controllingFieldValues>
+                <controllingFieldValues>Ford Direct</controllingFieldValues>
+                <controllingFieldValues>Manning</controllingFieldValues>
+                <controllingFieldValues>Motorwebs</controllingFieldValues>
+                <controllingFieldValues>Other</controllingFieldValues>
+                <controllingFieldValues>TK</controllingFieldValues>
+                <controllingFieldValues>VinSolutions</controllingFieldValues>
+                <controllingFieldValues>autoone</controllingFieldValues>
+                <controllingFieldValues>ebizautos</controllingFieldValues>
+                <controllingFieldValues>searchtopics</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Related_DAA__c</fullName>
+        <externalId>false</externalId>
+        <label>Related DAA</label>
+        <referenceTo>Digital_Audience_Analysis__c</referenceTo>
+        <relationshipLabel>Dealer Websites</relationshipLabel>
+        <relationshipName>Dealer_Websites</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Website_Provider_If_Other__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If &quot;Other&quot; was selected, enter website provider name here</inlineHelpText>
+        <label>Website Provider (If Other)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Website_Provider__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the Dealer&apos;s website provider</inlineHelpText>
+        <label>Website Provider</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Autofusion</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>autoone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ClickMotive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cobalt</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Apex</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer E Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer.com</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ebizautos</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ford Direct</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Motorwebs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>searchtopics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Dealer Website</label>
+    <nameField>
+        <label>Dealer Website Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Dealer Websites</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Enter_Dealer_Website</fullName>
+        <availability>online</availability>
+        <description>button to enter a new dealer website and return back to DAA form</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Enter Dealer Website</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a0L/e?CF00Nc0000000xL4W={!Digital_Audience_Analysis__c.Name}&amp;CF00Nc0000000xL4W_lkid={!Digital_Audience_Analysis__c.Id}&amp;saveURL=%2F{!Digital_Audience_Analysis__c.Id}&amp; retURL=%2F{!Digital_Audience_Analysis__c.Id}</url>
+    </webLinks>
+</CustomObject>

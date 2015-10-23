@@ -1,0 +1,2624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Add_l_Lead_Info__c</fullName>
+        <externalId>false</externalId>
+        <label>Add&apos;l Lead Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BU_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>BU Type</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Dealer_Contact__r.FirstName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact First Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Dealer_Contact__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Last Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Created_by_Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Created by Role</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>lookup an existing contact or use &quot;New&quot; function to quickly add the dealer contact</inlineHelpText>
+        <label>Dealer Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>BU_Lead</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Dealer_Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Dealer__r.Region__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dealer Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Prospects</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>District__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Dealer__r.District__c, 
+&quot;1&quot;,&quot;1&quot;, 
+&quot;2&quot;,&quot;2&quot;, 
+&quot;3&quot;,&quot;3&quot;, 
+&quot;4&quot;,&quot;4&quot;,
+&quot;&quot;)</formula>
+        <inlineHelpText>formula field that reads the District field from the Account</inlineHelpText>
+        <label>Dealer District</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Duplicate_Lead__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check this box to mark it as a duplicate.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box to mark it as a duplicate.</inlineHelpText>
+        <label>Duplicate Lead</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Final_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Final Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Help_Info__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(&quot;https://c.na9.content.force.com/servlet/servlet.FileDownload?file=015E0000001Eyh3&quot;, &quot;Help&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Help Info</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Age__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  ISPICKVAL(Status__c, &quot;Open&quot;) &amp;&amp; DATEVALUE(CreatedDate)=Today(),1,Today()-  DATEVALUE(CreatedDate))</formula>
+        <inlineHelpText>formula field that calculates the age of the lead when it is in open status</inlineHelpText>
+        <label>Lead Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Converted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box when you&apos;re ready to convert this lead into an opportunity.</inlineHelpText>
+        <label>Convert Lead</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>CreatedBy.FirstName &amp; &quot; &quot; &amp;  CreatedBy.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Submitted by</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Next_Step__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>input a short sentence as to what you are doing to convert this lead</inlineHelpText>
+        <label>Next Step</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_Cell__c</fullName>
+        <externalId>false</externalId>
+        <formula>CreatedBy.MobilePhone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Submitted by Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Buying Tool</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inventory Tool</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pricing Tool</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ILM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CRM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Tool</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SEM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Product_Matrix__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000003vKun&quot;, &quot;Product Matrix - Updated 7-16-2014&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Matrix</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Selection__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Selection</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1. Inventory Syndication, Vehicle Merchandising, Camera</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. ILM, CRM, Desking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Websites</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. Pricing, Appraisal, Inventory Sourcing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5. Inventory Management - Used Car (Or Use Car Inventory Management)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6. Inventory Management - New Car (Or New Car Inventory Management)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7. Trade-In Marketplace</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8. Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9. Ecommerce</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10. vAuto SubPrime Tool</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11. xTime Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <picklist>
+            <controllingField>Product_Selection__c</controllingField>
+            <picklistValues>
+                <fullName>ATC/KBB Core</fullName>
+                <controllingFieldValues>8. Media</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ATC/KBB Non-Core</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Auction Genius</fullName>
+                <controllingFieldValues>5. Inventory Management - Used Car (Or Use Car Inventory Management)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AutoTrader Classics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Check In 7</fullName>
+                <controllingFieldValues>11. xTime Service</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HomeNet Core</fullName>
+                <controllingFieldValues>1. Inventory Syndication, Vehicle Merchandising, Camera</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HomeNet Non-Core</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kelley Blue Book Price Advisor Report</fullName>
+                <controllingFieldValues>5. Inventory Management - Used Car (Or Use Car Inventory Management)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MakeMyDeal</fullName>
+                <controllingFieldValues>9. Ecommerce</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing 7</fullName>
+                <controllingFieldValues>11. xTime Service</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Private Seller</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scheduling 7</fullName>
+                <controllingFieldValues>11. xTime Service</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TIM Core</fullName>
+                <controllingFieldValues>7. Trade-In Marketplace</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TIM Non-Core</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>vAuto</fullName>
+                <controllingFieldValues>10. vAuto SubPrime Tool</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>vAuto Conquest</fullName>
+                <controllingFieldValues>6. Inventory Management - New Car (Or New Car Inventory Management)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>vAuto Core</fullName>
+                <controllingFieldValues>4. Pricing, Appraisal, Inventory Sourcing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>vAuto Non-Core</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>vAuto Provision</fullName>
+                <controllingFieldValues>5. Inventory Management - Used Car (Or Use Car Inventory Management)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VinSolutions Core</fullName>
+                <controllingFieldValues>2. ILM, CRM, Desking</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VinSolutions Non-Core</fullName>
+                <controllingFieldValues>3. Websites</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BU</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Emailed Lead</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ATC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HomeNet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Converted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent to Ecommerce</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent to Haystak</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent to HomeNet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent to TIM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent to vAuto</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent to vAuto Conquest</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent to VinSolutions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent to xTime Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Working</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Submitted_By_Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>Submitted_by__r.UserRole.Name</formula>
+        <inlineHelpText>formula field that reads the role assigned to the person who submitted the lead</inlineHelpText>
+        <label>Submitted By Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitted_by_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>CreatedBy.Email</formula>
+        <label>Submitted by Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitted_by__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>records the name of the person who clicked the button to submit the lead</inlineHelpText>
+        <label>Submitted by:</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>BU_Lead</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Targ__c</fullName>
+        <externalId>false</externalId>
+        <label>Target BU</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ATC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HomeNet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Unqualified_Lead__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check this box to unqualify this lead.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box to unqualify this lead.</inlineHelpText>
+        <label>Unqualified Lead</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>BU Referral</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Submitted_by__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Category__c</columns>
+        <columns>Targ__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Dealer__c</field>
+            <operation>notContain</operation>
+            <value>test</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Completed_Genius_Labs_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;6. Genius Labs, Auction Genius, AutoVisor&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Converted,Duplicate,Unqualified</value>
+        </filters>
+        <label>_Completed -  Genius Labs BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Completed_Haystack_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>2. SEM</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Converted,Duplicate,Unqualified</value>
+        </filters>
+        <label>_Completed - Haystack BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Completed_HomeNet_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;1. Inventory Syndication, Vehicle Merchandising, Camera&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Converted,Duplicate,Unqualified</value>
+        </filters>
+        <label>_Completed - HomeNet BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Completed_TIM_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>8. Trade-In Marketplace</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Converted,Duplicate,Unqualified</value>
+        </filters>
+        <label>_Completed - TIM BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Completed_VinSolutions_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;3. ILM, CRM, Desking&quot;,4. Websites</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Converted,Duplicate,Unqualified</value>
+        </filters>
+        <label>_Completed - VinSolutions BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Completed_vAuto_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;5. Pricing, Appraisal, Inventory Sourcing&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Converted,Duplicate,Unqualified</value>
+        </filters>
+        <label>_Completed - vAuto BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Completed_vAuto_Conquest_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>7. Inventory Management - New Car (Or New Car Inventory Management)</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Converted,Duplicate,Unqualified</value>
+        </filters>
+        <label>_Completed - vAuto Conquest BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>New_Genius_Labs_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;6. Genius Labs, Auction Genius, AutoVisor&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open,Sent to Genius Labs</value>
+        </filters>
+        <label>_New - Genius Labs BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>New_Haystack_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>2. SEM</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open,Sent to Haystak</value>
+        </filters>
+        <label>_New - Haystack BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>New_HomeNet_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;1. Inventory Syndication, Vehicle Merchandising, Camera&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open,Sent to HomeNet</value>
+        </filters>
+        <label>_New - HomeNet BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>New_Last_Week</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Status__c</columns>
+        <columns>Submitted_by__c</columns>
+        <columns>Targ__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_WEEK</value>
+        </filters>
+        <filters>
+            <field>Dealer__c</field>
+            <operation>notContain</operation>
+            <value>test</value>
+        </filters>
+        <label>New Last Week</label>
+    </listViews>
+    <listViews>
+        <fullName>New_TIM_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>8. Trade-In Marketplace</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open,Sent to TIM</value>
+        </filters>
+        <label>_New - TIM BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>New_This_Week</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Status__c</columns>
+        <columns>Submitted_by__c</columns>
+        <columns>Targ__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <filters>
+            <field>Dealer__c</field>
+            <operation>notContain</operation>
+            <value>test</value>
+        </filters>
+        <label>New This Week</label>
+    </listViews>
+    <listViews>
+        <fullName>New_VinSolutions_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;3. ILM, CRM, Desking&quot;,4. Websites</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open,Sent to Genius Labs</value>
+        </filters>
+        <label>_New - VinSolutions BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>New_vAuto_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;5. Pricing, Appraisal, Inventory Sourcing&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open,Sent to Genius Labs</value>
+        </filters>
+        <label>_New - vAuto BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>New_vAuto_Conquest_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>7. Inventory Management - New Car (Or New Car Inventory Management)</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open,Sent to Genius Labs</value>
+        </filters>
+        <label>_New - vAuto Conquest BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_BU_Leads</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Lead_Age__c</columns>
+        <columns>Next_Step__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Open,Working,Sent to Genius Labs,Sent to Haystak,Sent to VinSolutions,Sent</value>
+        </filters>
+        <filters>
+            <field>Dealer__c</field>
+            <operation>notContain</operation>
+            <value>Test</value>
+        </filters>
+        <label>Open BU Referrals - All</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_BU_Leads_CRM</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>District__c</columns>
+        <columns>Dealer__c</columns>
+        <columns>Submitted_by__c</columns>
+        <columns>Status__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Targ__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Open,Sent to VinSolutions</value>
+        </filters>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;3. ILM, CRM, Desking&quot;</value>
+        </filters>
+        <filters>
+            <field>Dealer__c</field>
+            <operation>notContain</operation>
+            <value>test</value>
+        </filters>
+        <label>Open BU Referrals - VinSolutions</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_BU_Referrals_Haystak</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>contains</operation>
+            <value>&quot;6.  Genius Labs, Auction Genius, AutoVisor&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Open,Sent to Genius Labs</value>
+        </filters>
+        <filters>
+            <field>Dealer__c</field>
+            <operation>notContain</operation>
+            <value>test</value>
+        </filters>
+        <label>Open BU Referrals - Genius Labs</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_BU_Referrals_Haystak1</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>contains</operation>
+            <value>&quot;6.  Genius Labs, Auction Genius, AutoVisor&quot;,2. SEM,4. Websites</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Open,Sent to Haystak</value>
+        </filters>
+        <filters>
+            <field>Dealer__c</field>
+            <operation>notContain</operation>
+            <value>test</value>
+        </filters>
+        <label>Open BU Referrals - Haystak</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_BU_Referrals_HomeNet</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;1. Inventory Syndication, Vehicle Merchandising, Camera&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Open,Sent to HomeNet</value>
+        </filters>
+        <filters>
+            <field>Dealer__c</field>
+            <operation>notContain</operation>
+            <value>test</value>
+        </filters>
+        <label>Open BU Referrals - HomeNet</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_BU_Referrals_Media</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>contains</operation>
+            <value>8. Media</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Dealer__c</field>
+            <operation>notContain</operation>
+            <value>test</value>
+        </filters>
+        <label>Open BU Referrals - Media</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_BU_Referrals_TIM</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>contains</operation>
+            <value>8. Trade-In Marketplace</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Open,Sent to TIM</value>
+        </filters>
+        <filters>
+            <field>Dealer__c</field>
+            <operation>notContain</operation>
+            <value>test</value>
+        </filters>
+        <label>Open BU Referrals - TIM</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_Leads_for_Pricing_Tool</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>contains</operation>
+            <value>&quot;5. Pricing, Appraisal, Inventory Sourcing&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Open,Sent to vAuto</value>
+        </filters>
+        <filters>
+            <field>Dealer__c</field>
+            <operation>notContain</operation>
+            <value>test</value>
+        </filters>
+        <label>Open BU Referrals - vAuto</label>
+    </listViews>
+    <listViews>
+        <fullName>Working_Genius_Labs_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;6. Genius Labs, Auction Genius, AutoVisor&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Working</value>
+        </filters>
+        <label>_Working - Genius Labs BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Working_Haystack_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>2. SEM</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Working</value>
+        </filters>
+        <label>_Working - Haystack BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Working_HomeNet_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;1. Inventory Syndication, Vehicle Merchandising, Camera&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Working</value>
+        </filters>
+        <label>_Working - HomeNet BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Working_TIM_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>8. Trade-In Marketplace</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Working</value>
+        </filters>
+        <label>_Working - TIM BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Working_VinSolutions_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;3. ILM, CRM, Desking&quot;,4. Websites</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Working</value>
+        </filters>
+        <label>_Working - VinSolutions BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Working_vAuto_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>&quot;5. Pricing, Appraisal, Inventory Sourcing&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Working</value>
+        </filters>
+        <label>_Working - vAuto BU Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Working_vAuto_Conquest_BU_Referrals</fullName>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Dealer__c</columns>
+        <columns>Product_Selection__c</columns>
+        <columns>Status__c</columns>
+        <columns>Add_l_Lead_Info__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Selection__c</field>
+            <operation>equals</operation>
+            <value>7. Inventory Management - New Car (Or New Car Inventory Management)</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Working</value>
+        </filters>
+        <label>_Working - vAuto Conquest BU Referrals</label>
+    </listViews>
+    <nameField>
+        <label>Referral Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>BU Referral</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Converted</fullName>
+        <active>true</active>
+        <description>Used when the lead has been converted to an opportunity.</description>
+        <label>Converted</label>
+        <picklistValues>
+            <picklist>Product_Category__c</picklist>
+            <values>
+                <fullName>Buying Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CRM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ILM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Selection__c</picklist>
+            <values>
+                <fullName>1%2E Inventory Syndication%2C Vehicle Merchandising%2C Camera</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2E vAuto SubPrime Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%2E xTime Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E ILM%2C CRM%2C Desking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Websites</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Pricing%2C Appraisal%2C Inventory Sourcing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Inventory Management - Used Car %28Or Use Car Inventory Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Inventory Management - New Car %28Or New Car Inventory Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Trade-In Marketplace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Ecommerce</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Type__c</picklist>
+            <values>
+                <fullName>ATC%2FKBB Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATC%2FKBB Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auction Genius</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Check In 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kelley Blue Book Price Advisor Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MakeMyDeal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduling 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Conquest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Provision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>ATC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BU</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Emailed Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Converted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Sent to Ecommerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to Haystak</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to vAuto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to vAuto Conquest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to xTime Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Targ__c</picklist>
+            <values>
+                <fullName>ATC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>New_BU_Referral</fullName>
+        <active>true</active>
+        <description>Used when creating a new BU Referral</description>
+        <label>New BU Referral</label>
+        <picklistValues>
+            <picklist>Product_Category__c</picklist>
+            <values>
+                <fullName>Buying Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CRM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ILM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Selection__c</picklist>
+            <values>
+                <fullName>1%2E Inventory Syndication%2C Vehicle Merchandising%2C Camera</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2E vAuto SubPrime Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%2E xTime Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E ILM%2C CRM%2C Desking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Websites</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Pricing%2C Appraisal%2C Inventory Sourcing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Inventory Management - Used Car %28Or Use Car Inventory Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Inventory Management - New Car %28Or New Car Inventory Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Trade-In Marketplace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Ecommerce</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Type__c</picklist>
+            <values>
+                <fullName>ATC%2FKBB Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATC%2FKBB Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auction Genius</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Check In 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kelley Blue Book Price Advisor Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MakeMyDeal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduling 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Conquest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Provision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>ATC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BU</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Emailed Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Converted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Sent to Ecommerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to Haystak</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to vAuto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to vAuto Conquest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to xTime Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Targ__c</picklist>
+            <values>
+                <fullName>ATC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Prospect</fullName>
+        <active>true</active>
+        <description>Default record type after BU Lead is created</description>
+        <label>Prospect</label>
+        <picklistValues>
+            <picklist>Product_Category__c</picklist>
+            <values>
+                <fullName>Buying Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CRM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ILM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Selection__c</picklist>
+            <values>
+                <fullName>1%2E Inventory Syndication%2C Vehicle Merchandising%2C Camera</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2E vAuto SubPrime Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%2E xTime Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E ILM%2C CRM%2C Desking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Websites</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Pricing%2C Appraisal%2C Inventory Sourcing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Inventory Management - Used Car %28Or Use Car Inventory Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Inventory Management - New Car %28Or New Car Inventory Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Trade-In Marketplace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Ecommerce</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Type__c</picklist>
+            <values>
+                <fullName>ATC%2FKBB Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATC%2FKBB Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auction Genius</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Check In 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kelley Blue Book Price Advisor Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MakeMyDeal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduling 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Conquest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Provision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>ATC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BU</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Emailed Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Converted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Sent to Ecommerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to Haystak</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to vAuto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to vAuto Conquest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to xTime Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Targ__c</picklist>
+            <values>
+                <fullName>ATC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Unqualified</fullName>
+        <active>true</active>
+        <description>Used when BU Lead Status is set to Unqualified</description>
+        <label>Unqualified</label>
+        <picklistValues>
+            <picklist>Product_Category__c</picklist>
+            <values>
+                <fullName>Buying Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CRM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ILM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Selection__c</picklist>
+            <values>
+                <fullName>1%2E Inventory Syndication%2C Vehicle Merchandising%2C Camera</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2E vAuto SubPrime Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%2E xTime Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E ILM%2C CRM%2C Desking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Websites</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Pricing%2C Appraisal%2C Inventory Sourcing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Inventory Management - Used Car %28Or Use Car Inventory Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Inventory Management - New Car %28Or New Car Inventory Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Trade-In Marketplace</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Ecommerce</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Type__c</picklist>
+            <values>
+                <fullName>ATC%2FKBB Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATC%2FKBB Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auction Genius</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Check In 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kelley Blue Book Price Advisor Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MakeMyDeal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduling 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions Non-Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Conquest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Core</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto Provision</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>ATC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BU</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Emailed Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Converted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Sent to Ecommerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to Haystak</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to vAuto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to vAuto Conquest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent to xTime Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Targ__c</picklist>
+            <values>
+                <fullName>ATC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomeNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KBB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>vAuto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Product_Category__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Source__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Submitted_by__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Targ__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Submitted_by__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Dealer__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>District__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Category__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Targ__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Cannot_Convert_Lead_wo_Product_Type</fullName>
+        <active>true</active>
+        <description>Product Selection and Product Type must be selected to convert a lead.</description>
+        <errorConditionFormula>Lead_Converted__c = TRUE &amp;&amp;
+ISPICKVAL (Product_Selection__c, &quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>Product_Selection__c</errorDisplayField>
+        <errorMessage>Product Selection and Product Type must be selected to convert a lead.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Enter_Final_Comments</fullName>
+        <active>true</active>
+        <description>If Lead Status = Unqualified, Final Comments must be entered.</description>
+        <errorConditionFormula>Lead_Converted__c = FALSE &amp;&amp;
+Duplicate_Lead__c = FALSE &amp;&amp;
+Unqualified_Lead__c = TRUE &amp;&amp;
+ISBLANK(Final_Comments__c )</errorConditionFormula>
+        <errorDisplayField>Final_Comments__c</errorDisplayField>
+        <errorMessage>Please enter your Final Comments if this lead is Unqualified.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Only_One_Checkbox</fullName>
+        <active>true</active>
+        <description>Prevents a user from checking more than one lead status.</description>
+        <errorConditionFormula>Lead_Converted__c = TRUE &amp;&amp;
+Duplicate_Lead__c = TRUE &amp;&amp;
+Unqualified_Lead__c = TRUE
+||
+Lead_Converted__c = TRUE &amp;&amp;
+Duplicate_Lead__c = TRUE
+||
+Lead_Converted__c = TRUE &amp;&amp;
+Unqualified_Lead__c = TRUE
+||
+Duplicate_Lead__c = TRUE &amp;&amp;
+Unqualified_Lead__c = TRUE</errorConditionFormula>
+        <errorDisplayField>Duplicate_Lead__c</errorDisplayField>
+        <errorMessage>You may only select one lead status.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Create_Opp</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create Opp</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/006/e?retURL=%2F006%2Fo 
+&amp;accid={!BU_Referrals__c.DealerId__c} 
+&amp;opp3=Set by the System upon Save 
+&amp;opp11=&quot;Prospect&quot; 
+&amp;CF00NE0000003Nd1G={!BU_Referrals__c.Name}
+&amp;opp9={!TODAY()}
+&amp;opp17=BU Lead Campaign
+&amp;opp6=Employee Referral</url>
+    </webLinks>
+</CustomObject>

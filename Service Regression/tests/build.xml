@@ -1,0 +1,27 @@
+<project xmlns:provar="antlib:com.provar.testrunner.ant" default="runtests">
+
+	<property environment="env"/>
+	
+  	<property name="testproject.home" value="C:\Users\bjweber\Provar Projects\Regression\Service Regression"/>
+	<property name="testproject.results" value="C:\Users\bjweber\Provar Projects\Regression\Antresults"/>
+
+	<target name="runtests">
+		<provar:compile
+	
+				projectPath="${testproject.home}"
+			/>
+		<provar:run
+	
+			projectPath="${testproject.home}"
+			resultsPath="${testproject.results}"
+			testEnvironment="UAT"
+			webBrowserConfiguration="PhantomJS"
+	  		>
+			<fileset dir="C:\Users\bjweber\Provar Projects\Regression\Service Regression\tests">
+		<!--	<include name="Account\**\*.*"/> -->
+
+				
+			</fileset>
+		</provar:run>
+	</target>
+</project>

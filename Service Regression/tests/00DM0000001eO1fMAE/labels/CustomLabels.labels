@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Case_Related_OrderItem_Does_Not_Exist</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case - Related OrderItem Does Not Exist</shortDescription>
+        <value>Case record does not have related Order Products (update message)</value>
+    </labels>
+    <labels>
+        <fullName>Internal_Error_Message</fullName>
+        <categories>General</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Internal Error Message</shortDescription>
+        <value>An internal error occurred, please contact system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>MassAccountTeamReassignLimit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MassAccountTeamReassignLimit</shortDescription>
+        <value>200</value>
+    </labels>
+    <labels>
+        <fullName>Order_Activated_Status_Message</fullName>
+        <categories>Order</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Activated Status Message</shortDescription>
+        <value>Cannot edit Order Products related to Activated Order</value>
+    </labels>
+    <labels>
+        <fullName>Order_Product_Car_Make_Required_Fields</fullName>
+        <categories>Order Product</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Product - Car Make Required Fields</shortDescription>
+        <value>Car Make Fields are Required (update error message)</value>
+    </labels>
+    <labels>
+        <fullName>Order_Product_Help_Document_Link</fullName>
+        <categories>Order Product</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Product - Help Document Link</shortDescription>
+        <value>https://help.salesforce.com/apex/HTViewHelpDoc?id=orderproduct_fields.htm&amp;language=en_US</value>
+    </labels>
+    <labels>
+        <fullName>Order_Product_KBB_Lead_Driver_Required_Fields</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Product - KBB Lead Driver Required Fields</shortDescription>
+        <value>Car Make Fields are Required (update error message)</value>
+    </labels>
+    <labels>
+        <fullName>Order_Product_Premium_Field_Help</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Product - Premium Field Help</shortDescription>
+        <value>Help text for Premium Fields</value>
+    </labels>
+    <labels>
+        <fullName>Order_Product_Premium_Required_Fields</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Product - Premium Required Fields</shortDescription>
+        <value>Premium contract information required. Please ensure that Premium Type, Premium Value, Premium Advertised Make, Premium Vehicle Quantity, Premium Vehicle Monthly Rate, and Premium Co-op Level of Service are filled out.</value>
+    </labels>
+    <labels>
+        <fullName>Order_Product_Required_Fields_Message</fullName>
+        <categories>Order Product</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Product - Required Fields Message</shortDescription>
+        <value>Order Product Fields are required when Configuration checkbox is selected (update Message)</value>
+    </labels>
+    <labels>
+        <fullName>Order_Product_Tier_Governor_Field_Help</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Product - Tier Governor Field Help</shortDescription>
+        <value>Help text for Tier Governor Fields</value>
+    </labels>
+    <labels>
+        <fullName>Order_Product_Tier_Governor_Required_Fields</fullName>
+        <categories>Order Product</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Product - Tier Governor Required Fields</shortDescription>
+        <value>Tier Gov Fields are required (update message)</value>
+    </labels>
+    <labels>
+        <fullName>RestrictProductConfig</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RestrictProductConfig</shortDescription>
+        <value>You cant add more than one product configuration record</value>
+    </labels>
+    <labels>
+        <fullName>Tier_Governor_Type_Incorrect_Sequence_Message</fullName>
+        <categories>Product Configuration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tier Governor Type Incorrect Sequence Message</shortDescription>
+        <value>Incorrect Sequence of Tier Governor Type field, please enter in sequence of (Make, Early Model, All Car)</value>
+    </labels>
+</CustomLabels>
