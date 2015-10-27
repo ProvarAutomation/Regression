@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Service Regression/templates/template 1.xml&apos; to &apos;accountColumnHeaders.xml&apos;" description="Rename resource &apos;template 1.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="templates/template 1.xml" name="accountColumnHeaders.xml" stamp="1441733096111" updateReferences="true"/>
-</session>
