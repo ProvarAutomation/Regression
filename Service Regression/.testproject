@@ -22,12 +22,6 @@
             <connectionUrl url="sf:user=servicetest1@autotrader.com.qa;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
-        <connection name="Kevin">
-          <summary>Kevin Mest</summary>
-          <connectionUrls>
-            <connectionUrl url="sf:user=kevin.mest@autotrader.com;logonAsConnection=Admin"/>
-          </connectionUrls>
-        </connection>
         <connection name="AdamGrille">
           <summary>AC</summary>
           <connectionUrls>
