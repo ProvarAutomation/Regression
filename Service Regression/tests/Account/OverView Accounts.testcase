@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="0">
+<testCase id="17">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
@@ -1577,8 +1577,8 @@
               <arguments>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="BillingAdress">
-                      <fieldLocator uri="ui:pageobject:field?field=BillingAdress&amp;pageId=pageobjects.ExtractBillingAddress"/>
+                    <uiFieldAssertion resultName="ShippingAdress">
+                      <fieldLocator uri="ui:pageobject:field?field=ShippingAdress&amp;pageId=pageobjects.ExtractBillingAddress"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
                           <value class="value" valueClass="string">16070 STATE ROUTE 170\r\nCALCUTTA, OH 43920-9686\r\nUSA</value>
@@ -1638,17 +1638,6 @@
         <apiParam group="target" name="uiTargetUrl" title="Web Page">
           <type>
             <textType/>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
           </type>
         </apiParam>
       </generatedParameters>
@@ -1744,17 +1733,12 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Set the Hierarchy Type select to Business</value>
                         </argument>
-                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="value" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType>
-                              <constraints>
-                                <valueConstraint name="boundedValues">Bill To|Business|Primary to Secondary</valueConstraint>
-                              </constraints>
-                            </choiceType>
+                            <textType/>
                           </type>
                         </apiParam>
                         <apiParam group="value" name="blur" title="Tab off field">
@@ -1998,15 +1982,12 @@
       </generatedParameters>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="119" title="On SF Account view (Dealer) screen">
-      <tags>
-        <string>disabled</string>
-      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer&amp;consoleTabType=CurrentTab"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Dont</value>
@@ -2020,22 +2001,11 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Account view (Dealer) screen</value>
         </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Main</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow">
-          <value class="value" valueClass="boolean">true</value>
-        </argument>
-        <argument id="captureBefore"/>
-        <argument id="captureAfter"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="120">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="153" title="Click the MS Dynamics Account field">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="121" title="Click the MS Dynamics Account field">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=MS_Dynamics_Account__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26field%3DMS_Dynamics_Account__c"/>
@@ -2054,9 +2024,6 @@
                 </argument>
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Click the MS Dynamics Account field</value>
-                </argument>
-                <argument id="wait">
-                  <value class="uiWait" uri="ui:wait:alert:timeout=60"/>
                 </argument>
               </arguments>
               <generatedParameters>
@@ -2155,9 +2122,6 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="127" title="On SF Account view (Dealer) screen">
-      <tags>
-        <string>disabled</string>
-      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
@@ -2307,9 +2271,6 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="139" title="On SF Account view (Dealer) screen">
-      <tags>
-        <string>disabled</string>
-      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>

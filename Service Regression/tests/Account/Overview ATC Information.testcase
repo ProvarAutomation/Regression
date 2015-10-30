@@ -180,6 +180,9 @@
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="10" title="UI Assert">
@@ -201,7 +204,7 @@
                       <fieldLocator uri="ui:locator?name=ATC_Collection_Status__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26field%3DATC_Collection_Status__c"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string"/>
+                          <value class="value"/>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -209,6 +212,9 @@
                 </argument>
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
                 </argument>
               </arguments>
             </apiCall>
