@@ -70,6 +70,12 @@
             <connectionUrl url="sf:user=wendy.hatfield@autotrader.com.qa;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
+        <connection name="EdMerrick">
+          <summary>\t</summary>
+          <connectionUrls>
+            <connectionUrl url="sf:user=ed.merrick@autotrader.com.qa;logonAsConnection=Admin"/>
+          </connectionUrls>
+        </connection>
       </connections>
     </connectionClass>
   </connectionClasses>
