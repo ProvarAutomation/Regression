@@ -63,5 +63,8 @@ public class AccountOverview {
 	@LinkType()
 	@FindBy(xpath = "//*[@id=\"001E000000mEZZY_00NE0000005Bwnz_link\"]")
 	public WebElement sVOCRequestsSourceAccount0;
+	@LinkType()
+	@FindBy(xpath = "//*[@id=\"msgBox\"]/table/tbody/tr/td[2]/div/div/a")
+	public WebElement showAllResults;
 			
 }
