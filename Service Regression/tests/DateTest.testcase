@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="2">
+  <summary/>
+  <steps>
+    <apiCall apiId="customapis.CheckIf7DaysOld" name="CheckIf7DaysOld" testItemId="2" title="Check If 7 Days Old: ⇒ OldDate">
+      <arguments>
+        <argument id="oldDateString">
+          <value class="value" valueClass="string">11/3/2015 4:04 PM</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">OldDate</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="3" title="Assert: true EqualTo {OldDate}">
+      <arguments>
+        <argument id="expectedValue">
+          <value class="value" valueClass="string">true</value>
+        </argument>
+        <argument id="actualValue">
+          <value class="variable">
+            <path element="OldDate"/>
+          </value>
+        </argument>
+        <argument id="comparisonType">
+          <value class="value" valueClass="string">EqualTo</value>
+        </argument>
+        <argument id="caseSensitive">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="numeric">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="retainDecimals">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="nullGreater">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="matchMultiLine">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="matchDotAll">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="failureMessage"/>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>
