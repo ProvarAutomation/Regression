@@ -632,6 +632,15 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Opportunity Product add product screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="43">

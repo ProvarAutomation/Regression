@@ -67,7 +67,9 @@ public class CheckIf7DaysOld {
     public void execute() {
 
     	// Put our implementation logic here.
+    	testLogger.info("Reading in: " + oldDateString);
     	String oldDateString2 = oldDateString.substring(0, oldDateString.indexOf(' '));
+    	testLogger.info("Ignoring hr:min : " + oldDateString2);
     	
     	SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
     	Date oldDate = null;
@@ -79,14 +81,20 @@ public class CheckIf7DaysOld {
 		}
     	long oldMs = oldDate.getTime();
     	long currentMs = System.currentTimeMillis();
+
+    	testLogger.info("Comparing " + oldDate + " to the current time (" + currentMs + ")");
     	
     	Boolean testResult = false;
+    	testLogger.info(currentMs + " - " + oldMs + " > 1 week (in ms)?");
     	if((currentMs - oldMs) > 6.048e8) {
+    		testLogger.info("YES! " + oldDateString2 + " is (more than) a week old");
     		testResult = true;
+    	} else {
+    		testLogger.info("NO! " + oldDateString2 + " is not a week old");
+    		testResult = false;
+    		
     	}
     	
-        // Store the result (if appropriate).
-    	String dummyResult = this.getClass().getName() + " result";
         testExecutionContext.setValue(resultName, testResult, resultScope);
         
     }
