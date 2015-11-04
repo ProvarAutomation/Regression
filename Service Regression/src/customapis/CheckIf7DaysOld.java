@@ -66,25 +66,34 @@ public class CheckIf7DaysOld {
     @TestApiExecutor
     public void execute() {
 
+    	int spaceIndex = 0;
+    	String oldDateString2 = null, timeStamp = null;
+    	Date oldDate = null;
+    	long oldMs, currentMs;
+    	Boolean testResult;
     	// Put our implementation logic here.
     	testLogger.info("Reading in: " + oldDateString);
-    	String oldDateString2 = oldDateString.substring(0, oldDateString.indexOf(' '));
-    	testLogger.info("Ignoring hr:min : " + oldDateString2);
+    	
+    	spaceIndex = oldDateString.indexOf(' ');
+    	oldDateString2 = oldDateString.substring(0, spaceIndex);
+    	timeStamp = oldDateString.substring(spaceIndex);
+    	
+    	testLogger.info("Date: " + oldDateString2 +" | Time: " + timeStamp);
     	
     	SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-    	Date oldDate = null;
     	try {
 			oldDate = sdf.parse(oldDateString2);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	long oldMs = oldDate.getTime();
-    	long currentMs = System.currentTimeMillis();
+    	oldMs = oldDate.getTime() + convertTimeStampToMs(timeStamp);
+    	
+    	currentMs = System.currentTimeMillis();
 
     	testLogger.info("Comparing " + oldDate + " to the current time (" + currentMs + ")");
     	
-    	Boolean testResult = false;
+    	testResult = false;
     	testLogger.info(currentMs + " - " + oldMs + " > 1 week (in ms)?");
     	if((currentMs - oldMs) > 6.048e8) {
     		testLogger.info("YES! " + oldDateString2 + " is (more than) a week old");
@@ -99,4 +108,23 @@ public class CheckIf7DaysOld {
         
     }
     
+    private long convertTimeStampToMs(String timestamp) {
+    	try {
+    		SimpleDateFormat date12Format = new SimpleDateFormat("hh:mm a");
+    	    SimpleDateFormat date24Format = new SimpleDateFormat("HH:mm");
+    	    
+			timestamp = date24Format.format(date12Format.parse(timestamp));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	    	
+    	long time = 0;
+    	int index = timestamp.indexOf(':');
+    	time += Integer.parseInt(timestamp.substring(0, index)) * 3.6e+6;
+    	time += Integer.parseInt(timestamp.substring(index+1)) * 60000;
+    	
+    	    	
+    	return time;
+    }
 }
