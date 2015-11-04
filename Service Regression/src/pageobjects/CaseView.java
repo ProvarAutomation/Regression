@@ -26,6 +26,8 @@ public class CaseView {
 
 	}
 	
+	@PageWaitAfter.BackgroundActivity(timeoutSeconds = 60)
+	@PageWait.Field(timeoutSeconds = 10)
 	@TextType()
 	@FindBy(xpath = "//*[@id=\"ClosedDate_ileinner\"]")
 	public WebElement DateTimeClosed;
