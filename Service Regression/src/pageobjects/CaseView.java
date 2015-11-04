@@ -25,7 +25,10 @@ public class CaseView {
 		
 
 	}
-
+	
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"ClosedDate_ileinner\"]")
+	public WebElement DateTimeClosed;
 	@TextType(maxLength = 100)
 	@FindBy(xpath = "//*[@id=\"00NE0000005Bwf0_ileinner\"]")
 	public WebElement SVOC_Id__c;
