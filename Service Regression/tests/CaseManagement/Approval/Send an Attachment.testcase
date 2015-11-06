@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="217">
+<testCase id="3">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="71" title="Salesforce Connect: ServiceUser (Test)">
@@ -36,7 +36,7 @@
         <argument id="environment"/>
       </arguments>
     </apiCall>
-    <caseCall testCaseId="0c770bd6-e9d6-448b-8c22-8ed9d4d0a35e" testItemId="53">
+    <caseCall testCaseId="092b89d3-99ff-4505-b853-7998e6742542" testItemId="74">
       <arguments>
         <argument id="reuseConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
@@ -355,9 +355,10 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Click the Done button</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
