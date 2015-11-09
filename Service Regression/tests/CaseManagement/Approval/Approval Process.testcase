@@ -38,7 +38,7 @@
         <argument id="environment"/>
       </arguments>
     </apiCall>
-    <caseCall testCaseId="58bc2c7a-02f7-4cfc-a98b-fbb75ed40edf" testItemId="39">
+    <caseCall testCaseId="092b89d3-99ff-4505-b853-7998e6742542" testItemId="40">
       <arguments>
         <argument id="reuseConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
