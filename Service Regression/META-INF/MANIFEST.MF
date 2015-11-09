@@ -5,4 +5,4 @@ Bundle-SymbolicName: Service_Regression
 Bundle-Version: 1.0.0.qualifier
 Require-Bundle: com.provar.core.testapi,
  com.provar.core.model.base,
- com.provar.core.lib.selenium-2.46.0
+ com.provar.core.lib.selenium-2.48.2

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="41">
+<testCase id="248">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: WendyHatfield (Test)">
@@ -43,7 +43,7 @@
       </arguments>
       <parameterValueSources/>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="130" title="On SF Change Control view (Admin) screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="130" title="On SF Chatter Invitation home screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">WendyHatfield</value>
@@ -58,7 +58,7 @@
           <value class="value" valueClass="string">a08M000000Alz0M</value>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Change Control view (Admin) screen</value>
+          <value class="value" valueClass="string">On SF Chatter Invitation home screen</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
