@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="40">
+<testCase id="84">
   <summary>undefined</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: WendyHatfield (Test)">
@@ -292,35 +292,31 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="11" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="235" title="UI Assert">
               <arguments>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="Request_Type__c">
+                      <fieldLocator uri="ui:locator?name=Request_Type__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DSLX__Change_Control__c%26field%3DRequest_Type__c"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="value" comparisonType="None"/>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
                 <argument id="resultName">
                   <value class="value" valueClass="string">ReqType</value>
                 </argument>
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Test</value>
                 </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiPageAssertion/>
-                  </value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Request_Type__c">
-                      <fieldLocator uri="ui:locator?name=Request_Type__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DSLX__Change_Control__c%26field%3DRequest_Type__c"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="options" comparisonType="None"/>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
+                <argument id="captureAfter"/>
               </arguments>
             </apiCall>
             <apiCall apiId="customapis.PicklistArrayCompare" name="PicklistArrayCompare" testItemId="12" title="Picklist Array Compare: ⇒ ReqTypeMatch">
@@ -373,6 +369,9 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="failureMessage"/>
+                <argument id="numeric">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="21" title="Account Reassignment">
@@ -1648,6 +1647,7 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Set the Change Control Request field to Test Request</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="value" title="Value">
@@ -3238,4 +3238,5 @@
   <params/>
   <args/>
   <parameterValueSources/>
+  <tags/>
 </testCase>

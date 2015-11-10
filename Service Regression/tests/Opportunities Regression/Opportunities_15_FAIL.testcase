@@ -211,27 +211,34 @@
               <clauses>
                 <clause name="substeps" testItemId="57">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="58" title="Click the OPPORTUNITY.NAME field">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="58" title="Click and Confirm the Opportunities Delete button">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=OPPORTUNITY_NAME&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26field%3DNAME%26relationship%3DOpportunities"/>
+                          <value class="uiLocator" uri="ui:locator?name=Delete&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26action%3DDelete%26relationship%3DOpportunities"/>
                         </argument>
                         <argument id="interaction">
-                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                          <value class="uiInteraction" uri="ui:interaction?name=actionWithOk"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Click the OPPORTUNITY.NAME field</value>
+                          <value class="value" valueClass="string">Click and Confirm the Opportunities Delete button</value>
                         </argument>
                         <argument id="wait"/>
                         <argument id="captureBefore"/>
                         <argument id="captureAfter"/>
                         <argument id="hover"/>
+                        <argument id="value"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="value" title="Expected Message">
+                          <summary>The expected message.  The test will fail if this is populated and doesn't match the actual message.</summary>
+                          <type>
+                            <textType/>
                           </type>
                         </apiParam>
                       </generatedParameters>

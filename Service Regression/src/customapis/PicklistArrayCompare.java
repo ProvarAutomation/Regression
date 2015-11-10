@@ -70,6 +70,7 @@ public class PicklistArrayCompare {
     
     @TestApiExecutor
     public void execute() {
+    	testLogger.info("Picklist choices: " + picklistChoices);
     	picklistChoices = picklistChoices.substring(1, picklistChoices.length()-1);
     	
     	picklistChoices = picklistChoices.replaceAll("\\s+", "");

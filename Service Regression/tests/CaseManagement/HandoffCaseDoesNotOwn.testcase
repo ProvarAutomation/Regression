@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="205">
+<testCase id="175">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
@@ -783,7 +783,7 @@
       <clauses>
         <clause name="substeps" testItemId="33">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="34" title="Set Reference Type the Owner reference to Queue">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="39" title="Set Reference Type the Owner reference to User">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=newOwn&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DOwnerId"/>
@@ -792,7 +792,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=sfReftype"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">Queue</value>
+                  <value class="value" valueClass="string">005</value>
                 </argument>
                 <argument id="captureBefore">
                   <value class="value" valueClass="boolean">false</value>
@@ -801,7 +801,7 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set Reference Type the Owner reference to Queue</value>
+                  <value class="value" valueClass="string">Set Reference Type the Owner reference to User</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
@@ -840,19 +840,19 @@
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Case&amp;field=OwnerId" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Case&amp;field=OwnerId" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
                     <textType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>

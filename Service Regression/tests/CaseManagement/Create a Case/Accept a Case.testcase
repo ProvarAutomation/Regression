@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="223">
+<testCase id="121">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
@@ -38,7 +38,7 @@
         <argument id="environment"/>
       </arguments>
     </apiCall>
-    <caseCall testCaseId="0c770bd6-e9d6-448b-8c22-8ed9d4d0a35e" testItemId="2">
+    <caseCall testCaseId="092b89d3-99ff-4505-b853-7998e6742542" testItemId="31">
       <arguments>
         <argument id="reuseConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>

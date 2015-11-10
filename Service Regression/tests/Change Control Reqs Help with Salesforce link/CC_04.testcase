@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="248">
+<testCase id="89">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: WendyHatfield (Test)">
@@ -43,13 +43,13 @@
       </arguments>
       <parameterValueSources/>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="130" title="On SF Chatter Invitation home screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="253" title="On SF Change Control view (Admin) screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">WendyHatfield</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?"/>
+          <value class="uiTarget" uri="sf:ui:target?object=SLX__Change_Control__c&amp;action=View&amp;recordType=Admin"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Always</value>
@@ -58,7 +58,7 @@
           <value class="value" valueClass="string">a08M000000Alz0M</value>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Chatter Invitation home screen</value>
+          <value class="value" valueClass="string">On SF Change Control view (Admin) screen</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -71,9 +71,9 @@
         <argument id="captureAfter"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="131">
+        <clause name="substeps" testItemId="254">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="239" title="With OpenActivities rows 1">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="256" title="With OpenActivities rows 1">
               <tags/>
               <arguments>
                 <argument id="uiConnectionName">
@@ -101,7 +101,7 @@
                 <argument id="autoPaginate"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="240"/>
+                <clause name="substeps" testItemId="257"/>
               </clauses>
               <generatedParameters>
                 <apiParam group="options" name="autoPaginate" title="Auto Paginate">
@@ -112,7 +112,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="241" title="With ActivityHistories rows 1">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="258" title="With ActivityHistories rows 1">
               <tags/>
               <arguments>
                 <argument id="uiConnectionName">
@@ -140,7 +140,7 @@
                 <argument id="autoPaginate"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="242"/>
+                <clause name="substeps" testItemId="259"/>
               </clauses>
               <generatedParameters>
                 <apiParam group="options" name="autoPaginate" title="Auto Paginate">
@@ -151,7 +151,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="243" title="With CombinedAttachments rows 1">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="260" title="With CombinedAttachments rows 1">
               <tags/>
               <arguments>
                 <argument id="uiConnectionName">
@@ -179,7 +179,7 @@
                 <argument id="autoPaginate"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="244"/>
+                <clause name="substeps" testItemId="261"/>
               </clauses>
               <generatedParameters>
                 <apiParam group="options" name="autoPaginate" title="Auto Paginate">
@@ -190,7 +190,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="245" title="With RelatedEntityHistoryList rows 1">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="262" title="With RelatedEntityHistoryList rows 1">
               <tags/>
               <arguments>
                 <argument id="uiConnectionName">
@@ -218,7 +218,7 @@
                 <argument id="autoPaginate"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="246"/>
+                <clause name="substeps" testItemId="263"/>
               </clauses>
               <generatedParameters>
                 <apiParam group="options" name="autoPaginate" title="Auto Paginate">
@@ -229,7 +229,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="248" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="264" title="UI Assert">
               <arguments>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
@@ -346,7 +346,7 @@
                 <argument id="captureAfter"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiRead" name="UiRead" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand" testItemId="252" title="UI Read/Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiRead" name="UiRead" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand" testItemId="265" title="UI Read/Assert">
               <arguments>
                 <argument id="resultName">
                   <value class="value" valueClass="string">Values</value>
@@ -384,10 +384,18 @@
           </steps>
         </clause>
       </clauses>
-      <generatedParameters/>
+      <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
     </apiCall>
   </steps>
   <params/>
   <args/>
   <parameterValueSources/>
+  <tags/>
 </testCase>
