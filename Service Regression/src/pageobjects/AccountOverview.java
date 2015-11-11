@@ -5,8 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import com.provar.core.testapi.annotations.*;
 
 @Page( title="AccountOverview"                                
-     , summary=""
-     , relativeUrl=""
      , connection="ServiceUser"
      )             
 public class AccountOverview {
@@ -33,7 +31,7 @@ public class AccountOverview {
 	@FindBy(xpath = "//a[contains(@id,'RelatedActivityList_link')]")
 	public WebElement QuickviewOpenActivities;
 	@LinkType()
-	@FindBy(xpath = "//a[contains(@id,'RelatedHistoryList_link')]")
+	@FindBy(xpath = "//a[contains(@id,'RelatedEntityHistoryList_link')]/span")
 	public WebElement QuickviewActivityHistory;
 	@LinkType()
 	@FindBy(xpath = "//a[contains(@id,'RelatedContractList_link')]")

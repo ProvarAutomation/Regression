@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="89">
+<testCase id="6">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
@@ -471,128 +471,6 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="219" title="Activity History">
-              <arguments>
-                <argument id="description">
-                  <value class="value" valueClass="string">Activity History</value>
-                </argument>
-              </arguments>
-              <clauses>
-                <clause name="hidden" testItemId="220">
-                  <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="221" title="Hover the Quickview Activity History">
-                      <arguments>
-                        <argument id="locator">
-                          <value class="uiLocator" uri="ui:pageobject:field?field=QuickviewActivityHistory&amp;pageId=pageobjects.AccountOverview"/>
-                        </argument>
-                        <argument id="interaction">
-                          <value class="uiInteraction" uri="ui:interaction?name=hover"/>
-                        </argument>
-                        <argument id="hover">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="captureBefore">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="captureAfter">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Hover the Quickview Activity History</value>
-                        </argument>
-                        <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
-                        </argument>
-                      </arguments>
-                      <generatedParameters/>
-                    </apiCall>
-                    <apiCall apiId="customapis.QuickviewBracketNumberExtract" name="QuickviewBracketNumberExtract" testItemId="222" title="Quickview Bracket Number Extract: ⇒ BracketNo">
-                      <arguments>
-                        <argument id="QuickviewString">
-                          <value class="variable">
-                            <path element="Values"/>
-                            <path element="QuickviewActivityHistory"/>
-                          </value>
-                        </argument>
-                        <argument id="resultName">
-                          <value class="value" valueClass="string">BracketNo</value>
-                        </argument>
-                        <argument id="resultScope">
-                          <value class="value" valueClass="string">Test</value>
-                        </argument>
-                      </arguments>
-                    </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="223" title="Click the Quickview Activity History">
-                      <arguments>
-                        <argument id="locator">
-                          <value class="uiLocator" uri="ui:pageobject:field?field=QuickviewActivityHistory&amp;pageId=pageobjects.AccountOverview"/>
-                        </argument>
-                        <argument id="interaction">
-                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                        </argument>
-                        <argument id="hover">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="captureBefore">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="captureAfter">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Click the Quickview Activity History</value>
-                        </argument>
-                        <argument id="wait"/>
-                      </arguments>
-                      <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
-                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                          <type>
-                            <booleanType/>
-                          </type>
-                        </apiParam>
-                      </generatedParameters>
-                    </apiCall>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="322" title="Assert: {NumRowsRead.fields.ActivityHistories.totalRowCount} GreaterThanOrEqualTo {BracketNo}">
-                      <arguments>
-                        <argument id="expectedValue">
-                          <value class="variable">
-                            <path element="NumRowsRead"/>
-                            <path element="fields"/>
-                            <path element="ActivityHistories"/>
-                            <path element="totalRowCount"/>
-                          </value>
-                        </argument>
-                        <argument id="actualValue">
-                          <value class="variable">
-                            <path element="BracketNo"/>
-                          </value>
-                        </argument>
-                        <argument id="comparisonType">
-                          <value class="value" valueClass="string">GreaterThanOrEqualTo</value>
-                        </argument>
-                        <argument id="caseSensitive">
-                          <value class="value" valueClass="boolean">true</value>
-                        </argument>
-                        <argument id="retainDecimals">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="nullGreater">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="matchMultiLine">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="matchDotAll">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="failureMessage"/>
-                      </arguments>
-                    </apiCall>
-                  </steps>
-                </clause>
-              </clauses>
-            </apiCall>
             <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="82" title="Account Team">
               <arguments>
                 <argument id="description">
@@ -804,6 +682,128 @@
                             <path element="NumRowsRead"/>
                             <path element="fields"/>
                             <path element="Contacts"/>
+                            <path element="totalRowCount"/>
+                          </value>
+                        </argument>
+                        <argument id="actualValue">
+                          <value class="variable">
+                            <path element="BracketNo"/>
+                          </value>
+                        </argument>
+                        <argument id="comparisonType">
+                          <value class="value" valueClass="string">GreaterThanOrEqualTo</value>
+                        </argument>
+                        <argument id="caseSensitive">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="retainDecimals">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="nullGreater">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="matchMultiLine">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="matchDotAll">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="failureMessage"/>
+                      </arguments>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="330" title="Activity History">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">Activity History</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="331">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="332" title="Hover the Quickview Activity History">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:field?field=QuickviewActivityHistory&amp;pageId=pageobjects.AccountOverview"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=hover"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Hover the Quickview Activity History</value>
+                        </argument>
+                        <argument id="wait">
+                          <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
+                        </argument>
+                      </arguments>
+                      <generatedParameters/>
+                    </apiCall>
+                    <apiCall apiId="customapis.QuickviewBracketNumberExtract" name="QuickviewBracketNumberExtract" testItemId="333" title="Quickview Bracket Number Extract: ⇒ BracketNo">
+                      <arguments>
+                        <argument id="QuickviewString">
+                          <value class="variable">
+                            <path element="Values"/>
+                            <path element="QuickviewActivityHistory"/>
+                          </value>
+                        </argument>
+                        <argument id="resultName">
+                          <value class="value" valueClass="string">BracketNo</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="334" title="Click the Quickview Activity History">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:field?field=QuickviewActivityHistory&amp;pageId=pageobjects.AccountOverview"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Quickview Activity History</value>
+                        </argument>
+                        <argument id="wait"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="335" title="Assert: {NumRowsRead.fields.ActivityHistories.totalRowCount} GreaterThanOrEqualTo {BracketNo}">
+                      <arguments>
+                        <argument id="expectedValue">
+                          <value class="variable">
+                            <path element="NumRowsRead"/>
+                            <path element="fields"/>
+                            <path element="ActivityHistories"/>
                             <path element="totalRowCount"/>
                           </value>
                         </argument>
