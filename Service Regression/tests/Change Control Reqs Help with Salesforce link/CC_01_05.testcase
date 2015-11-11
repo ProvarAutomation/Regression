@@ -1123,6 +1123,9 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="failureMessage"/>
+                        <argument id="numeric">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
                       </arguments>
                     </apiCall>
                   </steps>
@@ -1167,24 +1170,24 @@
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" modelBinding="sf:ui:binding:object?object=SLX__Change_Control__c&amp;field=Request_Type__c" name="value" title="Value">
+                        <apiParam group="value" modelBinding="sf:ui:binding:object?object=SLX__Change_Control__c&amp;field=Change_Control_Request__c" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType>
+                            <textType>
                               <constraints>
-                                <valueConstraint name="boundedValues">Account Team Assignment:Account Team Assignment|Broken Functionality:Broken Functionality|Feature Request:Feature Request|General User Question:General User Question|Missing Account:Missing Account|Primary &amp; Secondary Change:Primary &amp; Secondary Change|Account Status or BU Spend Issue:Account Status or BU Spend Issue|Report or View Request:Report or View Request|Account Reassignment:Account Reassignment|Account Status:Account Status|Salesforce Questions:Salesforce Questions|Dashboard/Report Issue:Dashboard/Report Issue|Missing BU Product:Missing BU Product|Salesforce1 App:Salesforce1 App|Pilot/Test Questions:Pilot/Test Questions</valueConstraint>
-                                <valueConstraint name="unrestricted">true</valueConstraint>
+                                <valueConstraint name="maxLength">30</valueConstraint>
+                                <valueConstraint name="maxLines">1</valueConstraint>
                               </constraints>
-                            </choiceType>
+                            </textType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
