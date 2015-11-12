@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="1">
+<testCase id="57">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="2" title="AC - Adam Grill">
@@ -590,21 +590,26 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Set the Mobile Phone to 12312312345</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <textType/>
+                            <textType>
+                              <constraints>
+                                <valueConstraint name="mimeType">text/plain</valueConstraint>
+                              </constraints>
+                            </textType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
