@@ -30,60 +30,80 @@
           <summary/>
           <connectionUrls>
             <connectionUrl url="sf:user=servicetest1@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=servicetest1@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="QA" url="sf:user=servicetest1@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="AdamGrille">
           <summary>AC</summary>
           <connectionUrls>
             <connectionUrl url="sf:user=adam.grill@atg.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=adam.grill@atg.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="QA" url="sf:user=adam.grill@atg.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="DavidLumpkin">
           <summary>The PC</summary>
           <connectionUrls>
             <connectionUrl url="sf:user=david.lumpkin@atgdealer.atg.qa;logonAsConnection=Admin"/>
+            <connectionUrl envName="QA" url="sf:user=david.lumpkin@atgdealer.atg.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=david.lumpkin@atgdealer.atg.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="RichardDearden">
           <summary>IC</summary>
           <connectionUrls>
             <connectionUrl url="sf:user=Richard.dearden@atg.atg.qa;logonAsConnection=Admin"/>
+            <connectionUrl envName="QA" url="sf:user=Richard.dearden@atg.atg.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=Richard.dearden@atg.atg.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="PhilipWeber">
           <summary>DSC/ISM</summary>
           <connectionUrls>
             <connectionUrl url="sf:user=Philip.weber@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl envName="QA" url="sf:user=Philip.weber@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=Philip.weber@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="MegGrady">
           <summary/>
           <connectionUrls>
             <connectionUrl url="sf:user=meg.grady@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl envName="QA" url="sf:user=meg.grady@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=meg.grady@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="ServiceUser">
           <summary/>
           <connectionUrls>
             <connectionUrl secureStorageNodeId="f04bce51-79e8-4ef8-a824-4bb947b2f7ba" url="sf:user=servicetest1@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl envName="QA" url="sf:user=servicetest1@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=servicetest1@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="AmeliaGoldman">
           <summary/>
           <connectionUrls>
             <connectionUrl url="sf:user=amelia.goldman@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl envName="QA" url="sf:user=amelia.goldman@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=amelia.goldman@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="WendyHatfield">
           <summary>Wendy</summary>
           <connectionUrls>
             <connectionUrl url="sf:user=wendy.hatfield@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl envName="QA" url="sf:user=wendy.hatfield@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=wendy.hatfield@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="EdMerrick">
           <summary>\t</summary>
           <connectionUrls>
             <connectionUrl url="sf:user=ed.merrick@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl envName="QA" url="sf:user=ed.merrick@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=ed.merrick@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
       </connections>
