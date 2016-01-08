@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="0">
+<testCase id="3">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
@@ -63,7 +63,7 @@
       <clauses>
         <clause name="substeps" testItemId="3">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="4" title="With Account rows {Name = &quot;#1 Power GM&quot;}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="4" title="With Account rows {Name = &quot;Crown KIA St. Petersburg&quot;}">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">ServiceUser</value>
@@ -76,11 +76,11 @@
                     <lhs class="variable">
                       <path element="Name"/>
                     </lhs>
-                    <rhs class="value" valueClass="string">#1 Power GM</rhs>
+                    <rhs class="value" valueClass="string">Crown KIA St. Petersburg</rhs>
                   </value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With Account rows {Name = "#1 Power GM"}</value>
+                  <value class="value" valueClass="string">With Account rows {Name = "Crown KIA St. Petersburg"}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -92,7 +92,9 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
-                <argument id="autoPaginate"/>
+                <argument id="autoPaginate">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="5">
