@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="17">
+<testCase id="6">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
@@ -13,9 +13,7 @@
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
         </argument>
-        <argument id="uiApplicationName">
-          <value class="value" valueClass="string">ATC_Service_Console</value>
-        </argument>
+        <argument id="uiApplicationName"/>
         <argument id="quickUiLogin">
           <value class="value" valueClass="boolean">true</value>
         </argument>
@@ -46,7 +44,7 @@
           <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=List&amp;listView=All_Accounts&amp;tab=standard-Account&amp;application=ATC_Service_Console"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=List&amp;application=ATC_Sales&amp;listView=All_Accounts&amp;tab=standard-Account"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Always</value>
@@ -70,7 +68,7 @@
       <clauses>
         <clause name="substeps" testItemId="24">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="25" title="With Account rows {Name = &quot;#1 Power GM&quot;}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="25" title="With Account rows {Name = &quot;Crown KIA&quot;}">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">ServiceUser</value>
@@ -83,11 +81,11 @@
                     <lhs class="variable">
                       <path element="Name"/>
                     </lhs>
-                    <rhs class="value" valueClass="string">#1 Power GM</rhs>
+                    <rhs class="value" valueClass="string">Crown KIA</rhs>
                   </value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With Account rows {Name = "#1 Power GM"}</value>
+                  <value class="value" valueClass="string">With Account rows {Name = "Crown KIA"}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -152,19 +150,7 @@
           </steps>
         </clause>
       </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
-      </generatedParameters>
+      <generatedParameters/>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="28" title="On SF Account view (Dealer) screen">
       <arguments>
@@ -215,87 +201,92 @@
                 </argument>
               </arguments>
               <resultAssertions>
-                <resultAssertion comparisonType="IsPresent" resultName="field__SVOC_Id__c" title="Check SVOC_Id__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__Phone" title="Check Phone value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Name" title="Check Name value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__Fax" title="Check Fax value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ParentId" title="Check ParentId value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Website" title="Check Website value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Dealer_Type__c" title="Check Dealer_Type__c value">
+                <resultAssertion comparisonType="None" dotAll="true" resultName="field__SVOC_Id__c" title="Check SVOC_Id__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Phone" title="Check Phone value"/>
+                <resultAssertion comparisonType="None" resultName="field__Name" title="Check Name value"/>
+                <resultAssertion comparisonType="None" resultName="field__Fax" title="Check Fax value"/>
+                <resultAssertion comparisonType="None" resultName="field__ParentId" title="Check ParentId value"/>
+                <resultAssertion comparisonType="None" resultName="field__Website" title="Check Website value"/>
+                <resultAssertion comparisonType="None" resultName="field__Dealer_Type__c" title="Check Dealer_Type__c value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Type" title="Check Type value">
+                <resultAssertion comparisonType="None" resultName="field__Type" title="Check Type value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Dealer_Nameplates__c" title="Check Dealer_Nameplates__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__SVOC_Sub_Type__c" title="Check SVOC_Sub_Type__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Open_Opportuntities__c" title="Check Open_Opportuntities__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__SVOC_Status__c" title="Check SVOC_Status__c value">
+                <resultAssertion comparisonType="None" resultName="field__Dealer_Nameplates__c" title="Check Dealer_Nameplates__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__SVOC_Sub_Type__c" title="Check SVOC_Sub_Type__c value">
+                  <expected class="value" valueClass="string"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__Open_Opportuntities__c" title="Check Open_Opportuntities__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__SVOC_Status__c" title="Check SVOC_Status__c value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Last_Update_by_SVOC__c" title="Check Last_Update_by_SVOC__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__Additional_Notes__c" title="Check Additional_Notes__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Status__c" title="Check ATC_Status__c value">
+                <resultAssertion comparisonType="None" resultName="field__Last_Update_by_SVOC__c" title="Check Last_Update_by_SVOC__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Status__c" title="Check ATC_Status__c value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Spend__c" title="Check ATC_Spend__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__KBB_Status__c" title="Check KBB_Status__c value">
+                <resultAssertion comparisonType="None" resultName="field__ATC_Spend__c" title="Check ATC_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__KBB_Status__c" title="Check KBB_Status__c value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__KBB_Spend__c" title="Check KBB_Spend__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__Haystack_Status__c" title="Check Haystack_Status__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__Haystack_Spend__c" title="Check Haystack_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__KBB_Spend__c" title="Check KBB_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Haystack_Status__c" title="Check Haystack_Status__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Haystack_Spend__c" title="Check Haystack_Spend__c value"/>
                 <resultAssertion comparisonType="IsPresent" resultName="field__TIM_Status__c" title="Check TIM_Status__c value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__TIM_Spend__c" title="Check TIM_Spend__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__HomeNet_Status__c" title="Check HomeNet_Status__c value">
+                <resultAssertion comparisonType="None" resultName="field__TIM_Spend__c" title="Check TIM_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__HomeNet_Status__c" title="Check HomeNet_Status__c value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__HomeNet_Spend__c" title="Check HomeNet_Spend__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__vAuto_Status__c" title="Check vAuto_Status__c value">
+                <resultAssertion comparisonType="None" resultName="field__HomeNet_Spend__c" title="Check HomeNet_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__vAuto_Status__c" title="Check vAuto_Status__c value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__vAuto_Spend__c" title="Check vAuto_Spend__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Vin_Status__c" title="Check Vin_Status__c value">
+                <resultAssertion comparisonType="None" resultName="field__vAuto_Spend__c" title="Check vAuto_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Vin_Status__c" title="Check Vin_Status__c value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Vin_Spend__c" title="Check Vin_Spend__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__Monthly_Sales_Volume__c" title="Check Monthly_Sales_Volume__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Total_Media_Spend__c" title="Check Total_Media_Spend__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Total_Software_Spend__c" title="Check Total_Software_Spend__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Total_Spend__c" title="Check Total_Spend__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Current_AC__c" title="Check Current_AC__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__SVOC_Region__c" title="Check SVOC_Region__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__SVOC_District__c" title="Check SVOC_District__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__ATC_Collection_Status__c" title="Check ATC_Collection_Status__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__ATC_Service_Alert_Last_Modified__c" title="Check ATC_Service_Alert_Last_Modified__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__ATC_Security_Question__c" title="Check ATC_Security_Question__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__ATC_Service_Alert_Last_Modified_By__c" title="Check ATC_Service_Alert_Last_Modified_By__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__ATC_Security_Response__c" title="Check ATC_Security_Response__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Sales_View_Flag__c" title="Check Sales_View_Flag__c value">
+                <resultAssertion comparisonType="None" resultName="field__Vin_Spend__c" title="Check Vin_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Monthly_Sales_Volume__c" title="Check Monthly_Sales_Volume__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Total_Media_Spend__c" title="Check Total_Media_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Total_Software_Spend__c" title="Check Total_Software_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Total_Spend__c" title="Check Total_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Current_AC__c" title="Check Current_AC__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__SVOC_Region__c" title="Check SVOC_Region__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__SVOC_District__c" title="Check SVOC_District__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Collection_Status__c" title="Check ATC_Collection_Status__c value">
+                  <expected class="value" valueClass="string"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Service_Alert_Last_Modified__c" title="Check ATC_Service_Alert_Last_Modified__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Security_Question__c" title="Check ATC_Security_Question__c value">
+                  <expected class="value" valueClass="string"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Service_Alert_Last_Modified_By__c" title="Check ATC_Service_Alert_Last_Modified_By__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Security_Response__c" title="Check ATC_Security_Response__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Sales_View_Flag__c" title="Check Sales_View_Flag__c value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Lot_Size_New__c" title="Check Lot_Size_New__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Web_Inventory_Status__c" title="Check Web_Inventory_Status__c value">
+                <resultAssertion comparisonType="None" resultName="field__Lot_Size_New__c" title="Check Lot_Size_New__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Web_Inventory_Status__c" title="Check Web_Inventory_Status__c value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Lot_Size_Used__c" title="Check Lot_Size_Used__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Last_In_Person__c" title="Check Last_In_Person__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__Days_Since_Last_In_Person__c" title="Check Days_Since_Last_In_Person__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Service_Alert_Message__c" title="Check ATC_Service_Alert_Message__c value"/>
-                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__ATC_Sales_Alert_Message__c" title="Check ATC_Sales_Alert_Message__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Dynamics_Acct_GUID_Id__c" title="Check ATC_Dynamics_Acct_GUID_Id__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Visit_Expectations__c" title="Check ATC_Visit_Expectations__c value">
+                <resultAssertion comparisonType="None" resultName="field__Lot_Size_Used__c" title="Check Lot_Size_Used__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Last_In_Person__c" title="Check Last_In_Person__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Days_Since_Last_In_Person__c" title="Check Days_Since_Last_In_Person__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Service_Alert_Message__c" title="Check ATC_Service_Alert_Message__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Sales_Alert_Message__c" title="Check ATC_Sales_Alert_Message__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Dynamics_Acct_GUID_Id__c" title="Check ATC_Dynamics_Acct_GUID_Id__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Visit_Expectations__c" title="Check ATC_Visit_Expectations__c value">
                   <expected class="value"/>
                 </resultAssertion>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Co_op__c" title="Check ATC_Co_op__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Current_Advertising__c" title="Check ATC_Current_Advertising__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Current_Dealership_Processes__c" title="Check ATC_Current_Dealership_Processes__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Dealer_Expectations__c" title="Check ATC_Dealer_Expectations__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Goals_Objectives__c" title="Check ATC_Goals_Objectives__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Core_Four_Last_Updated_Date__c" title="Check ATC_Core_Four_Last_Updated_Date__c value"/>
-                <resultAssertion comparisonType="IsPresent" resultName="field__ATC_Core_Four_Last_Updated_By__c" title="Check ATC_Core_Four_Last_Updated_By__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Co_op__c" title="Check ATC_Co_op__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Current_Advertising__c" title="Check ATC_Current_Advertising__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Current_Dealership_Processes__c" title="Check ATC_Current_Dealership_Processes__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Dealer_Expectations__c" title="Check ATC_Dealer_Expectations__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Goals_Objectives__c" title="Check ATC_Goals_Objectives__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Core_Four_Last_Updated_Date__c" title="Check ATC_Core_Four_Last_Updated_Date__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Core_Four_Last_Updated_By__c" title="Check ATC_Core_Four_Last_Updated_By__c value"/>
               </resultAssertions>
               <parameterGeneratorProperties>
                 <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.ConnectionName">ServiceUser</propertyValue>
@@ -987,17 +978,6 @@
         </clause>
       </clauses>
       <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
         <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
           <summary>The Id of the SF Object to be Viewed or Edited.</summary>
           <type>
@@ -1154,17 +1134,6 @@
         </clause>
       </clauses>
       <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
         <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
           <summary>The Id of the SF Object to be Viewed or Edited.</summary>
           <type>
@@ -1305,7 +1274,7 @@
       <clauses>
         <clause name="substeps" testItemId="89">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="90" title="With Account rows {Name = &quot;#1 Power GM&quot;}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="90" title="With Account rows {Name = &quot;Crown KIA&quot;}">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">ServiceUser</value>
@@ -1318,11 +1287,11 @@
                     <lhs class="variable">
                       <path element="Name"/>
                     </lhs>
-                    <rhs class="value" valueClass="string">#1 Power GM</rhs>
+                    <rhs class="value" valueClass="string">Crown KIA</rhs>
                   </value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With Account rows {Name = "#1 Power GM"}</value>
+                  <value class="value" valueClass="string">With Account rows {Name = "Crown KIA"}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -1581,7 +1550,7 @@
                       <fieldLocator uri="ui:pageobject:field?field=ShippingAdress&amp;pageId=pageobjects.ExtractBillingAddress"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">16070 STATE ROUTE 170\r\nCALCUTTA, OH 43920-9686\r\nUSA</value>
+                          <value class="value" valueClass="string">5500 34TH ST N\r\nSAINT PETERSBURG, FL 33714-1829\r\nUSA</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -1594,7 +1563,7 @@
                   <value class="valueList" mutable="Mutable"/>
                 </argument>
                 <argument id="resultName">
-                  <value class="value" valueClass="string">BillingAddress</value>
+                  <value class="value" valueClass="string">ShippingAddress</value>
                 </argument>
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Test</value>
@@ -1610,7 +1579,7 @@
                       <fieldLocator uri="ui:pageobject:field?field=BillingAdress&amp;pageId=pageobjects.ExtractBillingAddress"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">16070 STATE ROUTE 170\r\nCALCUTTA, OH 43920-9686\r\nUSA</value>
+                          <value class="value" valueClass="string">6001 34TH ST N\r\nSAINT PETERSBURG, FL 33714-1251\r\nUSA</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
