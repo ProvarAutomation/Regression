@@ -36,6 +36,7 @@
             <connectionUrl url="sf:user=servicetest1@autotrader.com.qa;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=servicetest1@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=servicetest1@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Quoting" url="sf:user=servicetest1@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="AdamGrille">
@@ -44,6 +45,7 @@
             <connectionUrl url="sf:user=adam.grill@atg.com.qa;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=adam.grill@atg.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=adam.grill@atg.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Quoting" url="sf:user=adam.grill@atg.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="DavidLumpkin">
@@ -52,6 +54,7 @@
             <connectionUrl url="sf:user=david.lumpkin@atgdealer.atg.qa;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=david.lumpkin@atgdealer.atg.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=david.lumpkin@atgdealer.atg.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Quoting" url="sf:user=david.lumpkin@atgdealer.atg.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="RichardDearden">
@@ -60,6 +63,7 @@
             <connectionUrl url="sf:user=Richard.dearden@atg.atg.qa;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=Richard.dearden@atg.atg.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=Richard.dearden@atg.atg.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Quoting" url="sf:user=Richard.dearden@atg.atg.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="PhilipWeber">
@@ -68,6 +72,7 @@
             <connectionUrl url="sf:user=Philip.weber@autotrader.com.qa;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=Philip.weber@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=Philip.weber@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Quoting" url="sf:user=Philip.weber@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="MegGrady">
@@ -76,6 +81,7 @@
             <connectionUrl url="sf:user=meg.grady@autotrader.com.qa;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=meg.grady@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=meg.grady@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Quoting" url="sf:user=meg.grady@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="ServiceUser">
@@ -84,6 +90,7 @@
             <connectionUrl secureStorageNodeId="f04bce51-79e8-4ef8-a824-4bb947b2f7ba" url="sf:user=servicetest1@autotrader.com.qa;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=servicetest1@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=servicetest1@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Quoting" url="sf:user=servicetest1@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="AmeliaGoldman">
@@ -92,6 +99,7 @@
             <connectionUrl url="sf:user=amelia.goldman@autotrader.com.qa;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=amelia.goldman@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=amelia.goldman@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Quoting" url="sf:user=amelia.goldman@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="WendyHatfield">
@@ -100,6 +108,7 @@
             <connectionUrl url="sf:user=wendy.hatfield@autotrader.com.qa;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=wendy.hatfield@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=wendy.hatfield@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Quoting" url="sf:user=wendy.hatfield@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="EdMerrick">
@@ -108,6 +117,7 @@
             <connectionUrl url="sf:user=ed.merrick@autotrader.com.qa;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=ed.merrick@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=ed.merrick@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Quoting" url="sf:user=ed.merrick@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
       </connections>
