@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="PreProd" selectedWebBrowserType="Chrome">
+<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="Quoting" selectedWebBrowserType="Chrome">
   <title>/Service Regression/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -14,6 +14,9 @@
     <environment name="QA">
       <summary>Salesforce QA</summary>
     </environment>
+    <environment name="Quoting">
+      <summary>Salesforce Pricing Environment</summary>
+    </environment>
   </environments>
   <connectionClasses>
     <connectionClass name="sf">
@@ -21,9 +24,10 @@
         <connection name="Admin">
           <summary/>
           <connectionUrls>
-            <connectionUrl secureStorageNodeId="3cf849ee-e3bf-4728-a4bc-e8778e6f7b43" url="sf:user=provar.tester@coxauto.com.qa;password={password};securityToken={securityToken};environment=SANDBOX;userLoginUrl=https://atgdealer--preprod.cs25.my.salesforce.com"/>
+            <connectionUrl secureStorageNodeId="3cf849ee-e3bf-4728-a4bc-e8778e6f7b43" url="sf:user=provar.tester@coxauto.com.qa;password={password};securityToken={securityToken};environment=SANDBOX;userLoginUrl=https://atgdealer--quoting.cs24.my.salesforce.com"/>
             <connectionUrl envName="QA" secureStorageNodeId="5ed7d772-11fb-4964-be1a-a40e641a66fe" url="sf:user=provar.tester@coxauto.com.qa;password={password};securityToken={securityToken};environment=SANDBOX"/>
             <connectionUrl envName="PreProd" secureStorageNodeId="cb695e41-0284-4116-90ce-182ff8a37ef4" url="sf:user=provar.tester@autotrader.com.preprod;password={password};securityToken={securityToken};environment=SANDBOX"/>
+            <connectionUrl envName="Quoting" secureStorageNodeId="535e0277-3a98-44ea-af13-a2c834d4c311" url="sf:user=provar.tester@coxauto.com.quoting;password={password};securityToken={securityToken};environment=SANDBOX;userLoginUrl=https://atgdealer--preprod.cs25.my.salesforce.com"/>
           </connectionUrls>
         </connection>
         <connection name="ServiceTestUser">
