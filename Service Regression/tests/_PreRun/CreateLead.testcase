@@ -1927,39 +1927,5 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConvertLead" name="ApexConvertLead" testItemId="525" title="Convert Lead: {objectId} =&gt; {resultAccountId}/{resultContactId}/{resultOpportunityId}">
-      <arguments>
-        <argument id="apexConnectionName">
-          <value class="value" valueClass="string">ApexConnection</value>
-        </argument>
-        <argument id="leadId"/>
-        <argument id="accountId"/>
-        <argument id="contactId"/>
-        <argument id="ownerId"/>
-        <argument id="convertedStatus"/>
-        <argument id="createOpportunity"/>
-        <argument id="opportunityName">
-          <value class="value" valueClass="string">API test</value>
-        </argument>
-        <argument id="overwriteLeadSource">
-          <value class="value" valueClass="boolean">true</value>
-        </argument>
-        <argument id="sendNotificationEmail">
-          <value class="value" valueClass="boolean">false</value>
-        </argument>
-        <argument id="resultAccountIdName">
-          <value class="value" valueClass="string">convertedAccountId</value>
-        </argument>
-        <argument id="resultContactIdName">
-          <value class="value" valueClass="string">convertedContactId</value>
-        </argument>
-        <argument id="resultOpportunityIdName">
-          <value class="value" valueClass="string">convertedOpportunityId</value>
-        </argument>
-        <argument id="resultScope">
-          <value class="value" valueClass="string">Test</value>
-        </argument>
-      </arguments>
-    </apiCall>
   </steps>
 </testCase>
