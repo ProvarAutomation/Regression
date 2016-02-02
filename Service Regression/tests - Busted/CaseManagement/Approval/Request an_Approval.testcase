@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="25">
+<testCase id="3">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="resultName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>

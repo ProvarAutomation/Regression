@@ -397,7 +397,5 @@
   <params/>
   <args/>
   <parameterValueSources/>
-  <tags>
-    <string>disabled</string>
-  </tags>
+  <tags/>
 </testCase>

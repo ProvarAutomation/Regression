@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="21">
+<testCase id="25">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="11" title="Salesforce Connect: ServiceTestUser (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">ServiceTestUser</value>
@@ -13,7 +13,9 @@
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
         </argument>
-        <argument id="uiApplicationName"/>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">ATG_Sales_NGSS</value>
+        </argument>
         <argument id="quickUiLogin">
           <value class="value" valueClass="boolean">true</value>
         </argument>
@@ -36,7 +38,7 @@
         <argument id="environment"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="21" title="On SF Account view (Dealer) screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="54" title="On SF Account view (Dealer) screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceTestUser</value>
@@ -66,43 +68,7 @@
         </argument>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="55">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="9" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiPageAssertion/>
-                  </value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="NGSS_Flair__c">
-                      <fieldLocator uri="ui:locator?name=NGSS_Flair__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26field%3DNGSS_Flair__c"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="Contains">
-                          <value class="value" valueClass="string">Active</value>
-                        </uiAttributeAssertion>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-              </arguments>
-            </apiCall>
-          </steps>
-        </clause>
+        <clause name="substeps" testItemId="55"/>
       </clauses>
       <generatedParameters>
         <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
