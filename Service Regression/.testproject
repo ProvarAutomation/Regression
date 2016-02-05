@@ -18,6 +18,29 @@
       <summary>Salesforce Pricing Environment</summary>
     </environment>
   </environments>
+  <variables>
+    <testVariable name="CrownKiaAccount">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="minLength">0</valueConstraint>
+          <valueConstraint name="maxLength">9999</valueConstraint>
+          <valueConstraint name="regex"/>
+        </constraints>
+      </valueType>
+      <summary/>
+      <values>
+        <testVariableValue>
+          <value class="value" valueClass="string">0011900000Dazi4</value>
+        </testVariableValue>
+        <testVariableValue envName="Quoting">
+          <value class="value" valueClass="string">0011900000Dazi4</value>
+        </testVariableValue>
+        <testVariableValue envName="PreProd">
+          <value class="value" valueClass="string">001E000000MZN0B </value>
+        </testVariableValue>
+      </values>
+    </testVariable>
+  </variables>
   <connectionClasses>
     <connectionClass name="sf">
       <connections>

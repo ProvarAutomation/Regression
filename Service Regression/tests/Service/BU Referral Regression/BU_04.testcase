@@ -173,7 +173,11 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
+<<<<<<< HEAD:Service Regression/tests/Service/BU Referral Regression/BU_04.testcase
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="68" title="Set the Dealer reference to Case Subject">
+=======
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="11" title="Set the Dealer reference to Crown KIA">
+>>>>>>> f58f60ad08bd424090d6b147078a359182051752:Service Regression/tests - Busted/BU Referral Regression/BU_04.testcase
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Dealer__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DBU_Referrals__c%26field%3DDealer__c"/>

@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="0" registryId="f304b79e-bbc1-4f39-a4a3-7fd9796da746">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
+      <arguments>
+        <argument argId="d72f17e9-c6d3-453a-ae6e-de3adecbcf47" id="connectionName">
+          <value class="value" valueClass="string">ServiceTestUser</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">ServiceTestUser</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">ATG_Sales_NGSS</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument argId="b4031694-b5a9-441b-927f-5a1d287a1af2" id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="vfDebug"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="environment"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On SF Account view (Dealer) screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">ServiceTestUser</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer"/>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Account view (Dealer) screen</value>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Always</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
+        <argument id="sfUiTargetObjectId">
+          <value class="variable">
+            <path element="CrownKiaAccount"/>
+          </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="3">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiRead" name="UiRead" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand" testItemId="4" title="UI Read/Assert">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="attributesResultName">
+                  <value class="value" valueClass="string">Attributes</value>
+                </argument>
+                <argument id="errorsResultName">
+                  <value class="value" valueClass="string">Errors</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+              <resultAssertions>
+                <resultAssertion comparisonType="None" resultName="field__SVOC_Id__c" title="Check SVOC_Id__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Phone" title="Check Phone value"/>
+                <resultAssertion comparisonType="None" resultName="field__Name" title="Check Name value"/>
+                <resultAssertion comparisonType="None" resultName="field__Fax" title="Check Fax value"/>
+                <resultAssertion comparisonType="None" resultName="field__ParentId" title="Check ParentId value"/>
+                <resultAssertion comparisonType="None" resultName="field__Website" title="Check Website value"/>
+                <resultAssertion comparisonType="None" resultName="field__Dealer_Type__c" title="Check Dealer_Type__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__Type" title="Check Type value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__Dealer_Nameplates__c" title="Check Dealer_Nameplates__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__SVOC_Sub_Type__c" title="Check SVOC_Sub_Type__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__Open_Opportuntities__c" title="Check Open_Opportuntities__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__SVOC_Status__c" title="Check SVOC_Status__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__Last_Update_by_SVOC__c" title="Check Last_Update_by_SVOC__c value"/>
+              </resultAssertions>
+              <parameterGeneratorProperties>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.ConnectionName">ServiceTestUser</propertyValue>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.CustomObjectName"/>
+              </parameterGeneratorProperties>
+              <generatedParameters>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=SVOC_Id__c" name="field__SVOC_Id__c" title="SVOC Master_Id">
+                  <type>
+                    <textType>
+                      <constraints>
+                        <valueConstraint name="maxLength">100</valueConstraint>
+                        <valueConstraint name="maxLines">1</valueConstraint>
+                      </constraints>
+                    </textType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Phone" name="field__Phone" title="Account Phone">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Name" name="field__Name" title="Account Name">
+                  <type>
+                    <textType>
+                      <constraints>
+                        <valueConstraint name="maxLength">255</valueConstraint>
+                        <valueConstraint name="maxLines">1</valueConstraint>
+                      </constraints>
+                    </textType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Fax" name="field__Fax" title="Account Fax">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ParentId" name="field__ParentId" title="Parent Account">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Website" name="field__Website" title="Website">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Dealer_Type__c" name="field__Dealer_Type__c" title="Dealer Type">
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Independent:Independent|Franchise:Franchise</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Type" name="field__Type" title="Account Type">
+                  <summary>Customer Type</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Ad Agency:Ad Agency|Dealer:Dealer|Dealer Group:Dealer Group|OEM:OEM|OEMAA:OEMAA|Rental Car Company:Rental Car Company|Other:Other</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Dealer_Nameplates__c" name="field__Dealer_Nameplates__c" title="Dealer Nameplates">
+                  <summary>Select the OEM names that the Dealer has</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Acura:Acura|Aston Martin:Aston Martin|Audi:Audi|Bentley:Bentley|BMW:BMW|Bugatti:Bugatti|Buick:Buick|Cadillac:Cadillac|Chevrolet:Chevrolet|Chrysler:Chrysler|Dodge:Dodge|Ferrari:Ferrari|Fiat:Fiat|Fisker:Fisker|Ford:Ford|GMC:GMC|Harley-Davidson:Harley-Davidson|Honda:Honda|Hummer:Hummer|Hyundai:Hyundai|Independent Dealer:Independent Dealer|Infiniti:Infiniti|Isuzu:Isuzu|Jaguar:Jaguar|Jeep:Jeep|Kia:Kia|Lamborghini:Lamborghini|Land Rover:Land Rover|Lexus:Lexus|Lincoln:Lincoln|Lotus:Lotus|Maserati:Maserati|Maybach:Maybach|Mazda:Mazda|Mercedes-Benz:Mercedes-Benz|Mercury:Mercury|Mini Cooper:Mini Cooper|Mitsubishi:Mitsubishi|Nissan:Nissan|None:None|Peugeot:Peugeot|Pontiac:Pontiac|Porsche:Porsche|Rolls-Royce:Rolls-Royce|Saab:Saab|Scion:Scion|Subaru:Subaru|Suzuki:Suzuki|Toyota:Toyota|Volkswagen:Volkswagen|Volvo:Volvo</valueConstraint>
+                        <valueConstraint name="multiSelection">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=SVOC_Sub_Type__c" name="field__SVOC_Sub_Type__c" title="Customer Sub Type">
+                  <summary>updated by SVOC</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">AUCTION:AUCTION|AUTOMOTIVE:AUTOMOTIVE|CPO:CPO|Data Customer:Data Customer|Exporter:Exporter|Finance:Finance|FINANCIAL INSTITUTION:FINANCIAL INSTITUTION|FLEET:FLEET|GOVERNMENT - FEDERAL:GOVERNMENT - FEDERAL|GOVERNMENT - STATE, LOCAL:GOVERNMENT - STATE, LOCAL|INSURANCE COMPANY:INSURANCE COMPANY|LEASING COMPANY:LEASING COMPANY|Major Accounts:Major Accounts|Manufacturer:Manufacturer|Market:Market|National:National|New Car:New Car|NON-AUTOMOTIVE:NON-AUTOMOTIVE|Parent:Parent|Region:Region|RESELLER:RESELLER|SERVICE PROVIDER:SERVICE PROVIDER|Traffic Partnerships:Traffic Partnerships|Unclassified:Unclassified|Vehicle History Report:Vehicle History Report|WHOLESALER:WHOLESALER</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Open_Opportuntities__c" name="field__Open_Opportuntities__c" title="Open Opportuntities">
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">0</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=SVOC_Status__c" name="field__SVOC_Status__c" title="SVOC Status">
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">IN BUSINESS:IN BUSINESS|OUT OF BUSINESS:OUT OF BUSINESS|INVALID:INVALID|Ready for SVOC:Ready for SVOC|Sent to SVOC:Sent to SVOC|Under Review:Under Review|Approved:Approved|Rejected:Rejected</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Last_Update_by_SVOC__c" name="field__Last_Update_by_SVOC__c" title="Last Update by SVOC">
+                  <summary>this field is populated by the integration to SVOC when the last request to SVOC was processed</summary>
+                  <type>
+                    <dateTimeType>
+                      <constraints>
+                        <valueConstraint name="decimalPlaces">0</valueConstraint>
+                      </constraints>
+                    </dateTimeType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiRead" name="UiRead" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand" testItemId="5" title="UI Read/Assert">
+              <tags/>
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="attributesResultName">
+                  <value class="value" valueClass="string">Attributes</value>
+                </argument>
+                <argument id="errorsResultName">
+                  <value class="value" valueClass="string">Errors</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+              <resultAssertions>
+                <resultAssertion comparisonType="None" resultName="field__BillingAddress" title="Check BillingAddress value"/>
+                <resultAssertion comparisonType="None" resultName="field__ShippingAddress" title="Check ShippingAddress value"/>
+              </resultAssertions>
+              <parameterGeneratorProperties>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.ConnectionName">ServiceTestUser</propertyValue>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.CustomObjectName"/>
+              </parameterGeneratorProperties>
+              <generatedParameters>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingAddress" name="field__BillingAddress" title="Billing Address">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ShippingAddress" name="field__ShippingAddress" title="Shipping Address">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiRead" name="UiRead" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand" testItemId="8" title="UI Read/Assert">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="attributesResultName">
+                  <value class="value" valueClass="string">Attributes</value>
+                </argument>
+                <argument id="errorsResultName">
+                  <value class="value" valueClass="string">Errors</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+              <resultAssertions>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Status__c" title="Check ATC_Status__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Spend__c" title="Check ATC_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__KBB_Status__c" title="Check KBB_Status__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__KBB_Spend__c" title="Check KBB_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__TIM_Status__c" title="Check TIM_Status__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__TIM_Spend__c" title="Check TIM_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Haystak_Status__c" title="Check Haystak_Status__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__Haystak_Spend__c" title="Check Haystak_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__HomeNet_Status__c" title="Check HomeNet_Status__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__HomeNet_Spend__c" title="Check HomeNet_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__vAuto_Status__c" title="Check vAuto_Status__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__vAuto_Spend__c" title="Check vAuto_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Vin_Status__c" title="Check Vin_Status__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__Vin_Spend__c" title="Check Vin_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Monthly_Sales_Volume__c" title="Check Monthly_Sales_Volume__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Total_Media_Spend__c" title="Check Total_Media_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Total_Software_Spend__c" title="Check Total_Software_Spend__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Total_Spend__c" title="Check Total_Spend__c value"/>
+              </resultAssertions>
+              <parameterGeneratorProperties>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.ConnectionName">ServiceTestUser</propertyValue>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.CustomObjectName"/>
+              </parameterGeneratorProperties>
+              <generatedParameters>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ATC_Status__c" name="field__ATC_Status__c" title="ATC Status">
+                  <summary>Field is updated by the system based on the product status in the ATG Product library.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Prospect:Prospect|Active:Active|Former:Former</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ATC_Spend__c" name="field__ATC_Spend__c" title="ATC Spend">
+                  <summary>System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status.</summary>
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=KBB_Status__c" name="field__KBB_Status__c" title="KBB Status">
+                  <summary>Field is updated by the system based on the product status in the ATG Product library.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Prospect:Prospect|Active:Active|Former:Former</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=KBB_Spend__c" name="field__KBB_Spend__c" title="KBB Spend">
+                  <summary>System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status.</summary>
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=TIM_Status__c" name="field__TIM_Status__c" title="TIM Status">
+                  <summary>Field is updated by the system based on the product status in the ATG Product library.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Prospect:Prospect|Active:Active|Former:Former</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=TIM_Spend__c" name="field__TIM_Spend__c" title="TIM Spend">
+                  <summary>System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status.</summary>
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Haystak_Status__c" name="field__Haystak_Status__c" title="Haystak Status">
+                  <summary>Field is updated by the system based on the product status in the ATG Product library.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Prospect:Prospect|Active:Active|Former:Former</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Haystak_Spend__c" name="field__Haystak_Spend__c" title="Haystak Spend">
+                  <summary>System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status.</summary>
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=HomeNet_Status__c" name="field__HomeNet_Status__c" title="HomeNet Status">
+                  <summary>Field is updated by the system based on the product status in the ATG Product library.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Prospect:Prospect|Active:Active|Former:Former</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=HomeNet_Spend__c" name="field__HomeNet_Spend__c" title="HomeNet Spend">
+                  <summary>System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status.</summary>
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=vAuto_Status__c" name="field__vAuto_Status__c" title="vAuto Status">
+                  <summary>Field is updated by the system based on the product status in the ATG Product library.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Prospect:Prospect|Active:Active|Former:Former</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=vAuto_Spend__c" name="field__vAuto_Spend__c" title="vAuto Spend">
+                  <summary>System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status.</summary>
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Vin_Status__c" name="field__Vin_Status__c" title="Vin Status">
+                  <summary>Field is updated by the system based on the product status in the ATG Product library.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Prospect:Prospect|Active:Active|Former:Former</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Vin_Spend__c" name="field__Vin_Spend__c" title="Vin Spend">
+                  <summary>System calculated field - looks at the ATG Product library and totals the product spend based on the BU name and product status.</summary>
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Monthly_Sales_Volume__c" name="field__Monthly_Sales_Volume__c" title="Monthly Sales Volume">
+                  <summary>Number of cars sold monthly.</summary>
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">0</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Total_Media_Spend__c" name="field__Total_Media_Spend__c" title="Total Media Spend">
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Total_Software_Spend__c" name="field__Total_Software_Spend__c" title="Total Software Spend">
+                  <summary>Adds all the software BU spend together</summary>
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Total_Spend__c" name="field__Total_Spend__c" title="Total Spend">
+                  <type>
+                    <numericType>
+                      <constraints>
+                        <valueConstraint name="length">18</valueConstraint>
+                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                      </constraints>
+                    </numericType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiRead" name="UiRead" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand" testItemId="12" title="UI Read/Assert">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="attributesResultName">
+                  <value class="value" valueClass="string">Attributes</value>
+                </argument>
+                <argument id="errorsResultName">
+                  <value class="value" valueClass="string">Errors</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+              <resultAssertions>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Core_Four_Last_Updated_Date__c" title="Check ATC_Core_Four_Last_Updated_Date__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__ATC_Core_Four_Last_Updated_By__c" title="Check ATC_Core_Four_Last_Updated_By__c value"/>
+              </resultAssertions>
+              <parameterGeneratorProperties>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.ConnectionName">ServiceTestUser</propertyValue>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.CustomObjectName"/>
+              </parameterGeneratorProperties>
+              <generatedParameters>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ATC_Core_Four_Last_Updated_Date__c" name="field__ATC_Core_Four_Last_Updated_Date__c" title="Core Four Last Updated Date">
+                  <summary>ATC Custom Field for Core Four - Used to store the date when any of the core four description fields are updated.</summary>
+                  <type>
+                    <dateTimeType>
+                      <constraints>
+                        <valueConstraint name="decimalPlaces">0</valueConstraint>
+                      </constraints>
+                    </dateTimeType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ATC_Core_Four_Last_Updated_By__c" name="field__ATC_Core_Four_Last_Updated_By__c" title="Core Four Last Updated By">
+                  <type>
+                    <textType>
+                      <constraints>
+                        <valueConstraint name="maxLength">60</valueConstraint>
+                        <valueConstraint name="maxLines">1</valueConstraint>
+                      </constraints>
+                    </textType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiRead" name="UiRead" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand" testItemId="9" title="UI Read/Assert">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="attributesResultName">
+                  <value class="value" valueClass="string">Attributes</value>
+                </argument>
+                <argument id="errorsResultName">
+                  <value class="value" valueClass="string">Errors</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+              <resultAssertions>
+                <resultAssertion comparisonType="None" resultName="field__Current_AC__c" title="Check Current_AC__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__SVOC_Region__c" title="Check SVOC_Region__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__SVOC_District__c" title="Check SVOC_District__c value"/>
+                <resultAssertion comparisonType="None" resultName="field__Sales_View_Flag__c" title="Check Sales_View_Flag__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+                <resultAssertion comparisonType="None" resultName="field__Web_Inventory_Status__c" title="Check Web_Inventory_Status__c value">
+                  <expected class="value"/>
+                </resultAssertion>
+              </resultAssertions>
+              <parameterGeneratorProperties>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.ConnectionName">ServiceTestUser</propertyValue>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.CustomObjectName"/>
+              </parameterGeneratorProperties>
+              <generatedParameters>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Current_AC__c" name="field__Current_AC__c" title="Current AC">
+                  <type>
+                    <textType>
+                      <constraints>
+                        <valueConstraint name="maxLength">150</valueConstraint>
+                        <valueConstraint name="maxLines">1</valueConstraint>
+                      </constraints>
+                    </textType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=SVOC_Region__c" name="field__SVOC_Region__c" title="SVOC Region">
+                  <summary>updated by the integration w/SVOC</summary>
+                  <type>
+                    <textType>
+                      <constraints>
+                        <valueConstraint name="maxLength">10</valueConstraint>
+                        <valueConstraint name="maxLines">1</valueConstraint>
+                      </constraints>
+                    </textType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=SVOC_District__c" name="field__SVOC_District__c" title="SVOC District">
+                  <summary>updated by the integration w/SVOC</summary>
+                  <type>
+                    <textType>
+                      <constraints>
+                        <valueConstraint name="maxLength">10</valueConstraint>
+                        <valueConstraint name="maxLines">1</valueConstraint>
+                      </constraints>
+                    </textType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Sales_View_Flag__c" name="field__Sales_View_Flag__c" title="Sales View Flag">
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Yes:Yes|No:No</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Web_Inventory_Status__c" name="field__Web_Inventory_Status__c" title="Web Inventory Status">
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Active:Active|Pending:Pending|Retracted:Retracted|Restricted Display:Restricted Display|Out of Business:Out of Business|Deduped:Deduped</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiRead" name="UiRead" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand" testItemId="10" title="UI Read/Assert">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="attributesResultName">
+                  <value class="value" valueClass="string">Attributes</value>
+                </argument>
+                <argument id="errorsResultName">
+                  <value class="value" valueClass="string">Errors</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+              <resultAssertions>
+                <resultAssertion comparisonType="None" resultName="field__Description" title="Check Description value"/>
+              </resultAssertions>
+              <parameterGeneratorProperties>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.ConnectionName">ServiceTestUser</propertyValue>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.CustomObjectName"/>
+              </parameterGeneratorProperties>
+              <generatedParameters>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Description" name="field__Description" title="Account Description">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+  <params/>
+  <args/>
+</testCase>

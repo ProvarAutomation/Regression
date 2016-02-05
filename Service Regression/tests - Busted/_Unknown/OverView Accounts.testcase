@@ -2,13 +2,13 @@
 <testCase id="18">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="resultName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
@@ -44,19 +44,16 @@
       </tags>
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=List&amp;application=ATC_Sales&amp;listView=All_Accounts&amp;tab=standard-Account"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer"/>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Account view (Dealer) screen</value>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Always</value>
-        </argument>
-        <argument id="scTabType">
-          <value class="value" valueClass="string">HomeTab</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Account list screen</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -176,23 +173,13 @@
           <value class="value" valueClass="string">CurrentTab</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">001E000000mEZZY</value>
+          <value class="variable">
+            <path element="CrownKiaAccount"/>
+          </value>
         </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Account view (Dealer) screen</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore"/>
-        <argument id="captureAfter"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="29">
+        <clause name="substeps" testItemId="153">
           <steps>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiRead" name="UiRead" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand" testItemId="39" title="UI Read/Assert">
               <arguments>
@@ -1359,31 +1346,7 @@
                   </steps>
                 </clause>
               </clauses>
-              <generatedParameters>
-                <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-                  <summary>The tab type for Scaffolds</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-                <apiParam group="target" name="scPrimaryTabName" seq="1001" title="Primary Tab Name">
-                  <summary>The main tab name</summary>
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-                <apiParam group="target" name="scSecondaryTabName" seq="1002" title="Secondary Tab Name">
-                  <summary>The sub-tab name</summary>
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
+              <generatedParameters/>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="45" title="Click the Edit button">
               <arguments>
@@ -1541,7 +1504,7 @@
       <clauses>
         <clause name="substeps" testItemId="53">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="55" title="Click the Create Opp button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="151" title="Click the Create Opp button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Create_Opp&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26action%3DCreate_Opp"/>

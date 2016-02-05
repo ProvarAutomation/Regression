@@ -63,5 +63,11 @@ public class AccountOverview {
 	@LinkType()
 	@FindBy(xpath = "//*[@id=\"msgBox\"]/table/tbody/tr/td[2]/div/div/a")
 	public WebElement showAllResults;
+	@ChoiceListType()
+	@FindBy(name = "fcf")
+	public WebElement recentlyViewed;
+	@LinkType()
+	@FindBy(linkText = "Crown KIA")
+	public WebElement crownKIA;
 			
 }
