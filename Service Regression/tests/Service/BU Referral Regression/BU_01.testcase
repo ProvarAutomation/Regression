@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="5">
+<testCase id="7">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: AdamGrille (Test)">
@@ -37,6 +37,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On SF BU Referral home screen">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">AdamGrille</value>
@@ -106,7 +109,7 @@
           <value class="uiTarget" uri="sf:ui:target?object=BU_Referrals__c&amp;action=New&amp;recordType=New+BU+Referral"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+          <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="sfUiTargetResultName">
           <value class="value" valueClass="string">bU_Referrals__cId</value>
@@ -156,21 +159,27 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Set the Referral Name field to Test Referral</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=BU_Referrals__c&amp;field=Name" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <textType/>
+                    <textType>
+                      <constraints>
+                        <valueConstraint name="maxLength">80</valueConstraint>
+                        <valueConstraint name="maxLines">1</valueConstraint>
+                      </constraints>
+                    </textType>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
@@ -178,7 +187,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="11" title="Set the Dealer reference to Noah's Auto Plex">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="11" title="Set the Dealer reference to Case Subject">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Dealer__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DBU_Referrals__c%26field%3DDealer__c"/>
@@ -187,7 +196,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">Noah's Auto Plex</value>
+                  <value class="value" valueClass="string">Case Subject</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -202,23 +211,24 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Dealer reference to Noah's Auto Plex</value>
+                  <value class="value" valueClass="string">Set the Dealer reference to Case Subject</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=BU_Referrals__c&amp;field=Dealer__c" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
                     <textType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
@@ -226,7 +236,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="12" title="Set the Dealer Contact reference to Hannah Hatfield">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="12" title="Set the Dealer Contact reference to Provar Test">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Dealer_Contact__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DBU_Referrals__c%26field%3DDealer_Contact__c"/>
@@ -235,7 +245,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">Hannah Hatfield</value>
+                  <value class="value" valueClass="string">Provar Test</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -250,24 +260,24 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Dealer Contact reference to Hannah Hatfield</value>
+                  <value class="value" valueClass="string">Set the Dealer Contact reference to Provar Test</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=BU_Referrals__c&amp;field=Dealer_Contact__c" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=BU_Referrals__c&amp;field=Dealer_Contact__c" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
                     <textType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
@@ -492,7 +502,7 @@
                       <fieldLocator uri="ui:locator?name=Product_Type__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DBU_Referrals__c%26field%3DProduct_Type__c"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">HomeNet Core</value>
+                          <value class="value" valueClass="string">HomeNet Non-Core</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -500,6 +510,9 @@
                 </argument>
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
                 </argument>
               </arguments>
             </apiCall>
@@ -585,6 +598,9 @@
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="25" title="Set the Product Selection picklist to 3. Websites">
@@ -663,6 +679,9 @@
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="27" title="Set the Product Selection picklist to 4. Pricing, Appraisal, Inventory Sourcing">
@@ -716,7 +735,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="28" title="UI Assert">
               <arguments>
                 <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
+                  <value class="value" valueClass="string">PSPicklist</value>
                 </argument>
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Test</value>
@@ -731,7 +750,7 @@
                     <uiFieldAssertion resultName="Product_Type__c">
                       <fieldLocator uri="ui:locator?name=Product_Type__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DBU_Referrals__c%26field%3DProduct_Type__c"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                        <uiAttributeAssertion attributeName="value" comparisonType="None">
                           <value class="value" valueClass="string">vAuto Core</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
@@ -741,6 +760,64 @@
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="customapis.PicklistArrayCompare" name="PicklistArrayCompare" testItemId="51" title="Picklist Array Compare: ⇒ PSPicklistAssert">
+              <arguments>
+                <argument id="picklistChoices">
+                  <value class="variable">
+                    <path element="PSPicklist"/>
+                    <path element="fields"/>
+                    <path element="Product_Type__c"/>
+                    <path element="options"/>
+                  </value>
+                </argument>
+                <argument id="expectedChoices">
+                  <value class="value" valueClass="string">--None--,vAuto Core,vAuto Stockwave</value>
+                </argument>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">PSPicklistAssert</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="52" title="Assert: true EqualTo {PSPicklistAssert}">
+              <arguments>
+                <argument id="expectedValue">
+                  <value class="value" valueClass="string">true</value>
+                </argument>
+                <argument id="actualValue">
+                  <value class="variable">
+                    <path element="PSPicklistAssert"/>
+                  </value>
+                </argument>
+                <argument id="comparisonType">
+                  <value class="value" valueClass="string">EqualTo</value>
+                </argument>
+                <argument id="caseSensitive">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="numeric">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="retainDecimals">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="nullGreater">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="matchMultiLine">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="matchDotAll">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="failureMessage"/>
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="29" title="Set the Product Selection picklist to 5. Inventory Management - Used Car (Or Use Car Inventory Management)">
