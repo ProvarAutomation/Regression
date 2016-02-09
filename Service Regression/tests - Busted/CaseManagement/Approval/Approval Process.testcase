@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="1">
+<testCase id="15">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="resultName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
@@ -22,7 +22,11 @@
         <argument id="closeAllPrimaryTabs">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="reuseConnectionName"/>
+        <argument argId="c2abf0b5-1d23-406d-89a6-aedc4d05a726" id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
         <argument id="alreadyOpenBehaviour">
           <value class="value" valueClass="string">Fail</value>
         </argument>
@@ -36,20 +40,95 @@
         <argument id="username"/>
         <argument id="password"/>
         <argument id="environment"/>
+        <argument id="securityToken"/>
       </arguments>
     </apiCall>
-    <caseCall testCaseId="092b89d3-99ff-4505-b853-7998e6742542" testItemId="40">
+    <caseCall testCaseId="29b3208e-62ad-4fd5-9cc6-5a750cbf1a0e" testItemId="39">
       <arguments>
         <argument id="reuseConnectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
       </arguments>
+      <outputArguments>
+        <outputArgument id="CaseId">
+          <name class="value" valueClass="string">CaseId</name>
+        </outputArgument>
+      </outputArguments>
     </caseCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="57" title="On SF Account view (Dealer) screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">ServiceTestUser</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer"/>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Account view (Dealer) screen</value>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Always</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
+        <argument id="sfUiTargetObjectId">
+          <value class="variable">
+            <path element="CrownKiaAccount"/>
+          </value>
+        </argument>
+        <argument id="scTabType">
+          <value class="value" valueClass="string">ExistingTab</value>
+        </argument>
+        <argument id="scPrimaryTabName"/>
+        <argument id="scSecondaryTabName"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="58"/>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+          <summary>The tab type for Scaffolds</summary>
+          <type>
+            <choiceType>
+              <constraints>
+                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+              </constraints>
+            </choiceType>
+          </type>
+        </apiParam>
+        <apiParam group="target" name="scPrimaryTabName" seq="1001" title="Primary Tab Name">
+          <summary>The main tab name</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="target" name="scSecondaryTabName" seq="1002" title="Secondary Tab Name">
+          <summary>The sub-tab name</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="3" title="On SF Case view (ATC Dealer Service) screen">
       <tags/>
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View&amp;recordType=ATC+Dealer+Service"/>
@@ -61,7 +140,9 @@
           <value class="value" valueClass="string">CurrentTab</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">500M0000006jtC5</value>
+          <value class="variable">
+            <path element="CaseId"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Case view (ATC Dealer Service) screen</value>
@@ -233,10 +314,10 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="26" title="On SF Case edit (ATC Dealer Service) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=Edit&amp;recordType=ATC+Dealer+Service&amp;consoleTabType=CurrentTab"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=Edit&amp;recordType=ATC+Dealer+Service"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Dont</value>
@@ -245,11 +326,22 @@
           <value class="value" valueClass="string">CurrentTab</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">500M0000006jtUv</value>
+          <value class="variable">
+            <path element="CaseId"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Case edit (ATC Dealer Service) screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="27">
@@ -310,7 +402,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="18" title="On SF Case view (ATC Dealer Service) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View&amp;recordType=ATC+Dealer+Service"/>
@@ -322,7 +414,9 @@
           <value class="value" valueClass="string">CurrentTab</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">500M0000006jtUM</value>
+          <value class="variable">
+            <path element="CaseId"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Case view (ATC Dealer Service) screen</value>
@@ -413,7 +507,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="29" title="On Case View page">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.CaseView"/>
@@ -427,6 +521,16 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On Case View page</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
+        <argument id="uiTargetUrl"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="30">
@@ -454,15 +558,9 @@
         </clause>
       </clauses>
       <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
+        <apiParam group="target" name="uiTargetUrl" title="Web Page">
           <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
+            <textType/>
           </type>
         </apiParam>
       </generatedParameters>
@@ -470,7 +568,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="32" title="On SF User lookup screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?lookup=User"/>
@@ -562,7 +660,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="35" title="On Case View page">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.CaseView"/>
@@ -624,17 +722,6 @@
         </clause>
       </clauses>
       <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
         <apiParam group="target" name="uiTargetUrl" title="Web Page">
           <type>
             <textType/>
@@ -643,4 +730,6 @@
       </generatedParameters>
     </apiCall>
   </steps>
+  <params/>
+  <args/>
 </testCase>

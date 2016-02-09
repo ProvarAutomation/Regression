@@ -20,9 +20,6 @@ public class NewCaseServiceAccountButton3 {
 	@FindBy(linkText = "Collections")
 	public WebElement collections;
 	@LinkType()
-	@FindBy(linkText = "Collections")
-	public WebElement collections1;
-	@LinkType()
 	@FindBy(linkText = "Order Entry")
 	public WebElement orderEntry;
 	

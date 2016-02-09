@@ -56,7 +56,7 @@
         <connection name="ServiceTestUser">
           <summary/>
           <connectionUrls>
-            <connectionUrl url="sf:user=servicetest1@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl url="sf:user=servicetest1@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=servicetest1@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=servicetest1@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=servicetest1@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>

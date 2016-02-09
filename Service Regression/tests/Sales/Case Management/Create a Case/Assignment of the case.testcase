@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="122">
+<testCase id="0">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">WendyHatfield</value>
         </argument>
         <argument id="resultName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
@@ -36,31 +36,41 @@
         <argument id="username"/>
         <argument id="password"/>
         <argument id="environment"/>
+        <argument id="securityToken"/>
       </arguments>
     </apiCall>
-    <caseCall testCaseId="092b89d3-99ff-4505-b853-7998e6742542" testItemId="11">
+    <caseCall testCaseId="29b3208e-62ad-4fd5-9cc6-5a750cbf1a0e" testItemId="12">
       <arguments>
         <argument id="reuseConnectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
         </argument>
       </arguments>
+      <outputArguments>
+        <outputArgument id="CaseId">
+          <name class="value" valueClass="string">CaseId</name>
+        </outputArgument>
+      </outputArguments>
     </caseCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="5" title="On SF Case view (ATC Dealer Service) screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="17" title="On SF Case view (ATC Dealer Service) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View&amp;recordType=ATC+Dealer+Service"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+          <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="scTabType">
           <value class="value" valueClass="string">CurrentTab</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">500M0000006k3qq</value>
+          <value class="variable">
+            <path element="CaseId"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Case view (ATC Dealer Service) screen</value>
@@ -76,9 +86,9 @@
         <argument id="captureAfter"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="6">
+        <clause name="substeps" testItemId="18">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="7" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="19" title="UI Assert">
               <arguments>
                 <argument id="resultName">
                   <value class="value" valueClass="string">Values</value>
@@ -97,7 +107,7 @@
                       <fieldLocator uri="ui:locator?name=OwnerId&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DOwnerId"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">Service Test User 1</value>
+                          <value class="value" valueClass="string">Provar Tester</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -106,9 +116,12 @@
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="8" title="Click the Accept Case button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="20" title="Click the Accept Case button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Accept_Case&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3DAccept_Case"/>
@@ -128,9 +141,10 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Click the Accept Case button</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
@@ -138,14 +152,14 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="10" title="Sleep for {10} seconds">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="21" title="Sleep for {10} seconds">
               <arguments>
                 <argument id="sleepSecs">
                   <value class="value" valueClass="decimal">10</value>
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="9" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="22" title="UI Assert">
               <arguments>
                 <argument id="resultName">
                   <value class="value" valueClass="string">Values</value>
@@ -164,7 +178,7 @@
                       <fieldLocator uri="ui:locator?name=OwnerId&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DOwnerId"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">Service Test User 1</value>
+                          <value class="value" valueClass="string">Wendy Hatfield</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -182,6 +196,12 @@
         </clause>
       </clauses>
       <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
         <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
           <summary>The tab type for Scaffolds</summary>
           <type>
@@ -191,12 +211,6 @@
                 <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
               </constraints>
             </choiceType>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
-          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
-          <type>
-            <textType/>
           </type>
         </apiParam>
       </generatedParameters>
