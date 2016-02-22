@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="95">
+<testCase id="6">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Connection (Test)">
@@ -37,6 +37,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="54" title="On SF Account list screen">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">Connection</value>
@@ -159,13 +162,15 @@
           <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+          <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="scTabType">
           <value class="value" valueClass="string">CurrentTab</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">001E000000mEZZY</value>
+          <value class="variable">
+            <path element="CrownKiaAccount"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Account view (Dealer) screen</value>
@@ -252,17 +257,6 @@
         </clause>
       </clauses>
       <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
         <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
           <summary>The Id of the SF Object to be Viewed or Edited.</summary>
           <type>
@@ -285,9 +279,7 @@
         <argument id="scTabType">
           <value class="value" valueClass="string">CurrentTab</value>
         </argument>
-        <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">006E000000KMeoV</value>
-        </argument>
+        <argument id="sfUiTargetObjectId"/>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Opportunity view screen</value>
         </argument>
@@ -304,10 +296,10 @@
       <clauses>
         <clause name="substeps" testItemId="60">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="61" title="Activate inline edit the Business Unit picklist">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="61" title="Activate inline edit the Type picklist">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=BU__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DBU__c"/>
+                  <value class="uiLocator" uri="ui:locator?name=Type&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DType"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=sfIleActivate"/>
@@ -319,12 +311,12 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Activate inline edit the Business Unit picklist</value>
+                  <value class="value" valueClass="string">Activate inline edit the Type picklist</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="95" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="66" title="UI Assert">
               <arguments>
                 <argument id="resultName">
                   <value class="value" valueClass="string">Values</value>
@@ -339,8 +331,8 @@
                 </argument>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="BU__c">
-                      <fieldLocator uri="ui:locator?name=BU__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DBU__c"/>
+                    <uiFieldAssertion resultName="Type">
+                      <fieldLocator uri="ui:locator?name=Type&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DType"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="options" comparisonType="None"/>
                       </attributeAssertions>
@@ -355,32 +347,32 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="customapis.ArrayCount" name="ArrayCount" testItemId="96" title="Array Count: ⇒ Result">
+            <apiCall apiId="customapis.ArrayCount" name="ArrayCount" testItemId="67" title="Array Count: ⇒ Results">
               <arguments>
                 <argument id="param1">
                   <value class="variable">
                     <path element="Values"/>
                     <path element="fields"/>
-                    <path element="BU__c"/>
+                    <path element="Type"/>
                     <path element="options"/>
                   </value>
                 </argument>
                 <argument id="resultName">
-                  <value class="value" valueClass="string">Result</value>
+                  <value class="value" valueClass="string">Results</value>
                 </argument>
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Test</value>
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="94" title="Assert: 7 EqualTo {Result}">
+            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="68" title="Assert: 5 EqualTo {Results}">
               <arguments>
                 <argument id="expectedValue">
-                  <value class="value" valueClass="string">7</value>
+                  <value class="value" valueClass="string">5</value>
                 </argument>
                 <argument id="actualValue">
                   <value class="variable">
-                    <path element="Result"/>
+                    <path element="Results"/>
                   </value>
                 </argument>
                 <argument id="comparisonType">
@@ -404,16 +396,16 @@
                 <argument id="failureMessage"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="64" title="Set the Business Unit picklist to ATC Media">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="73" title="Set the Type picklist to New Business">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=BU__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DBU__c"/>
+                  <value class="uiLocator" uri="ui:locator?name=Type&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DType"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">ATC Media</value>
+                  <value class="value" valueClass="string">New Business</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -428,17 +420,17 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Business Unit picklist to ATC Media</value>
+                  <value class="value" valueClass="string">Set the Type picklist to New Business</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU__c" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Type" name="value" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
                     <choiceType>
                       <constraints>
-                        <valueConstraint name="boundedValues">ATC Media:ATC Media|Haystak:Haystak|HomeNet:HomeNet|KBB:KBB|TIM:TIM|vAuto:vAuto|VinSolutions:VinSolutions</valueConstraint>
+                        <valueConstraint name="boundedValues">New Business:New Business|Upsell:Upsell|Cancellation:Cancellation|Downsell:Downsell|Renewal:Renewal</valueConstraint>
                         <valueConstraint name="unrestricted">true</valueConstraint>
                       </constraints>
                     </choiceType>
@@ -458,16 +450,16 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="66" title="Set the Business Unit picklist to Haystak">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="72" title="Set the Type picklist to Upsell">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=BU__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DBU__c"/>
+                  <value class="uiLocator" uri="ui:locator?name=Type&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DType"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">Haystak</value>
+                  <value class="value" valueClass="string">Upsell</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -482,17 +474,17 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Business Unit picklist to Haystak</value>
+                  <value class="value" valueClass="string">Set the Type picklist to Upsell</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU__c" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Type" name="value" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
                     <choiceType>
                       <constraints>
-                        <valueConstraint name="boundedValues">ATC Media:ATC Media|Haystak:Haystak|HomeNet:HomeNet|KBB:KBB|TIM:TIM|vAuto:vAuto|VinSolutions:VinSolutions</valueConstraint>
+                        <valueConstraint name="boundedValues">New Business:New Business|Upsell:Upsell|Cancellation:Cancellation|Downsell:Downsell|Renewal:Renewal</valueConstraint>
                         <valueConstraint name="unrestricted">true</valueConstraint>
                       </constraints>
                     </choiceType>
@@ -512,16 +504,16 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="62" title="Set the Business Unit picklist to HomeNet">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="71" title="Set the Type picklist to Cancellation">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=BU__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DBU__c"/>
+                  <value class="uiLocator" uri="ui:locator?name=Type&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DType"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">HomeNet</value>
+                  <value class="value" valueClass="string">Cancellation</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -536,17 +528,17 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Business Unit picklist to HomeNet</value>
+                  <value class="value" valueClass="string">Set the Type picklist to Cancellation</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU__c" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Type" name="value" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
                     <choiceType>
                       <constraints>
-                        <valueConstraint name="boundedValues">ATC Media:ATC Media|Haystak:Haystak|HomeNet:HomeNet|KBB:KBB|TIM:TIM|vAuto:vAuto|VinSolutions:VinSolutions</valueConstraint>
+                        <valueConstraint name="boundedValues">New Business:New Business|Upsell:Upsell|Cancellation:Cancellation|Downsell:Downsell|Renewal:Renewal</valueConstraint>
                         <valueConstraint name="unrestricted">true</valueConstraint>
                       </constraints>
                     </choiceType>
@@ -566,16 +558,16 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="69" title="Set the Business Unit picklist to KBB">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="70" title="Set the Type picklist to Downsell">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=BU__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DBU__c"/>
+                  <value class="uiLocator" uri="ui:locator?name=Type&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DType"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">KBB</value>
+                  <value class="value" valueClass="string">Downsell</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -590,17 +582,17 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Business Unit picklist to KBB</value>
+                  <value class="value" valueClass="string">Set the Type picklist to Downsell</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU__c" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Type" name="value" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
                     <choiceType>
                       <constraints>
-                        <valueConstraint name="boundedValues">ATC Media:ATC Media|Haystak:Haystak|HomeNet:HomeNet|KBB:KBB|TIM:TIM|vAuto:vAuto|VinSolutions:VinSolutions</valueConstraint>
+                        <valueConstraint name="boundedValues">New Business:New Business|Upsell:Upsell|Cancellation:Cancellation|Downsell:Downsell|Renewal:Renewal</valueConstraint>
                         <valueConstraint name="unrestricted">true</valueConstraint>
                       </constraints>
                     </choiceType>
@@ -620,16 +612,16 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="70" title="Set the Business Unit picklist to vAuto">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="69" title="Set the Type picklist to Renewal">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=BU__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DBU__c"/>
+                  <value class="uiLocator" uri="ui:locator?name=Type&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DType"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">vAuto</value>
+                  <value class="value" valueClass="string">Renewal</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -644,117 +636,17 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Business Unit picklist to vAuto</value>
+                  <value class="value" valueClass="string">Set the Type picklist to Renewal</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU__c" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Type" name="value" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
                     <choiceType>
                       <constraints>
-                        <valueConstraint name="boundedValues">ATC Media:ATC Media|Haystak:Haystak|HomeNet:HomeNet|KBB:KBB|TIM:TIM|vAuto:vAuto|VinSolutions:VinSolutions</valueConstraint>
-                        <valueConstraint name="unrestricted">true</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="68" title="Set the Business Unit picklist to TIM">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=BU__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DBU__c"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                </argument>
-                <argument id="value">
-                  <value class="value" valueClass="string">TIM</value>
-                </argument>
-                <argument id="blur">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="pressEnter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Business Unit picklist to TIM</value>
-                </argument>
-                <argument id="wait"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU__c" name="value" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="boundedValues">ATC Media:ATC Media|Haystak:Haystak|HomeNet:HomeNet|KBB:KBB|TIM:TIM|vAuto:vAuto|VinSolutions:VinSolutions</valueConstraint>
-                        <valueConstraint name="unrestricted">true</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="71" title="Set the Business Unit picklist to VinSolutions">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=BU__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DBU__c"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Business Unit picklist to VinSolutions</value>
-                </argument>
-                <argument id="wait"/>
-                <argument id="captureBefore"/>
-                <argument id="captureAfter"/>
-                <argument id="value">
-                  <value class="value" valueClass="string">VinSolutions</value>
-                </argument>
-                <argument id="blur"/>
-                <argument id="pressEnter"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU__c" name="value" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="boundedValues">ATC Media:ATC Media|Haystak:Haystak|HomeNet:HomeNet|KBB:KBB|TIM:TIM|vAuto:vAuto|VinSolutions:VinSolutions</valueConstraint>
+                        <valueConstraint name="boundedValues">New Business:New Business|Upsell:Upsell|Cancellation:Cancellation|Downsell:Downsell|Renewal:Renewal</valueConstraint>
                         <valueConstraint name="unrestricted">true</valueConstraint>
                       </constraints>
                     </choiceType>

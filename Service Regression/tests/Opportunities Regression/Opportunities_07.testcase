@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="61">
+<testCase id="5">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UiConnection (Test)">
@@ -37,6 +37,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On SF Account list screen">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">UiConnection</value>
@@ -150,7 +153,7 @@
           <value class="value" valueClass="string">On SF Account view (Dealer) screen</value>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+          <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -161,7 +164,11 @@
         <argument id="closeWindow"/>
         <argument id="captureBefore"/>
         <argument id="captureAfter"/>
-        <argument id="sfUiTargetObjectId"/>
+        <argument id="sfUiTargetObjectId">
+          <value class="variable">
+            <path element="CrownKiaAccount"/>
+          </value>
+        </argument>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="8">
@@ -203,7 +210,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="10" title="On SF Opportunity new screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="26" title="On SF Opportunity new screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">UiConnection</value>
@@ -211,11 +218,17 @@
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=New"/>
         </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Opportunity new screen</value>
-        </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Dont</value>
+        </argument>
+        <argument id="sfUiTargetResultName">
+          <value class="value" valueClass="string">opportunityId</value>
+        </argument>
+        <argument id="sfUiTargetResultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Opportunity new screen</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -226,27 +239,19 @@
         <argument id="closeWindow"/>
         <argument id="captureBefore"/>
         <argument id="captureAfter"/>
-        <argument id="sfUiTargetResultName"/>
-        <argument id="sfUiTargetResultScope"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="11">
+        <clause name="substeps" testItemId="27">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="16" title="Set the Dealer Interested Product field to aBc123!@#/?">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="28" title="Click the Save and New button">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=Product_Line__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DProduct_Line__c"/>
+                  <value class="uiLocator" uri="ui:locator?name=save_new&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26action%3Dsave_new"/>
                 </argument>
                 <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
                 </argument>
-                <argument id="value">
-                  <value class="value" valueClass="string">aBc123!@#/?</value>
-                </argument>
-                <argument id="blur">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="pressEnter">
+                <argument id="hover">
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="captureBefore">
@@ -256,35 +261,99 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Dealer Interested Product field to aBc123!@#/?</value>
+                  <value class="value" valueClass="string">Click the Save and New button</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Product_Line__c" name="value" title="Value">
-                  <summary>The value to be populated.</summary>
-                  <type>
-                    <textType>
-                      <constraints>
-                        <valueConstraint name="maxLength">50</valueConstraint>
-                        <valueConstraint name="maxLines">1</valueConstraint>
-                      </constraints>
-                    </textType>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
-                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
-                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                <apiParam group="value" name="hover" title="Hover before Clicking">
+                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
               </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="31" title="UI Assert">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiPageAssertion/>
+                  </value>
+                </argument>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="AccountId">
+                      <fieldLocator uri="ui:locator?name=AccountId&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DAccountId"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="message" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">Error: You must enter a value</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                    <uiFieldAssertion resultName="Name">
+                      <fieldLocator uri="ui:locator?name=Name&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DName"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="message" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">Error: You must enter a value</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                    <uiFieldAssertion resultName="CloseDate">
+                      <fieldLocator uri="ui:locator?name=CloseDate&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DCloseDate"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="message" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">Error: You must enter a value</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                    <uiFieldAssertion resultName="BU__c">
+                      <fieldLocator uri="ui:locator?name=BU__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DBU__c"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="message" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">Error: You must enter a value</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                    <uiFieldAssertion resultName="Product_Line__c">
+                      <fieldLocator uri="ui:locator?name=Product_Line__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DProduct_Line__c"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="message" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">Error: You must enter a value</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                    <uiFieldAssertion resultName="Type">
+                      <fieldLocator uri="ui:locator?name=Type&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DType"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="message" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">Error: You must enter a value</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                    <uiFieldAssertion resultName="StageName">
+                      <fieldLocator uri="ui:locator?name=StageName&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DStageName"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="message" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">Error: You must enter a value</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+              </arguments>
             </apiCall>
           </steps>
         </clause>

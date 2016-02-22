@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="58">
+<testCase id="4">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UiConnection (Test)">
@@ -37,6 +37,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On SF Account list screen">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">UiConnection</value>
@@ -92,7 +95,9 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
-                <argument id="autoPaginate"/>
+                <argument id="autoPaginate">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="5">
@@ -150,7 +155,7 @@
           <value class="value" valueClass="string">On SF Account view (Dealer) screen</value>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+          <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -161,7 +166,9 @@
         <argument id="closeWindow"/>
         <argument id="captureBefore"/>
         <argument id="captureAfter"/>
-        <argument id="sfUiTargetObjectId"/>
+        <argument id="sfUiTargetObjectId">
+          <value class="value" valueClass="string">001E000000mEZZY</value>
+        </argument>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="8">
@@ -258,21 +265,27 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Set the Opportunity Name field to Test Op</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Name" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <textType/>
+                    <textType>
+                      <constraints>
+                        <valueConstraint name="maxLength">120</valueConstraint>
+                        <valueConstraint name="maxLines">1</valueConstraint>
+                      </constraints>
+                    </textType>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
@@ -297,6 +310,7 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Today link the Close Date field</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="14" title="Set the Business Unit picklist to ATC Media">
@@ -325,21 +339,27 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Set the Business Unit picklist to ATC Media</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU__c" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <textType/>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">ATC Media:ATC Media|Haystak:Haystak|HomeNet:HomeNet|KBB:KBB|TIM:TIM|vAuto:vAuto|VinSolutions:VinSolutions</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
@@ -421,18 +441,12 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Set the Type picklist to New Business</value>
                 </argument>
-                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Type" name="value" title="Value">
+                <apiParam group="value" name="value" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="boundedValues">New Business:New Business|Upsell:Upsell|Cancellation:Cancellation|Downsell:Downsell|Renewal:Renewal</valueConstraint>
-                        <valueConstraint name="unrestricted">true</valueConstraint>
-                      </constraints>
-                    </choiceType>
+                    <textType/>
                   </type>
                 </apiParam>
                 <apiParam group="value" name="blur" title="Tab off field">
@@ -475,18 +489,12 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Set the Stage picklist to Prospect</value>
                 </argument>
-                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=StageName" name="value" title="Value">
+                <apiParam group="value" name="value" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed Won:Closed Won|Closed Lost:Closed Lost|Closed Realized:Closed Realized</valueConstraint>
-                        <valueConstraint name="unrestricted">true</valueConstraint>
-                      </constraints>
-                    </choiceType>
+                    <textType/>
                   </type>
                 </apiParam>
                 <apiParam group="value" name="blur" title="Tab off field">
@@ -529,18 +537,12 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Set the Amount field to 1000</value>
                 </argument>
-                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Amount" name="value" title="Value">
+                <apiParam group="value" name="value" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <numericType>
-                      <constraints>
-                        <valueConstraint name="length">18</valueConstraint>
-                        <valueConstraint name="decimalPlaces">2</valueConstraint>
-                      </constraints>
-                    </numericType>
+                    <textType/>
                   </type>
                 </apiParam>
                 <apiParam group="value" name="blur" title="Tab off field">
@@ -577,7 +579,6 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Click the Save and New button</value>
                 </argument>
-                <argument id="wait"/>
               </arguments>
               <generatedParameters>
                 <apiParam group="value" name="hover" title="Hover before Clicking">
@@ -613,7 +614,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="20" title="On SF Opportunity Product add product screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="56" title="On SF Opportunity Product add product screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">UiConnection</value>
@@ -630,11 +631,20 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Opportunity Product add product screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="21">
+        <clause name="substeps" testItemId="57">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="22" title="Set the By Keyword control to SEM Pro">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="58" title="Set the By Keyword control to Alpha 2014">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=byKeyword"/>
@@ -643,7 +653,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">SEM Pro</value>
+                  <value class="value" valueClass="string">Alpha 2014</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -658,14 +668,12 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the By Keyword control to SEM Pro</value>
+                  <value class="value" valueClass="string">Set the By Keyword control to Alpha 2014</value>
                 </argument>
-                <argument id="wait">
-                  <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
-                </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" title="Value">
+                <apiParam group="value" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
                     <textType>
@@ -675,13 +683,13 @@
                     </textType>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
@@ -689,7 +697,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="23" title="With Product Table rows {productName = &quot;SEM Pro&quot;}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="65" title="With Product Table rows {ProductName = &quot;Alpha 2014&quot;}">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">UiConnection</value>
@@ -700,13 +708,13 @@
                 <argument id="uiRowLocator">
                   <value class="eq">
                     <lhs class="variable">
-                      <path element="productName"/>
+                      <path element="ProductName"/>
                     </lhs>
-                    <rhs class="value" valueClass="string">SEM Pro</rhs>
+                    <rhs class="value" valueClass="string">Alpha 2014</rhs>
                   </value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With Product Table rows {productName = "SEM Pro"}</value>
+                  <value class="value" valueClass="string">With Product Table rows {ProductName = "Alpha 2014"}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -720,12 +728,12 @@
                 </argument>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="24">
+                <clause name="substeps" testItemId="66">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="25" title="Check the Select control">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="67" title="Check the Select control">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=select&amp;rowLocator=productName+%3D+%27SEM+Pro%27"/>
+                          <value class="uiLocator" uri="ui:locator?name=select&amp;rowLocator=productName+%3D+%27Alpha+2014%27"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=check"/>
@@ -765,7 +773,7 @@
                 </clause>
               </clauses>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="26" title="Click the Select Button button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="68" title="Click the Select Button button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=selectButton"/>
@@ -807,7 +815,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="27" title="On SF Opportunity Product add product2 screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="37" title="On SF Opportunity Product add product2 screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">UiConnection</value>
@@ -824,11 +832,20 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Opportunity Product add product2 screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="28">
+        <clause name="substeps" testItemId="38">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="29" title="With OpportunityLineItem rows {Product2Id = &quot;SEM Pro&quot;}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="39" title="With OpportunityLineItem rows {Product2Id = &quot;Alpha 2014&quot;}">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">UiConnection</value>
@@ -841,11 +858,11 @@
                     <lhs class="variable">
                       <path element="Product2Id"/>
                     </lhs>
-                    <rhs class="value" valueClass="string">SEM Pro</rhs>
+                    <rhs class="value" valueClass="string">Alpha 2014</rhs>
                   </value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With OpportunityLineItem rows {Product2Id = "SEM Pro"}</value>
+                  <value class="value" valueClass="string">With OpportunityLineItem rows {Product2Id = "Alpha 2014"}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -859,9 +876,9 @@
                 </argument>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="30">
+                <clause name="substeps" testItemId="40">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="31" title="Set the Quantity field to 1">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="41" title="Set the Quantity field to 2">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=Quantity&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DQuantity"/>
@@ -870,7 +887,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">1</value>
+                          <value class="value" valueClass="string">2</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -885,7 +902,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Quantity field to 1</value>
+                          <value class="value" valueClass="string">Set the Quantity field to 2</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
@@ -915,7 +932,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="32" title="Set the Sales Price field to 1000">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="44" title="Set the Sales Price field to 1000">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=UnitPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DUnitPrice"/>
@@ -973,7 +990,7 @@
                 </clause>
               </clauses>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="33" title="Click the Save button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="49" title="Click the Save button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=save&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26action%3Dsave"/>
@@ -1016,7 +1033,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="37" title="On SF Opportunity view (ATC) screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="50" title="On SF Opportunity view (ATC) screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">UiConnection</value>
@@ -1028,7 +1045,7 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">006M000000D60xA</value>
+          <value class="value" valueClass="string">006M000000D60OK</value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Opportunity view (ATC) screen</value>
@@ -1044,9 +1061,9 @@
         <argument id="captureAfter"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="38">
+        <clause name="substeps" testItemId="51">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="39" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="52" title="UI Assert">
               <arguments>
                 <argument id="resultName">
                   <value class="value" valueClass="string">Values</value>
@@ -1061,19 +1078,11 @@
                 </argument>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Type">
-                      <fieldLocator uri="ui:locator?name=Type&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DType"/>
+                    <uiFieldAssertion resultName="Amount">
+                      <fieldLocator uri="ui:locator?name=Amount&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DAmount"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">New Business</value>
-                        </uiAttributeAssertion>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                    <uiFieldAssertion resultName="StageName">
-                      <fieldLocator uri="ui:locator?name=StageName&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DStageName"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">Prospect</value>
+                          <value class="value" valueClass="string">$2,000.00</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>

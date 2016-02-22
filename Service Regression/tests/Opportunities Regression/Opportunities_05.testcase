@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="110">
+<testCase id="3">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UiConnection (Test)">
@@ -37,6 +37,9 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On SF Account list screen">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">UiConnection</value>
@@ -150,7 +153,7 @@
           <value class="value" valueClass="string">On SF Account view (Dealer) screen</value>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+          <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -161,7 +164,11 @@
         <argument id="closeWindow"/>
         <argument id="captureBefore"/>
         <argument id="captureAfter"/>
-        <argument id="sfUiTargetObjectId"/>
+        <argument id="sfUiTargetObjectId">
+          <value class="variable">
+            <path element="CrownKiaAccount"/>
+          </value>
+        </argument>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="8">
@@ -232,38 +239,59 @@
       <clauses>
         <clause name="substeps" testItemId="11">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="31" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="16" title="Set the Dealer Interested Product field to aBc123!@#/?">
               <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:locator?name=Product_Line__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DProduct_Line__c"/>
                 </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiPageAssertion/>
-                  </value>
+                <argument id="value">
+                  <value class="value" valueClass="string">aBc123!@#/?</value>
                 </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="save_new">
-                      <fieldLocator uri="ui:locator?name=save_new&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26action%3Dsave_new"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">Save &amp; Add Product</value>
-                        </uiAttributeAssertion>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
+                <argument id="blur">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="pressEnter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Set the Dealer Interested Product field to aBc123!@#/?</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
+              <generatedParameters>
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Product_Line__c" name="value" seq="10000" title="Value">
+                  <summary>The value to be populated.</summary>
+                  <type>
+                    <textType>
+                      <constraints>
+                        <valueConstraint name="maxLength">50</valueConstraint>
+                        <valueConstraint name="maxLines">1</valueConstraint>
+                      </constraints>
+                    </textType>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
             </apiCall>
           </steps>
         </clause>
@@ -291,4 +319,5 @@
       </generatedParameters>
     </apiCall>
   </steps>
+  <tags/>
 </testCase>
