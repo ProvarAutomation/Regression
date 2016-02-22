@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import com.provar.core.testapi.annotations.*;
 
 @Page( title="AccountOverview"                                
-     , connection="ServiceUser"
+     , connection="ServiceTestUser"
      )             
 public class AccountOverview {
 
@@ -69,5 +69,14 @@ public class AccountOverview {
 	@LinkType()
 	@FindBy(linkText = "Crown KIA")
 	public WebElement crownKIA;
+	@ButtonType()
+	@FindBy(xpath = "//input[@name=\"create_case_from_account\"]")
+	public WebElement createCase;
+	@LinkType()
+	@FindByLabel(label = "Follow Up Date")
+	public WebElement followUpDate;
+	@TextType()
+	@FindByLabel(label = "Approval Detail")
+	public WebElement approvalDetail;
 			
 }
