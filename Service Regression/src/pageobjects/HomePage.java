@@ -14,5 +14,8 @@ public class HomePage {
 	@LinkType()
 	@FindBy(linkText = "Request Help w/Salesforce")
 	public WebElement requestHelpWSalesforce;
+	@LinkType()
+	@FindBy(linkText = "Opportunities")
+	public WebElement opportunities;
 			
 }

@@ -78,5 +78,8 @@ public class AccountOverview {
 	@TextType()
 	@FindByLabel(label = "Approval Detail")
 	public WebElement approvalDetail;
+	@LinkType()
+	@FindBy(linkText = "Opportunities")
+	public WebElement opportunities;
 			
 }

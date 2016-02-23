@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="98">
+<testCase id="13">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Connection (Test)">
@@ -34,120 +34,8 @@
         <argument id="username"/>
         <argument id="password"/>
         <argument id="environment"/>
+        <argument id="securityToken"/>
       </arguments>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On SF Account list screen">
-      <tags>
-        <string>disabled</string>
-      </tags>
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">Connection</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=List&amp;application=ATC_Service_Console&amp;listView=All_Accounts&amp;tab=standard-Account"/>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Account list screen</value>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">IfNeccessary</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore"/>
-        <argument id="captureAfter"/>
-        <argument id="scTabType">
-          <value class="value" valueClass="string">HomeTab</value>
-        </argument>
-        <argument id="scPrimaryTabName"/>
-        <argument id="scSecondaryTabName"/>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="3">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="5" title="With Account rows {Name = &quot;Bain &amp; Company, Inc&quot;}">
-              <arguments>
-                <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">Connection</value>
-                </argument>
-                <argument id="locator">
-                  <value class="uiLocator" uri="sf:ui:locator:row?table=List%2FlistView%2FlistTable"/>
-                </argument>
-                <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With Account rows {Name = "Bain &amp; Company, Inc"}</value>
-                </argument>
-                <argument id="uiRowLocator">
-                  <value class="eq">
-                    <lhs class="variable">
-                      <path element="Name"/>
-                    </lhs>
-                    <rhs class="value" valueClass="string">Bain &amp; Company, Inc</rhs>
-                  </value>
-                </argument>
-                <argument id="failIfNotFound">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
-                <argument id="debugRowLocator"/>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Row</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Local</value>
-                </argument>
-                <argument id="autoPaginate">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
-              </arguments>
-              <clauses>
-                <clause name="substeps" testItemId="6">
-                  <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="7" title="Click the Account Name link">
-                      <arguments>
-                        <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Name"/>
-                        </argument>
-                        <argument id="interaction">
-                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                        </argument>
-                        <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Click the Account Name link</value>
-                        </argument>
-                        <argument id="wait"/>
-                        <argument id="captureBefore"/>
-                        <argument id="captureAfter"/>
-                        <argument id="hover"/>
-                      </arguments>
-                      <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
-                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                          <type>
-                            <booleanType/>
-                          </type>
-                        </apiParam>
-                      </generatedParameters>
-                    </apiCall>
-                  </steps>
-                </clause>
-              </clauses>
-              <generatedParameters>
-                <apiParam group="options" name="autoPaginate" title="Auto Paginate">
-                  <summary>Whether Show More/Next is clicked till the match condition succeeds.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters/>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="13" title="On SF Account view (Dealer) screen">
       <arguments>

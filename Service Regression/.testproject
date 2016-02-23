@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="Quoting" selectedWebBrowserType="Chrome">
+<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="PreProd" selectedWebBrowserType="Chrome">
   <title>/Service Regression/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -30,10 +30,10 @@
       <summary/>
       <values>
         <testVariableValue>
-          <value class="value" valueClass="string">001E00000MZN0B</value>
+          <value class="value" valueClass="string">001E000000MZN0B</value>
         </testVariableValue>
         <testVariableValue envName="PreProd">
-          <value class="value" valueClass="string">001E00000MZN0B</value>
+          <value class="value" valueClass="string">001E000000MZN0B</value>
         </testVariableValue>
         <testVariableValue envName="Quoting">
           <value class="value" valueClass="string">0011900000Dazi4</value>
