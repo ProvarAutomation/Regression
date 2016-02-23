@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="58">
+<testCase id="40">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UiConnection (Test)">
@@ -86,7 +86,7 @@
                 <argument id="hover"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
@@ -129,7 +129,9 @@
         <argument id="closeWindow"/>
         <argument id="captureBefore"/>
         <argument id="captureAfter"/>
-        <argument id="sfUiTargetResultName"/>
+        <argument id="sfUiTargetResultName">
+          <value class="value" valueClass="string">oppId</value>
+        </argument>
         <argument id="sfUiTargetResultScope"/>
       </arguments>
       <clauses>
@@ -202,7 +204,7 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="14" title="Set the Business Unit picklist to ATC Media">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="14" title="Set the Business Unit picklist to Haystak">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=BU__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DBU__c"/>
@@ -211,7 +213,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">ATC Media</value>
+                  <value class="value" valueClass="string">Haystak</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -226,23 +228,29 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Business Unit picklist to ATC Media</value>
+                  <value class="value" valueClass="string">Set the Business Unit picklist to Haystak</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU__c" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <textType/>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">ATC Media:ATC Media|Dealer.com:Dealer.com|Haystak:Haystak|HomeNet:HomeNet|KBB:KBB|TIM:TIM|vAuto:vAuto|VinSolutions:VinSolutions</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
@@ -949,7 +957,9 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">006M000000D60xA</value>
+          <value class="variable">
+            <path element="oppId"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Opportunity view (ATC) screen</value>
