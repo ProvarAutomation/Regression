@@ -14,5 +14,8 @@ public class OpportunityCreate {
 	@TextType()
 	@FindBy(id = "errorDiv_ep")
 	public WebElement pageErrors;
+	@BooleanType()
+	@FindBy(id = "01uE0000004UbZb")
+	public WebElement select;
 			
 }
