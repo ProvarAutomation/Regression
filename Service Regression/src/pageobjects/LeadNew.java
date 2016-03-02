@@ -280,6 +280,11 @@ public class LeadNew {
 	@TextType()
 	@FindByLabel(label = "Monthly Sales Volume")
 	public WebElement MonthlySalesVolume;
+	@ButtonType()
+	public WebElement CustomConvert;
+	@ButtonType()
+	@FindBy(xpath = "//*[@id=\"topButtonRow\"]/input[4]")
+	public WebElement CustomConvert1;
 
 
 }

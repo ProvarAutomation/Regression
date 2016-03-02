@@ -748,5 +748,7 @@
       </clauses>
     </apiCall>
   </steps>
-  <tags/>
+  <tags>
+    <string>disabled</string>
+  </tags>
 </testCase>

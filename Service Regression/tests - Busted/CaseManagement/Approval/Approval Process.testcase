@@ -732,4 +732,7 @@
   </steps>
   <params/>
   <args/>
+  <tags>
+    <string>disabled</string>
+  </tags>
 </testCase>

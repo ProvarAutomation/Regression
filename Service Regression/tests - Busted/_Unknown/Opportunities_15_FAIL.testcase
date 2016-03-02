@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="80">
+<testCase id="45">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Connection (Test)">
@@ -13,7 +13,9 @@
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
         </argument>
-        <argument id="uiApplicationName"/>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">ATC_Sales</value>
+        </argument>
         <argument id="quickUiLogin">
           <value class="value" valueClass="boolean">true</value>
         </argument>
@@ -34,121 +36,8 @@
         <argument id="username"/>
         <argument id="password"/>
         <argument id="environment"/>
+        <argument id="securityToken"/>
       </arguments>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="54" title="On SF Account list screen">
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">Connection</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=List&amp;application=ATC_Service_Console&amp;listView=All_Accounts&amp;tab=standard-Account"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Always</value>
-        </argument>
-        <argument id="scTabType">
-          <value class="value" valueClass="string">HomeTab</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Account list screen</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore"/>
-        <argument id="captureAfter"/>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="49">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="51" title="With Account rows {Name = &quot;Bain &amp; Company, Inc&quot;}">
-              <arguments>
-                <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">Connection</value>
-                </argument>
-                <argument id="locator">
-                  <value class="uiLocator" uri="sf:ui:locator:row?table=List%2FlistView%2FlistTable"/>
-                </argument>
-                <argument id="uiRowLocator">
-                  <value class="eq">
-                    <lhs class="variable">
-                      <path element="Name"/>
-                    </lhs>
-                    <rhs class="value" valueClass="string">Bain &amp; Company, Inc</rhs>
-                  </value>
-                </argument>
-                <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With Account rows {Name = "Bain &amp; Company, Inc"}</value>
-                </argument>
-                <argument id="failIfNotFound">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
-                <argument id="debugRowLocator"/>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Row</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Local</value>
-                </argument>
-                <argument id="autoPaginate">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
-              </arguments>
-              <clauses>
-                <clause name="substeps" testItemId="52">
-                  <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="53" title="Click the Account Name link">
-                      <arguments>
-                        <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Name&amp;rowLocator=Name+%3D+%27Cadillac+of+Novi%27"/>
-                        </argument>
-                        <argument id="interaction">
-                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                        </argument>
-                        <argument id="hover">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="captureBefore">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="captureAfter">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Click the Account Name link</value>
-                        </argument>
-                        <argument id="wait"/>
-                      </arguments>
-                      <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
-                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                          <type>
-                            <booleanType/>
-                          </type>
-                        </apiParam>
-                      </generatedParameters>
-                    </apiCall>
-                  </steps>
-                </clause>
-              </clauses>
-              <generatedParameters>
-                <apiParam group="options" name="autoPaginate" title="Auto Paginate">
-                  <summary>Whether Show More/Next is clicked till the match condition succeeds.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters/>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="55" title="On SF Account view (Dealer) screen">
       <arguments>
@@ -159,13 +48,15 @@
           <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+          <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="scTabType">
           <value class="value" valueClass="string">CurrentTab</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">001E000000mEZZY</value>
+          <value class="variable">
+            <path element="CrownKiaAccount"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Account view (Dealer) screen</value>
@@ -207,6 +98,7 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
+                <argument id="autoPaginate"/>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="57">
@@ -259,59 +151,6 @@
         </clause>
       </clauses>
       <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
-          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="59" title="On SF Opportunity view screen">
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">Connection</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="scTabType">
-          <value class="value" valueClass="string">CurrentTab</value>
-        </argument>
-        <argument id="sfUiTargetObjectId"/>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Opportunity view screen</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore"/>
-        <argument id="captureAfter"/>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="60">
-          <steps/>
-        </clause>
-      </clauses>
-      <generatedParameters>
         <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
           <summary>The Id of the SF Object to be Viewed or Edited.</summary>
           <type>
@@ -337,6 +176,15 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Opportunity view (ATC) screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="65">
@@ -391,7 +239,5 @@
       </arguments>
     </apiCall>
   </steps>
-  <tags>
-    <string>disabled</string>
-  </tags>
+  <tags/>
 </testCase>
