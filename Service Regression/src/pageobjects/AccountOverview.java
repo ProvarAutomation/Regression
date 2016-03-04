@@ -9,8 +9,8 @@ import com.provar.core.testapi.annotations.*;
      )             
 public class AccountOverview {
 
+	@FindBy(linkText = "Account Team")
 	@LinkType()
-	@FindBy(xpath = "//a[contains(@id,'RelatedAccountSalesTeam_link')]")
 	public WebElement QuicklinkAccountTeam;
 	@LinkType()
 	@FindBy(xpath = "//a[contains(@id,'RelatedContactList_link')]")

@@ -781,4 +781,7 @@
       </generatedParameters>
     </apiCall>
   </steps>
+  <tags>
+    <string>disabled</string>
+  </tags>
 </testCase>
