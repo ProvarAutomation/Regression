@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="36">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: AdamGrille (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">AdamGrille</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">AdamGrille</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">ATC_Sales</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="vfDebug"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="29" title="On SF Opportunity view (ATC) screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">AdamGrille</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View&amp;recordType=ATC"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Always</value>
+        </argument>
+        <argument id="sfUiTargetObjectId">
+          <value class="value" valueClass="string">0061b000002S76x</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Opportunity view (ATC) screen</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="30">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="33" title="UI Assert">
+              <arguments>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="PS_Forecast__c">
+                      <fieldLocator uri="ui:locator?name=PS_Forecast__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DPS_Forecast__c"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="visible" comparisonType="EqualTo">
+                          <value class="value" valueClass="boolean">false</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">PSforecast</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="captureAfter"/>
+              </arguments>
+              <expectedExceptions>
+                <expectedException comparisonType="Contains" title="PS forecast Expected Exception">
+                  <assertionValue class="value" valueClass="string">Failed to resolve control locator</assertionValue>
+                </expectedException>
+              </expectedExceptions>
+              <parameterValueSources/>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>
