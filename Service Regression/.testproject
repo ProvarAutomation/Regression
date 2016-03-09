@@ -146,6 +146,19 @@
       </connections>
     </connectionClass>
   </connectionClasses>
+  <tagTypes>
+    <tagType name="maintainer" tagClass="maintainer" title="Test Case Maintainer">
+      <summary>The person or team responsible for maintaining a Test Case</summary>
+      <tags>
+        <tag name="Brad Weber">
+          <summary/>
+        </tag>
+        <tag name="Jason John">
+          <summary/>
+        </tag>
+      </tags>
+    </tagType>
+  </tagTypes>
   <browserConfigurations>
     <browserConfiguration adjustBrowserWidthForChromeIde="true" browserHeight="0" browserWidth="0" name="Full Screen">
       <summary>Full screen with Test Authoring adjustment</summary>

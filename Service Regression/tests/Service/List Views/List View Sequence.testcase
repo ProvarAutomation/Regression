@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="26">
+<testCase id="3">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
@@ -36,6 +36,7 @@
         <argument id="username"/>
         <argument id="password"/>
         <argument id="environment"/>
+        <argument id="securityToken"/>
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="46" title="On AccountColumns page">
@@ -87,8 +88,8 @@
                     <uiFieldAssertion resultName="Column1">
                       <fieldLocator uri="ui:pageobject:field?field=Column1&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">svoc master_id</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">SVOC MASTER_ID</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -120,8 +121,8 @@
                     <uiFieldAssertion resultName="Column2">
                       <fieldLocator uri="ui:pageobject:field?field=Column2&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">account name</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">ACCOUNT NAME</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -153,8 +154,8 @@
                     <uiFieldAssertion resultName="Column3">
                       <fieldLocator uri="ui:pageobject:field?field=Column3&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">dealer type</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">DEALER TYPE</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -186,8 +187,8 @@
                     <uiFieldAssertion resultName="Column4">
                       <fieldLocator uri="ui:pageobject:field?field=Column4&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">atc status</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">ATC STATUS</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -219,8 +220,8 @@
                     <uiFieldAssertion resultName="Column5">
                       <fieldLocator uri="ui:pageobject:field?field=Column5&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">kbb status</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">KBB STATUS</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -252,8 +253,8 @@
                     <uiFieldAssertion resultName="Column6">
                       <fieldLocator uri="ui:pageobject:field?field=Column6&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">tim status</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">TIM STATUS</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -285,8 +286,8 @@
                     <uiFieldAssertion resultName="Column7">
                       <fieldLocator uri="ui:pageobject:field?field=Column7&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">homenet status</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">HOMENET STATUS</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -318,8 +319,8 @@
                     <uiFieldAssertion resultName="Column8">
                       <fieldLocator uri="ui:pageobject:field?field=Column8&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">atc spend</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">ATC SPEND</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -351,8 +352,8 @@
                     <uiFieldAssertion resultName="Column9">
                       <fieldLocator uri="ui:pageobject:field?field=Column9&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">kbb spend</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">KBB SPEND</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -384,8 +385,8 @@
                     <uiFieldAssertion resultName="Column10">
                       <fieldLocator uri="ui:pageobject:field?field=Column10&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">tim spend</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">TIM SPEND</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -417,8 +418,8 @@
                     <uiFieldAssertion resultName="Column11">
                       <fieldLocator uri="ui:pageobject:field?field=Column11&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">homenet spend</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">HOMENET SPEND</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -450,8 +451,8 @@
                     <uiFieldAssertion resultName="Column12">
                       <fieldLocator uri="ui:pageobject:field?field=Column12&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">last activity</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">LAST ACTIVITY</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -483,8 +484,8 @@
                     <uiFieldAssertion resultName="Column13">
                       <fieldLocator uri="ui:pageobject:field?field=Column13&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">open opportuntities</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">OPEN OPPORTUNTITIES</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -516,8 +517,8 @@
                     <uiFieldAssertion resultName="Column14">
                       <fieldLocator uri="ui:pageobject:field?field=Column14&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">svoc status</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">SVOC STATUS</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -549,8 +550,8 @@
                     <uiFieldAssertion resultName="Column15">
                       <fieldLocator uri="ui:pageobject:field?field=Column15&amp;pageId=pageobjects.AccountColumns"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">type</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">TYPE</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -587,4 +588,7 @@
       </generatedParameters>
     </apiCall>
   </steps>
+  <tagReferences>
+    <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
+  </tagReferences>
 </testCase>
