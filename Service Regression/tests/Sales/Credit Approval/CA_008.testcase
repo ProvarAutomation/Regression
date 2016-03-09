@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="51">
+<testCase id="30">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: AdamGrille (Test)">
@@ -36,6 +36,7 @@
         <argument id="username"/>
         <argument id="password"/>
         <argument id="environment"/>
+        <argument id="securityToken"/>
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On SF Case record type screen">
@@ -52,6 +53,15 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Case record type screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="3">
@@ -99,7 +109,7 @@
                   </value>
                 </argument>
                 <argument id="expectedChoices">
-                  <value class="value" valueClass="string">ATG Service Core, ATG Order Entry, CDG</value>
+                  <value class="value" valueClass="string">ATC DMR - New, ATC DMR - Update, ATG Order Entry, ATG Service Core, CDG, Request Salesforce Help</value>
                 </argument>
                 <argument id="resultName">
                   <value class="value" valueClass="string">PicklistAssert</value>

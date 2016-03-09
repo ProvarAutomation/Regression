@@ -85,5 +85,8 @@ public class CaseView {
 	@LinkType()
 	@FindBy(id = "newOwn_lkwgt")
 	public WebElement newOwner;
+	@TextType()
+	@FindByLabel(label = "Parent Case")
+	public WebElement parentCase;
 			
 }

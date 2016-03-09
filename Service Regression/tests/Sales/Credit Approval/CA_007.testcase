@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="50">
+<testCase id="28">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: AdamGrille (Test)">
@@ -36,9 +36,10 @@
         <argument id="username"/>
         <argument id="password"/>
         <argument id="environment"/>
+        <argument id="securityToken"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="5" title="On SF Case list screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="7" title="On SF Case list screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">AdamGrille</value>
@@ -61,27 +62,6 @@
         <argument id="closeWindow"/>
         <argument id="captureBefore"/>
         <argument id="captureAfter"/>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="6">
-          <steps/>
-        </clause>
-      </clauses>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="7" title="On SF Case list screen">
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">AdamGrille</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=List"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Case list screen</value>
-        </argument>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="8">
@@ -208,6 +188,9 @@
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
               </arguments>
             </apiCall>
           </steps>
@@ -215,4 +198,7 @@
       </clauses>
     </apiCall>
   </steps>
+  <tagReferences>
+    <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
+  </tagReferences>
 </testCase>

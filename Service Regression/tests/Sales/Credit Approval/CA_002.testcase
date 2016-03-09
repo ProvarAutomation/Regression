@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="46">
+<testCase id="20">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UiConnection (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: AmeliaGoldman (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">AmeliaGoldman</value>
         </argument>
         <argument id="reuseConnectionName"/>
         <argument id="resultName">
-          <value class="value" valueClass="string">UiConnection</value>
+          <value class="value" valueClass="string">AmeliaGoldman</value>
         </argument>
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
@@ -36,12 +36,13 @@
         <argument id="username"/>
         <argument id="password"/>
         <argument id="environment"/>
+        <argument id="securityToken"/>
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="42" title="On SF Account view (Dealer) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">UiConnection</value>
+          <value class="value" valueClass="string">AmeliaGoldman</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer"/>
@@ -68,10 +69,10 @@
       <clauses>
         <clause name="substeps" testItemId="43">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="44" title="With ATG_Products__r rows {NAME = &quot;201309-86164&quot;}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="44" title="With ATG_Products__r rows {NAME = &quot;201506-569271&quot;}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">AmeliaGoldman</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FATG_Products__r%2FATG_Products__rTable"/>
@@ -81,11 +82,11 @@
                     <lhs class="variable">
                       <path element="NAME"/>
                     </lhs>
-                    <rhs class="value" valueClass="string">201309-86164</rhs>
+                    <rhs class="value" valueClass="string">201506-569271</rhs>
                   </value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With ATG_Products__r rows {NAME = "201309-86164"}</value>
+                  <value class="value" valueClass="string">With ATG_Products__r rows {NAME = "201506-569271"}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -159,7 +160,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On SF Case new (ATC Dealer Sales Credit Request) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">UiConnection</value>
+          <value class="value" valueClass="string">AmeliaGoldman</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=New&amp;recordType=ATC+Dealer+Sales+Credit+Request"/>
@@ -281,7 +282,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="17" title="On SF Account lookup screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">AmeliaGoldman</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?lookup=Account"/>
@@ -308,7 +309,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="19" title="Click the Account Name button">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=Name+%3D+%27Crown+Kia%27"/>
+                          <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=Name+%3D+%27Crown+KIA%27"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -339,25 +340,6 @@
                   </steps>
                 </clause>
               </clauses>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="6" title="Today link the Date Invoiced field">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=Date_Invoiced__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DDate_Invoiced__c"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=sfToday"/>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Today link the Date Invoiced field</value>
-                </argument>
-              </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="7" title="Set the Amount Requested by DSM field to 10000.01">
               <arguments>
@@ -435,7 +417,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="24" title="On SF ATG Product lookup screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">AmeliaGoldman</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?lookup=ATG_Product__c"/>
@@ -462,7 +444,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="26" title="Click the ATG Product Name button">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=Name+%3D+%27201309-86164%27"/>
+                          <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=Name+%3D+%27201506-569271%27"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -494,7 +476,7 @@
                 </clause>
               </clauses>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="31" title="Set the Subject field to asficyhaudonfiv">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="31" title="Set the Subject field to Test Subject">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Subject&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DSubject"/>
@@ -503,7 +485,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">asficyhaudonfiv</value>
+                  <value class="value" valueClass="string">Test Subject</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -518,7 +500,7 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Subject field to asficyhaudonfiv</value>
+                  <value class="value" valueClass="string">Set the Subject field to Test Subject</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
@@ -548,7 +530,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="32" title="Set the Reasons for Credit Request field to dsgfivayusdnfuckpljuasouyfsdg">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="32" title="Set the Reasons for Credit Request field to test request reason">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Reasons_for_Credit_Request__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DReasons_for_Credit_Request__c"/>
@@ -557,7 +539,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">dsgfivayusdnfuckpljuasouyfsdg</value>
+                  <value class="value" valueClass="string">test request reason</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -572,7 +554,7 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Reasons for Credit Request field to dsgfivayusdnfuckpljuasouyfsdg</value>
+                  <value class="value" valueClass="string">Set the Reasons for Credit Request field to test request reason</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
@@ -656,7 +638,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="37" title="On SF Case view (ATC Dealer Sales Credit Request) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">UiConnection</value>
+          <value class="value" valueClass="string">AmeliaGoldman</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View&amp;recordType=ATC+Dealer+Sales+Credit+Request"/>
@@ -686,7 +668,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="39" title="With RelatedProcessHistoryList rows 1">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">AmeliaGoldman</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedProcessHistoryList%2FRelatedProcessHistoryListTable"/>
@@ -770,4 +752,7 @@
       </generatedParameters>
     </apiCall>
   </steps>
+  <tagReferences>
+    <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
+  </tagReferences>
 </testCase>
